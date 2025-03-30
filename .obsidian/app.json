@@ -1,0 +1,24 @@
+{
+  "newFileLocation": "current",
+  "useMarkdownLinks": true,
+  "userIgnoreFilters": [
+    "node_modules/",
+    "themes/",
+    "scaffolds/",
+    "_book/"
+  ],
+  "showRibbon": true,
+  "showInlineTitle": true,
+  "attachmentFolderPath": "././${filename}",
+  "newLinkFormat": "relative",
+  "alwaysUpdateLinks": true,
+  "trashOption": "none",
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "promptDelete": false
+}

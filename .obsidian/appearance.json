@@ -1,0 +1,12 @@
+{
+  "accentColor": "#19a5f0",
+  "interfaceFontFamily": "Microsoft YaHei",
+  "monospaceFontFamily": "Fira Code",
+  "textFontFamily": "Microsoft YaHei",
+  "baseFontSizeAction": true,
+  "cssTheme": "Blue Topaz",
+  "showViewHeader": true,
+  "nativeMenus": false,
+  "baseFontSize": 16,
+  "theme": "moonstone"
+}

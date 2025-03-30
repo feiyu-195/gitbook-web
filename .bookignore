@@ -1,0 +1,7 @@
+.obsidian/
+assets/templater/
+.git
+.gitignore
+.bookignore
+node_modules/
+*.bat
