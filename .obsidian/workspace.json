@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "网络安全/AWD/AWD-Guide.md",
+                "file": "联系我.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "AWD-Guide"
+              "title": "联系我"
             }
           }
         ]
@@ -186,6 +186,7 @@
   },
   "active": "a2feb2f15ac6e9f0",
   "lastOpenFiles": [
+    "网络安全/AWD/AWD-Guide.md",
     "_book/search_plus_index.json",
     "_book/联系我.html",
     "_book/其他/青龙面板.html",
@@ -196,7 +197,6 @@
     "_book/其他/pip镜像加速.html",
     "_book/其他/Openssl创建自签名证书.html",
     "_book/其他/NPM镜像加速.html",
-    "_book/其他/Nginx反向代理+SSL配置模板.html",
     "_book/网络安全/CTF竞赛/蓝桥杯/Web/文件包含绕过/image-20240308212742127.png",
     "_book/网络安全/CTF竞赛/蓝桥杯/Web/文件包含绕过/image-20240308212604211.png",
     "_book/网络安全/CTF竞赛/蓝桥杯/Web/文件包含绕过/image-20240308212323980.png",

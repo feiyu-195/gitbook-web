@@ -36,4 +36,5 @@ git push web-origin web:master --force
 echo.
 
 :: ÍË³ö½Å±¾
-exit
+:: exit
+pause
