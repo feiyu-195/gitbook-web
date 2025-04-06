@@ -53,10 +53,6 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
-                
-            
-                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -3267,31 +3263,31 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="vim-plug&#x4E0B;&#x8F7D;">vim-plug&#x4E0B;&#x8F7D;</h1>
-<pre class="language-"><code class="lang-shell"><span class="token comment"># Unix, Linux</span>
-<span class="token function">curl</span> <span class="token parameter variable">-fLo</span> ~/.vim/autoload/plug.vim --create-dirs <span class="token punctuation">\</span>
+<pre><code class="lang-shell"># Unix, Linux
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-<span class="token comment"># Windows (PowerShell)</span>
-iwr <span class="token parameter variable">-useb</span> https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim <span class="token operator">|</span><span class="token variable"><span class="token variable">`</span>
-    ni <span class="token environment constant">$HOME</span>/vimfiles/autoload/plug.vim <span class="token parameter variable">-Force</span>
+# Windows (PowerShell)
+iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
+    ni $HOME/vimfiles/autoload/plug.vim -Force
 
-<span class="token comment"># Neovim</span>
-<span class="token comment">## Unix, Linux</span>
-<span class="token function">sh</span> <span class="token parameter variable">-c</span> <span class="token string">&apos;curl -fLo &quot;${XDG_DATA_HOME:-$HOME/.local/share}&quot;/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim&apos;</span>
+# Neovim
+## Unix, Linux
+sh -c &apos;curl -fLo &quot;${XDG_DATA_HOME:-$HOME/.local/share}&quot;/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim&apos;
 
-<span class="token comment">## Linux (Flatpak)</span>
-<span class="token function">curl</span> <span class="token parameter variable">-fLo</span> ~/.var/app/io.neovim.nvim/data/nvim/site/autoload/plug.vim --create-dirs <span class="token punctuation">\</span>
+## Linux (Flatpak)
+curl -fLo ~/.var/app/io.neovim.nvim/data/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-<span class="token comment">## Windows (PowerShell)</span>
-iwr <span class="token parameter variable">-useb</span> https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim <span class="token operator">|</span><span class="token variable">`</span></span>
-    ni <span class="token string">&quot;<span class="token variable"><span class="token variable">$(</span>@<span class="token punctuation">(</span>$env:XDG_DATA_HOME, $env:LOCALAPPDATA<span class="token punctuation">)</span><span class="token punctuation">[</span>$null <span class="token parameter variable">-eq</span> $env:XDG_DATA_HOME<span class="token punctuation">]</span><span class="token variable">)</span></span>/nvim-data/site/autoload/plug.vim&quot;</span> <span class="token parameter variable">-Force</span>
+## Windows (PowerShell)
+iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
+    ni &quot;$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim&quot; -Force
 </code></pre>
 <h1 id="&#x63D2;&#x4EF6;&#x5B89;&#x88C5;">&#x63D2;&#x4EF6;&#x5B89;&#x88C5;</h1>
 <p>&#x63D2;&#x4EF6;&#x5E02;&#x573A;&#xFF1A;<a href="https://vimawesome.com/" target="_blank">vim awesome</a></p>
-<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
-2025-01-02 17:17
+<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
+2025-04-06 16:47
 </span></footer>
                                 
                                 </section>
@@ -3335,7 +3331,7 @@ iwr <span class="token parameter variable">-useb</span> https://raw.githubuserco
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Vim配置与美化","date":"2025-01-02T16:51:19.000Z","updated":"2025-01-02T17:17:18.000Z","tags":["Vim"],"permalink":"/posts/Vim配置与美化/","level":"1.6.16","depth":2,"next":{"title":"解决nvm安装的node使用sudo令npm报错的问题","level":"1.6.17","depth":2,"path":"其他/解决nvm安装的node使用sudo令npm报错的问题.md","ref":"其他/解决nvm安装的node使用sudo令npm报错的问题.md","articles":[]},"previous":{"title":"Umami搭建","level":"1.6.15","depth":2,"path":"其他/Umami搭建.md","ref":"其他/Umami搭建.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","prism","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"其他/Vim配置与美化.md","mtime":"2025-01-02T09:17:20.380Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T08:32:22.121Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Vim配置与美化","date":"2025-01-02T16:51:19.000Z","updated":"2025-01-02T17:17:18.000Z","tags":["Vim"],"permalink":"/posts/Vim配置与美化/","level":"1.6.16","depth":2,"next":{"title":"解决nvm安装的node使用sudo令npm报错的问题","level":"1.6.17","depth":2,"path":"其他/解决nvm安装的node使用sudo令npm报错的问题.md","ref":"其他/解决nvm安装的node使用sudo令npm报错的问题.md","articles":[]},"previous":{"title":"Umami搭建","level":"1.6.15","depth":2,"path":"其他/Umami搭建.md","ref":"其他/Umami搭建.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"其他/Vim配置与美化.md","mtime":"2025-04-06T08:47:51.928Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T09:05:17.990Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -53,10 +53,6 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
-                
-            
-                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -3273,49 +3269,49 @@
 <p>&#x8F93;&#x5165;&#x4ED3;&#x5E93;&#x540D;&#x548C;&#x63CF;&#x8FF0;(&#x53EF;&#x9009;)&#x8FDB;&#x884C;&#x521B;&#x5EFA;&#xFF0C;&#x8BB0;&#x4F4F;&#x4ED3;&#x5E93;&#x9009;&#x62E9;&#x516C;&#x5F00;</p>
 <p><img src="Docker&#x63A8;&#x9001;&#x955C;&#x50CF;&#x5230;&#x4ED3;&#x5E93;/image-20240815134032524-1731303421820-2.png" alt="image-20240815134032524"></p>
 <h1 id="2&#x3001;&#x5728;&#x672C;&#x5730;shell&#x767B;&#x5F55;docker">2&#x3001;&#x5728;&#x672C;&#x5730;shell&#x767B;&#x5F55;docker</h1>
-<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment"># docker login</span>
-Log <span class="token keyword">in</span> with your Docker ID or email address to push and pull images from Docker Hub. If you don&apos;t have a Docker ID, <span class="token function">head</span> over to https://hub.docker.com/ to create one.
-You can log <span class="token keyword">in</span> with your password or a Personal Access Token <span class="token punctuation">(</span>PAT<span class="token punctuation">)</span>. Using a limited-scope PAT grants better security and is required <span class="token keyword">for</span> organizations using SSO. Learn <span class="token function">more</span> at https://docs.docker.com/go/access-tokens/
+<pre><code class="lang-bash">[root@localhost ~]<span class="hljs-comment"># docker login</span>
+Log <span class="hljs-keyword">in</span> with your Docker ID or email address to push and pull images from Docker Hub. If you don<span class="hljs-string">&apos;t have a Docker ID, head over to https://hub.docker.com/ to create one.
+You can log in with your password or a Personal Access Token (PAT). Using a limited-scope PAT grants better security and is required for organizations using SSO. Learn more at https://docs.docker.com/go/access-tokens/
 
 Username: xxxx
 Password: 
 
-WARNING<span class="token operator">!</span> Your password will be stored unencrypted <span class="token keyword">in</span> /home/feiyu/.docker/config.json.
+WARNING! Your password will be stored unencrypted in /home/feiyu/.docker/config.json.
 Configure a credential helper to remove this warning. See
-https://docs.docker.com/engine/reference/commandline/login/<span class="token comment">#credential-stores</span>
+https://docs.docker.com/engine/reference/commandline/login/#credential-stores
 
 Login Succeeded
-</code></pre>
+</span></code></pre>
 <h1 id="3&#x3001;&#x67E5;&#x770B;&#x9700;&#x63A8;&#x9001;&#x955C;&#x50CF;">3&#x3001;&#x67E5;&#x770B;&#x9700;&#x63A8;&#x9001;&#x955C;&#x50CF;</h1>
-<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment"># docker images </span>
+<pre><code class="lang-bash">[root@localhost ~]<span class="hljs-comment"># docker images </span>
 REPOSITORY   TAG        IMAGE ID       CREATED          SIZE
-centos       <span class="token number">7.9</span>.2009   eeb6ee3f44bd   <span class="token number">2</span> years ago      204MB
+centos       7.9.2009   eeb6ee3f44bd   2 years ago      204MB
 </code></pre>
 <h1 id="4&#x3001;&#x7ED9;&#x955C;&#x50CF;&#x4FEE;&#x6539;&#x6807;&#x7B7E;&#x4E0E;&#x540D;&#x79F0;">4&#x3001;&#x7ED9;&#x955C;&#x50CF;&#x4FEE;&#x6539;&#x6807;&#x7B7E;&#x4E0E;&#x540D;&#x79F0;</h1>
 <p>&#x89C4;&#x8303;&#xFF1A;docker tag &#x539F;&#x955C;&#x50CF;&#x540D;:&#x539F;&#x955C;&#x50CF;tag dockerhub&#x7528;&#x6237;&#x540D;/&#x4ED3;&#x5E93;&#x540D;:&#x6807;&#x7B7E;</p>
-<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment"># docker tag centos:7.9.2009 user/centos7.9:stable</span>
-<span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment"># docker images ls</span>
+<pre><code class="lang-bash">[root@localhost ~]<span class="hljs-comment"># docker tag centos:7.9.2009 user/centos7.9:stable</span>
+[root@localhost ~]<span class="hljs-comment"># docker images ls</span>
 REPOSITORY       TAG        IMAGE ID       CREATED          SIZE
-user/centos7.9   stable     853aab1a35f1   <span class="token number">27</span> minutes ago   204MB
+user/centos7.9   stable     853aab1a35f1   27 minutes ago   204MB
 </code></pre>
 <h1 id="5&#x3001;push&#x5230;dockerhub&#x4ED3;&#x5E93;">5&#x3001;Push&#x5230;DockerHub&#x4ED3;&#x5E93;</h1>
-<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment"># docker push user/centos7.9:stable</span>
+<pre><code class="lang-bash">[root@localhost ~]<span class="hljs-comment"># docker push user/centos7.9:stable</span>
 </code></pre>
 <p>&#x4E4B;&#x540E;&#x53EF;&#x4EE5;&#x5728;&#x81EA;&#x5DF1;dockerhub&#x8D26;&#x53F7;&#x7684;&#x4ED3;&#x5E93;&#x4E2D;&#x770B;&#x5230;push&#x7684;&#x955C;&#x50CF;&#xFF0C;&#x6D4B;&#x8BD5;&#x4E5F;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;pull&#x4E0B;&#x6765;&#x5230;&#x672C;&#x5730;</p>
 <h1 id="6&#x3001;&#x914D;&#x7F6E;&#x4EE3;&#x7406;">6&#x3001;&#x914D;&#x7F6E;&#x4EE3;&#x7406;</h1>
 <h2 id="dockerd-&#x4EE3;&#x7406;">Dockerd &#x4EE3;&#x7406;</h2>
 <p>&#x5728;&#x6267;&#x884C;docker pull&#x65F6;&#xFF0C;&#x662F;&#x7531;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;dockerd&#x6765;&#x6267;&#x884C;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x4EE3;&#x7406;&#x9700;&#x8981;&#x914D;&#x5728;dockerd&#x7684;&#x73AF;&#x5883;&#x4E2D;&#x3002;&#x800C;&#x8FD9;&#x4E2A;&#x73AF;&#x5883;&#xFF0C;&#x5219;&#x662F;&#x53D7;systemd&#x6240;&#x7BA1;&#x63A7;&#xFF0C;&#x56E0;&#x6B64;&#x5B9E;&#x9645;&#x662F;systemd&#x7684;&#x914D;&#x7F6E;&#x3002;</p>
-<pre class="language-"><code class="lang-text">sudo mkdir -p /etc/systemd/system/docker.service.d
+<pre><code class="lang-text">sudo mkdir -p /etc/systemd/system/docker.service.d
 sudo touch /etc/systemd/system/docker.service.d/proxy.conf
 </code></pre>
 <p>&#x5728;&#x8FD9;&#x4E2A;proxy.conf&#x6587;&#x4EF6;&#xFF08;&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x610F;*.conf&#x7684;&#x5F62;&#x5F0F;&#xFF09;&#x4E2D;&#xFF0C;&#x6DFB;&#x52A0;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;</p>
-<pre class="language-"><code class="lang-text">[Service]
+<pre><code class="lang-text">[Service]
 Environment=&quot;HTTP_PROXY=http://127.0.0.1:7893/&quot;
 Environment=&quot;HTTPS_PROXY=http://127.0.0.1:7893/&quot;
 Environment=&quot;NO_PROXY=localhost,127.0.0.1,.example.com&quot;
 </code></pre>
-<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
-2024-12-29 21:01
+<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
+2025-04-06 16:47
 </span></footer>
                                 
                                 </section>
@@ -3359,7 +3355,7 @@ Environment=&quot;NO_PROXY=localhost,127.0.0.1,.example.com&quot;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Docker推送镜像到仓库","date":"2024-08-24T14:30:10.000Z","updated":"2024-12-29T21:01:21.000Z","categories":["其他"],"tags":["docker"],"permalink":"/posts/Docker推送镜像到仓库/","level":"1.6.2","depth":2,"next":{"title":"Docker部署elk","level":"1.6.3","depth":2,"path":"其他/Docker部署elk.md","ref":"其他/Docker部署elk.md","articles":[]},"previous":{"title":"计算机组成原理","level":"1.6.1.5","depth":3,"path":"其他/学校课程/计算机组成原理.md","ref":"其他/学校课程/计算机组成原理.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","prism","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"其他/Docker推送镜像到仓库.md","mtime":"2024-12-29T13:01:22.785Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T08:32:22.121Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Docker推送镜像到仓库","date":"2024-08-24T14:30:10.000Z","updated":"2024-12-29T21:01:21.000Z","categories":["其他"],"tags":["docker"],"permalink":"/posts/Docker推送镜像到仓库/","level":"1.6.2","depth":2,"next":{"title":"Docker部署elk","level":"1.6.3","depth":2,"path":"其他/Docker部署elk.md","ref":"其他/Docker部署elk.md","articles":[]},"previous":{"title":"计算机组成原理","level":"1.6.1.5","depth":3,"path":"其他/学校课程/计算机组成原理.md","ref":"其他/学校课程/计算机组成原理.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"其他/Docker推送镜像到仓库.md","mtime":"2025-04-06T08:47:51.918Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T09:05:17.990Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

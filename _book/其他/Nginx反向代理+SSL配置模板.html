@@ -53,10 +53,6 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
-                
-            
-                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -3266,69 +3262,69 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <pre class="language-"><code class="lang-shell">server <span class="token punctuation">{</span>
-    listen <span class="token number">80</span><span class="token punctuation">;</span>
-    server_name www.domain.com<span class="token punctuation">;</span>
+                                <pre><code class="lang-shell">server {
+    listen 80;
+    server_name www.domain.com;
 
-    <span class="token comment"># location / {  // &#x5F3A;&#x5236; https &#x91CD;&#x5B9A;&#x5411;</span>
-    <span class="token comment">#     rewrite ^(.*)$  https://$host$1 permanent;</span>
-    <span class="token comment"># }</span>
+    # location / {  // &#x5F3A;&#x5236; https &#x91CD;&#x5B9A;&#x5411;
+    #     rewrite ^(.*)$  https://$host$1 permanent;
+    # }
 
-    <span class="token comment"># &#x91CD;&#x5B9A;&#x5411;&#x81F3;https</span>
-    <span class="token builtin class-name">return</span> <span class="token number">301</span> https://<span class="token variable">$host</span><span class="token variable">$request_uri</span><span class="token punctuation">;</span>
+    # &#x91CD;&#x5B9A;&#x5411;&#x81F3;https
+    return 301 https://$host$request_uri;
 
-    <span class="token comment"># &#x7F51;&#x7AD9;&#x6839;&#x76EE;&#x5F55;&#x53CA;&#x9ED8;&#x8BA4;&#x7F51;&#x9875;</span>
-    <span class="token comment">#root  /www/xxx;</span>
-    <span class="token comment">#index index.html;</span>
+    # &#x7F51;&#x7AD9;&#x6839;&#x76EE;&#x5F55;&#x53CA;&#x9ED8;&#x8BA4;&#x7F51;&#x9875;
+    #root  /www/xxx;
+    #index index.html;
 
-    <span class="token comment"># &#x65E5;&#x5FD7;&#x6587;&#x4EF6;</span>
-    access_log  /var/log/nginx/host.access.log  main<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+    # &#x65E5;&#x5FD7;&#x6587;&#x4EF6;
+    access_log  /var/log/nginx/host.access.log  main;
+}
 
-server <span class="token punctuation">{</span>
-    listen <span class="token number">443</span> ssl<span class="token punctuation">;</span>
-    server_name www.domain.com<span class="token punctuation">;</span>
+server {
+    listen 443 ssl;
+    server_name www.domain.com;
 
-    <span class="token comment"># SSL&#x914D;&#x7F6E;</span>
-    ssl on<span class="token punctuation">;</span>
-    ssl_certificate      /root/ssl/chained.pem<span class="token punctuation">;</span>
-    ssl_certificate_key  /root/ssl/domain.key<span class="token punctuation">;</span>
-    <span class="token comment"># SSL/TLS&#x9ED8;&#x8BA4;&#x503C;</span>
-    ssl_protocols   TLSv1 TLSv1.1 TLSv1.2<span class="token punctuation">;</span>
-    ssl_ciphers     HIGH:<span class="token operator">!</span>aNULL:<span class="token operator">!</span>MD5<span class="token punctuation">;</span>
+    # SSL&#x914D;&#x7F6E;
+    ssl on;
+    ssl_certificate      /root/ssl/chained.pem;
+    ssl_certificate_key  /root/ssl/domain.key;
+    # SSL/TLS&#x9ED8;&#x8BA4;&#x503C;
+    ssl_protocols   TLSv1 TLSv1.1 TLSv1.2;
+    ssl_ciphers     HIGH:!aNULL:!MD5;
 
 
-    <span class="token comment"># &#x51CF;&#x5C11;&#x70B9;&#x51FB;&#x52AB;&#x6301;</span>
-    add_header X-Frame-Options DENY<span class="token punctuation">;</span>
-    <span class="token comment"># &#x7981;&#x6B62;&#x670D;&#x52A1;&#x5668;&#x81EA;&#x52A8;&#x89E3;&#x6790;&#x8D44;&#x6E90;&#x7C7B;&#x578B;</span>
-    add_header X-Content-Type-Options nosniff<span class="token punctuation">;</span>
-    <span class="token comment"># &#x9632;XSS&#x653B;&#x51FB;</span>
-    add_header X-Xss-Protection <span class="token number">1</span><span class="token punctuation">;</span>
+    # &#x51CF;&#x5C11;&#x70B9;&#x51FB;&#x52AB;&#x6301;
+    add_header X-Frame-Options DENY;
+    # &#x7981;&#x6B62;&#x670D;&#x52A1;&#x5668;&#x81EA;&#x52A8;&#x89E3;&#x6790;&#x8D44;&#x6E90;&#x7C7B;&#x578B;
+    add_header X-Content-Type-Options nosniff;
+    # &#x9632;XSS&#x653B;&#x51FB;
+    add_header X-Xss-Protection 1;
 
-    <span class="token comment"># &#x53CD;&#x5411;&#x4EE3;&#x7406;</span>
-    location / <span class="token punctuation">{</span>
-            proxy_pass http://127.0.0.1:8080<span class="token punctuation">;</span>
-            proxy_set_header Host <span class="token variable">$host</span><span class="token punctuation">;</span>
-            proxy_set_header X-Real-IP <span class="token variable">$remote_addr</span><span class="token punctuation">;</span>
-            proxy_set_header REMOTE-HOST <span class="token variable">$remote_addr</span><span class="token punctuation">;</span>
-            proxy_set_header X-Forwarded-For <span class="token variable">$proxy_add_x_forwarded_for</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
+    # &#x53CD;&#x5411;&#x4EE3;&#x7406;
+    location / {
+            proxy_pass http://127.0.0.1:8080;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header REMOTE-HOST $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+}
 </code></pre>
 <p>&#x4E8C;&#x3001;&#x914D;&#x7F6E;&#x5B8C;&#x540E;&#x8BC1;&#x4E66;&#x6587;&#x4EF6;&#x65E0;&#x6CD5;&#x8BBF;&#x95EE;(Centos)</p>
-<pre class="language-"><code class="lang-shell"><span class="token comment"># &#x6062;&#x590D;&#x6B63;&#x786E;&#x7684; SELinux type</span>
-restorecon <span class="token parameter variable">-v</span> <span class="token parameter variable">-R</span> /etc/nginx/ssl/a.pe
-<span class="token comment"># &#x6216;&#x8005;&#x5173;&#x95ED;SELinux&#xFF08;&#x63A8;&#x8350;&#xFF09;</span>
+<pre><code class="lang-shell"># &#x6062;&#x590D;&#x6B63;&#x786E;&#x7684; SELinux type
+restorecon -v -R /etc/nginx/ssl/a.pe
+# &#x6216;&#x8005;&#x5173;&#x95ED;SELinux&#xFF08;&#x63A8;&#x8350;&#xFF09;
 </code></pre>
 <p>&#x4E09;&#x3001;&#x975E;80&#x7AEF;&#x53E3;&#x8F6C;https</p>
-<pre class="language-"><code class="lang-shell">error_page <span class="token number">497</span> <span class="token number">301</span> https://<span class="token variable">$http_host</span><span class="token variable">$request_uri</span><span class="token punctuation">;</span>
+<pre><code class="lang-shell">error_page 497 301 https://$http_host$request_uri;
 </code></pre>
 <p>&#x91CD;&#x70B9;&#x662F;&#xFF0C;&#x9519;&#x8BEF;&#x65F6;&#x8FD4;&#x56DE;301&#x8F6C;&#x6210;https &#xFF1A;</p>
-<pre class="language-"><code class="lang-shell"><span class="token number">497</span> - normal request was sent to HTTPS
+<pre><code class="lang-shell">497 - normal request was sent to HTTPS
 &#x89E3;&#x91CA;&#xFF1A;&#x5F53;&#x7F51;&#x7AD9;&#x53EA;&#x5141;&#x8BB8;https&#x8BBF;&#x95EE;&#x65F6;&#xFF0C;&#x5F53;&#x7528;http&#x8BBF;&#x95EE;&#x65F6;nginx&#x4F1A;&#x62A5;&#x51FA;497&#x9519;&#x8BEF;&#x7801;
 </code></pre>
-<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
-2025-01-04 01:14
+<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
+2025-04-06 16:47
 </span></footer>
                                 
                                 </section>
@@ -3372,7 +3368,7 @@ restorecon <span class="token parameter variable">-v</span> <span class="token p
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Nginx反向代理+SSL配置模板","date":"2024-08-06T14:30:12.000Z","updated":"2025-01-04T01:14:45.000Z","categories":["其他"],"tags":["nginx","反向代理","SSL"],"permalink":"/posts/Nginx反向代理+SSL配置模板/","level":"1.6.9","depth":2,"next":{"title":"NPM镜像加速","level":"1.6.10","depth":2,"path":"其他/NPM镜像加速.md","ref":"其他/NPM镜像加速.md","articles":[]},"previous":{"title":"MySQL创建新用户并给予数据库权限","level":"1.6.8","depth":2,"path":"其他/MySQL创建新用户并给予数据库权限.md","ref":"其他/MySQL创建新用户并给予数据库权限.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","prism","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"其他/Nginx反向代理+SSL配置模板.md","mtime":"2025-01-03T17:14:46.638Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T08:32:22.121Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Nginx反向代理+SSL配置模板","date":"2024-08-06T14:30:12.000Z","updated":"2025-01-04T01:14:45.000Z","categories":["其他"],"tags":["nginx","反向代理","SSL"],"permalink":"/posts/Nginx反向代理+SSL配置模板/","level":"1.6.9","depth":2,"next":{"title":"NPM镜像加速","level":"1.6.10","depth":2,"path":"其他/NPM镜像加速.md","ref":"其他/NPM镜像加速.md","articles":[]},"previous":{"title":"MySQL创建新用户并给予数据库权限","level":"1.6.8","depth":2,"path":"其他/MySQL创建新用户并给予数据库权限.md","ref":"其他/MySQL创建新用户并给予数据库权限.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"其他/Nginx反向代理+SSL配置模板.md","mtime":"2025-04-06T08:47:51.926Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T09:05:17.990Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

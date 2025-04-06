@@ -53,10 +53,6 @@
                 
             
                 
-                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
-                
-            
-                
                 <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -3328,34 +3324,34 @@
 <p><img src="happy2forensics/image-20240223191659369.png" alt="image-20240223191659369"></p>
 <p>&#x5BF9;&#x4E8E;&#x62FC;&#x63A5;&#x56FE;&#x7247;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>apt install imagemagick</code>&#x5728;<code>kali</code>&#x4E2D;&#x5B89;&#x88C5;<code>imagemagick</code>&#x5DE5;&#x5177;&#xFF1A;</p>
 <p>&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x662F;</p>
-<pre class="language-"><code class="lang-shell">convert +append <span class="token punctuation">[</span>&#x56FE;&#x7247;1<span class="token punctuation">]</span> <span class="token punctuation">[</span>&#x56FE;&#x7247;2<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token punctuation">..</span>.<span class="token punctuation">]</span> <span class="token punctuation">[</span>&#x6700;&#x540E;&#x62FC;&#x63A5;&#x7684;&#x56FE;&#x7247;<span class="token punctuation">]</span>
+<pre><code class="lang-shell">convert +append [&#x56FE;&#x7247;1] [&#x56FE;&#x7247;2] [...] [&#x6700;&#x540E;&#x62FC;&#x63A5;&#x7684;&#x56FE;&#x7247;]
 </code></pre>
 <p>&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x6709;&#x5F88;&#x591A;&#x56FE;&#x7247;&#xFF0C;&#x6240;&#x4EE5;&#x901A;&#x8FC7;&#x6279;&#x5904;&#x7406;&#x5408;&#x5E76;&#xFF0C;&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x4E2A;&#x6279;&#x5904;&#x7406;<code>shell</code>&#x811A;&#x672C;&#xFF1B;</p>
-<pre class="language-"><code class="lang-shell"><span class="token shebang important">#!/bin/bash</span>
+<pre><code class="lang-shell">#!/bin/bash
 
-<span class="token comment"># &#x5FAA;&#x73AF;&#x904D;&#x5386;0-14267&#x7684;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x5E76;&#x9010;&#x4E2A;&#x5408;&#x5E76;&#x5230;book.txt&#x4E2D;</span>
-<span class="token comment">#str = &quot;&quot;</span>
-<span class="token keyword">for</span> <span class="token for-or-select variable">i</span> <span class="token keyword">in</span> <span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">..</span><span class="token number">685</span><span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token keyword">do</span>
-        <span class="token assign-left variable">file</span><span class="token operator">=</span><span class="token string">&quot;<span class="token variable">${i}</span>.png&quot;</span>
-        <span class="token assign-left variable">str</span><span class="token operator">=</span><span class="token string">&quot;<span class="token variable">${str}</span><span class="token variable">${file}</span> &quot;</span>
-<span class="token keyword">done</span>
-<span class="token builtin class-name">echo</span> <span class="token variable">$str</span>
-convert +append <span class="token variable">$str</span> passwd.png
+# &#x5FAA;&#x73AF;&#x904D;&#x5386;0-14267&#x7684;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x5E76;&#x9010;&#x4E2A;&#x5408;&#x5E76;&#x5230;book.txt&#x4E2D;
+#str = &quot;&quot;
+for i in {0..685}; do
+        file=&quot;${i}.png&quot;
+        str=&quot;${str}${file} &quot;
+done
+echo $str
+convert +append $str passwd.png
 </code></pre>
 <p>&#x6700;&#x540E;&#x62FC;&#x63A5;&#x7684;&#x56FE;&#x7247;&#xFF1A;</p>
 <p><img src="happy2forensics/passwd.png" alt="passwd"></p>
 <p>&#x53EF;&#x4EE5;&#x770B;&#x5230;<code>password&#xFF1A;856a-a56b6a705653</code></p>
 <p>&#x540C;&#x65F6;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x770B;&#x4E00;&#x4E0B;&#x5176;&#x4ED6;&#x56FE;&#x7247;&#x62FC;&#x63A5;&#x51FA;&#x6765;&#x662F;&#x4EC0;&#x4E48;&#xFF1A;</p>
-<pre class="language-"><code class="lang-shell"><span class="token shebang important">#!/bin/bash</span>
+<pre><code class="lang-shell">#!/bin/bash
 
-<span class="token comment"># &#x5FAA;&#x73AF;&#x904D;&#x5386;0-14267&#x7684;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x5E76;&#x9010;&#x4E2A;&#x5408;&#x5E76;&#x5230;book.txt&#x4E2D;</span>
-str <span class="token operator">=</span> <span class="token string">&quot;&quot;</span>
-<span class="token keyword">for</span> <span class="token for-or-select variable">i</span> <span class="token keyword">in</span> <span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">..</span><span class="token number">267</span><span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token keyword">do</span>
-        <span class="token assign-left variable">file</span><span class="token operator">=</span><span class="token string">&quot;<span class="token variable">${i}</span>.png&quot;</span>
-        <span class="token assign-left variable">str</span><span class="token operator">=</span><span class="token string">&quot;<span class="token variable">${str}</span><span class="token variable">${file}</span> &quot;</span>
-<span class="token keyword">done</span>
-<span class="token builtin class-name">echo</span> <span class="token variable">$str</span>
-convert <span class="token parameter variable">-append</span> <span class="token variable">$str</span> tupian.png
+# &#x5FAA;&#x73AF;&#x904D;&#x5386;0-14267&#x7684;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x5E76;&#x9010;&#x4E2A;&#x5408;&#x5E76;&#x5230;book.txt&#x4E2D;
+str = &quot;&quot;
+for i in {0..267}; do
+        file=&quot;${i}.png&quot;
+        str=&quot;${str}${file} &quot;
+done
+echo $str
+convert -append $str tupian.png
 </code></pre>
 <p>&#x62FC;&#x63A5;&#x51FA;&#x6765;&#x540E;&#xFF1A;</p>
 <p><img src="happy2forensics/tupian.png" alt="tupian"></p>
@@ -3364,8 +3360,8 @@ convert <span class="token parameter variable">-append</span> <span class="token
 <p><img src="happy2forensics/image-20240223193011112.png" alt="image-20240223193011112"></p>
 <p>&#x63D0;&#x53D6;&#x51FA;&#x540E;&#x5F97;&#x5230;<code>flag.txt</code>&#x770B;&#x5230;<code>flag2:-919c-a140d7054ac5</code></p>
 <p>&#x62FC;&#x63A5;&#x5F97;&#x5230;<code>flag&#xFF1A;f97d5b05-d312-46ac-919c-a140d7054ac5</code></p>
-<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
-2024-11-15 21:49
+<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
+2025-04-06 16:47
 </span></footer>
                                 
                                 </section>
@@ -3409,7 +3405,7 @@ convert <span class="token parameter variable">-append</span> <span class="token
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Happy 2 Forensics","date":"2024-03-18T14:31:30.000Z","updated":"2024-11-15T21:49:39.000Z","categories":["网络安全","CTF竞赛","蓝桥杯","Misc"],"tags":["网络安全","CTF","Misc"],"permalink":"/posts/happy2forensics/","level":"1.4.2.1.2.9","depth":5,"next":{"title":"Matrix","level":"1.4.2.1.2.10","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/Matrix.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/Matrix.md","articles":[]},"previous":{"title":"Flooding","level":"1.4.2.1.2.8","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/flooding.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/flooding.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","prism","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"网络安全/CTF竞赛/蓝桥杯/Misc/happy2forensics.md","mtime":"2024-11-15T13:49:40.102Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T08:32:22.121Z"},"basePath":"../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Happy 2 Forensics","date":"2024-03-18T14:31:30.000Z","updated":"2024-11-15T21:49:39.000Z","categories":["网络安全","CTF竞赛","蓝桥杯","Misc"],"tags":["网络安全","CTF","Misc"],"permalink":"/posts/happy2forensics/","level":"1.4.2.1.2.9","depth":5,"next":{"title":"Matrix","level":"1.4.2.1.2.10","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/Matrix.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/Matrix.md","articles":[]},"previous":{"title":"Flooding","level":"1.4.2.1.2.8","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/flooding.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/flooding.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"网络安全/CTF竞赛/蓝桥杯/Misc/happy2forensics.md","mtime":"2025-04-06T08:47:52.354Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T09:05:17.990Z"},"basePath":"../../../..","book":{"language":""}});
         });
     </script>
 </div>

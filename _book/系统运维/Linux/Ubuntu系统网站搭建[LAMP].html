@@ -53,10 +53,6 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
-                
-            
-                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -3271,14 +3267,14 @@
 <p>&#x51C6;&#x5907;&#x642D;&#x5EFA;&#x73AF;&#x5883;&#xFF1A;LAMP&#xFF08;Linux + Apache + Mysql + PHP&#xFF09;</p>
 <h1 id="&#x642D;&#x5EFA;lamp&#x73AF;&#x5883;">&#x642D;&#x5EFA;LAMP&#x73AF;&#x5883;</h1>
 <p>1&#x3001;&#x5B89;&#x88C5;Apache</p>
-<pre class="language-"><code class="lang-shell"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> apache2 <span class="token parameter variable">-y</span>
+<pre><code class="lang-shell">sudo apt-get install apache2 -y
 </code></pre>
 <ul>
 <li>&#x9A8C;&#x8BC1;&#xFF1A;&#x5982;&#x679C;&#x662F;&#x672C;&#x5730;&#x4E3B;&#x673A;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x8F93;&#x5165;127.0.0.1&#xFF1B;&#x5982;&#x679C;&#x662F;&#x4E91;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x53EF;&#x4EE5;&#x518D;&#x6D4F;&#x89C8;&#x5668;&#x8F93;&#x5165;&#x670D;&#x52A1;&#x5668;&#x63D0;&#x4F9B;&#x5546;&#x7ED9;&#x7684;IP&#x5730;&#x5740;&#xFF0C;&#x51FA;&#x73B0;&#x4EE5;&#x4E0B;&#x754C;&#x9762;&#x5219;&#x8868;&#x793A;&#x5B89;&#x88C5;&#x6210;&#x529F;&#xFF1A;</li>
 </ul>
 <p><img src="https://ps.feiyunote.cn/assets/image-20240220145113368.png" alt="image-20240220145113368"></p>
 <p>2&#x3001;&#x5B89;&#x88C5;php</p>
-<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> php libapache2-mod-php <span class="token parameter variable">-y</span> <span class="token function">sudo</span> systemctl restart apache2    <span class="token comment">#&#x91CD;&#x542F;apache&#x670D;&#x52A1;</span>
+<pre><code class="lang-bash">sudo apt-get install php libapache2-mod-php -y sudo systemctl restart apache2    <span class="hljs-comment">#&#x91CD;&#x542F;apache&#x670D;&#x52A1;</span>
 </code></pre>
 <ul>
 <li>&#x8FD9;&#x91CC;&#x5B89;&#x88C5;libapache2-mod-php&#x7684;&#x4E3B;&#x8981;&#x7684;&#x539F;&#x56E0;&#x662F;&#x56E0;&#x4E3A;</li>
@@ -3291,24 +3287,24 @@
 <p>&#x4FDD;&#x5B58;&#x9000;&#x51FA;&#xFF0C;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x8F93;&#x5165;<code>http://IP&#x5730;&#x5740;/1.php</code>&#xFF0C;&#x51FA;&#x73B0;&#x4EE5;&#x4E0B;&#x754C;&#x9762;&#xFF0C;&#x8868;&#x793A;&#x5B89;&#x88C5;&#x6210;&#x529F;</p>
 <p><img src="https://ps.feiyunote.cn/assets/image-20240220145123404.png" alt="image-20240220145123404"></p>
 <p>3&#x3001;&#x5B89;&#x88C5;MySQL&#x53CA;&#x5176;&#x76F8;&#x5173;php&#x7EC4;&#x4EF6;</p>
-<pre class="language-"><code class="lang-shell"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> mysql <span class="token parameter variable">-y</span>    <span class="token comment">#&#x5B89;&#x88C5;mysql </span>
-<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> php-mysql    <span class="token comment">#&#x5B89;&#x88C5;php&#x76F8;&#x5173;&#x7EC4;&#x4EF6;</span>
+<pre><code class="lang-shell">sudo apt-get install mysql -y    #&#x5B89;&#x88C5;mysql 
+sudo apt-get install php-mysql    #&#x5B89;&#x88C5;php&#x76F8;&#x5173;&#x7EC4;&#x4EF6;
 </code></pre>
 <p>4&#x3001;&#x5B89;&#x88C5;phpmyadmin&#xFF08;&#x53EF;&#x89C6;&#x5316;&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;&#x754C;&#x9762;&#xFF09;</p>
-<pre class="language-"><code class="lang-shell"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> phpmyadmin <span class="token parameter variable">-y</span> <span class="token function">sudo</span> <span class="token function">ln</span> <span class="token parameter variable">-s</span> /usr/share/phpmyadmin /var/www/html/phpmyadmin    <span class="token comment">#&#x5EFA;&#x7ACB; /var/www/html &#x4E0B;&#x7684;&#x8F6F;&#x8FDE;&#x63A5; </span>
-<span class="token function">sudo</span> systemctl restart mysql    <span class="token comment">#&#x91CD;&#x542F; MySQL &#x670D;&#x52A1; </span>
-<span class="token function">sudo</span> systemctl restart apache2.service    <span class="token comment">#&#x91CD;&#x542F; Apache &#x670D;&#x52A1;</span>
+<pre><code class="lang-shell">sudo apt-get install phpmyadmin -y sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin    #&#x5EFA;&#x7ACB; /var/www/html &#x4E0B;&#x7684;&#x8F6F;&#x8FDE;&#x63A5; 
+sudo systemctl restart mysql    #&#x91CD;&#x542F; MySQL &#x670D;&#x52A1; 
+sudo systemctl restart apache2.service    #&#x91CD;&#x542F; Apache &#x670D;&#x52A1;
 </code></pre>
 <ul>
 <li>&#x521B;&#x5EFA;&#x8F6F;&#x94FE;&#x63A5;&#x7684;&#x76EE;&#x7684;&#x662F;&#x8BA9;&#x6211;&#x4EEC;&#x5728;&#x8FDB;&#x5165;phpmyadmin&#x65F6;&#x66F4;&#x52A0;&#x7684;&#x65B9;&#x4FBF;&#x4E00;&#x70B9;&#xFF0C;&#x53EA;&#x8981;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x8F93;&#x5165;<code>http://IP&#x5730;&#x5740;/phpmyadmin</code></li>
 </ul>
 <h1 id="&#x521B;&#x5EFA;wordpress&#x6570;&#x636E;&#x5E93;">&#x521B;&#x5EFA;wordpress&#x6570;&#x636E;&#x5E93;</h1>
-<pre class="language-"><code class="lang-shell">mysql <span class="token parameter variable">-u</span> root <span class="token parameter variable">-p</span>             <span class="token comment">#&#x8FDB;&#x5165;mysqlroot&#x8D26;&#x6237;&#xFF0C;&#x521D;&#x6B21;&#x8FDB;&#x5165;&#x4F1A;&#x8BBE;&#x7F6E;&#x5BC6;&#x7801; </span>
-CREATE DATABASE &#x6570;&#x636E;&#x5E93;&#x540D;&#x79F0;<span class="token punctuation">;</span>    <span class="token comment">#&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93; </span>
-CREATE <span class="token environment constant">USER</span> &#x2018;&#x7528;&#x6237;&#x540D;&#x2019;@&#x2018;%&#x2019; IDENTIFIED BY &#x2018;&#x5BC6;&#x7801;&#x2019;<span class="token punctuation">;</span>    <span class="token comment">#&#x521B;&#x5EFA;&#x7528;&#x6237;&#xFF08;&#x8FDC;&#x7A0B;&#x7528;&#x6237;&#xFF09;&#x5E76;&#x8BBE;&#x7F6E;&#x5BC6;&#x7801;&#x7528;&#x4E8E;&#x8FDE;&#x63A5;wordpress </span>
-GRANT ALL PRIVILEGES ON &#x6570;&#x636E;&#x5E93;&#x540D;&#x79F0;.* TO &#x2018;&#x7528;&#x6237;&#x540D;&#x2019;@&#x2018;%&apos;<span class="token punctuation">;</span>    <span class="token comment">#&#x7ED9;&#x521B;&#x5EFA;&#x7684;&#x7528;&#x6237;&#x6743;&#x9650; </span>
-FLUSH PRIVILEGES<span class="token punctuation">;</span>             <span class="token comment">#&#x751F;&#x6548;&#x8BBE;&#x7F6E; </span>
-<span class="token builtin class-name">exit</span><span class="token punctuation">;</span>                         <span class="token comment">#&#x9000;&#x51FA;</span>
+<pre><code class="lang-shell">mysql -u root -p             #&#x8FDB;&#x5165;mysqlroot&#x8D26;&#x6237;&#xFF0C;&#x521D;&#x6B21;&#x8FDB;&#x5165;&#x4F1A;&#x8BBE;&#x7F6E;&#x5BC6;&#x7801; 
+CREATE DATABASE &#x6570;&#x636E;&#x5E93;&#x540D;&#x79F0;;    #&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93; 
+CREATE USER &#x2018;&#x7528;&#x6237;&#x540D;&#x2019;@&#x2018;%&#x2019; IDENTIFIED BY &#x2018;&#x5BC6;&#x7801;&#x2019;;    #&#x521B;&#x5EFA;&#x7528;&#x6237;&#xFF08;&#x8FDC;&#x7A0B;&#x7528;&#x6237;&#xFF09;&#x5E76;&#x8BBE;&#x7F6E;&#x5BC6;&#x7801;&#x7528;&#x4E8E;&#x8FDE;&#x63A5;wordpress 
+GRANT ALL PRIVILEGES ON &#x6570;&#x636E;&#x5E93;&#x540D;&#x79F0;.* TO &#x2018;&#x7528;&#x6237;&#x540D;&#x2019;@&#x2018;%&apos;;    #&#x7ED9;&#x521B;&#x5EFA;&#x7684;&#x7528;&#x6237;&#x6743;&#x9650; 
+FLUSH PRIVILEGES;             #&#x751F;&#x6548;&#x8BBE;&#x7F6E; 
+exit;                         #&#x9000;&#x51FA;
 </code></pre>
 <ul>
 <li>&#x8F93;&#x5165;&#x547D;&#x4EE4;&#x65F6;&#x6CE8;&#x610F;&#x6700;&#x540E;&#x7684;&#x2018;&#xFF1B;&#x2019;&#x53F7;&#xFF0C;&#x8FD8;&#x6709;&#x5728;&#x8D4B;&#x6743;&#x65F6;&#x6570;&#x636E;&#x5E93;&#x540D;&#x79F0;&#x540E;&#x9762;&#x7684;&#x2018;.*&#x2019;&#xFF0C;&#x521B;&#x5EFA;&#x6210;&#x529F;&#x4E4B;&#x540E;&#x53EF;&#x4EE5;&#x8FDB;&#x5165;phpmyadmin&#x540E;&#x53F0;&#x9A8C;&#x8BC1;&#x662F;&#x5426;&#x80FD;&#x591F;&#x767B;&#x5F55;&#x3002;</li>
@@ -3321,34 +3317,34 @@ FLUSH PRIVILEGES<span class="token punctuation">;</span>             <span class
 </ul>
 <p>wget &#x590D;&#x5236;&#x7684;&#x94FE;&#x63A5;</p>
 <p>tar -zxvf &#x538B;&#x7F29;&#x5305;&#x540D;</p>
-<pre class="language-"><code class="lang-shell"><span class="token function">sudo</span> <span class="token function">wget</span> https://cn.wordpress.org/latest-zh_CN.tar.gz 
-<span class="token function">sudo</span> <span class="token function">tar</span> <span class="token parameter variable">-zxvf</span> latest-zh_CN.tar.gz
+<pre><code class="lang-shell">sudo wget https://cn.wordpress.org/latest-zh_CN.tar.gz 
+sudo tar -zxvf latest-zh_CN.tar.gz
 </code></pre>
 <ul>
 <li>&#x5148;&#x5C06;apache&#x76EE;&#x5F55;&#x4E0B;&#x7684;index.php&#x8FDB;&#x884C;&#x91CD;&#x547D;&#x540D;&#xFF08;&#x76EE;&#x7684;&#x662F;&#x6539;&#x53D8;Apache&#x9ED8;&#x8BA4;&#x6253;&#x5F00;&#x7684;&#x7F51;&#x9875;&#xFF09;</li>
 </ul>
-<pre class="language-"><code class="lang-shell"><span class="token function">sudo</span> <span class="token function">mv</span> /var/www/html/index.html /var/www/html/index~.html
+<pre><code class="lang-shell">sudo mv /var/www/html/index.html /var/www/html/index~.html
 </code></pre>
 <ul>
 <li>&#x518D;&#x5C06;&#x89E3;&#x538B;&#x7684;wordpress&#x6587;&#x4EF6;&#x5168;&#x90E8;&#x79FB;&#x52A8;&#x5230;Apache&#x6587;&#x4EF6;&#x76EE;&#x5F55;&#x4E0B;</li>
 </ul>
-<pre class="language-"><code class="lang-shell"><span class="token function">sudo</span> <span class="token function">mv</span> wordpress/* /var/www/html/
+<pre><code class="lang-shell">sudo mv wordpress/* /var/www/html/
 </code></pre>
 <ul>
 <li>&#x7136;&#x540E;&#x7ED9;html&#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x8D4B;&#x6743;&#x9650;</li>
 </ul>
-<pre class="language-"><code class="lang-shell"><span class="token function">sudo</span> <span class="token function">chmod</span> <span class="token parameter variable">-R</span> <span class="token number">777</span> /var/www/html/    <span class="token comment">#shiji&#x5B9E;&#x9645;&#x4E0A;&#x4E0D;&#x7528;&#x8FD9;&#x4E48;&#x9AD8;&#x7684;&#x6743;&#x9650;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x8FD9;&#x91CC;&#x56FE;&#x4E2A;&#x65B9;&#x4FBF;&#x76F4;&#x63A5;&#x7ED9;&#x6700;&#x9AD8;&#x6743;&#x9650;</span>
+<pre><code class="lang-shell">sudo chmod -R 777 /var/www/html/    #shiji&#x5B9E;&#x9645;&#x4E0A;&#x4E0D;&#x7528;&#x8FD9;&#x4E48;&#x9AD8;&#x7684;&#x6743;&#x9650;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x8FD9;&#x91CC;&#x56FE;&#x4E2A;&#x65B9;&#x4FBF;&#x76F4;&#x63A5;&#x7ED9;&#x6700;&#x9AD8;&#x6743;&#x9650;
 </code></pre>
 <ul>
 <li>&#x91CD;&#x542F;Apache&#x670D;&#x52A1;&#xFF0C;&#x914D;&#x7F6E;&#x5B8C;&#x6210;</li>
 </ul>
-<pre class="language-"><code class="lang-shell"><span class="token function">sudo</span> systemctl restart apache2
+<pre><code class="lang-shell">sudo systemctl restart apache2
 </code></pre>
 <p>&#x914D;&#x7F6E;&#x5B8C;&#x540E;&#xFF0C;&#x5373;&#x53EF;&#x8FDB;&#x5165;&#x6D4F;&#x89C8;&#x5668;&#x914D;&#x7F6E;&#x7F51;&#x7AD9;&#x7684;&#x76F8;&#x5173;&#x914D;&#x7F6E;&#x4E86;&#xFF0C;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x8F93;&#x5165;IP&#x5730;&#x5740;&#xFF0C;&#x8FDB;&#x5165;wordpress&#x914D;&#x7F6E;&#xFF0C;&#x6309;&#x7167;&#x8981;&#x6C42;&#x586B;&#x5199;&#x4E4B;&#x524D;&#x521B;&#x5EFA;&#x7684;&#x6570;&#x636E;&#x5E93;&#x4FE1;&#x606F;&#xFF0C;&#x548C;&#x7F51;&#x7AD9;&#x4FE1;&#x606F;&#xFF0C;&#x5B8C;&#x6210;&#x540E;&#x4F60;&#x5C31;&#x80FD;&#x62E5;&#x6709;&#x4E00;&#x4E2A;&#x5C5E;&#x4E8E;&#x81EA;&#x5DF1;&#x7684;&#x7F51;&#x7AD9;&#x4E86;[&#x6492;&#x82B1;][&#x6492;&#x82B1;][&#x6492;&#x82B1;]</p>
 <h1 id="&#x7ED3;&#x8BED;">&#x7ED3;&#x8BED;</h1>
 <p>&#x5230;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x62E5;&#x6709;&#x4E86;&#x81EA;&#x5DF1;&#x7684;&#x7F51;&#x7AD9;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x6837;&#x5B50;&#x5E76;&#x4E0D;&#x7B97;&#x5DF2;&#x7ECF;&#x4E0A;&#x7EBF;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x8FD8;&#x6CA1;&#x6709;&#x57DF;&#x540D;&#xFF0C;&#x4E0B;&#x4E00;&#x6B65;&#x6211;&#x4EEC;&#x5C06;&#x4F1A;&#x7ED9;&#x7F51;&#x7AD9;&#x94FE;&#x63A5;&#x4E00;&#x4E2A;&#x57DF;&#x540D;&#xFF0C;&#x5B9E;&#x73B0;&#x57DF;&#x540D;&#x8BBF;&#x95EE;[&#x671F;&#x5F85;]&#x3002; </p>
-<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
-2024-11-23 23:08
+<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
+2025-04-06 16:47
 </span></footer>
                                 
                                 </section>
@@ -3392,7 +3388,7 @@ FLUSH PRIVILEGES<span class="token punctuation">;</span>             <span class
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Ubuntu系统网站搭建[LAMP]","categories":["系统运维","Linux"],"tags":["Linux","Ubuntu"],"permalink":"/posts/Ubuntu系统网站搭建[LAMP]/","date":"2023-03-13T14:34:32.000Z","updated":"2024-11-15T21:49:40.000Z","level":"1.3.1.19","depth":3,"next":{"title":"Ubuntu镜像源加速","level":"1.3.1.20","depth":3,"path":"系统运维/Linux/Ubuntu镜像源加速.md","ref":"系统运维/Linux/Ubuntu镜像源加速.md","articles":[]},"previous":{"title":"​Ubuntu系统网站搭建[LAMP]","level":"1.3.1.18","depth":3,"path":"系统运维/Linux/Ubuntu系统网站搭建[LAMP]%20- 副本.md","ref":"系统运维/Linux/Ubuntu系统网站搭建[LAMP]%20- 副本.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","prism","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"系统运维/Linux/Ubuntu系统网站搭建[LAMP].md","mtime":"2024-11-23T15:08:45.453Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T08:32:22.121Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Ubuntu系统网站搭建[LAMP]","categories":["系统运维","Linux"],"tags":["Linux","Ubuntu"],"permalink":"/posts/Ubuntu系统网站搭建[LAMP]/","date":"2023-03-13T14:34:32.000Z","updated":"2024-11-15T21:49:40.000Z","level":"1.3.1.19","depth":3,"next":{"title":"Ubuntu镜像源加速","level":"1.3.1.20","depth":3,"path":"系统运维/Linux/Ubuntu镜像源加速.md","ref":"系统运维/Linux/Ubuntu镜像源加速.md","articles":[]},"previous":{"title":"​Ubuntu系统网站搭建[LAMP]","level":"1.3.1.18","depth":3,"path":"系统运维/Linux/Ubuntu系统网站搭建[LAMP]%20- 副本.md","ref":"系统运维/Linux/Ubuntu系统网站搭建[LAMP]%20- 副本.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"系统运维/Linux/Ubuntu系统网站搭建[LAMP].md","mtime":"2025-04-06T08:47:52.259Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T09:05:17.990Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

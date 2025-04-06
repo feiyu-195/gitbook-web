@@ -53,10 +53,6 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
-                
-            
-                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -3273,77 +3269,77 @@
 </blockquote>
 <p><strong>&#x5E93;&#x5185;&#x51FD;&#x6570;&#xFF1A;</strong></p>
 <p>1.&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x89E3;&#x7684;&#x58F0;&#x660E;&#x5BF9;&#x8C61;&#xFF1A;</p>
-<pre class="language-"><code class="lang-python">s <span class="token operator">=</span> Solver<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<pre><code class="lang-python">s = Solver()
 </code></pre>
 <p>2.&#x6DFB;&#x52A0;&#x6761;&#x4EF6;&#xFF1A;</p>
-<pre class="language-"><code class="lang-python">s<span class="token punctuation">.</span>add<span class="token punctuation">(</span>&#x5224;&#x65AD;&#x516C;&#x5F0F;<span class="token punctuation">)</span>
+<pre><code class="lang-python">s.add(&#x5224;&#x65AD;&#x516C;&#x5F0F;)
 </code></pre>
 <p>3.&#x5224;&#x65AD;&#x662F;&#x5426;&#x6709;&#x89E3;&#xFF1A;</p>
-<pre class="language-"><code class="lang-python">s<span class="token punctuation">.</span>check<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># &#x5982;&#x679C;&#x6709;&#x89E3;,&#x5219;&#x53CD;&#x56DE;sate/sat &#x53CD;&#x4E4B; &#x8FD4;&#x56DE; unsate/unsat</span>
+<pre><code class="lang-python">s.check() <span class="hljs-comment"># &#x5982;&#x679C;&#x6709;&#x89E3;,&#x5219;&#x53CD;&#x56DE;sate/sat &#x53CD;&#x4E4B; &#x8FD4;&#x56DE; unsate/unsat</span>
 </code></pre>
 <p>4.&#x8FD4;&#x56DE;&#x6700;&#x540E;&#x7684;&#x89E3;&#xFF1A;</p>
-<pre class="language-"><code class="lang-python">result<span class="token operator">=</span>s<span class="token punctuation">.</span>modul<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+<pre><code class="lang-python">result=s.modul()
+print(result)
 </code></pre>
 <p>5.&#x58F0;&#x660E;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x672A;&#x77E5;&#x6570;&#xFF1A;</p>
-<pre class="language-"><code class="lang-python">a<span class="token punctuation">,</span> s<span class="token punctuation">,</span> d <span class="token operator">=</span> Ints<span class="token punctuation">(</span><span class="token string">&apos;a s d&apos;</span><span class="token punctuation">)</span><span class="token comment">#&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x2018;int&#x2019;&#x7C7B;&#x578B;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x4F46;&#x5176;&#x5B9E;&#x8FD0;&#x7B97;&#x65F6;&#x5019;&#x662F;&apos;ArithRef&apos;&#x7C7B;&#x578B;&#xFF0C;&#x5E76;&#x4E14;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;&#x6309;&#x4F4D;&#x8FD0;&#x7B97; </span>
-x <span class="token operator">=</span> Real<span class="token punctuation">(</span><span class="token string">&apos;x&apos;</span><span class="token punctuation">)</span>   <span class="token comment">#&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6709;&#x7406;&#x6570;&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#x3002; </span>
-y <span class="token operator">=</span> Real<span class="token punctuation">(</span><span class="token string">&apos;y&apos;</span><span class="token punctuation">)</span>
+<pre><code class="lang-python">a, s, d = Ints(<span class="hljs-string">&apos;a s d&apos;</span>)<span class="hljs-comment">#&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x2018;int&#x2019;&#x7C7B;&#x578B;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x4F46;&#x5176;&#x5B9E;&#x8FD0;&#x7B97;&#x65F6;&#x5019;&#x662F;&apos;ArithRef&apos;&#x7C7B;&#x578B;&#xFF0C;&#x5E76;&#x4E14;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;&#x6309;&#x4F4D;&#x8FD0;&#x7B97; </span>
+x = Real(<span class="hljs-string">&apos;x&apos;</span>)   <span class="hljs-comment">#&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6709;&#x7406;&#x6570;&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#x3002; </span>
+y = Real(<span class="hljs-string">&apos;y&apos;</span>)
 </code></pre>
 <p>z3&#x5E93;&#x6700;&#x725B;&#x903C;&#x7684;&#x6765;&#x4E86;:&#x4E0A;&#x9762;&#x4E24;&#x4E2A;&#x5C31;&#x662F;&#x6BD4;&#x6B63;&#x5E38;&#x591A;&#x5143;&#x672A;&#x77E5;&#x6570;&#x590D;&#x6742;&#x4E86;&#x70B9;&#xFF0C;&#x6C42;&#x89E3;&#x6309;&#x4F4D;&#x8FD0;&#x7B97;&#x624D;&#x662F;&#x8FD9;&#x4E2A;&#x5E93;&#x6700;&#x540A;&#x7684;&#xFF01;</p>
-<pre class="language-"><code class="lang-python">BitVecs<span class="token punctuation">(</span>name<span class="token punctuation">,</span>bv<span class="token punctuation">,</span>ctx<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span>     <span class="token comment"># &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6709;&#x591A;&#x53D8;&#x91CF;&#x7684;&#x4F4D;&#x5411;&#x91CF;&#xFF0C;name&#x662F;&#x540D;&#x5B57;&#xFF0C;bv&#x8868;&#x793A;&#x5927;&#x5C0F;</span>
-<span class="token comment"># a,b,c=s=BitVecs(&apos;a b c&apos;,32)</span>
-Bitvex<span class="token punctuation">(</span>name<span class="token punctuation">,</span>bv<span class="token punctuation">,</span>ctx<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span>      <span class="token comment"># &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4F4D;&#x5411;&#x91CF;&#xFF0C;name&#x662F;&#x4ED6;&#x7684;&#x540D;&#x5B57;&#xFF0C;bv&#x8868;&#x793A;&#x5927;&#x5C0F;</span>
-BitVecSort<span class="token punctuation">(</span>bv<span class="token punctuation">,</span>ctx<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span>       <span class="token comment"># &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x5927;&#x5C0F;&#x7684;&#x4F4D;&#x5411;&#x91CF;</span>
-BitVecVal<span class="token punctuation">(</span>val<span class="token punctuation">,</span>bv<span class="token punctuation">,</span>ctx<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span>    <span class="token comment"># &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4F4D;&#x5411;&#x91CF;&#xFF0C;&#x6709;&#x521D;&#x59CB;&#x503C;&#xFF0C;&#x6CA1;&#x540D;&#x5B57;</span>
+<pre><code class="lang-python">BitVecs(name,bv,ctx=<span class="hljs-keyword">None</span>)     <span class="hljs-comment"># &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6709;&#x591A;&#x53D8;&#x91CF;&#x7684;&#x4F4D;&#x5411;&#x91CF;&#xFF0C;name&#x662F;&#x540D;&#x5B57;&#xFF0C;bv&#x8868;&#x793A;&#x5927;&#x5C0F;</span>
+<span class="hljs-comment"># a,b,c=s=BitVecs(&apos;a b c&apos;,32)</span>
+Bitvex(name,bv,ctx=<span class="hljs-keyword">None</span>)      <span class="hljs-comment"># &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4F4D;&#x5411;&#x91CF;&#xFF0C;name&#x662F;&#x4ED6;&#x7684;&#x540D;&#x5B57;&#xFF0C;bv&#x8868;&#x793A;&#x5927;&#x5C0F;</span>
+BitVecSort(bv,ctx=<span class="hljs-keyword">None</span>)       <span class="hljs-comment"># &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x5927;&#x5C0F;&#x7684;&#x4F4D;&#x5411;&#x91CF;</span>
+BitVecVal(val,bv,ctx=<span class="hljs-keyword">None</span>)    <span class="hljs-comment"># &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4F4D;&#x5411;&#x91CF;&#xFF0C;&#x6709;&#x521D;&#x59CB;&#x503C;&#xFF0C;&#x6CA1;&#x540D;&#x5B57;</span>
 </code></pre>
 <p><strong>&#x6574;&#x578B;(Int)&#x65B9;&#x7A0B;&#x6C42;&#x89E3;</strong></p>
-<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> z3 <span class="token keyword">import</span> <span class="token operator">*</span>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> z3 <span class="hljs-keyword">import</span> *
 
-a<span class="token punctuation">,</span> s<span class="token punctuation">,</span> d <span class="token operator">=</span> Ints<span class="token punctuation">(</span><span class="token string">&apos;a s d&apos;</span><span class="token punctuation">)</span>
-x <span class="token operator">=</span> Solver<span class="token punctuation">(</span><span class="token punctuation">)</span>
-x<span class="token punctuation">.</span>add<span class="token punctuation">(</span>a<span class="token operator">-</span>d <span class="token operator">==</span> <span class="token number">18</span><span class="token punctuation">)</span>
-x<span class="token punctuation">.</span>add<span class="token punctuation">(</span>a<span class="token operator">+</span>s <span class="token operator">==</span> <span class="token number">12</span><span class="token punctuation">)</span>
-x<span class="token punctuation">.</span>add<span class="token punctuation">(</span>s<span class="token operator">-</span>d <span class="token operator">==</span> <span class="token number">20</span><span class="token punctuation">)</span>
-check <span class="token operator">=</span> x<span class="token punctuation">.</span>check<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>check<span class="token punctuation">)</span>
-model <span class="token operator">=</span> x<span class="token punctuation">.</span>model<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
-<span class="token comment"># sat</span>
-<span class="token comment"># [a = 5, d = -13, s = 7]</span>
+a, s, d = Ints(<span class="hljs-string">&apos;a s d&apos;</span>)
+x = Solver()
+x.add(a-d == <span class="hljs-number">18</span>)
+x.add(a+s == <span class="hljs-number">12</span>)
+x.add(s-d == <span class="hljs-number">20</span>)
+check = x.check()
+print(check)
+model = x.model()
+print(model)
+<span class="hljs-comment"># sat</span>
+<span class="hljs-comment"># [a = 5, d = -13, s = 7]</span>
 </code></pre>
 <p><strong>&#x6709;&#x7406;&#x6570;(Real)&#x578B;&#x89E3;&#x65B9;&#x7A0B;&#x6C42;&#x89E3;</strong></p>
-<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> z3 <span class="token keyword">import</span> <span class="token operator">*</span>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> z3 <span class="hljs-keyword">import</span> *
 
-x <span class="token operator">=</span> Real<span class="token punctuation">(</span><span class="token string">&apos;x&apos;</span><span class="token punctuation">)</span>
-y <span class="token operator">=</span> Real<span class="token punctuation">(</span><span class="token string">&apos;y&apos;</span><span class="token punctuation">)</span>
-s <span class="token operator">=</span> Solver<span class="token punctuation">(</span><span class="token punctuation">)</span>
-s<span class="token punctuation">.</span>add<span class="token punctuation">(</span>x<span class="token operator">**</span><span class="token number">2</span> <span class="token operator">+</span> y<span class="token operator">**</span><span class="token number">2</span> <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">)</span>
-s<span class="token punctuation">.</span>add<span class="token punctuation">(</span>x<span class="token operator">**</span><span class="token number">3</span> <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">)</span>
-check <span class="token operator">=</span> s<span class="token punctuation">.</span>check<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>check<span class="token punctuation">)</span>
-model <span class="token operator">=</span> s<span class="token punctuation">.</span>model<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
-<span class="token comment"># sat</span>
-<span class="token comment"># [y = -1.1885280594?, x = 1.2599210498?]</span>
+x = Real(<span class="hljs-string">&apos;x&apos;</span>)
+y = Real(<span class="hljs-string">&apos;y&apos;</span>)
+s = Solver()
+s.add(x**<span class="hljs-number">2</span> + y**<span class="hljs-number">2</span> == <span class="hljs-number">3</span>)
+s.add(x**<span class="hljs-number">3</span> == <span class="hljs-number">2</span>)
+check = s.check()
+print(check)
+model = s.model()
+print(model)
+<span class="hljs-comment"># sat</span>
+<span class="hljs-comment"># [y = -1.1885280594?, x = 1.2599210498?]</span>
 </code></pre>
 <p><strong>&#x4F4D;&#x5411;&#x91CF;(BitVec)&#x578B;&#x89E3;&#x65B9;&#x7A0B;</strong></p>
-<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> z3 <span class="token keyword">import</span> <span class="token operator">*</span>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> z3 <span class="hljs-keyword">import</span> *
 
-x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> z <span class="token operator">=</span> BitVecs<span class="token punctuation">(</span><span class="token string">&apos;x y z&apos;</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">)</span>
-s <span class="token operator">=</span> Solver<span class="token punctuation">(</span><span class="token punctuation">)</span>
-s<span class="token punctuation">.</span>add<span class="token punctuation">(</span>x <span class="token operator">^</span> y <span class="token operator">&amp;</span> z <span class="token operator">==</span> <span class="token number">12</span><span class="token punctuation">)</span>
-s<span class="token punctuation">.</span>add<span class="token punctuation">(</span>y <span class="token operator">&amp;</span> z <span class="token operator">&gt;&gt;</span> <span class="token number">3</span> <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">)</span>
-s<span class="token punctuation">.</span>add<span class="token punctuation">(</span>z <span class="token operator">^</span> y <span class="token operator">==</span> <span class="token number">4</span><span class="token punctuation">)</span>
-check <span class="token operator">=</span> s<span class="token punctuation">.</span>check<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>check<span class="token punctuation">)</span>
-model <span class="token operator">=</span> s<span class="token punctuation">.</span>model<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span>
-<span class="token comment"># sat</span>
-<span class="token comment"># [z = 27, y = 31, x = 23]</span>
+x, y, z = BitVecs(<span class="hljs-string">&apos;x y z&apos;</span>, <span class="hljs-number">8</span>)
+s = Solver()
+s.add(x ^ y &amp; z == <span class="hljs-number">12</span>)
+s.add(y &amp; z &gt;&gt; <span class="hljs-number">3</span> == <span class="hljs-number">3</span>)
+s.add(z ^ y == <span class="hljs-number">4</span>)
+check = s.check()
+print(check)
+model = s.model()
+print(model)
+<span class="hljs-comment"># sat</span>
+<span class="hljs-comment"># [z = 27, y = 31, x = 23]</span>
 </code></pre>
-<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
-2024-11-15 21:49
+<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
+2025-04-06 16:47
 </span></footer>
                                 
                                 </section>
@@ -3387,7 +3383,7 @@ model <span class="token operator">=</span> s<span class="token punctuation">.</
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"z3库（z3_solver）使用","date":"2024-03-13T14:23:12.000Z","updated":"2024-11-15T21:49:39.000Z","categories":["编程语言","python"],"tags":["python"],"permalink":"/posts/z3库（z3_solver）使用/","level":"1.5.2.4","depth":3,"next":{"title":"通过公钥文件获取n，e","level":"1.5.2.5","depth":3,"path":"编程语言/python/通过公钥文件获取n，e.md","ref":"编程语言/python/通过公钥文件获取n，e.md","articles":[]},"previous":{"title":"rjust()使用","level":"1.5.2.3","depth":3,"path":"编程语言/python/rjust(","ref":"编程语言/python/rjust(","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","prism","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"编程语言/python/z3库（z3_solver）使用.md","mtime":"2024-11-15T13:49:40.151Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T08:32:22.121Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"z3库（z3_solver）使用","date":"2024-03-13T14:23:12.000Z","updated":"2024-11-15T21:49:39.000Z","categories":["编程语言","python"],"tags":["python"],"permalink":"/posts/z3库（z3_solver）使用/","level":"1.5.2.4","depth":3,"next":{"title":"通过公钥文件获取n，e","level":"1.5.2.5","depth":3,"path":"编程语言/python/通过公钥文件获取n，e.md","ref":"编程语言/python/通过公钥文件获取n，e.md","articles":[]},"previous":{"title":"rjust()使用","level":"1.5.2.3","depth":3,"path":"编程语言/python/rjust(","ref":"编程语言/python/rjust(","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"编程语言/python/z3库（z3_solver）使用.md","mtime":"2025-04-06T08:47:52.273Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T09:05:17.990Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -53,10 +53,6 @@
                 
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
-                
-            
-                
                 <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -3290,16 +3286,16 @@ C++ &#x662F; C &#x7684;&#x4E00;&#x4E2A;<strong>&#x8D85;&#x96C6;</strong>&#xFF0C;
 <h2 id="&#x4E8C;&#x3001;c&#x57FA;&#x672C;&#x8BED;&#x6CD5;">&#x4E8C;&#x3001;C++&#x57FA;&#x672C;&#x8BED;&#x6CD5;</h2>
 <h3 id="c-&#x7A0B;&#x5E8F;&#x7ED3;&#x6784;">C++ &#x7A0B;&#x5E8F;&#x7ED3;&#x6784;</h3>
 <p>&#x8BA9;&#x6211;&#x4EEC;&#x770B;&#x4E00;&#x6BB5;&#x7B80;&#x5355;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x53EF;&#x4EE5;&#x8F93;&#x51FA;&#x5355;&#x8BCD; <em>Hello World</em>&#x3002;</p>
-<pre class="language-"><code class="lang-c++">#include <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iostream</span><span class="token punctuation">&gt;</span></span>
-using namespace std;
-// main() &#x662F;&#x7A0B;&#x5E8F;&#x5F00;&#x59CB;&#x6267;&#x884C;&#x7684;&#x5730;&#x65B9;
-int main() {
-    cout &lt;&lt; &quot;Hello World&quot;; // &#x8F93;&#x51FA; Hello World
-    return 0;
+<pre><code class="lang-c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+<span class="hljs-comment">// main() &#x662F;&#x7A0B;&#x5E8F;&#x5F00;&#x59CB;&#x6267;&#x884C;&#x7684;&#x5730;&#x65B9;</span>
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;Hello World&quot;</span>; <span class="hljs-comment">// &#x8F93;&#x51FA; Hello World</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
 }
 </code></pre>
 <ul>
-<li>C++ &#x8BED;&#x8A00;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E9B;&#x5934;&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E9B;&#x5934;&#x6587;&#x4EF6;&#x5305;&#x542B;&#x4E86;&#x7A0B;&#x5E8F;&#x4E2D;&#x5FC5;&#x9700;&#x7684;&#x6216;&#x6709;&#x7528;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x4E0A;&#x9762;&#x8FD9;&#x6BB5;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x5305;&#x542B;&#x4E86;&#x5934;&#x6587;&#x4EF6; <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iostream</span><span class="token punctuation">&gt;</span></span></code>&#x3002;</li>
+<li>C++ &#x8BED;&#x8A00;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E9B;&#x5934;&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E9B;&#x5934;&#x6587;&#x4EF6;&#x5305;&#x542B;&#x4E86;&#x7A0B;&#x5E8F;&#x4E2D;&#x5FC5;&#x9700;&#x7684;&#x6216;&#x6709;&#x7528;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x4E0A;&#x9762;&#x8FD9;&#x6BB5;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x5305;&#x542B;&#x4E86;&#x5934;&#x6587;&#x4EF6; <code>&lt;iostream&gt;</code>&#x3002;</li>
 <li>&#x4E0B;&#x4E00;&#x884C; <strong>using namespace std;</strong> &#x544A;&#x8BC9;&#x7F16;&#x8BD1;&#x5668;&#x4F7F;&#x7528; std &#x547D;&#x540D;&#x7A7A;&#x95F4;&#x3002;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x662F; C++ &#x4E2D;&#x4E00;&#x4E2A;&#x76F8;&#x5BF9;&#x65B0;&#x7684;&#x6982;&#x5FF5;&#x3002;</li>
 <li>&#x4E0B;&#x4E00;&#x884C; <strong>// main() &#x662F;&#x7A0B;&#x5E8F;&#x5F00;&#x59CB;&#x6267;&#x884C;&#x7684;&#x5730;&#x65B9;</strong> &#x662F;&#x4E00;&#x4E2A;&#x5355;&#x884C;&#x6CE8;&#x91CA;&#x3002;&#x5355;&#x884C;&#x6CE8;&#x91CA;&#x4EE5; // &#x5F00;&#x5934;&#xFF0C;&#x5728;&#x884C;&#x672B;&#x7ED3;&#x675F;&#x3002;</li>
 <li>&#x4E0B;&#x4E00;&#x884C; <strong>int main()</strong> &#x662F;&#x4E3B;&#x51FD;&#x6570;&#xFF0C;&#x7A0B;&#x5E8F;&#x4ECE;&#x8FD9;&#x91CC;&#x5F00;&#x59CB;&#x6267;&#x884C;&#x3002;</li>
@@ -3354,7 +3350,7 @@ int main() {
 </tbody>
 </table>
 <p>&#x5176;&#x5B9E; wchar_t &#x662F;&#x8FD9;&#x6837;&#x6765;&#x7684;&#xFF1A;</p>
-<pre class="language-"><code class="lang-c++">typedef short int wchar_t;
+<pre><code class="lang-c++"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">short</span> <span class="hljs-keyword">int</span> <span class="hljs-keyword">wchar_t</span>;
 </code></pre>
 <p>&#x6240;&#x4EE5; wchar_t &#x5B9E;&#x9645;&#x4E0A;&#x7684;&#x7A7A;&#x95F4;&#x662F;&#x548C; short int &#x4E00;&#x6837;&#x3002;
 &#x4E00;&#x4E9B;&#x57FA;&#x672C;&#x7C7B;&#x578B;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<strong>&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;</strong>&#x7C7B;&#x578B;&#x4FEE;&#x9970;&#x7B26;&#x8FDB;&#x884C;&#x4FEE;&#x9970;&#xFF1A;</p>
@@ -3363,21 +3359,21 @@ int main() {
 <li>unsigned</li>
 <li>short</li>
 <li>long<h3 id="typedef-&#x58F0;&#x660E;">typedef &#x58F0;&#x660E;</h3>
-&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <strong>typedef</strong> &#x4E3A;&#x4E00;&#x4E2A;&#x5DF2;&#x6709;&#x7684;&#x7C7B;&#x578B;&#x53D6;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x540D;&#x5B57;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x4F7F;&#x7528; typedef &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x65B0;&#x7C7B;&#x578B;&#x7684;&#x8BED;&#x6CD5;&#xFF1A;<pre class="language-"><code class="lang-c++">typedef type newname;
+&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <strong>typedef</strong> &#x4E3A;&#x4E00;&#x4E2A;&#x5DF2;&#x6709;&#x7684;&#x7C7B;&#x578B;&#x53D6;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x540D;&#x5B57;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x4F7F;&#x7528; typedef &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x65B0;&#x7C7B;&#x578B;&#x7684;&#x8BED;&#x6CD5;&#xFF1A;<pre><code class="lang-c++"><span class="hljs-keyword">typedef</span> type newname;
 </code></pre>
 </li>
 </ul>
 <p>&#x4F8B;&#x5982;&#xFF0C;&#x4E0B;&#x9762;&#x7684;&#x8BED;&#x53E5;&#x4F1A;&#x544A;&#x8BC9;&#x7F16;&#x8BD1;&#x5668;&#xFF0C;feet &#x662F; int &#x7684;&#x53E6;&#x4E00;&#x4E2A;&#x540D;&#x79F0;&#xFF1A;</p>
-<pre class="language-"><code class="lang-c++">typedef int feet;
+<pre><code class="lang-c++"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">int</span> feet;
 </code></pre>
 <p>&#x73B0;&#x5728;&#xFF0C;&#x4E0B;&#x9762;&#x7684;&#x58F0;&#x660E;&#x662F;&#x5B8C;&#x5168;&#x5408;&#x6CD5;&#x7684;&#xFF0C;&#x5B83;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x6574;&#x578B;&#x53D8;&#x91CF; distance&#xFF1A;</p>
-<pre class="language-"><code class="lang-c++">feet distance;
+<pre><code class="lang-c++">feet distance;
 </code></pre>
 <h3 id="&#x679A;&#x4E3E;&#x7C7B;&#x578B;">&#x679A;&#x4E3E;&#x7C7B;&#x578B;</h3>
 <p><em>&#x679A;&#x4E3E;&#x7C7B;&#x578B;(enumeration)</em>&#x662F;C++&#x4E2D;&#x7684;&#x4E00;&#x79CD;<strong>&#x6D3E;&#x751F;&#x6570;&#x636E;&#x7C7B;&#x578B;</strong>&#xFF0C;&#x5B83;&#x662F;&#x7531;&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x7684;&#x82E5;&#x5E72;&#x679A;&#x4E3E;&#x5E38;&#x91CF;&#x7684;&#x96C6;&#x5408;&#x3002;
 &#x5982;&#x679C;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x53EA;&#x6709;&#x51E0;&#x79CD;&#x53EF;&#x80FD;&#x7684;&#x503C;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x4E3A;&#x679A;&#x4E3E;(enumeration)&#x7C7B;&#x578B;&#x3002;&#x6240;&#x8C13;&quot;&#x679A;&#x4E3E;&quot;&#x662F;&#x6307;&#x5C06;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x4E00;&#x4E00;&#x5217;&#x4E3E;&#x51FA;&#x6765;&#xFF0C;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x53EA;&#x80FD;&#x5728;&#x5217;&#x4E3E;&#x51FA;&#x6765;&#x7684;&#x503C;&#x7684;&#x8303;&#x56F4;&#x5185;&#x3002;
 &#x521B;&#x5EFA;&#x679A;&#x4E3E;&#xFF0C;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x5173;&#x952E;&#x5B57; <strong>enum</strong>&#x3002;&#x679A;&#x4E3E;&#x7C7B;&#x578B;&#x7684;&#x4E00;&#x822C;&#x5F62;&#x5F0F;&#x4E3A;&#xFF1A;</p>
-<pre class="language-"><code class="lang-c++">enum &#x679A;&#x4E3E;&#x540D;{ 
+<pre><code class="lang-c++"><span class="hljs-keyword">enum</span> &#x679A;&#x4E3E;&#x540D;{ 
      &#x6807;&#x8BC6;&#x7B26;[=&#x6574;&#x578B;&#x5E38;&#x6570;], 
      &#x6807;&#x8BC6;&#x7B26;[=&#x6574;&#x578B;&#x5E38;&#x6570;], 
 ... 
@@ -3386,12 +3382,12 @@ int main() {
 </code></pre>
 <p>&#x5982;&#x679C;&#x679A;&#x4E3E;&#x6CA1;&#x6709;&#x521D;&#x59CB;&#x5316;, &#x5373;&#x7701;&#x6389;&quot;=&#x6574;&#x578B;&#x5E38;&#x6570;&quot;&#x65F6;, &#x5219;&#x4ECE;&#x7B2C;&#x4E00;&#x4E2A;&#x6807;&#x8BC6;&#x7B26;&#x5F00;&#x59CB;&#x3002;
 &#x4F8B;&#x5982;&#xFF0C;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x989C;&#x8272;&#x679A;&#x4E3E;&#xFF0C;&#x53D8;&#x91CF; c &#x7684;&#x7C7B;&#x578B;&#x4E3A; color&#x3002;&#x6700;&#x540E;&#xFF0C;c &#x88AB;&#x8D4B;&#x503C;&#x4E3A; &quot;blue&quot;&#x3002;</p>
-<pre class="language-"><code class="lang-c++">enum color { red, green, blue } c;
+<pre><code class="lang-c++"><span class="hljs-keyword">enum</span> color { red, green, blue } c;
 c = blue;
 </code></pre>
 <p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x540D;&#x79F0;&#x7684;&#x503C;&#x4E3A; 0&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x540D;&#x79F0;&#x7684;&#x503C;&#x4E3A; 1&#xFF0C;&#x7B2C;&#x4E09;&#x4E2A;&#x540D;&#x79F0;&#x7684;&#x503C;&#x4E3A; 2&#xFF0C;&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x60A8;&#x4E5F;&#x53EF;&#x4EE5;&#x7ED9;&#x540D;&#x79F0;&#x8D4B;&#x4E88;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x503C;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x521D;&#x59CB;&#x503C;&#x5373;&#x53EF;&#x3002;
 &#x4F8B;&#x5982;&#xFF0C;&#x5728;&#x4E0B;&#x9762;&#x7684;&#x679A;&#x4E3E;&#x4E2D;&#xFF0C;<strong>green</strong> &#x7684;&#x503C;&#x4E3A; 5&#x3002;</p>
-<pre class="language-"><code class="lang-c++">enum color { red, green=5, blue };
+<pre><code class="lang-c++"><span class="hljs-keyword">enum</span> color { red, green=<span class="hljs-number">5</span>, blue };
 </code></pre>
 <p>&#x5728;&#x8FD9;&#x91CC;&#xFF0C;<strong>blue</strong> &#x7684;&#x503C;&#x4E3A; 6&#xFF0C;&#x56E0;&#x4E3A;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6BCF;&#x4E2A;&#x540D;&#x79F0;&#x90FD;&#x4F1A;&#x6BD4;&#x5B83;&#x524D;&#x9762;&#x4E00;&#x4E2A;&#x540D;&#x79F0;&#x5927; 1&#xFF0C;&#x4F46; red &#x7684;&#x503C;&#x4F9D;&#x7136;&#x4E3A; 0&#x3002;</p>
 <h3 id="&#x7C7B;&#x578B;&#x8F6C;&#x6362;">&#x7C7B;&#x578B;&#x8F6C;&#x6362;</h3>
@@ -3402,30 +3398,30 @@ C++ &#x4E2D;&#x6709;&#x56DB;&#x79CD;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#xFF1A;<str
 &#x9759;&#x6001;&#x8F6C;&#x6362;&#x901A;&#x5E38;&#x7528;&#x4E8E;<em>&#x6BD4;&#x8F83;&#x7C7B;&#x578B;&#x76F8;&#x4F3C;&#x7684;&#x5BF9;&#x8C61;&#x4E4B;&#x95F4;&#x7684;&#x8F6C;&#x6362;</em>&#xFF0C;&#x4F8B;&#x5982;&#x5C06; int &#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E3A; float &#x7C7B;&#x578B;&#x3002;
 &#x9759;&#x6001;&#x8F6C;&#x6362;<em>&#x4E0D;&#x8FDB;&#x884C;&#x4EFB;&#x4F55;&#x8FD0;&#x884C;&#x65F6;&#x7C7B;&#x578B;&#x68C0;&#x67E5;</em>&#xFF0C;&#x56E0;&#x6B64;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x8FD0;&#x884C;&#x65F6;&#x9519;&#x8BEF;&#x3002;</p>
 <p><strong>&#x5B9E;&#x4F8B;</strong></p>
-<pre class="language-"><code class="lang-c++">int i = 10; 
-float f = static_cast<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>float</span><span class="token punctuation">&gt;</span></span>(i); // &#x9759;&#x6001;&#x5C06;int&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E3A;float&#x7C7B;&#x578B;
+<pre><code class="lang-c++"><span class="hljs-keyword">int</span> i = <span class="hljs-number">10</span>; 
+<span class="hljs-keyword">float</span> f = <span class="hljs-keyword">static_cast</span>&lt;<span class="hljs-keyword">float</span>&gt;(i); <span class="hljs-comment">// &#x9759;&#x6001;&#x5C06;int&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E3A;float&#x7C7B;&#x578B;</span>
 </code></pre>
 <h4 id="&#x52A8;&#x6001;&#x8F6C;&#x6362;&#xFF08;dynamic-cast&#xFF09;">&#x52A8;&#x6001;&#x8F6C;&#x6362;&#xFF08;Dynamic Cast&#xFF09;</h4>
 <p>&#x52A8;&#x6001;&#x8F6C;&#x6362;&#x901A;&#x5E38;&#x7528;&#x4E8E;&#x5C06;<em>&#x4E00;&#x4E2A;&#x57FA;&#x7C7B;&#x6307;&#x9488;&#x6216;&#x5F15;&#x7528;&#x8F6C;&#x6362;&#x4E3A;&#x6D3E;&#x751F;&#x7C7B;&#x6307;&#x9488;&#x6216;&#x5F15;&#x7528;</em>&#x3002;&#x52A8;&#x6001;&#x8F6C;&#x6362;&#x5728;&#x8FD0;&#x884C;&#x65F6;<em>&#x8FDB;&#x884C;&#x7C7B;&#x578B;&#x68C0;&#x67E5;</em>&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x80FD;&#x8FDB;&#x884C;&#x8F6C;&#x6362;&#x5219;&#x8FD4;&#x56DE;&#x7A7A;&#x6307;&#x9488;&#x6216;&#x5F15;&#x53D1;&#x5F02;&#x5E38;&#x3002;</p>
 <p><strong>&#x5B9E;&#x4F8B;</strong></p>
-<pre class="language-"><code class="lang-c++">class Base {};
-class Derived : public Base {};
-Base* ptr_base = new Derived; Derived*
-ptr_derived = dynamic_cast<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Derived*</span><span class="token punctuation">&gt;</span></span>(ptr_base); // &#x5C06;&#x57FA;&#x7C7B;&#x6307;&#x9488;&#x8F6C;&#x6362;&#x4E3A;&#x6D3E;&#x751F;&#x7C7B;&#x6307;&#x9488;
+<pre><code class="lang-c++"><span class="hljs-keyword">class</span> Base {};
+<span class="hljs-keyword">class</span> Derived : <span class="hljs-keyword">public</span> Base {};
+Base* ptr_base = <span class="hljs-keyword">new</span> Derived; Derived*
+ptr_derived = <span class="hljs-keyword">dynamic_cast</span>&lt;Derived*&gt;(ptr_base); <span class="hljs-comment">// &#x5C06;&#x57FA;&#x7C7B;&#x6307;&#x9488;&#x8F6C;&#x6362;&#x4E3A;&#x6D3E;&#x751F;&#x7C7B;&#x6307;&#x9488;</span>
 </code></pre>
 <h4 id="&#x5E38;&#x91CF;&#x8F6C;&#x6362;&#xFF08;const-cast&#xFF09;">&#x5E38;&#x91CF;&#x8F6C;&#x6362;&#xFF08;Const Cast&#xFF09;</h4>
 <p>&#x5E38;&#x91CF;&#x8F6C;&#x6362;&#x7528;&#x4E8E;<strong>&#x5C06; const &#x7C7B;&#x578B;&#x7684;&#x5BF9;&#x8C61;&#x8F6C;&#x6362;&#x4E3A;&#x975E; const &#x7C7B;&#x578B;&#x7684;&#x5BF9;&#x8C61;</strong>&#x3002;
 &#x5E38;&#x91CF;&#x8F6C;&#x6362;<strong>&#x53EA;&#x80FD;</strong>&#x7528;&#x4E8E;&#x8F6C;&#x6362;&#x6389; const &#x5C5E;&#x6027;&#xFF0C;&#x4E0D;&#x80FD;&#x6539;&#x53D8;&#x5BF9;&#x8C61;&#x7684;&#x7C7B;&#x578B;&#x3002;</p>
 <p><strong>&#x5B9E;&#x4F8B;</strong></p>
-<pre class="language-"><code class="lang-c++">const int i = 10;
-int&amp; r = const_cast<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>int&amp;</span><span class="token punctuation">&gt;</span></span>(i); // &#x5E38;&#x91CF;&#x8F6C;&#x6362;&#xFF0C;&#x5C06;const int&#x8F6C;&#x6362;&#x4E3A;int
+<pre><code class="lang-c++"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> i = <span class="hljs-number">10</span>;
+<span class="hljs-keyword">int</span>&amp; r = <span class="hljs-keyword">const_cast</span>&lt;<span class="hljs-keyword">int</span>&amp;&gt;(i); <span class="hljs-comment">// &#x5E38;&#x91CF;&#x8F6C;&#x6362;&#xFF0C;&#x5C06;const int&#x8F6C;&#x6362;&#x4E3A;int</span>
 </code></pre>
 <h4 id="&#x91CD;&#x65B0;&#x89E3;&#x91CA;&#x8F6C;&#x6362;&#xFF08;reinterpret-cast&#xFF09;">&#x91CD;&#x65B0;&#x89E3;&#x91CA;&#x8F6C;&#x6362;&#xFF08;Reinterpret Cast&#xFF09;</h4>
 <p>&#x91CD;&#x65B0;&#x89E3;&#x91CA;&#x8F6C;&#x6362;&#x5C06;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x503C;&#x91CD;&#x65B0;&#x89E3;&#x91CA;&#x4E3A;&#x53E6;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x503C;&#xFF0C;&#x901A;&#x5E38;<strong>&#x7528;&#x4E8E;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4E4B;&#x95F4;&#x8FDB;&#x884C;&#x8F6C;&#x6362;</strong>&#x3002;
 &#x91CD;&#x65B0;&#x89E3;&#x91CA;&#x8F6C;&#x6362;<em>&#x4E0D;&#x8FDB;&#x884C;&#x4EFB;&#x4F55;&#x7C7B;&#x578B;&#x68C0;&#x67E5;</em>&#xFF0C;&#x56E0;&#x6B64;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x672A;&#x5B9A;&#x4E49;&#x7684;&#x884C;&#x4E3A;&#x3002;</p>
 <p><strong>&#x5B9E;&#x4F8B;</strong></p>
-<pre class="language-"><code class="lang-c++">int i = 10;
-float f = reinterpret_cast<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>float&amp;</span><span class="token punctuation">&gt;</span></span>(i); // &#x91CD;&#x65B0;&#x89E3;&#x91CA;&#x5C06;int&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E3A;float&#x7C7B;&#x578B;
+<pre><code class="lang-c++"><span class="hljs-keyword">int</span> i = <span class="hljs-number">10</span>;
+<span class="hljs-keyword">float</span> f = <span class="hljs-keyword">reinterpret_cast</span>&lt;<span class="hljs-keyword">float</span>&amp;&gt;(i); <span class="hljs-comment">// &#x91CD;&#x65B0;&#x89E3;&#x91CA;&#x5C06;int&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E3A;float&#x7C7B;&#x578B;</span>
 </code></pre>
 <h2 id="&#x4E09;&#x3001;c&#x53D8;&#x91CF;&#x7C7B;&#x578B;">&#x4E09;&#x3001;C++&#x53D8;&#x91CF;&#x7C7B;&#x578B;</h2>
 <p>C++ &#x4E5F;&#x5141;&#x8BB8;&#x5B9A;&#x4E49;&#x5404;&#x79CD;&#x5176;&#x4ED6;&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x6BD4;&#x5982;<strong>&#x679A;&#x4E3E;&#x3001;&#x6307;&#x9488;&#x3001;&#x6570;&#x7EC4;&#x3001;&#x5F15;&#x7528;&#x3001;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3001;&#x7C7B;</strong>&#x7B49;&#x7B49;&#xFF0C;&#x8FD9;&#x5C06;&#x4F1A;&#x5728;&#x540E;&#x7EED;&#x7684;&#x7AE0;&#x8282;&#x4E2D;&#x8FDB;&#x884C;&#x8BB2;&#x89E3;&#x3002;</p>
@@ -3786,8 +3782,8 @@ float f = reinterpret_cast<span class="token tag"><span class="token tag"><span 
 </tr>
 </tbody>
 </table>
-<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
-2024-11-15 21:39
+<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
+2025-04-06 16:47
 </span></footer>
                                 
                                 </section>
@@ -3831,7 +3827,7 @@ float f = reinterpret_cast<span class="token tag"><span class="token tag"><span 
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"C++基本语法","date":"2024-03-13T14:22:52.000Z","updated":"2024-11-15T21:39:03.000Z","categories":["编程语言","CCPlusPlus","CPlusPlus"],"tags":["C语言"],"permalink":"/posts/CPlusPlus基本语法/","level":"1.5.1.1.2","depth":4,"next":{"title":"剖析cout","level":"1.5.1.1.3","depth":4,"path":"编程语言/C++/C++/剖析cout.md","ref":"编程语言/C++/C++/剖析cout.md","articles":[]},"previous":{"title":"ctime-time.h","level":"1.5.1.1.1.4","depth":5,"path":"编程语言/C++/C++/C++文件头/ctime-time.h.md","ref":"编程语言/C++/C++/C++文件头/ctime-time.h.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","prism","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"编程语言/C++/C++/C++基本语法.md","mtime":"2024-11-15T13:39:05.574Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T08:32:22.121Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"C++基本语法","date":"2024-03-13T14:22:52.000Z","updated":"2024-11-15T21:39:03.000Z","categories":["编程语言","CCPlusPlus","CPlusPlus"],"tags":["C语言"],"permalink":"/posts/CPlusPlus基本语法/","level":"1.5.1.1.2","depth":4,"next":{"title":"剖析cout","level":"1.5.1.1.3","depth":4,"path":"编程语言/C++/C++/剖析cout.md","ref":"编程语言/C++/C++/剖析cout.md","articles":[]},"previous":{"title":"ctime-time.h","level":"1.5.1.1.1.4","depth":5,"path":"编程语言/C++/C++/C++文件头/ctime-time.h.md","ref":"编程语言/C++/C++/C++文件头/ctime-time.h.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"编程语言/C++/C++/C++基本语法.md","mtime":"2025-04-06T08:47:52.260Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T09:05:17.990Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

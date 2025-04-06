@@ -53,10 +53,6 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
-                
-            
-                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -3270,7 +3266,7 @@
 <p>KVM(Kernel-based Virtual Machine, &#x5373;&#x5185;&#x6838;&#x7EA7;&#x865A;&#x62DF;&#x673A;) &#x662F;&#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x7684;&#x7CFB;&#x7EDF;&#x865A;&#x62DF;&#x5316;&#x6A21;&#x5757;&#x3002;</p>
 <p>QEMU&#x662F;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x865A;&#x62DF;&#x5316;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;&#x4ECE;&#x8FD9;&#x4E2A;&#x89D2;&#x5EA6;&#x5B83;&#x5E76;&#x4E0D;&#x4F9D;&#x8D56;KVM&#x3002;&#x800C;KVM&#x662F;&#x53E6;&#x4E00;&#x5957;&#x865A;&#x62DF;&#x5316;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;&#x4E0D;&#x8FC7;&#x56E0;&#x4E3A;&#x8FD9;&#x4E2A;&#x65B9;&#x6848;&#x5B9E;&#x9645;&#x4E0A;&#x53EA;&#x5B9E;&#x73B0;&#x4E86;&#x5185;&#x6838;&#x4E2D;&#x5BF9;&#x5904;&#x7406;&#x5668;&#xFF08;Intel VT&#xFF09;, AMD SVM)&#x865A;&#x62DF;&#x5316;&#x7279;&#x6027;&#x7684;&#x652F;&#x6301;&#xFF0C;&#x6362;&#x8A00;&#x4E4B;&#xFF0C;&#x5B83;&#x7F3A;&#x4E4F;&#x8BBE;&#x5907;&#x865A;&#x62DF;&#x5316;&#x4EE5;&#x53CA;&#x76F8;&#x5E94;&#x7684;&#x7528;&#x6237;&#x7A7A;&#x95F4;&#x7BA1;&#x7406;&#x865A;&#x62DF;&#x673A;&#x7684;&#x5DE5;&#x5177;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x501F;&#x7528;&#x4E86;QEMU&#x7684;&#x4EE3;&#x7801;&#x5E76;&#x52A0;&#x4EE5;&#x7CBE;&#x7B80;&#xFF0C;&#x8FDE;&#x540C;KVM&#x4E00;&#x8D77;&#x6784;&#x6210;&#x4E86;&#x53E6;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x865A;&#x62DF;&#x5316;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF1A;KVM + QEMU&#x3002;</p>
 <p>&#x8981;&#x4F7F;&#x7528;&#x8D77;&#x6765;&#xFF0C;&#x9700;&#x8981;&#x786C;&#x4EF6;&#x652F;&#x6301;&#xFF0C;&#x5E76;&#x4E14;&#x9700;&#x8981;&#x52A0;&#x8F7D;&#x76F8;&#x5E94;&#x7684;&#x6A21;&#x5757;&#x3002;&#x6309;&#x4EE5;&#x4E0B;&#x7684;&#x6B65;&#x9AA4;&#x53BB;&#x68C0;&#x6D4B;&#x5B89;&#x88C5;&#x5373;&#x53EF;&#x3002;</p>
-<pre class="language-"><code class="lang-shell"><span class="token function">sudo</span> pacman <span class="token parameter variable">-S</span> qemu libvirt ovmf virt-manager dnsmasq bridge-utils openbsd-netcat
+<pre><code class="lang-shell">sudo pacman -S qemu libvirt ovmf virt-manager dnsmasq bridge-utils openbsd-netcat
 </code></pre>
 <ul>
 <li>kvm &#x8D1F;&#x8D23;CPU&#x548C;&#x5185;&#x5B58;&#x7684;&#x865A;&#x62DF;&#x5316;</li>
@@ -3284,41 +3280,41 @@
 <ul>
 <li>&#x542F;&#x7528;&#x670D;&#x52A1;&#x5E76;&#x8BBE;&#x7F6E;&#x5F00;&#x673A;&#x81EA;&#x542F;&#x52A8;</li>
 </ul>
-<pre class="language-"><code class="lang-shell"><span class="token function">sudo</span> systemctl <span class="token builtin class-name">enable</span> libvirtd.service
-<span class="token function">sudo</span> systemctl start libvirtd.service
+<pre><code class="lang-shell">sudo systemctl enable libvirtd.service
+sudo systemctl start libvirtd.service
 </code></pre>
 <ul>
 <li>&#x67E5;&#x770B;&#x8FD0;&#x884C;&#x72B6;&#x6001;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">systemctl status libvirtd.service
+<pre><code class="lang-shell">systemctl status libvirtd.service
 </code></pre>
 <h1 id="&#x914D;&#x7F6E;&#x666E;&#x901A;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;kvm">&#x914D;&#x7F6E;&#x666E;&#x901A;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;KVM</h1>
 <ul>
 <li>&#x6253;&#x5F00;/etc/libvirt/libvirtd.conf&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x7F16;&#x8F91;&#x3002;</li>
 </ul>
-<pre class="language-"><code class="lang-shell"><span class="token function">sudo</span> pacman <span class="token parameter variable">-S</span> <span class="token function">vim</span>
-<span class="token function">sudo</span> <span class="token function">vim</span> /etc/libvirt/libvirtd.conf
+<pre><code class="lang-shell">sudo pacman -S vim
+sudo vim /etc/libvirt/libvirtd.conf
 </code></pre>
 <ul>
 <li>&#x5C06;UNIX&#x57DF;&#x5957;&#x63A5;&#x5B57;&#x7EC4;&#x6240;&#x6709;&#x6743;&#x8BBE;&#x7F6E;&#x4E3A;libvirt&#xFF08;&#x7B2C;85&#x884C;&#x5DE6;&#x53F3;&#xFF09;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">unix_sock_group <span class="token operator">=</span> <span class="token string">&quot;libvirt&quot;</span>
+<pre><code class="lang-shell">unix_sock_group = &quot;libvirt&quot;
 </code></pre>
 <ul>
 <li>&#x4E3A;R/W&#x5957;&#x63A5;&#x5B57;&#x8BBE;&#x7F6E;UNIX&#x5957;&#x63A5;&#x5B57;&#x6743;&#x9650;&#xFF08;&#x7B2C;102&#x884C;&#x9644;&#x8FD1;&#xFF09;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">unix_sock_rw_perms <span class="token operator">=</span> <span class="token string">&quot;0770&quot;</span>
+<pre><code class="lang-shell">unix_sock_rw_perms = &quot;0770&quot;
 </code></pre>
 <ul>
 <li>&#x5C06;&#x5F53;&#x524D;&#x7528;&#x6237;&#x5E10;&#x6237;&#x6DFB;&#x52A0;&#x5230;libvirt&#x7EC4;</li>
 </ul>
-<pre class="language-"><code class="lang-shell"><span class="token function">sudo</span> <span class="token function">usermod</span> <span class="token parameter variable">-a</span> <span class="token parameter variable">-G</span> libvirt <span class="token variable"><span class="token variable">$(</span><span class="token function">whoami</span><span class="token variable">)</span></span>
+<pre><code class="lang-shell">sudo usermod -a -G libvirt $(whoami)
 newgrp libvirt
 </code></pre>
 <ul>
 <li>&#x91CD;&#x65B0;&#x542F;&#x52A8;libvirt&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#x3002;</li>
 </ul>
-<pre class="language-"><code class="lang-shell"><span class="token function">sudo</span> systemctl restart libvirtd.service
+<pre><code class="lang-shell">sudo systemctl restart libvirtd.service
 </code></pre>
 <h1 id="&#x542F;&#x7528;&#x5D4C;&#x5957;&#x865A;&#x62DF;&#x5316;&#xFF08;&#x53EF;&#x9009;&#xFF09;">&#x542F;&#x7528;&#x5D4C;&#x5957;&#x865A;&#x62DF;&#x5316;&#xFF08;&#x53EF;&#x9009;&#xFF09;</h1>
 <ul>
@@ -3326,41 +3322,41 @@ newgrp libvirt
 &#x5982;&#x56FE;&#x6240;&#x793A;&#xFF0C;&#x901A;&#x8FC7;&#x542F;&#x7528;&#x5185;&#x6838;&#x6A21;&#x5757;&#x4E3A;kvm_intel / kvm_amd&#x542F;&#x7528;&#x5D4C;&#x5957;&#x865A;&#x62DF;&#x5316;&#x3002;</li>
 </ul>
 <p>&#x4E00;&#x822C;&#x4E0D;&#x4F1A;&#x8FD9;&#x6837;&#x641E;&#x3002;</p>
-<pre class="language-"><code class="lang-shell"><span class="token comment">### Intel Processor ###</span>
-<span class="token function">sudo</span> modprobe <span class="token parameter variable">-r</span> kvm_intel
-<span class="token function">sudo</span> modprobe kvm_intel <span class="token assign-left variable">nested</span><span class="token operator">=</span><span class="token number">1</span>
+<pre><code class="lang-shell">### Intel Processor ###
+sudo modprobe -r kvm_intel
+sudo modprobe kvm_intel nested=1
 
-<span class="token comment">### AMD Processor ###</span>
-<span class="token function">sudo</span> modprobe <span class="token parameter variable">-r</span> kvm_amd
-<span class="token function">sudo</span> modprobe kvm_amd <span class="token assign-left variable">nested</span><span class="token operator">=</span><span class="token number">1</span>
+### AMD Processor ###
+sudo modprobe -r kvm_amd
+sudo modprobe kvm_amd nested=1
 </code></pre>
 <ul>
 <li>&#x8981;&#x4F7F;&#x6B64;&#x914D;&#x7F6E;&#x6301;&#x4E45;&#x5316;&#xFF0C;&#x8BF7;&#x8FD0;&#x884C;&#xFF1A;</li>
 </ul>
-<pre class="language-"><code class="lang-shell"><span class="token builtin class-name">echo</span> <span class="token string">&quot;options kvm-intel nested=1&quot;</span> <span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">tee</span> /etc/modprobe.d/kvm-intel.conf
+<pre><code class="lang-shell">echo &quot;options kvm-intel nested=1&quot; | sudo tee /etc/modprobe.d/kvm-intel.conf
 </code></pre>
 <ul>
 <li>&#x786E;&#x8BA4;&#x201C;&#x5D4C;&#x5957;&#x865A;&#x62DF;&#x5316;&#x201D;&#x8BBE;&#x7F6E;&#x4E3A;&#x201C;yes&#x201D;&#xFF1A;</li>
 </ul>
-<pre class="language-"><code class="lang-shell"><span class="token comment">## Intel Processor ###</span>
-$ systool <span class="token parameter variable">-m</span> kvm_intel <span class="token parameter variable">-v</span> <span class="token operator">|</span> <span class="token function">grep</span> nested
-    nested              <span class="token operator">=</span> <span class="token string">&quot;Y&quot;</span>
-    nested_early_check  <span class="token operator">=</span> <span class="token string">&quot;N&quot;</span>
-$ <span class="token function">cat</span> /sys/module/kvm_intel/parameters/nested
+<pre><code class="lang-shell">## Intel Processor ###
+$ systool -m kvm_intel -v | grep nested
+    nested              = &quot;Y&quot;
+    nested_early_check  = &quot;N&quot;
+$ cat /sys/module/kvm_intel/parameters/nested
 Y
 
-<span class="token comment">### AMD Processor ###</span>
-$ systool <span class="token parameter variable">-m</span> kvm_amd <span class="token parameter variable">-v</span> <span class="token operator">|</span> <span class="token function">grep</span> nested
-    nested              <span class="token operator">=</span> <span class="token string">&quot;Y&quot;</span>
-    nested_early_check  <span class="token operator">=</span> <span class="token string">&quot;N&quot;</span>
-$ <span class="token function">cat</span> /sys/module/kvm_amd/parameters/nested 
+### AMD Processor ###
+$ systool -m kvm_amd -v | grep nested
+    nested              = &quot;Y&quot;
+    nested_early_check  = &quot;N&quot;
+$ cat /sys/module/kvm_amd/parameters/nested 
 Y
 </code></pre>
 <h1 id="&#x5728;arch-linux-&#x4E0A;&#x4F7F;&#x7528;kvm">&#x5728;Arch Linux &#x4E0A;&#x4F7F;&#x7528;KVM</h1>
 <p>&#x81F3;&#x6B64;&#xFF0C;&#x5DF2;&#x7ECF;&#x5728;Arch Linux&#x4E0A;&#x6210;&#x529F;&#x5B89;&#x88C5;&#x4E86;KVM&#x3001;QEMU&#x548C;Virt Manager&#x3002;&#x73B0;&#x5728;&#x5C31;&#x53EF;&#x4EE5;&#x7528;&#x4E86;&#x3002;</p>
-<pre class="language-"><code>virt-install --name vmware --memory 8192 --vcpus sockets=2,cores=2,threads=2 --disk device=cdrom,path=/mnt/Windows-D/VirtualMachine/Images/VMware-VMvisor-Installer-201701001-4887370.x86_64.iso --disk path=/mnt/Windows-D/VirtualMachine/KVM/esxi-1.img,size=200,bus=ide --network bridge=virbr1,model=e1000 --noautoconsole --accelerate --hvm --graphics vnc,listen=0.0.0.0,port=20005 --video vga --input tablet,bus=usb --cpu host-passthrough
-</code></pre><footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
-2024-11-23 23:08
+<pre><code>virt-install --name vmware --memory 8192 --vcpus sockets=2,cores=2,threads=2 --disk device=cdrom,path=/mnt/Windows-D/VirtualMachine/Images/VMware-VMvisor-Installer-201701001-4887370.x86_64.iso --disk path=/mnt/Windows-D/VirtualMachine/KVM/esxi-1.img,size=200,bus=ide --network bridge=virbr1,model=e1000 --noautoconsole --accelerate --hvm --graphics vnc,listen=0.0.0.0,port=20005 --video vga --input tablet,bus=usb --cpu host-passthrough
+</code></pre><footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
+2025-04-06 16:47
 </span></footer>
                                 
                                 </section>
@@ -3404,7 +3400,7 @@ Y
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Arch安装KVM","categories":["系统运维","Linux"],"tags":["Linux","Arch","KVM"],"permalink":"/posts/Arch安装KVM/","date":"2024-11-08T14:34:27.000Z","updated":"2024-11-23T23:05:25.000Z","level":"1.3.1.7","depth":3,"next":{"title":"Arch安装卸载软件常用命令","level":"1.3.1.8","depth":3,"path":"系统运维/Linux/Arch安装卸载软件常用命令.md","ref":"系统运维/Linux/Arch安装卸载软件常用命令.md","articles":[]},"previous":{"title":"Arch安装(Btrfs文件系统)","level":"1.3.1.6","depth":3,"path":"系统运维/Linux/Arch安装(Btrfs文件系统","ref":"系统运维/Linux/Arch安装(Btrfs文件系统","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","prism","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"系统运维/Linux/Arch安装KVM.md","mtime":"2024-11-23T15:08:45.452Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T08:32:22.121Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Arch安装KVM","categories":["系统运维","Linux"],"tags":["Linux","Arch","KVM"],"permalink":"/posts/Arch安装KVM/","date":"2024-11-08T14:34:27.000Z","updated":"2024-11-23T23:05:25.000Z","level":"1.3.1.7","depth":3,"next":{"title":"Arch安装卸载软件常用命令","level":"1.3.1.8","depth":3,"path":"系统运维/Linux/Arch安装卸载软件常用命令.md","ref":"系统运维/Linux/Arch安装卸载软件常用命令.md","articles":[]},"previous":{"title":"Arch安装(Btrfs文件系统)","level":"1.3.1.6","depth":3,"path":"系统运维/Linux/Arch安装(Btrfs文件系统","ref":"系统运维/Linux/Arch安装(Btrfs文件系统","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"系统运维/Linux/Arch安装KVM.md","mtime":"2025-04-06T08:47:52.255Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T09:05:17.990Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
