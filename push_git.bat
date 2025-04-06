@@ -1,8 +1,8 @@
 @echo off
 
 :: 前置命令
-:: git remote add origin git@gitee.com:feiyu-195/gitbook_notes.git
-:: git remote add web-origin git@gitee.com:feiyu-195/gitbook_web.git
+:: git remote add gitee git@gitee.com:feiyu-195/gitbook_notes.git
+:: git remote add github git@github.com:feiyu-195/gitbook-notes.git
 
 :: 设置日志文件路径
 set log_file=%~dp0..\push_log.txt
@@ -23,12 +23,20 @@ echo 提交Commit...
 git commit -m "feiyu commit"
 echo.
 
-echo 上传文件至父仓库 master 主分支...
-git push origin master
+echo push gitee仓库中...
+git push git@gitee.com:feiyu-195/gitbook-notes.git master
 echo.
 
-echo 上传 _book 文件夹至子仓库gitbook_web(master) 分支...
-git subtree push --prefix=_book git@gitee.com:feiyu-195/gitbook_web.git master
+echo push github仓库中...
+git push git@github.com:feiyu-195/gitbook-notes.git master
+echo.
+
+echo push _book 文件夹至子仓库gitbook_web(master) 分支...
+git subtree push --prefix=_book git@gitee.com:feiyu-195/gitbook-web.git master
+echo.
+
+echo push _book 文件夹至子仓库gitbook_web(master) 分支...
+git subtree push --prefix=_book git@github.com:feiyu-195/gitbook-web.git master
 echo.
 
 :: 退出脚本
