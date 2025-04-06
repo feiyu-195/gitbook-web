@@ -27,12 +27,8 @@ echo 上传文件至父仓库 master 主分支...
 git push origin master
 echo.
 
-echo 分离 _book 文件夹为新分支web...
-git subtree split -P _book -b web
-echo.
-
-echo 上传 _book 文件夹至子仓库 master 分支...
-git push web-origin web:master --force
+echo 上传 _book 文件夹至子仓库gitbook_web(master) 分支...
+git subtree push --prefix=_book git@gitee.com:feiyu-195/gitbook_web.git master
 echo.
 
 :: 退出脚本
