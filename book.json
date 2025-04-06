@@ -6,28 +6,33 @@
         
     },
     "scripts": {
-        "start": "assets/umami.js"
+
     },
     "plugins": [
         "theme-comscore",
-         "-lunr", 
-         "-search", 
-         "search-pro", 
-         "expandable-chapters", 
-         "chapter-fold", 
-         "splitter", 
-         "github",
-         "page-toc-button",
-         "back-to-top-button",
-         "tbfed-pagefooter",
-         "code",
-         "accordion",
-         "prism",
-         "-sharing", 
-         "sharing-plus",
-         "hide-element"
+        "-lunr", 
+        "-search", 
+        "search-pro", 
+        "expandable-chapters", 
+        "chapter-fold", 
+        "splitter", 
+        "github",
+        "page-toc-button",
+        "back-to-top-button",
+        "tbfed-pagefooter",
+        "code",
+        "accordion",
+        "prism",
+        "-sharing", 
+        "sharing-plus",
+        "hide-element",
+        "umami"
     ], 
     "pluginsConfig": {
+        "umami": {
+            "url": "https://www.feiyunote.cn:30101/random-string.js",
+            "website-id": "49159946-a785-4fe1-aaf0-a009bd825d7e"
+        },
         "github": {
             "url": "https://github.com/feiyu-195"
         },
