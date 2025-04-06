@@ -25,12 +25,16 @@
         "-sharing", 
         "sharing-plus",
         "hide-element",
-        "umami"
+        "umami",
+        "3-ba"
     ], 
     "pluginsConfig": {
         "umami": {
             "url": "https://www.feiyunote.cn:30101/random-string.js",
             "website-id": "49159946-a785-4fe1-aaf0-a009bd825d7e"
+        },
+        "3-ba": {
+            "token": "44afc32490f5c9ccad725edf6bd674ae"
         },
         "github": {
             "url": "https://github.com/feiyu-195"
