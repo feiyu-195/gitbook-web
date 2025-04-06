@@ -53,10 +53,6 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
-                
-            
-                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -3272,110 +3268,110 @@
 <ul>
 <li>&#x5B89;&#x88C5;&#x8F6F;&#x4EF6;&#x3002;&#x4E5F;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x5B89;&#x88C5;&#x591A;&#x4E2A;&#x5305;&#xFF0C;&#x53EA;&#x9700;&#x4EE5;&#x7A7A;&#x683C;&#x5206;&#x9694;&#x5305;&#x540D;&#x5373;&#x53EF;&#x3002;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">pacman <span class="token parameter variable">-S</span> &#x8F6F;&#x4EF6;&#x540D;
+<pre><code class="lang-shell">pacman -S &#x8F6F;&#x4EF6;&#x540D;
 </code></pre>
 <ul>
 <li>&#x5B89;&#x88C5;&#x8F6F;&#x4EF6;&#xFF0C;&#x4F46;&#x4E0D;&#x91CD;&#x65B0;&#x5B89;&#x88C5;&#x5DF2;&#x7ECF;&#x662F;&#x6700;&#x65B0;&#x7684;&#x8F6F;&#x4EF6;&#x3002;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">pacman <span class="token parameter variable">-S</span> <span class="token parameter variable">--needed</span> &#x8F6F;&#x4EF6;&#x540D;1 &#x8F6F;&#x4EF6;&#x540D;2
+<pre><code class="lang-shell">pacman -S --needed &#x8F6F;&#x4EF6;&#x540D;1 &#x8F6F;&#x4EF6;&#x540D;2
 </code></pre>
 <ul>
 <li>&#x5B89;&#x88C5;&#x8F6F;&#x4EF6;&#x524D;&#xFF0C;&#x5148;&#x4ECE;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x4E0B;&#x8F7D;&#x8F6F;&#x4EF6;&#x5305;&#x6570;&#x636E;&#x5E93;(&#x6570;&#x636E;&#x5E93;&#x5373;&#x6240;&#x6709;&#x8F6F;&#x4EF6;&#x5217;&#x8868;)&#x3002;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">pacman <span class="token parameter variable">-Sy</span> &#x8F6F;&#x4EF6;&#x540D;
+<pre><code class="lang-shell">pacman -Sy &#x8F6F;&#x4EF6;&#x540D;
 </code></pre>
 <ul>
 <li>&#x5728;&#x663E;&#x793A;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;&#x4FE1;&#x606F;&#x540E;&#x6267;&#x884C;&#x5B89;&#x88C5;&#x3002;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">pacman <span class="token parameter variable">-Sv</span> &#x8F6F;&#x4EF6;&#x540D;
+<pre><code class="lang-shell">pacman -Sv &#x8F6F;&#x4EF6;&#x540D;
 </code></pre>
 <ul>
 <li>&#x53EA;&#x4E0B;&#x8F7D;&#x8F6F;&#x4EF6;&#x5305;&#xFF0C;&#x4E0D;&#x5B89;&#x88C5;&#x3002;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">pacman <span class="token parameter variable">-Sw</span> &#x8F6F;&#x4EF6;&#x540D;
+<pre><code class="lang-shell">pacman -Sw &#x8F6F;&#x4EF6;&#x540D;
 </code></pre>
 <ul>
 <li>&#x5B89;&#x88C5;&#x672C;&#x5730;&#x8F6F;&#x4EF6;&#x5305;&#x3002;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">pacman <span class="token parameter variable">-U</span> &#x8F6F;&#x4EF6;&#x540D;.pkg.tar.gz
+<pre><code class="lang-shell">pacman -U &#x8F6F;&#x4EF6;&#x540D;.pkg.tar.gz
 </code></pre>
 <ul>
 <li>&#x5B89;&#x88C5;&#x4E00;&#x4E2A;&#x8FDC;&#x7A0B;&#x5305;&#xFF08;&#x4E0D;&#x5728; pacman &#x914D;&#x7F6E;&#x7684;&#x6E90;&#x91CC;&#x9762;&#xFF09;&#x3002;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">pacman <span class="token parameter variable">-U</span> http://www.example.com/repo/example.pkg.tar.xz
+<pre><code class="lang-shell">pacman -U http://www.example.com/repo/example.pkg.tar.xz
 </code></pre>
 <h1 id="&#x66F4;&#x65B0;&#x7CFB;&#x7EDF;">&#x66F4;&#x65B0;&#x7CFB;&#x7EDF;</h1>
 <ul>
 <li>&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x4E0B;&#x8F7D;&#x65B0;&#x7684;&#x8F6F;&#x4EF6;&#x5305;&#x6570;&#x636E;&#x5E93;&#xFF08;&#x5B9E;&#x9645;&#x4E0A;&#x5C31;&#x662F;&#x4E0B;&#x8F7D;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x6700;&#x65B0;&#x8F6F;&#x4EF6;&#x5217;&#x8868;&#x5230;&#x672C;&#x5730;&#xFF09;&#x3002;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">pacman <span class="token parameter variable">-Sy</span>
+<pre><code class="lang-shell">pacman -Sy
 </code></pre>
 <ul>
 <li>&#x5347;&#x7EA7;&#x6240;&#x6709;&#x5DF2;&#x5B89;&#x88C5;&#x7684;&#x8F6F;&#x4EF6;&#x5305;&#x3002;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">pacman <span class="token parameter variable">-Su</span>
+<pre><code class="lang-shell">pacman -Su
 </code></pre>
 <p>pacman &#x53EF;&#x4EE5;&#x7528;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x5C31;&#x53EF;&#x4EE5;&#x5347;&#x7EA7;&#x6574;&#x4E2A;&#x7CFB;&#x7EDF;&#x3002;&#x82B1;&#x8D39;&#x7684;&#x65F6;&#x95F4;&#x53D6;&#x51B3;&#x4E8E;&#x7CFB;&#x7EDF;&#x6709;&#x591A;&#x8001;&#x3002;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x4F1A;&#x540C;&#x6B65;&#x975E;&#x672C;&#x5730;(local)&#x8F6F;&#x4EF6;&#x4ED3;&#x5E93;&#x5E76;&#x5347;&#x7EA7;&#x7CFB;&#x7EDF;&#x7684;&#x8F6F;&#x4EF6;&#x5305;&#xFF1A;</p>
-<pre class="language-"><code class="lang-shell">pacman <span class="token parameter variable">-Syu</span>
+<pre><code class="lang-shell">pacman -Syu
 </code></pre>
 <blockquote>
 <p>&#x5728;msys2&#x4E2D; pacman -Syu&#x540E;&#x9700;&#x8981;&#x91CD;&#x542F;&#x4E00;&#x4E0B;msys2(&#x5173;&#x6389;shell&#x91CD;&#x65B0;&#x6253;&#x5F00;&#x5373;&#x53EF;)&#x3002;</p>
 </blockquote>
 <p>&#x5728;Arch linux&#x4E2D;&#xFF0C;&#x53EA;&#x652F;&#x6301;&#x7CFB;&#x7EDF;&#x5B8C;&#x6574;&#x5347;&#x7EA7;&#xFF0C;&#x4E0D;&#x652F;&#x6301;&#x90E8;&#x5206;&#x5347;&#x7EA7;&#x3002;&#x6240;&#x4EE5;&#x5373;&#x4F7F;&#x5728;msys2&#x4E2D;&#xFF0C;pacman -Syu&#x4E5F;&#x4F1A;&#x5347;&#x7EA7;&#x6574;&#x4E2A;&#x7CFB;&#x7EDF;&#x3002;&#x53EF;&#x4EE5;&#x89C2;&#x5BDF;&#x4E00;&#x4E0B;&#xFF0C;&#x5373;&#x4F7F;&#x65B0;&#x5B89;&#x88C5;&#x7684;msys2&#xFF0C;pacman -Syu&#x540E;&#xFF0C;msys2&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x5360;&#x7528;&#x7A7A;&#x95F4;&#x7ACB;&#x9A6C;&#x53D8;&#x5927;&#x5F88;&#x591A;&#x3002;</p>
 <p>&#x5982;&#x679C;&#x5347;&#x7EA7;&#x65F6;&#xFF0C;&#x7F51;&#x7EDC;&#x6BD4;&#x8F83;&#x6162;&#xFF0C;&#x89C9;&#x5F97;&#x65E2;&#x6D6A;&#x8D39;&#x65F6;&#x95F4;&#x53C8;&#x6D6A;&#x8D39;&#x786C;&#x76D8;&#xFF0C;&#x5B9E;&#x5728;&#x4E0D;&#x60F3;&#x5347;&#x7EA7;&#x90A3;&#x4E48;&#x591A;&#x4E1C;&#x897F;&#xFF0C;&#x53EF;&#x4EE5;&#x9010;&#x4E2A;&#x8F6F;&#x4EF6;&#x5305;&#x5347;&#x7EA7;&#x3002;&#x7528;&#x4E0B;&#x9762;&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x5347;&#x7EA7;&#x6838;&#x5FC3;&#x5305;&#xFF1A;</p>
-<pre class="language-"><code class="lang-shell">pacman <span class="token parameter variable">-S</span> <span class="token parameter variable">--needed</span> filesystem msys2-runtime <span class="token function">bash</span> libreadline libiconv libarchive libgpgme libcurl pacman ncurses libintl
+<pre><code class="lang-shell">pacman -S --needed filesystem msys2-runtime bash libreadline libiconv libarchive libgpgme libcurl pacman ncurses libintl
 </code></pre>
 <h1 id="&#x5378;&#x8F7D;&#x8F6F;&#x4EF6;">&#x5378;&#x8F7D;&#x8F6F;&#x4EF6;</h1>
 <ul>
 <li>&#x8BE5;&#x547D;&#x4EE4;&#x5C06;&#x53EA;&#x5220;&#x9664;&#x5305;&#xFF0C;&#x4FDD;&#x7559;&#x5176;&#x5168;&#x90E8;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">pacman <span class="token parameter variable">-R</span> &#x8F6F;&#x4EF6;&#x540D;
+<pre><code class="lang-shell">pacman -R &#x8F6F;&#x4EF6;&#x540D;
 </code></pre>
 <ul>
 <li>&#x5220;&#x9664;&#x8F6F;&#x4EF6;&#xFF0C;&#x5E76;&#x663E;&#x793A;&#x8BE6;&#x7EC6;&#x7684;&#x4FE1;&#x606F;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">pacman <span class="token parameter variable">-Rv</span> &#x8F6F;&#x4EF6;&#x540D;
+<pre><code class="lang-shell">pacman -Rv &#x8F6F;&#x4EF6;&#x540D;
 </code></pre>
 <ul>
 <li>&#x5220;&#x9664;&#x8F6F;&#x4EF6;&#xFF0C;&#x540C;&#x65F6;&#x5220;&#x9664;&#x672C;&#x673A;&#x4E0A;&#x53EA;&#x6709;&#x8BE5;&#x8F6F;&#x4EF6;&#x4F9D;&#x8D56;&#x7684;&#x8F6F;&#x4EF6;&#x3002;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">pacman <span class="token parameter variable">-Rs</span> &#x8F6F;&#x4EF6;&#x540D;
+<pre><code class="lang-shell">pacman -Rs &#x8F6F;&#x4EF6;&#x540D;
 </code></pre>
 <ul>
 <li>&#x5220;&#x9664;&#x8F6F;&#x4EF6;&#xFF0C;&#x5E76;&#x5220;&#x9664;&#x6240;&#x6709;&#x4F9D;&#x8D56;&#x8FD9;&#x4E2A;&#x8F6F;&#x4EF6;&#x7684;&#x7A0B;&#x5E8F;&#xFF0C;&#x614E;&#x7528;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">pacman <span class="token parameter variable">-Rsc</span> &#x8F6F;&#x4EF6;&#x540D;
+<pre><code class="lang-shell">pacman -Rsc &#x8F6F;&#x4EF6;&#x540D;
 </code></pre>
 <ul>
 <li>&#x5220;&#x9664;&#x8F6F;&#x4EF6;,&#x540C;&#x65F6;&#x5220;&#x9664;&#x4E0D;&#x518D;&#x88AB;&#x4EFB;&#x4F55;&#x8F6F;&#x4EF6;&#x6240;&#x9700;&#x8981;&#x7684;&#x4F9D;&#x8D56;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">pacman <span class="token parameter variable">-Ru</span> &#x8F6F;&#x4EF6;&#x540D;
+<pre><code class="lang-shell">pacman -Ru &#x8F6F;&#x4EF6;&#x540D;
 </code></pre>
 <h1 id="&#x641C;&#x7D22;&#x8F6F;&#x4EF6;">&#x641C;&#x7D22;&#x8F6F;&#x4EF6;</h1>
 <ul>
 <li>&#x5728;&#x4ED3;&#x5E93;&#x4E2D;&#x641C;&#x7D22;&#x542B;&#x5173;&#x952E;&#x5B57;&#x7684;&#x8F6F;&#x4EF6;&#x5305;&#xFF08;&#x672C;&#x5730;&#x5DF2;&#x5B89;&#x88C5;&#x7684;&#x4F1A;&#x6807;&#x8BB0;&#xFF09;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">pacman <span class="token parameter variable">-Ss</span> &#x5173;&#x952E;&#x5B57;
+<pre><code class="lang-shell">pacman -Ss &#x5173;&#x952E;&#x5B57;
 </code></pre>
 <ul>
 <li>&#x663E;&#x793A;&#x8F6F;&#x4EF6;&#x4ED3;&#x5E93;&#x4E2D;&#x6240;&#x6709;&#x8F6F;&#x4EF6;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x53EF;&#x4EE5;&#x7701;&#x7565;&#xFF0C;&#x901A;&#x5E38;&#x8FD9;&#x6837;&#x7528;:<code>pacman -Sl | &#x5173;&#x952E;&#x5B57;</code></li>
 </ul>
-<pre class="language-"><code class="lang-shell">pacman <span class="token parameter variable">-Sl</span> <span class="token operator">&lt;</span>repo<span class="token operator">&gt;</span>
+<pre><code class="lang-shell">pacman -Sl &lt;repo&gt;
 </code></pre>
 <ul>
 <li>&#x641C;&#x7D22;&#x5DF2;&#x5B89;&#x88C5;&#x7684;&#x8F6F;&#x4EF6;&#x5305;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">pacman <span class="token parameter variable">-Qs</span> &#x5173;&#x952E;&#x5B57;
+<pre><code class="lang-shell">pacman -Qs &#x5173;&#x952E;&#x5B57;
 </code></pre>
 <ul>
 <li>&#x5217;&#x51FA;&#x6240;&#x6709;&#x53EF;&#x5347;&#x7EA7;&#x7684;&#x8F6F;&#x4EF6;&#x5305;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">pacman <span class="token parameter variable">-Qu</span>
+<pre><code class="lang-shell">pacman -Qu
 </code></pre>
 <ul>
 <li>&#x5217;&#x51FA;&#x4E0D;&#x88AB;&#x4EFB;&#x4F55;&#x8F6F;&#x4EF6;&#x8981;&#x6C42;&#x7684;&#x8F6F;&#x4EF6;&#x5305;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">pacman <span class="token parameter variable">-Qt</span>
+<pre><code class="lang-shell">pacman -Qt
 </code></pre>
 <p>&#x53C2;&#x6570;&#x52A0;q&#x53EF;&#x4EE5;&#x7B80;&#x6D01;&#x65B9;&#x5F0F;&#x663E;&#x793A;&#x7ED3;&#x679C;&#xFF0C;&#x6BD4;&#x5982;pacman -Ssq gcc&#x4F1A;&#x6BD4;pacman -Ss gcc&#x663E;&#x793A;&#x7684;&#x597D;&#x770B;&#x4E00;&#x4E9B;&#x3002;</p>
 <blockquote>
@@ -3385,28 +3381,28 @@
 <ul>
 <li>&#x67E5;&#x770B;&#x8F6F;&#x4EF6;&#x5305;&#x662F;&#x5426;&#x5DF2;&#x5B89;&#x88C5;&#xFF0C;&#x5DF2;&#x5B89;&#x88C5;&#x5219;&#x663E;&#x793A;&#x8F6F;&#x4EF6;&#x5305;&#x540D;&#x79F0;&#x548C;&#x7248;&#x672C;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">pacman <span class="token parameter variable">-Q</span> &#x8F6F;&#x4EF6;&#x540D;
+<pre><code class="lang-shell">pacman -Q &#x8F6F;&#x4EF6;&#x540D;
 </code></pre>
 <ul>
 <li>&#x67E5;&#x770B;&#x67D0;&#x4E2A;&#x8F6F;&#x4EF6;&#x5305;&#x4FE1;&#x606F;&#xFF0C;&#x663E;&#x793A;&#x8F83;&#x4E3A;&#x8BE6;&#x7EC6;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC;&#x63CF;&#x8FF0;&#x3001;&#x6784;&#x67B6;&#x3001;&#x4F9D;&#x8D56;&#x3001;&#x5927;&#x5C0F;&#x7B49;&#x7B49;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">pacman <span class="token parameter variable">-Qi</span> &#x8F6F;&#x4EF6;&#x540D;
+<pre><code class="lang-shell">pacman -Qi &#x8F6F;&#x4EF6;&#x540D;
 </code></pre>
 <ul>
 <li>&#x5217;&#x51FA;&#x8F6F;&#x4EF6;&#x5305;&#x5185;&#x6240;&#x6709;&#x6587;&#x4EF6;&#xFF0C;&#x5305;&#x62EC;&#x8F6F;&#x4EF6;&#x5B89;&#x88C5;&#x7684;&#x6BCF;&#x4E2A;&#x6587;&#x4EF6;&#x3001;&#x6587;&#x4EF6;&#x5939;&#x7684;&#x540D;&#x79F0;&#x548C;&#x8DEF;&#x5F84;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">pacman <span class="token parameter variable">-Ql</span> &#x8F6F;&#x4EF6;&#x540D;
+<pre><code class="lang-shell">pacman -Ql &#x8F6F;&#x4EF6;&#x540D;
 </code></pre>
 <h1 id="&#x6E05;&#x7406;&#x7F13;&#x5B58;">&#x6E05;&#x7406;&#x7F13;&#x5B58;</h1>
 <ul>
 <li>&#x6E05;&#x7406;&#x672A;&#x5B89;&#x88C5;&#x7684;&#x5305;&#x6587;&#x4EF6;&#xFF0C;&#x5305;&#x6587;&#x4EF6;&#x4F4D;&#x4E8E; /var/cache/pacman/pkg/ &#x76EE;&#x5F55;&#x3002;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">pacman <span class="token parameter variable">-Sc</span>
+<pre><code class="lang-shell">pacman -Sc
 </code></pre>
 <ul>
 <li>&#x6E05;&#x7406;&#x6240;&#x6709;&#x7684;&#x7F13;&#x5B58;&#x6587;&#x4EF6;&#x3002;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">pacman <span class="token parameter variable">-Scc</span>
+<pre><code class="lang-shell">pacman -Scc
 </code></pre>
 <h1 id="yay">yay</h1>
 <blockquote>
@@ -3415,32 +3411,32 @@
 <ul>
 <li>&#x4ECE;&#x4ED3;&#x5E93;&#x548C; AUR &#x4E2D;&#x4EA4;&#x4E92;&#x5F0F;&#x641C;&#x7D22;&#x548C;&#x5B89;&#x88C5;&#x8F6F;&#x4EF6;&#x5305;&#xFF1A;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">yay <span class="token punctuation">{</span><span class="token punctuation">{</span>&#x8F6F;&#x4EF6;&#x5305;<span class="token operator">|</span>&#x641C;&#x7D22;&#x8BCD;<span class="token punctuation">}</span><span class="token punctuation">}</span>
+<pre><code class="lang-shell">yay {{&#x8F6F;&#x4EF6;&#x5305;|&#x641C;&#x7D22;&#x8BCD;}}
 </code></pre>
 <ul>
 <li>&#x540C;&#x6B65;&#x5E76;&#x66F4;&#x65B0;&#x6240;&#x6709;&#x6765;&#x81EA;&#x4ED3;&#x5E93;&#x548C; AUR &#x7684;&#x8F6F;&#x4EF6;&#x5305;&#xFF1A;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">yay
+<pre><code class="lang-shell">yay
 </code></pre>
 <ul>
 <li>&#x53EA;&#x540C;&#x6B65;&#x548C;&#x66F4;&#x65B0; AUR &#x8F6F;&#x4EF6;&#x5305;&#xFF1A;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">yay <span class="token parameter variable">-Sua</span>
+<pre><code class="lang-shell">yay -Sua
 </code></pre>
 <ul>
 <li>&#x4ECE;&#x4ED3;&#x5E93;&#x548C; AUR &#x4E2D;&#x5B89;&#x88C5;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x8F6F;&#x4EF6;&#x5305;&#x3002;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">yay <span class="token parameter variable">-S</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>&#x8F6F;&#x4EF6;&#x5305;<span class="token punctuation">}</span><span class="token punctuation">}</span>
+<pre><code class="lang-shell">yay -S {{&#x8F6F;&#x4EF6;&#x5305;}}
 </code></pre>
 <ul>
 <li>&#x4ECE;&#x4ED3;&#x5E93;&#x548C; AUR &#x4E2D;&#x641C;&#x7D22;&#x8F6F;&#x4EF6;&#x5305;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x5173;&#x952E;&#x8BCD;&#xFF1A;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">yay <span class="token parameter variable">-Ss</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>&#x5173;&#x952E;&#x8BCD;<span class="token punctuation">}</span><span class="token punctuation">}</span>
+<pre><code class="lang-shell">yay -Ss {{&#x5173;&#x952E;&#x8BCD;}}
 </code></pre>
 <ul>
 <li>&#x663E;&#x793A;&#x5DF2;&#x5B89;&#x88C5;&#x8F6F;&#x4EF6;&#x5305;&#x548C;&#x7CFB;&#x7EDF;&#x5065;&#x5EB7;&#x72B6;&#x51B5;&#x7684;&#x7EDF;&#x8BA1;&#x6570;&#x636E;&#xFF1A;</li>
 </ul>
-<pre class="language-"><code class="lang-shell">yay <span class="token parameter variable">-Ps</span>
+<pre><code class="lang-shell">yay -Ps
 </code></pre>
 <h1 id="&#x6700;&#x5E38;&#x7528;&#x7684;pacman&#x547D;&#x4EE4;&#x5C0F;&#x7ED3;">&#x6700;&#x5E38;&#x7528;&#x7684;pacman&#x547D;&#x4EE4;&#x5C0F;&#x7ED3;</h1>
 <p>pacman&#x547D;&#x4EE4;&#x8F83;&#x591A;&#xFF0C;&#x4F5C;&#x4E3A;&#x65B0;&#x624B;&#xFF0C;&#x5C06;&#x4E2A;&#x4EBA;&#x6700;&#x5E38;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x603B;&#x7ED3;&#x5982;&#x4E0B;&#xFF1A;</p>
@@ -3457,8 +3453,8 @@
 <li><code>pacman -Sc</code>&#xFF1A;&#x6E05;&#x7406;&#x672A;&#x5B89;&#x88C5;&#x7684;&#x5305;&#x6587;&#x4EF6;&#xFF0C;&#x5305;&#x6587;&#x4EF6;&#x4F4D;&#x4E8E; /var/cache/pacman/pkg/ &#x76EE;&#x5F55;&#x3002;</li>
 <li><code>pacman -Scc</code>&#xFF1A;&#x6E05;&#x7406;&#x6240;&#x6709;&#x7684;&#x7F13;&#x5B58;&#x6587;&#x4EF6;&#x3002;</li>
 </ul>
-<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
-2024-11-23 23:22
+<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
+2025-04-06 16:57
 </span></footer>
                                 
                                 </section>
@@ -3502,7 +3498,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Arch安装卸载软件常用命令","date":"2024-08-27T14:34:23.000Z","updated":"2024-11-23T23:22:30.000Z","categories":["系统运维","Linux"],"tags":["Linux","Arch"],"permalink":"/posts/Arch安装卸载软件常用命令/","level":"1.3.1.8","depth":3,"next":{"title":"Arch安装问题","level":"1.3.1.9","depth":3,"path":"系统运维/Linux/Arch安装问题.md","ref":"系统运维/Linux/Arch安装问题.md","articles":[]},"previous":{"title":"Arch安装KVM","level":"1.3.1.7","depth":3,"path":"系统运维/Linux/Arch安装KVM.md","ref":"系统运维/Linux/Arch安装KVM.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","prism","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"系统运维/Linux/Arch安装卸载软件常用命令.md","mtime":"2024-11-23T15:22:32.571Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T08:32:22.121Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Arch安装卸载软件常用命令","date":"2024-08-27T14:34:23.000Z","updated":"2025-04-06T16:57:55.000Z","categories":["系统运维","Linux"],"tags":["Linux","Arch"],"permalink":"/posts/Arch安装卸载软件常用命令/","level":"1.3.1.8","depth":3,"next":{"title":"Arch安装问题","level":"1.3.1.9","depth":3,"path":"系统运维/Linux/Arch安装问题.md","ref":"系统运维/Linux/Arch安装问题.md","articles":[]},"previous":{"title":"Arch安装KVM","level":"1.3.1.7","depth":3,"path":"系统运维/Linux/Arch安装KVM.md","ref":"系统运维/Linux/Arch安装KVM.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"系统运维/Linux/Arch安装卸载软件常用命令.md","mtime":"2025-04-06T08:57:55.912Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T09:05:17.990Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

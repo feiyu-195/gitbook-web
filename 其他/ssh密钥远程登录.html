@@ -53,10 +53,6 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
-                
-            
-                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -3274,28 +3270,28 @@
 <ol>
 <li>&#x4F7F;&#x7528;ssh-copy-id&#x547D;&#x4EE4;&#x4E0A;&#x4F20;&#x516C;&#x94A5;&#x81F3;&#x670D;&#x52A1;&#x5668;(ip=172.16.100.10)</li>
 </ol>
-<pre class="language-"><code class="lang-bash">ssh-copy-id aaa@172.16.100.10
+<pre><code class="lang-bash">ssh-copy-id aaa@172.16.100.10
 </code></pre>
 <p><img src="https://ps.feiyunote.cn/assets/image-20240309161430258.png" alt=""></p>
 <p>&#x82E5;&#x60F3;&#x4F7F;&#x7528;scp&#x4E0A;&#x4F20;&#x516C;&#x94A5;&#xFF0C;&#x5219;&#xFF1A;</p>
-<pre class="language-"><code class="lang-bash"><span class="token function">scp</span> ~/.ssh/id_rsa.pub aaa@172.16.100.10:/home/aaa/.ssh/authorized_keys
+<pre><code class="lang-bash">scp ~/.ssh/id_rsa.pub aaa@172.16.100.10:/home/aaa/.ssh/authorized_keys
 </code></pre>
 <p>&#x4F46;&#x662F;&#x9700;&#x6CE8;&#x610F;&#x4F7F;&#x7528;&#x8BE5;&#x65B9;&#x6CD5;&#x9700;&#x63D0;&#x524D;&#x5728;<strong>&#x670D;&#x52A1;&#x5668;</strong>&#x521B;&#x5EFA;.ssh&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x6743;&#x9650;&#x6539;&#x4E3A;<code>700</code>&#xFF0C;
 <strong>&#x539F;&#x56E0;&#x662F;&#x82E5;.ssh&#x76EE;&#x5F55;&#x6216;&#x8005;&#x662F;&#x5176;&#x4E2D;&#x7684;&#x516C;&#x94A5;&#x6587;&#x4EF6;&#x80FD;&#x591F;&#x5457;&#x5176;&#x4ED6;&#x7528;&#x6237;&#x53EF;&#x8BFB;&#xFF0C;&#x5C06;&#x4E0D;&#x4F1A;ssh&#x7A0B;&#x5E8F;&#x8BC6;&#x522B;</strong></p>
-<pre class="language-"><code class="lang-bash"><span class="token function">chmod</span> <span class="token number">700</span> ~/.ssh
+<pre><code class="lang-bash">chmod 700 ~/.ssh
 &#x6216;
-<span class="token function">chmod</span> <span class="token punctuation">[</span><span class="token number">400</span>/600<span class="token punctuation">]</span> ~/.ssh/authorized_keys
+chmod [400/600] ~/.ssh/authorized_keys
 </code></pre>
 <ol>
 <li><strong>&#x5728;&#x670D;&#x52A1;&#x5668;</strong>&#x4FEE;&#x6539;sshd_config&#x6587;&#x4EF6;&#xFF0C;&#x53BB;&#x6389;&#x6CE8;&#x91CA;&#x542F;&#x7528;&#x4EE5;&#x4E0B;&#x53C2;&#x6570;&#xFF1A;</li>
 </ol>
-<pre class="language-"><code class="lang-bash">PubkeyAuthentication <span class="token function">yes</span>
+<pre><code class="lang-bash">PubkeyAuthentication yes
 AuthorizedKeysFile .ssh/authorized_keys
 </code></pre>
 <ol>
 <li>&#x4FEE;&#x6539;&#x5B8C;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4FDD;&#x5B58;&#x9000;&#x51FA;&#xFF0C;&#x91CD;&#x542F;&#x670D;&#x52A1;&#x5668;sshd&#x670D;&#x52A1;</li>
 </ol>
-<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> systemctl restart sshd
+<pre><code class="lang-bash">sudo systemctl restart sshd
 </code></pre>
 <p><img src="https://ps.feiyunote.cn/assets/image-20240309161907506.png" alt=""></p>
 <ol>
@@ -3304,8 +3300,8 @@ AuthorizedKeysFile .ssh/authorized_keys
 <img src="https://ps.feiyunote.cn/assets/image-20240309161955238.png" alt=""></li>
 </ol>
 <p>&#x6CE8;&#xFF1A;&#x672C;&#x5730;&#x5BC6;&#x94A5;&#x6743;&#x9650;&#x4E3A;600</p>
-<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
-2024-11-15 21:49
+<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
+2025-04-06 16:47
 </span></footer>
                                 
                                 </section>
@@ -3349,7 +3345,7 @@ AuthorizedKeysFile .ssh/authorized_keys
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ssh密钥远程登录","date":"2024-06-12T14:30:15.000Z","updated":"2024-11-15T21:49:40.000Z","categories":["其他"],"tags":["SSH"],"permalink":"/posts/ssh密钥远程登录/","level":"1.6.14","depth":2,"next":{"title":"Umami搭建","level":"1.6.15","depth":2,"path":"其他/Umami搭建.md","ref":"其他/Umami搭建.md","articles":[]},"previous":{"title":"Spug手动部署(Kali)","level":"1.6.13","depth":2,"path":"其他/Spug手动部署(Kali","ref":"其他/Spug手动部署(Kali","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","prism","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"其他/ssh密钥远程登录.md","mtime":"2024-11-15T13:49:40.306Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T08:32:22.121Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"ssh密钥远程登录","date":"2024-06-12T14:30:15.000Z","updated":"2024-11-15T21:49:40.000Z","categories":["其他"],"tags":["SSH"],"permalink":"/posts/ssh密钥远程登录/","level":"1.6.14","depth":2,"next":{"title":"Umami搭建","level":"1.6.15","depth":2,"path":"其他/Umami搭建.md","ref":"其他/Umami搭建.md","articles":[]},"previous":{"title":"Spug手动部署(Kali)","level":"1.6.13","depth":2,"path":"其他/Spug手动部署(Kali","ref":"其他/Spug手动部署(Kali","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"其他/ssh密钥远程登录.md","mtime":"2025-04-06T08:47:51.928Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T09:05:17.990Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

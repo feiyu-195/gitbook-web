@@ -53,10 +53,6 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
-                
-            
-                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -3271,63 +3267,63 @@
 <ol>
 <li>&#x5E38;&#x7528;&#x547D;&#x4EE4;</li>
 </ol>
-<pre class="language-"><code class="lang-shell"><span class="token function">docker-compose</span> up <span class="token parameter variable">-d</span>    <span class="token comment"># &#x542F;&#x52A8;&#x5BB9;&#x5668;</span>
-<span class="token function">docker-compose</span> down        <span class="token comment"># &#x5173;&#x95ED;&#x5BB9;&#x5668;</span>
-<span class="token function">docker</span> <span class="token function">ps</span> <span class="token parameter variable">-a</span>            <span class="token comment"># &#x67E5;&#x770B;&#x5BB9;&#x5668;&#xFF08;&#x5305;&#x62EC;&#x505C;&#x6B62;&#x7684;&#xFF09;</span>
-<span class="token function">docker</span> <span class="token function">ps</span>                <span class="token comment"># &#x67E5;&#x770B;&#x5BB9;&#x5668;&#xFF08;&#x4E0D;&#x5305;&#x62EC;&#x505C;&#x6B62;&#x7684;&#xFF09;</span>
-<span class="token function">docker</span> logs &#x5BB9;&#x5668;&#x540D;          <span class="token comment"># &#x67E5;&#x770B;&#x5BB9;&#x5668;&#x8FD0;&#x884C;&#x65E5;&#x5FD7;</span>
-<span class="token function">docker</span> logs  <span class="token parameter variable">-f</span> &#x5BB9;&#x5668;&#x540D;      <span class="token comment"># &#x5B9E;&#x65F6;&#x663E;&#x793A;&#x5BB9;&#x5668;&#x8FD0;&#x884C;&#x65E5;&#x5FD7;</span>
-<span class="token function">docker</span> restart/start/stop &#x5BB9;&#x5668;&#x540D;       <span class="token comment"># &#x91CD;&#x542F;/&#x542F;&#x52A8;/&#x505C;&#x6B62;&#x5BB9;&#x5668;</span>
-<span class="token function">docker</span> run <span class="token parameter variable">-itd</span> <span class="token parameter variable">--name</span> &#x5BB9;&#x5668;&#x540D; &#x955C;&#x50CF;&#x540D;    <span class="token comment"># &#x8FD0;&#x884C;&#x5BB9;&#x5668;</span>
-<span class="token function">docker</span> <span class="token builtin class-name">exec</span> <span class="token parameter variable">-it</span> &#x5BB9;&#x5668;&#x540D; /bin/bash      <span class="token comment"># &#x8FDB;&#x5165;&#x5BB9;&#x5668;</span>
+<pre><code class="lang-shell">docker-compose up -d    # &#x542F;&#x52A8;&#x5BB9;&#x5668;
+docker-compose down        # &#x5173;&#x95ED;&#x5BB9;&#x5668;
+docker ps -a            # &#x67E5;&#x770B;&#x5BB9;&#x5668;&#xFF08;&#x5305;&#x62EC;&#x505C;&#x6B62;&#x7684;&#xFF09;
+docker ps                # &#x67E5;&#x770B;&#x5BB9;&#x5668;&#xFF08;&#x4E0D;&#x5305;&#x62EC;&#x505C;&#x6B62;&#x7684;&#xFF09;
+docker logs &#x5BB9;&#x5668;&#x540D;          # &#x67E5;&#x770B;&#x5BB9;&#x5668;&#x8FD0;&#x884C;&#x65E5;&#x5FD7;
+docker logs  -f &#x5BB9;&#x5668;&#x540D;      # &#x5B9E;&#x65F6;&#x663E;&#x793A;&#x5BB9;&#x5668;&#x8FD0;&#x884C;&#x65E5;&#x5FD7;
+docker restart/start/stop &#x5BB9;&#x5668;&#x540D;       # &#x91CD;&#x542F;/&#x542F;&#x52A8;/&#x505C;&#x6B62;&#x5BB9;&#x5668;
+docker run -itd --name &#x5BB9;&#x5668;&#x540D; &#x955C;&#x50CF;&#x540D;    # &#x8FD0;&#x884C;&#x5BB9;&#x5668;
+docker exec -it &#x5BB9;&#x5668;&#x540D; /bin/bash      # &#x8FDB;&#x5165;&#x5BB9;&#x5668;
 </code></pre>
 <ol>
 <li>docker-compose&#x6587;&#x4EF6;</li>
 </ol>
-<pre class="language-"><code class="lang-shell">version: <span class="token string">&quot;3.0&quot;</span>
+<pre><code class="lang-shell">version: &quot;3.0&quot;
 services:
   elasticsearch:
     image: elasticsearch:8.15.0
     container_name: elasticsearch
     restart: always
-    <span class="token comment">#entrypoint: /bin/bash</span>
+    #entrypoint: /bin/bash
     volumes:
       - ./elasticsearch/data:/usr/share/elasticsearch/data
     environment:
-      - <span class="token assign-left variable">ES_JAVA_OPTS</span><span class="token operator">=</span>-Xms2g <span class="token parameter variable">-Xmx24g</span>
-      - <span class="token assign-left variable">discovery.type</span><span class="token operator">=</span>single-node
-      <span class="token comment"># &#x662F;&#x5426;&#x5F00;&#x542F;&#x7528;&#x6237;&#x5BC6;&#x7801;&#x9A8C;&#x8BC1;&#xFF0C;&#x521D;&#x59CB;&#x914D;&#x7F6E;&#x65F6;&#x53EF;&#x5148;&#x8BBE;&#x7F6E;&#x4E3A;false</span>
-      - <span class="token assign-left variable">xpack.security.enabled</span><span class="token operator">=</span>true
+      - ES_JAVA_OPTS=-Xms2g -Xmx24g
+      - discovery.type=single-node
+      # &#x662F;&#x5426;&#x5F00;&#x542F;&#x7528;&#x6237;&#x5BC6;&#x7801;&#x9A8C;&#x8BC1;&#xFF0C;&#x521D;&#x59CB;&#x914D;&#x7F6E;&#x65F6;&#x53EF;&#x5148;&#x8BBE;&#x7F6E;&#x4E3A;false
+      - xpack.security.enabled=true
     ports:
-      - <span class="token string">&quot;9200:9200&quot;</span>
-      - <span class="token string">&quot;9300:9300&quot;</span>
+      - &quot;9200:9200&quot;
+      - &quot;9300:9300&quot;
     networks:
       elk:
-        ipv4_address: <span class="token number">172.31</span>.0.2
+        ipv4_address: 172.31.0.2
 
   kibana:
     image: kibana:8.15.0
     container_name: kibana
     restart: always
-    <span class="token comment">#entrypoint: /bin/bash</span>
+    #entrypoint: /bin/bash
     depends_on:
       - elasticsearch
     environment:
-      - <span class="token assign-left variable">ELASTICSEARCH_HOSTS</span><span class="token operator">=</span>http://elasticsearch:9200
-      - <span class="token assign-left variable">I18N_LOCALE</span><span class="token operator">=</span>zh-CN
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+      - I18N_LOCALE=zh-CN
     ports:
-      - <span class="token string">&quot;5601:5601&quot;</span>
+      - &quot;5601:5601&quot;
     networks:
       elk:
-        ipv4_address: <span class="token number">172.31</span>.0.3
+        ipv4_address: 172.31.0.3
   logstash:
     image: logstash:8.15.0
     container_name: logstash
     restart: always
     extra_hosts:
-      elasticsearch: &#x65E5;&#x5FD7;&#x670D;&#x52A1;&#x5668;<span class="token punctuation">(</span>elk<span class="token punctuation">)</span>ip
+      elasticsearch: &#x65E5;&#x5FD7;&#x670D;&#x52A1;&#x5668;(elk)ip
     ports:
-      - <span class="token string">&quot;5044:5044&quot;</span>
+      - &quot;5044:5044&quot;
     volumes:
       - ./logstash/logs:/usr/share/logstash/logs
       - ./logstash/data:/usr/share/logstash/data
@@ -3335,174 +3331,174 @@ services:
       - ./logstash/pipeline:/usr/share/logstash/pipeline
     networks:
       elk:
-        ipv4_address: <span class="token number">172.31</span>.0.4
+        ipv4_address: 172.31.0.4
 
 networks:
   elk:
     driver: bridge
     ipam:
       config:
-        - subnet: <span class="token number">172.31</span>.0.0/16
+        - subnet: 172.31.0.0/16
 </code></pre>
 <h1 id="&#x4E00;&#x3001;&#x90E8;&#x7F72;elk">&#x4E00;&#x3001;&#x90E8;&#x7F72;elk</h1>
 <p>&#x521B;&#x5EFA;elk&#x76EE;&#x5F55;&#x5E76;&#x8FDB;&#x5165;</p>
-<pre class="language-"><code class="lang-shell"><span class="token function">mkdir</span> elk
-<span class="token builtin class-name">cd</span> elk
+<pre><code class="lang-shell">mkdir elk
+cd elk
 </code></pre>
 <p>&#x5C06;docker-compose&#x6587;&#x4EF6;&#x653E;&#x5165;</p>
-<pre class="language-"><code class="lang-shell"><span class="token function">vim</span> docker-compose-yml
+<pre><code class="lang-shell">vim docker-compose-yml
 </code></pre>
 <p>&#x5C06;&#x4E0A;&#x8FF0;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x590D;&#x5236;&#x8FDB;&#x53BB;</p>
 <p>&#x542F;&#x52A8;&#x5BB9;&#x5668;</p>
-<pre class="language-"><code class="lang-shell"><span class="token function">docker-compose</span> up <span class="token parameter variable">-d</span>
+<pre><code class="lang-shell">docker-compose up -d
 </code></pre>
 <p>&#x67E5;&#x770B;&#x5BB9;&#x5668;&#x8FD0;&#x884C;&#x72B6;&#x6001;</p>
-<pre class="language-"><code class="lang-shell">root@localhost:~/elk$ <span class="token function">docker</span> <span class="token function">ps</span>
+<pre><code class="lang-shell">root@localhost:~/elk$ docker ps
 CONTAINER ID   IMAGE                  COMMAND                   CREATED        STATUS        PORTS                                                                                  NAMES
-064f34707685   logstash:8.15.0        <span class="token string">&quot;/usr/local/bin/dock&#x2026;&quot;</span>   <span class="token number">20</span> hours ago   Up <span class="token number">16</span> hours   <span class="token number">0.0</span>.0.0:5044-<span class="token operator">&gt;</span><span class="token number">5044</span>/tcp, :::5044-<span class="token operator">&gt;</span><span class="token number">5044</span>/tcp, <span class="token number">9600</span>/tcp                                    logstash
-380abab64dbe   elasticsearch:8.15.0   <span class="token string">&quot;/bin/tini -- /usr/l&#x2026;&quot;</span>   <span class="token number">23</span> hours ago   Up <span class="token number">21</span> hours   <span class="token number">0.0</span>.0.0:9200-<span class="token operator">&gt;</span><span class="token number">9200</span>/tcp, :::9200-<span class="token operator">&gt;</span><span class="token number">9200</span>/tcp, <span class="token number">0.0</span>.0.0:9300-<span class="token operator">&gt;</span><span class="token number">9300</span>/tcp, :::9300-<span class="token operator">&gt;</span><span class="token number">9300</span>/tcp   elasticsearch
-6a725eb9c3f7   kibana:8.15.0          <span class="token string">&quot;/bin/tini -- /usr/l&#x2026;&quot;</span>   <span class="token number">23</span> hours ago   Up <span class="token number">23</span> hours   <span class="token number">0.0</span>.0.0:5601-<span class="token operator">&gt;</span><span class="token number">5601</span>/tcp, :::5601-<span class="token operator">&gt;</span><span class="token number">5601</span>/tcp                                              kibana
+064f34707685   logstash:8.15.0        &quot;/usr/local/bin/dock&#x2026;&quot;   20 hours ago   Up 16 hours   0.0.0.0:5044-&gt;5044/tcp, :::5044-&gt;5044/tcp, 9600/tcp                                    logstash
+380abab64dbe   elasticsearch:8.15.0   &quot;/bin/tini -- /usr/l&#x2026;&quot;   23 hours ago   Up 21 hours   0.0.0.0:9200-&gt;9200/tcp, :::9200-&gt;9200/tcp, 0.0.0.0:9300-&gt;9300/tcp, :::9300-&gt;9300/tcp   elasticsearch
+6a725eb9c3f7   kibana:8.15.0          &quot;/bin/tini -- /usr/l&#x2026;&quot;   23 hours ago   Up 23 hours   0.0.0.0:5601-&gt;5601/tcp, :::5601-&gt;5601/tcp                                              kibana
 </code></pre>
 <p><em>STATUS&#x662F;&#x8FD0;&#x884C;&#x72B6;&#x6001;</em></p>
 <p>&#x82E5;&#x6709;&#x5BB9;&#x5668;&#x65E0;&#x6CD5;&#x6B63;&#x5E38;&#x8FD0;&#x884C;&#xFF0C;&#x5148;&#x5173;&#x95ED;&#x5BB9;&#x5668;</p>
-<pre class="language-"><code>docker-compose down
+<pre><code>docker-compose down
 </code></pre><h5 id="&#x60C5;&#x51B5;&#x4E00;&#xFF1A;elasticsearch&#x5BB9;&#x5668;&#x91CD;&#x542F;">&#x60C5;&#x51B5;&#x4E00;&#xFF1A;elasticsearch&#x5BB9;&#x5668;&#x91CD;&#x542F;</h5>
 <ol>
 <li>&#x5C1D;&#x8BD5;&#x7ED9;&#x6587;&#x4EF6;&#x5939;&#x8D4B;&#x6743;&#x548C;&#x5F52;&#x5C5E;</li>
 </ol>
-<pre class="language-"><code class="lang-shell"><span class="token comment"># &#x5206;&#x522B;&#x6267;&#x884C;</span>
-<span class="token function">sudo</span> <span class="token function">chmod</span> <span class="token number">777</span> elasticsearch
-<span class="token function">sudo</span> <span class="token function">chmod</span> <span class="token number">777</span> elasticsearch/data
-<span class="token function">sudo</span> <span class="token function">chown</span> <span class="token parameter variable">-R</span> user:user elasticsearch
+<pre><code class="lang-shell"># &#x5206;&#x522B;&#x6267;&#x884C;
+sudo chmod 777 elasticsearch
+sudo chmod 777 elasticsearch/data
+sudo chown -R user:user elasticsearch
 </code></pre>
 <ol>
 <li>&#x91CD;&#x542F;&#x5BB9;&#x5668;</li>
 </ol>
-<pre class="language-"><code class="lang-shell"><span class="token function">docker</span> restart elasticsearch
+<pre><code class="lang-shell">docker restart elasticsearch
 </code></pre>
 <h5 id="&#x60C5;&#x51B5;&#x4E8C;&#xFF1A;logstash&#x5BB9;&#x5668;&#x91CD;&#x542F;">&#x60C5;&#x51B5;&#x4E8C;&#xFF1A;logstash&#x5BB9;&#x5668;&#x91CD;&#x542F;</h5>
 <ol>
 <li>&#x5C1D;&#x8BD5;&#x7ED9;&#x6587;&#x4EF6;&#x5939;&#x8D4B;&#x6743;&#x548C;&#x5F52;&#x5C5E;</li>
 </ol>
-<pre class="language-"><code class="lang-shell"><span class="token comment"># &#x5206;&#x522B;&#x6267;&#x884C;</span>
-<span class="token function">sudo</span> <span class="token function">chmod</span> <span class="token number">777</span> logstash
-<span class="token function">sudo</span> <span class="token function">chmod</span> <span class="token number">777</span> logstash/data
-<span class="token function">sudo</span> <span class="token function">chmod</span> <span class="token number">777</span> logstash/logs
-<span class="token function">sudo</span> <span class="token function">chmod</span> <span class="token number">777</span> logstash/data
-<span class="token function">sudo</span> <span class="token function">chmod</span> <span class="token number">777</span> logstash/config
-<span class="token function">sudo</span> <span class="token function">chmod</span> <span class="token number">777</span> logstash/pipeline
-<span class="token function">sudo</span> <span class="token function">chown</span> <span class="token parameter variable">-R</span> user:user logstash
+<pre><code class="lang-shell"># &#x5206;&#x522B;&#x6267;&#x884C;
+sudo chmod 777 logstash
+sudo chmod 777 logstash/data
+sudo chmod 777 logstash/logs
+sudo chmod 777 logstash/data
+sudo chmod 777 logstash/config
+sudo chmod 777 logstash/pipeline
+sudo chown -R user:user logstash
 </code></pre>
 <ol>
 <li>&#x91CD;&#x542F;&#x5BB9;&#x5668;&#x5728;&#x770B;&#x662F;&#x5426;&#x89E3;&#x51B3;</li>
 </ol>
-<pre class="language-"><code class="lang-shell"><span class="token function">docker</span> restart logstash
+<pre><code class="lang-shell">docker restart logstash
 </code></pre>
 <ol>
 <li>&#x68C0;&#x67E5;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x6709;&#x9519;&#x8BEF;</li>
 </ol>
-<pre class="language-"><code class="lang-shell"><span class="token function">sudo</span> <span class="token function">vim</span> logstash/pipeline/logstash.conf
+<pre><code class="lang-shell">sudo vim logstash/pipeline/logstash.conf
 </code></pre>
 <p>&#x653E;&#x5165;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;</p>
-<pre class="language-"><code class="lang-shell">input <span class="token punctuation">{</span>
-    beats <span class="token punctuation">{</span>
-        port <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token number">5044</span>
-    <span class="token punctuation">}</span>
+<pre><code class="lang-shell">input {
+    beats {
+        port =&gt; 5044
+    }
 
-<span class="token punctuation">}</span>
+}
 
-filter <span class="token punctuation">{</span>
-    json <span class="token punctuation">{</span>
-      <span class="token builtin class-name">source</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">&quot;message&quot;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">if</span> <span class="token punctuation">[</span>tags<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token keyword">in</span> <span class="token punctuation">[</span><span class="token string">&quot;nginx&quot;</span>, <span class="token string">&quot;httpd&quot;</span>, <span class="token string">&quot;apache&quot;</span>, <span class="token string">&quot;mysql&quot;</span>, <span class="token string">&quot;router&quot;</span>, <span class="token string">&quot;switch&quot;</span><span class="token punctuation">]</span> <span class="token punctuation">{</span>
-        mutate <span class="token punctuation">{</span>
-          add_field <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
-            <span class="token string">&quot;index_name&quot;</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">&quot;%{[host][name]}@%{[tags][1]}-%{[tags][0]}-%{+YYYY.MM.dd}&quot;</span>
-          <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-        mutate <span class="token punctuation">{</span>
-          add_field <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
-            <span class="token string">&quot;index_name&quot;</span> <span class="token operator">=</span><span class="token operator">&gt;</span>  <span class="token string">&quot;non_hosts_log&quot;</span>
-          <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-      <span class="token punctuation">}</span>
+filter {
+    json {
+      source =&gt; &quot;message&quot;
+    }
+    if [tags][0] in [&quot;nginx&quot;, &quot;httpd&quot;, &quot;apache&quot;, &quot;mysql&quot;, &quot;router&quot;, &quot;switch&quot;] {
+        mutate {
+          add_field =&gt; {
+            &quot;index_name&quot; =&gt; &quot;%{[host][name]}@%{[tags][1]}-%{[tags][0]}-%{+YYYY.MM.dd}&quot;
+          }
+        }
+      } else {
+        mutate {
+          add_field =&gt; {
+            &quot;index_name&quot; =&gt;  &quot;non_hosts_log&quot;
+          }
+        }
+      }
 
-<span class="token punctuation">}</span>
+}
 
-output <span class="token punctuation">{</span>
-    elasticsearch <span class="token punctuation">{</span>
-      hosts <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">[</span><span class="token string">&quot;http://&#x65E5;&#x5FD7;&#x670D;&#x52A1;&#x5668;ip:9200&quot;</span><span class="token punctuation">]</span>
-      index <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">&quot;%{index_name}&quot;</span>
-      user <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">&quot;elastic&quot;</span>
-      password <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">&quot;elastic_password&quot;</span>
-  <span class="token punctuation">}</span>
-  stdout <span class="token punctuation">{</span>
-    codec <span class="token operator">=</span><span class="token operator">&gt;</span> rubydebug
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
+output {
+    elasticsearch {
+      hosts =&gt; [&quot;http://&#x65E5;&#x5FD7;&#x670D;&#x52A1;&#x5668;ip:9200&quot;]
+      index =&gt; &quot;%{index_name}&quot;
+      user =&gt; &quot;elastic&quot;
+      password =&gt; &quot;elastic_password&quot;
+  }
+  stdout {
+    codec =&gt; rubydebug
+  }
+}
 </code></pre>
 <ol>
 <li>&#x91CD;&#x542F;&#x5BB9;&#x5668;&#x5728;&#x770B;&#x662F;&#x5426;&#x89E3;&#x51B3;</li>
 </ol>
-<pre class="language-"><code class="lang-shell"><span class="token function">docker</span> restart logstash
+<pre><code class="lang-shell">docker restart logstash
 </code></pre>
 <h1 id="&#x4E8C;&#x3001;&#x914D;&#x7F6E;elk&#x7528;&#x6237;&#x5BC6;&#x7801;">&#x4E8C;&#x3001;&#x914D;&#x7F6E;elk&#x7528;&#x6237;&#x5BC6;&#x7801;</h1>
 <ol>
 <li>&#x8FD0;&#x884C;&#x5BB9;&#x5668;</li>
 </ol>
-<pre class="language-"><code>docker-compose up -d
+<pre><code>docker-compose up -d
 </code></pre><ol>
 <li>&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</li>
 </ol>
 <p>&#x590D;&#x5236;&#x5BB9;&#x5668;&#x5185;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5230;&#x672C;&#x5730;</p>
-<pre class="language-"><code class="lang-shell"><span class="token function">sudo</span> <span class="token function">docker</span> <span class="token function">cp</span> elasticsearch:/usr/share/elasticsearch/config/elasticsearch.yml elasticsearch/config/elasticsearch.yml
+<pre><code class="lang-shell">sudo docker cp elasticsearch:/usr/share/elasticsearch/config/elasticsearch.yml elasticsearch/config/elasticsearch.yml
 </code></pre>
 <p>&#x6DFB;&#x52A0;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;</p>
-<pre class="language-"><code>http.cors.enabled: true
+<pre><code>http.cors.enabled: true
 http.cors.allow-origin: &quot;*&quot;
 </code></pre><p>&#x628A;&#x4FEE;&#x6539;&#x540E;&#x7684;&#x6587;&#x4EF6;&#x62F7;&#x8D1D;&#x56DE;&#x5BB9;&#x5668;</p>
-<pre class="language-"><code>sudo docker cp elasticsearch/config/elasticsearch.yml elasticsearch:/usr/share/elasticsearch/config/elasticsearch.yml
+<pre><code>sudo docker cp elasticsearch/config/elasticsearch.yml elasticsearch:/usr/share/elasticsearch/config/elasticsearch.yml
 
 #&#x91CD;&#x542F;&#x5BB9;&#x5668;
 docker restart elasticsearch
 </code></pre><p>&#x8FDB;&#x5165;elasticsearch&#x5BB9;&#x5668;&#x4FEE;&#x6539;&#x5BC6;&#x7801;</p>
-<pre class="language-"><code class="lang-shell"><span class="token function">docker</span> <span class="token builtin class-name">exec</span> <span class="token parameter variable">-it</span> elasticsearch /bin/bash <span class="token comment">#&#x8FDB;&#x5165;&#x5BB9;&#x5668;</span>
+<pre><code class="lang-shell">docker exec -it elasticsearch /bin/bash #&#x8FDB;&#x5165;&#x5BB9;&#x5668;
 
-./bin/elasticsearch-setup-passwords auto <span class="token comment">#&#x81EA;&#x52A8;&#x751F;&#x6210;&#x5BC6;&#x7801;</span>
+./bin/elasticsearch-setup-passwords auto #&#x81EA;&#x52A8;&#x751F;&#x6210;&#x5BC6;&#x7801;
 
-<span class="token comment">#&#x4FEE;&#x6539;elastic&#x4E3A;&#x6307;&#x5B9A;&#x7684;&#x5BC6;&#x7801;</span>
-<span class="token function">curl</span> <span class="token parameter variable">-XPOST</span> <span class="token parameter variable">-u</span> elastic <span class="token string">&apos;http://localhost:9200/_security/user/elastic/_password&apos;</span> <span class="token parameter variable">-H</span> <span class="token string">&quot;Content-Type: application/json&quot;</span> -d<span class="token string">&apos;
+#&#x4FEE;&#x6539;elastic&#x4E3A;&#x6307;&#x5B9A;&#x7684;&#x5BC6;&#x7801;
+curl -XPOST -u elastic &apos;http://localhost:9200/_security/user/elastic/_password&apos; -H &quot;Content-Type: application/json&quot; -d&apos;
 {
 &quot;password&quot;: &quot;elastic_password&quot;
 }
-&apos;</span>
+&apos;
 
-<span class="token comment">#&#x4FEE;&#x6539;kibana&#x4E3A;&#x6307;&#x5B9A;&#x7684;&#x5BC6;&#x7801;</span>
-<span class="token function">curl</span> <span class="token parameter variable">-XPOST</span> <span class="token parameter variable">-u</span> kibana <span class="token string">&apos;http://localhost:9200/_security/user/kibana/_password&apos;</span> <span class="token parameter variable">-H</span> <span class="token string">&quot;Content-Type: application/json&quot;</span> -d<span class="token string">&apos;
+#&#x4FEE;&#x6539;kibana&#x4E3A;&#x6307;&#x5B9A;&#x7684;&#x5BC6;&#x7801;
+curl -XPOST -u kibana &apos;http://localhost:9200/_security/user/kibana/_password&apos; -H &quot;Content-Type: application/json&quot; -d&apos;
 {
 &quot;password&quot;: &quot;kibana_password&quot;
 }
-&apos;</span>
+&apos;
 
-<span class="token comment"># &#x4FEE;&#x6539;&#x540E;exit&#x9000;&#x51FA;&#x5BB9;&#x5668;&#xFF0C;&#x53EF;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x9A8C;&#x8BC1;&#x5BC6;&#x7801;&#x662F;&#x5426;&#x6B63;&#x786E;&#xFF08;http://192.168.1.11:9200&#xFF09;</span>
+# &#x4FEE;&#x6539;&#x540E;exit&#x9000;&#x51FA;&#x5BB9;&#x5668;&#xFF0C;&#x53EF;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x9A8C;&#x8BC1;&#x5BC6;&#x7801;&#x662F;&#x5426;&#x6B63;&#x786E;&#xFF08;http://192.168.1.11:9200&#xFF09;
 </code></pre>
 <p>&#x4FEE;&#x6539;kibana&#x914D;&#x7F6E;&#x6587;&#x4EF6;kibana.yml</p>
-<pre class="language-"><code class="lang-shell"><span class="token function">sudo</span> <span class="token function">docker</span> <span class="token function">cp</span> kibana:/usr/share/kibana/config/kibana.yml kibana/kibana.yml
+<pre><code class="lang-shell">sudo docker cp kibana:/usr/share/kibana/config/kibana.yml kibana/kibana.yml
 
-<span class="token function">vim</span> kibana/kibana.yml
+vim kibana/kibana.yml
 
-<span class="token comment"># &#x6DFB;&#x52A0;&#x4EE5;&#x4E0B;&#x4E24;&#x884C;&#x5185;&#x5BB9;&#xFF0C;&#x4EC5;&#x53EF;&#x7528;&#x4E8E;&#x8FDE;&#x63A5;elasticsearch&#x5E76;&#x4E0E;&#x4E4B;&#x901A;&#x4FE1;, &#x4E0D;&#x80FD;&#x7528;&#x4E8E;kibana&#x767B;&#x5F55;</span>
-elasticsearch.username: <span class="token string">&quot;kibana&quot;</span>
-elasticsearch.password: <span class="token string">&quot;kibana_password&quot;</span>
+# &#x6DFB;&#x52A0;&#x4EE5;&#x4E0B;&#x4E24;&#x884C;&#x5185;&#x5BB9;&#xFF0C;&#x4EC5;&#x53EF;&#x7528;&#x4E8E;&#x8FDE;&#x63A5;elasticsearch&#x5E76;&#x4E0E;&#x4E4B;&#x901A;&#x4FE1;, &#x4E0D;&#x80FD;&#x7528;&#x4E8E;kibana&#x767B;&#x5F55;
+elasticsearch.username: &quot;kibana&quot;
+elasticsearch.password: &quot;kibana_password&quot;
 
-<span class="token comment"># &#x628A;&#x4FEE;&#x6539;&#x540E;&#x7684;&#x6587;&#x4EF6;&#x62F7;&#x8D1D;&#x5230;&#x5BB9;&#x5668;</span>
-<span class="token function">docker</span> <span class="token function">cp</span> kibana/kibana.yml kibana:/usr/share/kibana/config/kibana.yml
-<span class="token function">docker</span> restart kibana <span class="token comment">#&#x91CD;&#x542F;kibana&#x5BB9;&#x5668;</span>
+# &#x628A;&#x4FEE;&#x6539;&#x540E;&#x7684;&#x6587;&#x4EF6;&#x62F7;&#x8D1D;&#x5230;&#x5BB9;&#x5668;
+docker cp kibana/kibana.yml kibana:/usr/share/kibana/config/kibana.yml
+docker restart kibana #&#x91CD;&#x542F;kibana&#x5BB9;&#x5668;
 </code></pre>
-<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
-2024-11-23 22:56
+<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
+2025-04-06 16:47
 </span></footer>
                                 
                                 </section>
@@ -3546,7 +3542,7 @@ elasticsearch.password: <span class="token string">&quot;kibana_password&quot;</
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Docker部署elk","date":"2024-10-07T14:30:09.000Z","updated":"2024-11-23T22:56:19.000Z","categories":["其他"],"tags":["docker","ELK"],"permalink":"/posts/Docker部署elk/","level":"1.6.3","depth":2,"next":{"title":"Easytier安装与配置","level":"1.6.4","depth":2,"path":"其他/Easytier安装与配置.md","ref":"其他/Easytier安装与配置.md","articles":[]},"previous":{"title":"Docker推送镜像到仓库","level":"1.6.2","depth":2,"path":"其他/Docker推送镜像到仓库.md","ref":"其他/Docker推送镜像到仓库.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","prism","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"其他/Docker部署elk.md","mtime":"2024-11-23T14:56:21.620Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T08:32:22.121Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Docker部署elk","date":"2024-10-07T14:30:09.000Z","updated":"2024-11-23T22:56:19.000Z","categories":["其他"],"tags":["docker","ELK"],"permalink":"/posts/Docker部署elk/","level":"1.6.3","depth":2,"next":{"title":"Easytier安装与配置","level":"1.6.4","depth":2,"path":"其他/Easytier安装与配置.md","ref":"其他/Easytier安装与配置.md","articles":[]},"previous":{"title":"Docker推送镜像到仓库","level":"1.6.2","depth":2,"path":"其他/Docker推送镜像到仓库.md","ref":"其他/Docker推送镜像到仓库.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"其他/Docker部署elk.md","mtime":"2025-04-06T08:47:51.922Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T09:05:17.990Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

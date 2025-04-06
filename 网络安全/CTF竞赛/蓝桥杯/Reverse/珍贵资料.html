@@ -53,10 +53,6 @@
                 
             
                 
-                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
-                
-            
-                
                 <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -3286,84 +3282,84 @@ tips&#xFF1A;flag&#x662F;flag{&#x7ED3;&#x679C;}</p>
 <li>&#x7528;&#x6237;&#x8F93;&#x5165;&#x7684;password&#x52A0;&#x5BC6;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x4E0E;PASSWORD</li>
 </ul>
 <p>&#x52A0;&#x5BC6;&#x4EE3;&#x7801;&#xFF1A;</p>
-<pre class="language-"><code class="lang-java"><span class="token comment">/* JADX INFO: Access modifiers changed from: private */</span>
-    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">encode</span><span class="token punctuation">(</span><span class="token class-name">String</span> string<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token class-name">String</span> s <span class="token operator">=</span> <span class="token class-name">Encryption</span><span class="token punctuation">(</span>string<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> s <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">?</span> s <span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+<pre><code class="lang-java"><span class="hljs-comment">/* JADX INFO: Access modifiers changed from: private */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">encode</span><span class="hljs-params">(String string)</span> </span>{
+        String s = Encryption(string);
+        <span class="hljs-keyword">return</span> s != <span class="hljs-keyword">null</span> ? s : <span class="hljs-string">&quot;&quot;</span>;
+    }
 
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">String</span> <span class="token class-name">Encryption</span><span class="token punctuation">(</span><span class="token class-name">String</span> s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token class-name">StringBuilder</span> sb <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>s <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span> s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;you Input nothing.&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token class-name">String</span> s2 <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">int</span> len <span class="token operator">=</span> s2<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> len<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">char</span> c <span class="token operator">=</span> s2<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>j<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token constant">SOURCE</span><span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token operator">==</span> <span class="token constant">LEN</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                a <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token operator">==</span> <span class="token constant">LEN</span> <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                a <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token operator">==</span> <span class="token constant">LEN</span> <span class="token operator">-</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                a <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-            sb<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token constant">SOURCE</span><span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>a <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> sb<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">Encryption</span><span class="hljs-params">(String s)</span> </span>{
+        StringBuilder sb = <span class="hljs-keyword">new</span> StringBuilder();
+        <span class="hljs-keyword">if</span> (s == <span class="hljs-keyword">null</span> || s.length() &lt; <span class="hljs-number">1</span>) {
+            System.out.println(<span class="hljs-string">&quot;you Input nothing.&quot;</span>);
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
+        }
+        String s2 = s.toLowerCase();
+        <span class="hljs-keyword">int</span> len = s2.length();
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; len; j++) {
+            <span class="hljs-keyword">char</span> c = s2.charAt(j);
+            <span class="hljs-keyword">int</span> a = SOURCE.indexOf(c);
+            <span class="hljs-keyword">if</span> (a == LEN - <span class="hljs-number">1</span>) {
+                a = -<span class="hljs-number">1</span>;
+            }
+            <span class="hljs-keyword">if</span> (a == LEN - <span class="hljs-number">2</span>) {
+                a = -<span class="hljs-number">2</span>;
+            }
+            <span class="hljs-keyword">if</span> (a == LEN - <span class="hljs-number">3</span>) {
+                a = -<span class="hljs-number">3</span>;
+            }
+            sb.append(SOURCE.charAt(a + <span class="hljs-number">3</span>));
+        }
+        <span class="hljs-keyword">return</span> sb.toString();
+    }
 </code></pre>
 <p>&#x6839;&#x636E;&#x8FD9;&#x4E2A;&#x53EF;&#x4EE5;&#x5F88;&#x8F7B;&#x6613;&#x5199;&#x51FA;&#x89E3;&#x9898;&#x811A;&#x672C;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x5E76;&#x4E0D;&#x77E5;&#x9053;&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;PASSWORD&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x731C;&#x6D4B;&#x5728;&#x6587;&#x4EF6;unknown&#x4E2D;&#x3002;
 &#x7ECF;&#x8FC7;&#x767E;&#x5EA6;&#x5F97;&#x77E5;<code>ANDROID BACKUP</code>&#x6587;&#x4EF6;&#x53EF;&#x4EE5;&#x88AB;&#x63D0;&#x53D6;&#xFF0C;&#x4F7F;&#x7528;abe&#x5DE5;&#x5177;&#xFF08;&#x9879;&#x76EE;&#x5730;&#x5740;&#xFF1A;<a href="https://github.com/nelenkov/android-backup-extractor" target="_blank">https://github.com/nelenkov/android-backup-extractor</a>&#xFF09;
 &#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;
 <em>&#x6CE8;&#x610F;&#xFF1A;&#x9700;&#x8981;&#x5B89;&#x88C5;Java&#x73AF;&#x5883;</em></p>
-<pre class="language-"><code class="lang-shell"><span class="token function">java</span> <span class="token parameter variable">-jar</span> .<span class="token punctuation">\</span>abe.jar unpack <span class="token punctuation">[</span>&#x88AB;&#x63D0;&#x53D6;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;<span class="token punctuation">]</span> <span class="token punctuation">[</span>&#x63D0;&#x53D6;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;<span class="token punctuation">]</span>
+<pre><code class="lang-shell">java -jar .\abe.jar unpack [&#x88AB;&#x63D0;&#x53D6;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;] [&#x63D0;&#x53D6;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;]
 </code></pre>
 <p>&#x63D0;&#x53D6;&#x51FA;&#x6765;&#x540E;&#xFF0C;&#x4F7F;&#x7528;010&#x7684;&#x6587;&#x672C;&#x6A21;&#x5F0F;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;&#xFF1A;
 <img src="&#x73CD;&#x8D35;&#x8D44;&#x6599;/image-20240304223812085.png" alt=""></p>
 <p>&#x77E5;&#x9053;&#x5B57;&#x7B26;&#x4E32;&#x540E;&#xFF0C;&#x5199;&#x51FA;&#x89E3;&#x9898;&#x811A;&#x672C;&#xFF1A;</p>
-<pre class="language-"><code class="lang-c++">#include<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iostream</span><span class="token punctuation">&gt;</span></span>
-using namespace std;
+<pre><code class="lang-c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
 
-int main()
-{
-    char source[] = &quot;ijklmstuvwxyz0123abcdenopqrfgh456789&quot;;
-    char password[] = &quot;dudqlvqrero1&quot;;
-    char flag[] = &quot;&quot;;
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword">char</span> source[] = <span class="hljs-string">&quot;ijklmstuvwxyz0123abcdenopqrfgh456789&quot;</span>;
+    <span class="hljs-keyword">char</span> password[] = <span class="hljs-string">&quot;dudqlvqrero1&quot;</span>;
+    <span class="hljs-keyword">char</span> flag[] = <span class="hljs-string">&quot;&quot;</span>;
 
-    int len = 12;
-    int LEN = 36;
-    for (int j = 0; j &lt; len; j++) {
-        char c = password[j];
+    <span class="hljs-keyword">int</span> len = <span class="hljs-number">12</span>;
+    <span class="hljs-keyword">int</span> LEN = <span class="hljs-number">36</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; len; j++) {
+        <span class="hljs-keyword">char</span> c = password[j];
 
-        int a;
-        for (int i = 0; i &lt; LEN; i++)
+        <span class="hljs-keyword">int</span> a;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; LEN; i++)
         {
-            if (source[i] == c) a = i;
+            <span class="hljs-keyword">if</span> (source[i] == c) a = i;
         }
 
-        if (a - 3 == -1) {
-            a = LEN - 1;
+        <span class="hljs-keyword">if</span> (a - <span class="hljs-number">3</span> == <span class="hljs-number">-1</span>) {
+            a = LEN - <span class="hljs-number">1</span>;
         }
-        if (a - 3 == -2) {
-            a = LEN - 2;
+        <span class="hljs-keyword">if</span> (a - <span class="hljs-number">3</span> == <span class="hljs-number">-2</span>) {
+            a = LEN - <span class="hljs-number">2</span>;
         }
-        if (a - 3 == -3) {
-            a = LEN - 3;
+        <span class="hljs-keyword">if</span> (a - <span class="hljs-number">3</span> == <span class="hljs-number">-3</span>) {
+            a = LEN - <span class="hljs-number">3</span>;
         }
-        flag[j] = source[a - 3];
+        flag[j] = source[a - <span class="hljs-number">3</span>];
     }
-    cout &lt;&lt; &quot;flag{&quot; &lt;&lt; flag &lt;&lt; &quot;}&quot;;
+    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;flag{&quot;</span> &lt;&lt; flag &lt;&lt; <span class="hljs-string">&quot;}&quot;</span>;
 }
-// flag{amanisnobody1}
+<span class="hljs-comment">// flag{amanisnobody1}</span>
 </code></pre>
 <p>&#x5F97;&#x5230;<code>flag{amanisnobody1}</code></p>
-<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
-2024-11-15 21:49
+<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
+2025-04-06 16:47
 </span></footer>
                                 
                                 </section>
@@ -3403,7 +3399,7 @@ int main()
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"珍贵资料","date":"2024-03-11T14:31:58.000Z","updated":"2024-11-15T21:49:39.000Z","categories":["网络安全","CTF竞赛","蓝桥杯","Reverse"],"tags":["网络安全","CTF","Reverse"],"permalink":"/posts/珍贵资料/","level":"1.4.2.1.3.16","depth":5,"next":{"title":"Web","level":"1.4.2.1.4","depth":4,"ref":"","articles":[{"title":"Web 01 1","level":"1.4.2.1.4.1","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Web/web01-1.md","ref":"网络安全/CTF竞赛/蓝桥杯/Web/web01-1.md","articles":[]},{"title":"Web 01 2","level":"1.4.2.1.4.2","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Web/web01-2.md","ref":"网络安全/CTF竞赛/蓝桥杯/Web/web01-2.md","articles":[]},{"title":"Web 02","level":"1.4.2.1.4.3","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Web/web02.md","ref":"网络安全/CTF竞赛/蓝桥杯/Web/web02.md","articles":[]},{"title":"Web 03 1","level":"1.4.2.1.4.4","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Web/web03-1.md","ref":"网络安全/CTF竞赛/蓝桥杯/Web/web03-1.md","articles":[]},{"title":"文件包含绕过","level":"1.4.2.1.4.5","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Web/文件包含绕过.md","ref":"网络安全/CTF竞赛/蓝桥杯/Web/文件包含绕过.md","articles":[]}]},"previous":{"title":"填数游戏","level":"1.4.2.1.3.15","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/填数游戏.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/填数游戏.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","prism","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/珍贵资料.md","mtime":"2024-11-15T13:49:40.066Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T08:32:22.121Z"},"basePath":"../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"珍贵资料","date":"2024-03-11T14:31:58.000Z","updated":"2024-11-15T21:49:39.000Z","categories":["网络安全","CTF竞赛","蓝桥杯","Reverse"],"tags":["网络安全","CTF","Reverse"],"permalink":"/posts/珍贵资料/","level":"1.4.2.1.3.16","depth":5,"next":{"title":"Web","level":"1.4.2.1.4","depth":4,"ref":"","articles":[{"title":"Web 01 1","level":"1.4.2.1.4.1","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Web/web01-1.md","ref":"网络安全/CTF竞赛/蓝桥杯/Web/web01-1.md","articles":[]},{"title":"Web 01 2","level":"1.4.2.1.4.2","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Web/web01-2.md","ref":"网络安全/CTF竞赛/蓝桥杯/Web/web01-2.md","articles":[]},{"title":"Web 02","level":"1.4.2.1.4.3","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Web/web02.md","ref":"网络安全/CTF竞赛/蓝桥杯/Web/web02.md","articles":[]},{"title":"Web 03 1","level":"1.4.2.1.4.4","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Web/web03-1.md","ref":"网络安全/CTF竞赛/蓝桥杯/Web/web03-1.md","articles":[]},{"title":"文件包含绕过","level":"1.4.2.1.4.5","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Web/文件包含绕过.md","ref":"网络安全/CTF竞赛/蓝桥杯/Web/文件包含绕过.md","articles":[]}]},"previous":{"title":"填数游戏","level":"1.4.2.1.3.15","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/填数游戏.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/填数游戏.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/珍贵资料.md","mtime":"2025-04-06T08:47:52.507Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T09:05:17.990Z"},"basePath":"../../../..","book":{"language":""}});
         });
     </script>
 </div>

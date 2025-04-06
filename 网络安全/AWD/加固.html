@@ -53,10 +53,6 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
-                
-            
-                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -3271,24 +3267,24 @@
 httpd.conf&#x4E0B;&#x542F;&#x7528;<strong>mod_reqtimeout&#x6A21;&#x5757;</strong>
 &#x53BB;&#x6389;LoadModule reqtimeout_module modules/mod_reqtimeout.so&#x524D;&#x9762;&#x7684;#&#x53F7;
 &#x589E;&#x52A0;&#x4EE5;&#x4E0B;&#x914D;&#x7F6E;&#xFF1A;</p>
-<pre class="language-"><code class="lang-shell"><span class="token operator">&lt;</span>IfModule reqtimeout_module<span class="token operator">&gt;</span>
- RequestReadTimeout <span class="token assign-left variable">header</span><span class="token operator">=</span><span class="token number">5</span>-40,MinRate<span class="token operator">=</span><span class="token number">500</span> <span class="token assign-left variable">body</span><span class="token operator">=</span><span class="token number">20</span>,MinRate<span class="token operator">=</span><span class="token number">500</span>
-<span class="token operator">&lt;</span>/IfModule<span class="token operator">&gt;</span>
+<pre><code class="lang-shell">&lt;IfModule reqtimeout_module&gt;
+ RequestReadTimeout header=5-40,MinRate=500 body=20,MinRate=500
+&lt;/IfModule&gt;
 </code></pre>
 <p>&#x91CD;&#x542F;apache&#xFF0C;&#x5DE5;&#x5177;&#x626B;&#x63CF;&#x786E;&#x8BA4;&#x6F0F;&#x6D1E;&#x662F;&#x5426;&#x4FEE;&#x6539;&#x5B8C;&#x6210;&#x3002;</p>
 <p><strong>Nginx:</strong>
 &#x5173;&#x95ED;&#x6162;&#x901F;&#x8FDE;&#x63A5;</p>
-<pre class="language-"><code class="lang-shell">server <span class="token punctuation">{</span>
-    client_body_timeout 5s<span class="token punctuation">;</span>    <span class="token comment">#NGINX&#x5728;&#x5BA2;&#x6237;&#x673A;&#x4F53;&#x5199;&#x5165;&#x4E4B;&#x95F4;&#x7B49;&#x5F85;&#x7684;&#x65F6;&#x95F4;</span>
-    client_header_timeout 5s<span class="token punctuation">;</span>    <span class="token comment">#NGINX&#x5728;&#x5199;&#x5165;&#x5BA2;&#x6237;&#x673A;&#x6807;&#x9898;&#x4E4B;&#x95F4;&#x7B49;&#x5F85;&#x7684;&#x65F6;&#x95F4;</span>
-    limit_conn perserver <span class="token number">300</span><span class="token punctuation">;</span><span class="token comment">#&#x9650;&#x5236;&#x5F53;&#x524D;&#x7AD9;&#x70B9;&#x6700;&#x5927;&#x5E76;&#x53D1;&#x6570;</span>
-    limit_conn perip <span class="token number">25</span><span class="token punctuation">;</span><span class="token comment">#&#x9650;&#x5236;&#x5355;&#x4E2A;IP&#x8BBF;&#x95EE;&#x6700;&#x5927;&#x5E76;&#x53D1;&#x6570;</span>
-    limit_rate 512k<span class="token punctuation">;</span><span class="token comment">#&#x9650;&#x5236;&#x6BCF;&#x4E2A;&#x8BF7;&#x6C42;&#x7684;&#x6D41;&#x91CF;&#x4E0A;&#x9650;&#xFF08;&#x5355;&#x4F4D;&#xFF1A;KB&#xFF09;</span>
-    <span class="token comment"># ...</span>
-<span class="token punctuation">}</span>
+<pre><code class="lang-shell">server {
+    client_body_timeout 5s;    #NGINX&#x5728;&#x5BA2;&#x6237;&#x673A;&#x4F53;&#x5199;&#x5165;&#x4E4B;&#x95F4;&#x7B49;&#x5F85;&#x7684;&#x65F6;&#x95F4;
+    client_header_timeout 5s;    #NGINX&#x5728;&#x5199;&#x5165;&#x5BA2;&#x6237;&#x673A;&#x6807;&#x9898;&#x4E4B;&#x95F4;&#x7B49;&#x5F85;&#x7684;&#x65F6;&#x95F4;
+    limit_conn perserver 300;#&#x9650;&#x5236;&#x5F53;&#x524D;&#x7AD9;&#x70B9;&#x6700;&#x5927;&#x5E76;&#x53D1;&#x6570;
+    limit_conn perip 25;#&#x9650;&#x5236;&#x5355;&#x4E2A;IP&#x8BBF;&#x95EE;&#x6700;&#x5927;&#x5E76;&#x53D1;&#x6570;
+    limit_rate 512k;#&#x9650;&#x5236;&#x6BCF;&#x4E2A;&#x8BF7;&#x6C42;&#x7684;&#x6D41;&#x91CF;&#x4E0A;&#x9650;&#xFF08;&#x5355;&#x4F4D;&#xFF1A;KB&#xFF09;
+    # ...
+}
 </code></pre>
-<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
-2024-11-15 21:49
+<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
+2025-04-06 16:47
 </span></footer>
                                 
                                 </section>
@@ -3332,7 +3328,7 @@ httpd.conf&#x4E0B;&#x542F;&#x7528;<strong>mod_reqtimeout&#x6A21;&#x5757;</strong
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"加固","date":"2024-09-25T14:30:32.000Z","updated":"2024-11-15T21:49:39.000Z","categories":["网络安全","AWD"],"tags":["AWD","网络安全"],"permalink":"/posts/加固/","level":"1.4.1.6","depth":3,"next":{"title":"定时备份源码","level":"1.4.1.7","depth":3,"path":"网络安全/AWD/定时备份源码.md","ref":"网络安全/AWD/定时备份源码.md","articles":[]},"previous":{"title":"信息修改","level":"1.4.1.5","depth":3,"path":"网络安全/AWD/信息修改.md","ref":"网络安全/AWD/信息修改.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","prism","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"网络安全/AWD/加固.md","mtime":"2024-11-15T13:49:40.143Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T08:32:22.121Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"加固","date":"2024-09-25T14:30:32.000Z","updated":"2024-11-15T21:49:39.000Z","categories":["网络安全","AWD"],"tags":["AWD","网络安全"],"permalink":"/posts/加固/","level":"1.4.1.6","depth":3,"next":{"title":"定时备份源码","level":"1.4.1.7","depth":3,"path":"网络安全/AWD/定时备份源码.md","ref":"网络安全/AWD/定时备份源码.md","articles":[]},"previous":{"title":"信息修改","level":"1.4.1.5","depth":3,"path":"网络安全/AWD/信息修改.md","ref":"网络安全/AWD/信息修改.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"网络安全/AWD/加固.md","mtime":"2025-04-06T08:47:52.275Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T09:05:17.990Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -1,7 +1,7 @@
 ---
 title: Arch安装卸载软件常用命令
 date: 2024-08-27 14:34:23
-updated: 2024-11-23 23:22:30
+updated: 2025-04-06 16:57:55
 categories:
   - 系统运维
   - Linux

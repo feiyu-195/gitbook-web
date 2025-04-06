@@ -53,10 +53,6 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
-                
-            
-                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -3269,107 +3265,107 @@
                                 <h1 id="ubuntu">Ubuntu</h1>
 <ol>
 <li><p>&#x6DFB;&#x52A0;ElasticSearch&#x7684;GPG&#x5BC6;&#x94A5;</p>
-<pre class="language-"><code>wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+<pre><code>wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 </code></pre></li>
 </ol>
 <ol>
-<li>&#x6DFB;&#x52A0;ElasticSearch&#x7684;APT&#x5B58;&#x50A8;&#x5E93;<pre class="language-"><code>echo &quot;deb https://artifacts.elastic.co/packages/oss-8.x/apt stable main&quot; | sudo tee -a /etc/apt/sources.list.d/elastic-8.x.list
+<li>&#x6DFB;&#x52A0;ElasticSearch&#x7684;APT&#x5B58;&#x50A8;&#x5E93;<pre><code>echo &quot;deb https://artifacts.elastic.co/packages/oss-8.x/apt stable main&quot; | sudo tee -a /etc/apt/sources.list.d/elastic-8.x.list
 </code></pre></li>
 </ol>
 <ol>
-<li>&#x66F4;&#x65B0;APT&#x8F6F;&#x4EF6;&#x5305;&#x7D22;&#x5F15;<pre class="language-"><code>sudo apt update
+<li>&#x66F4;&#x65B0;APT&#x8F6F;&#x4EF6;&#x5305;&#x7D22;&#x5F15;<pre><code>sudo apt update
 </code></pre></li>
 </ol>
 <ol>
-<li>&#x5B89;&#x88C5;filebeat<pre class="language-"><code>sudo apt install filebeat
+<li>&#x5B89;&#x88C5;filebeat<pre><code>sudo apt install filebeat
 </code></pre></li>
 </ol>
 <ol>
 <li>&#x914D;&#x7F6E;filebeat</li>
 </ol>
-<pre class="language-"><code>sudo vim /etc/filebeat/filebeat.yml
+<pre><code>sudo vim /etc/filebeat/filebeat.yml
 </code></pre><p>&#x5168;&#x90E8;&#x66FF;&#x6362;&#x4E3A;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;</p>
-<pre class="language-"><code class="lang-shell">processors:
+<pre><code class="lang-shell">processors:
   - add_cloud_metadata: ~
   - add_docker_metadata: ~
 
-<span class="token comment"># ============================== Filebeat inputs ===============================</span>
+# ============================== Filebeat inputs ===============================
 
 filebeat.inputs:
 - type: log
-  enabled: <span class="token boolean">true</span>
+  enabled: true
   paths:
     - /var/log/nginx/*.log
-  <span class="token comment"># tags&#x66F4;&#x6539;&#x5206;&#x522B;&#x66F4;&#x6539;&#x4E3A;&#x65E5;&#x5FD7;&#x5E94;&#x7528;&#x548C;&#x4E3B;&#x673A;ip&#xFF0C;&#x540E;&#x7EED;&#x5206;&#x522B;&#x5BF9;&#x5E94;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x540D;&#x79F0;</span>
-  tags: <span class="token punctuation">[</span><span class="token string">&quot;nginx&quot;</span>, <span class="token string">&quot;[&#x4E3B;&#x673A;ip]&quot;</span><span class="token punctuation">]</span>
+  # tags&#x66F4;&#x6539;&#x5206;&#x522B;&#x66F4;&#x6539;&#x4E3A;&#x65E5;&#x5FD7;&#x5E94;&#x7528;&#x548C;&#x4E3B;&#x673A;ip&#xFF0C;&#x540E;&#x7EED;&#x5206;&#x522B;&#x5BF9;&#x5E94;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x540D;&#x79F0;
+  tags: [&quot;nginx&quot;, &quot;[&#x4E3B;&#x673A;ip]&quot;]
 
 filebeat.config:
   modules:
-    path: <span class="token variable">${path.config}</span>/modules.d/*.yml
-    reload.enabled: <span class="token boolean">false</span>
+    path: ${path.config}/modules.d/*.yml
+    reload.enabled: false
 
-<span class="token comment"># ============================== Filebeat output ===============================</span>
+# ============================== Filebeat output ===============================
 
-<span class="token comment"># &#x76F4;&#x63A5;&#x53D1;&#x9001;&#x7ED9;elasticsearch</span>
-<span class="token comment">#output.elasticsearch:</span>
-<span class="token comment">#  username: &apos;elastic&apos;</span>
-<span class="token comment">#  password: &apos;elastic_password&apos;</span>
-<span class="token comment">#  hosts: [&quot;http://&#x65E5;&#x5FD7;&#x670D;&#x52A1;&#x5668;ip:9200&quot;]</span>
-<span class="token comment">#  indices:</span>
-<span class="token comment">#    - index: &quot;nginx-%{+yyyy.MM.dd}&quot;</span>
+# &#x76F4;&#x63A5;&#x53D1;&#x9001;&#x7ED9;elasticsearch
+#output.elasticsearch:
+#  username: &apos;elastic&apos;
+#  password: &apos;elastic_password&apos;
+#  hosts: [&quot;http://&#x65E5;&#x5FD7;&#x670D;&#x52A1;&#x5668;ip:9200&quot;]
+#  indices:
+#    - index: &quot;nginx-%{+yyyy.MM.dd}&quot;
 
-<span class="token comment"># &#x53D1;&#x9001;&#x7ED9;logstash</span>
+# &#x53D1;&#x9001;&#x7ED9;logstash
 output.logstash:
-  hosts: <span class="token punctuation">[</span><span class="token string">&quot;&#x65E5;&#x5FD7;&#x670D;&#x52A1;&#x5668;ip:5044&quot;</span><span class="token punctuation">]</span>
-  enabled: <span class="token boolean">true</span>
+  hosts: [&quot;&#x65E5;&#x5FD7;&#x670D;&#x52A1;&#x5668;ip:5044&quot;]
+  enabled: true
 </code></pre>
 <ol>
-<li>&#x542F;&#x52A8;filebeat<pre class="language-"><code>sudo systemctl enable filebeat
+<li>&#x542F;&#x52A8;filebeat<pre><code>sudo systemctl enable filebeat
 sudo systemctl start filebeat
 </code></pre></li>
 </ol>
 <h1 id="centos">Centos</h1>
 <p>&#x4E00;. &#x76F4;&#x63A5;yum&#x65B9;&#x5F0F;&#x5B89;&#x88C5;</p>
-<pre class="language-"><code>yum install filebeat
+<pre><code>yum install filebeat
 </code></pre><p>&#x4E8C;. &#x914D;&#x7F6E;filebeat</p>
-<pre class="language-"><code>sudo vim /etc/filebeat/filebeat.yml
+<pre><code>sudo vim /etc/filebeat/filebeat.yml
 </code></pre><p>&#x5168;&#x90E8;&#x66FF;&#x6362;&#x4E3A;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;</p>
-<pre class="language-"><code class="lang-shell">processors:
+<pre><code class="lang-shell">processors:
   - add_cloud_metadata: ~
   - add_docker_metadata: ~
 
-<span class="token comment"># ============================== Filebeat inputs ===============================</span>
+# ============================== Filebeat inputs ===============================
 
 filebeat.inputs:
 - type: log
-  enabled: <span class="token boolean">true</span>
+  enabled: true
   paths:
     - /var/log/nginx/*.log
-  <span class="token comment"># tags&#x66F4;&#x6539;&#x5206;&#x522B;&#x66F4;&#x6539;&#x4E3A;&#x65E5;&#x5FD7;&#x5E94;&#x7528;&#x548C;&#x4E3B;&#x673A;ip&#xFF0C;&#x540E;&#x7EED;&#x5206;&#x522B;&#x5BF9;&#x5E94;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x540D;&#x79F0;</span>
-  tags: <span class="token punctuation">[</span><span class="token string">&quot;nginx&quot;</span>, <span class="token string">&quot;[&#x4E3B;&#x673A;ip]&quot;</span><span class="token punctuation">]</span>
+  # tags&#x66F4;&#x6539;&#x5206;&#x522B;&#x66F4;&#x6539;&#x4E3A;&#x65E5;&#x5FD7;&#x5E94;&#x7528;&#x548C;&#x4E3B;&#x673A;ip&#xFF0C;&#x540E;&#x7EED;&#x5206;&#x522B;&#x5BF9;&#x5E94;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x540D;&#x79F0;
+  tags: [&quot;nginx&quot;, &quot;[&#x4E3B;&#x673A;ip]&quot;]
 
 filebeat.config:
   modules:
-    path: <span class="token variable">${path.config}</span>/modules.d/*.yml
-    reload.enabled: <span class="token boolean">false</span>
+    path: ${path.config}/modules.d/*.yml
+    reload.enabled: false
 
-<span class="token comment"># ============================== Filebeat output ===============================</span>
+# ============================== Filebeat output ===============================
 
-<span class="token comment"># &#x76F4;&#x63A5;&#x53D1;&#x9001;&#x7ED9;elasticsearch</span>
-<span class="token comment">#output.elasticsearch:</span>
-<span class="token comment">#  username: &apos;elastic&apos;</span>
-<span class="token comment">#  password: &apos;elastic_password&apos;</span>
-<span class="token comment">#  hosts: [&quot;http://&#x65E5;&#x5FD7;&#x670D;&#x52A1;&#x5668;ip:9200&quot;]</span>
-<span class="token comment">#  indices:</span>
-<span class="token comment">#    - index: &quot;nginx-%{+yyyy.MM.dd}&quot;</span>
+# &#x76F4;&#x63A5;&#x53D1;&#x9001;&#x7ED9;elasticsearch
+#output.elasticsearch:
+#  username: &apos;elastic&apos;
+#  password: &apos;elastic_password&apos;
+#  hosts: [&quot;http://&#x65E5;&#x5FD7;&#x670D;&#x52A1;&#x5668;ip:9200&quot;]
+#  indices:
+#    - index: &quot;nginx-%{+yyyy.MM.dd}&quot;
 
-<span class="token comment"># &#x53D1;&#x9001;&#x7ED9;logstash</span>
+# &#x53D1;&#x9001;&#x7ED9;logstash
 output.logstash:
-  hosts: <span class="token punctuation">[</span><span class="token string">&quot;&#x65E5;&#x5FD7;&#x670D;&#x52A1;&#x5668;ip:5044&quot;</span><span class="token punctuation">]</span>
-  enabled: <span class="token boolean">true</span>
+  hosts: [&quot;&#x65E5;&#x5FD7;&#x670D;&#x52A1;&#x5668;ip:5044&quot;]
+  enabled: true
 </code></pre>
-<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
-2025-01-03 14:41
+<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
+2025-04-06 16:47
 </span></footer>
                                 
                                 </section>
@@ -3413,7 +3409,7 @@ output.logstash:
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Filebeat安装配置","date":"2024-10-07T14:30:11.000Z","updated":"2025-01-03T14:41:08.000Z","categories":["其他"],"tags":["ELK","filebeat"],"permalink":"/posts/Filebeat安装配置/","level":"1.6.5","depth":2,"next":{"title":"kvm虚拟机配置增强功能","level":"1.6.6","depth":2,"path":"其他/kvm虚拟机配置增强功能.md","ref":"其他/kvm虚拟机配置增强功能.md","articles":[]},"previous":{"title":"Easytier安装与配置","level":"1.6.4","depth":2,"path":"其他/Easytier安装与配置.md","ref":"其他/Easytier安装与配置.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","prism","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"其他/Filebeat安装配置.md","mtime":"2025-01-03T06:41:09.984Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T08:32:22.121Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Filebeat安装配置","date":"2024-10-07T14:30:11.000Z","updated":"2025-01-03T14:41:08.000Z","categories":["其他"],"tags":["ELK","filebeat"],"permalink":"/posts/Filebeat安装配置/","level":"1.6.5","depth":2,"next":{"title":"kvm虚拟机配置增强功能","level":"1.6.6","depth":2,"path":"其他/kvm虚拟机配置增强功能.md","ref":"其他/kvm虚拟机配置增强功能.md","articles":[]},"previous":{"title":"Easytier安装与配置","level":"1.6.4","depth":2,"path":"其他/Easytier安装与配置.md","ref":"其他/Easytier安装与配置.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","chapter-fold","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","-sharing","sharing-plus","hide-element","umami"],"styles":{},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"scripts":{},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"其他/Filebeat安装配置.md","mtime":"2025-04-06T08:47:51.923Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-06T09:05:17.990Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
