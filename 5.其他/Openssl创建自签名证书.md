@@ -1,7 +1,7 @@
 ---
 title: Openssl创建自签名证书
 date: 2024-07-06 14:30:13
-updated: 2025-03-23 10:56:16
+updated: 2025-04-08 18:38:43
 categories:
   - 其他
 tags:
@@ -11,7 +11,7 @@ permalink: /posts/Openssl创建自签名证书/
 # 生成根证书的私钥和证书
 
 ```shell
-openssl req -x509 -nodes -days 36500 -newkey rsa:2048 -subj "/C=CN/ST=China/L=China/O=Private" -keyout ./cert/CA.key -out ./cert/CA.crt -reqexts v3_req -extensions v3_ca
+openssl req -x509 -nodes -days 36500 -newkey rsa:2048 -subj "/C=CN/ST=Jiangxi/L=Jiujiang/O=Network_CA" -keyout ./cert/CA.key -out ./cert/CA.crt -reqexts v3_req -extensions v3_ca
 ```
 
 - `req`：表示使用 OpenSSL 的请求（request）功能。
@@ -32,7 +32,7 @@ openssl req -x509 -nodes -days 36500 -newkey rsa:2048 -subj "/C=CN/ST=China/L=Ch
 openssl genrsa -out ./cert/nginx.key 2048
 
 # 根据应用证书的私钥创建一个证书请求文件csr
-openssl req -new -key  ./cert/nginx.key -subj "/C=CN/ST=China/L=China/O=Private/CN=192.168.111.3" -sha256 -out  ./cert/nginx.csr
+openssl req -new -key  ./cert/nginx.key -subj "/C=CN/ST=Jiangxi/L=Jiujiang/O=Network/CN=sharkfeiyu.com" -sha256 -out  ./cert/nginx.csr
 
 # 根据应用证书请求文件创建应用证书，创建应用证书之前需要创建应用证书的扩展描述文件，如果不使用扩展描述文件，那么浏览器中无法授信，会提示证书无效
 
@@ -41,14 +41,16 @@ vim ./cert/nginx.ext
 ##########################
 [ req ]
 default_bits        = 2048
-distinguished_name  = req_distinguished_name
+distinguished_name  = city
 req_extensions      = san
 extensions          = san
-[ req_distinguished_name ]
+
+[ city ]
 countryName         = CN
-stateOrProvinceName = China
-localityName        = China
-organizationName    = Private
+stateOrProvinceName = Jiangxi
+localityName        = Jiujiang
+organizationName    = Network
+
 [SAN]
 authorityKeyIdentifier=keyid,issuer
 basicConstraints=CA:FALSE
@@ -57,9 +59,9 @@ subjectAltName = @alt_names
 
 [ alt_names ]
 IP.1 = 192.168.111.3
-IP.2 = 192.168.168.3
-IP.3 = 10.3.7.3
-DNS.1 = feiyu.private
+IP.2 = 10.3.7.3
+DNS.1 = sharkfeiyu.com
+DNS.2 = *.sharkfeiyu.com
 ##########################
 
 # 最后，使用csr，ext、以及根证书CA.crt创建应用证书
