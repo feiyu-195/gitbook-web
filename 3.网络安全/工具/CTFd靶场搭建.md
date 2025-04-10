@@ -1,7 +1,7 @@
 ---
 title: CTFd靶场搭建
 date: 2024-04-27 14:32:28
-updated: 2024-11-15 21:49:39
+updated: 2025-04-10 14:56:53
 categories:
   - 网络安全
   - 工具
@@ -17,14 +17,11 @@ permalink: /posts/CTFd靶场搭建/
 
 # 二、前置需求下载安装
 
-
-
 #### 1、CTFd
 
 ```bash
 git clone https://github.com/CTFd/CTFd.git
 ```
-
 
 #### 2、ctfd-whale
 
@@ -45,12 +42,15 @@ cp frpc.ini frps.ini /etc/frp/
 cp frpc frps /usr/bin/
 chmod a+x /usr/bin/frpc /usr/bin/frps
 ```
+
 2)添加指令单元快捷启动frps
 
 ```shell
 vim /usr/lib/systemd/system/frps.service
 ```
+
 填入以下内容
+
 ```shell
 [Unit]
 Description=frps
@@ -65,7 +65,9 @@ Restart=on-failure
 [Install]
 WantedBy=multi-user.target
 ```
+
 启动frps
+
 ```bash
 systemctl daemo-reload
 systemctl start frps
@@ -95,8 +97,6 @@ admin_addr = 172.1.0.4      # 这里填写frpc服务在frp网络中的ip
 admin_port = 7400
 # 这里需要留至少一行空行，因为新的 Whale 会把容器的转发代理写到这个文件里，没留空行的话会影响 admin_port。
 ```
-
-
 
 # 三、安装docker和docker-compose
 
@@ -141,19 +141,4 @@ docker swarm init
 docker node update --label-add name=linux-1 $(docker node ls -q)
 ```
 
-
-
 # 四、配置过程
-
-
-
-
-
-
-
-
-
-
-
-
-

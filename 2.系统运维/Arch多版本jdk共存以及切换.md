@@ -1,5 +1,7 @@
 ---
-title: Arch多版本jdk共存以及切换
+title: Arch多版本JDK共存以及切换
+date: 2024-10-11 14:34:25
+updated: 2025-04-09 21:49:10
 categories:
   - 系统运维
   - Linux
@@ -7,10 +9,9 @@ tags:
   - Linux
   - Arch
   - Java
-permalink: /posts/Arch多版本jdk共存以及切换/
-date: 2024-10-11 14:34:25
-updated: 2024-11-23 23:05:52
+permalink: /posts/Arch多版本JDK共存以及切换/
 ---
+
 ArchLinux提供了archlinux-java命令来切换jdk版本，使用如下：
 
 - 使用ArchLinux的包管理器安装openjdk8和openjdk11

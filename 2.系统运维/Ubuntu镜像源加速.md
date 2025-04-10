@@ -1,23 +1,15 @@
 ---
 title: Ubuntu镜像源加速
 date: 2024-12-16 10:20:10
-updated: 2024-12-16 10:34:33
+updated: 2025-04-10 14:51:02
 tags: 
 permalink: /posts/Ubuntu镜像源加速/
 ---
 # 前言
 
-国内镜像源汇总
+镜像源文件位置`/etc/apt/sources.list`
 
 ```shell
-
-```
-
-镜像源文件
-
-```shell
-sudo vim /etc/apt/sources.list
-
 ## 基础源
 deb 镜像源地址 版本名 main restricted universe multiverse
 deb-src 镜像源地址 版本名 main restricted universe multiverse

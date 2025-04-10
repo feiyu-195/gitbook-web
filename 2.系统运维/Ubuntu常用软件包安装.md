@@ -1,5 +1,7 @@
 ---
 title: Ubuntu常用软件包安装
+date: 2024-08-08 14:34:32
+updated: 2025-04-10 14:51:15
 categories:
   - 系统运维
   - Linux
@@ -7,8 +9,6 @@ tags:
   - Linux
   - Ubuntu
 permalink: /posts/Ubuntu常用软件包安装/
-date: 2024-08-08 14:34:32
-updated: 2024-11-15 21:49:40
 ---
 ### 1、bash命令补全工具
 
@@ -18,8 +18,6 @@ sudo apt-get -y install bash-completion
 # 在用户的shell中运行
 source /etc/bash_completion
 ```
-
-
 
 ### 2、docker
 
@@ -85,8 +83,6 @@ EOF
 sudo systemctl restart docker
 ```
 
-
-
 ### 3、docker-compose
 
 ```shell
@@ -102,8 +98,6 @@ mv docker-compose-linux-x86_64 docker-compose
 sudo chmod +x docker-compose
 ```
 
-
-
 ### 4、Nginx
 
 ```shell
@@ -113,6 +107,3 @@ sudo apt install -y curl gnupg2 ca-certificates lsb-release
 # 安装Nginx
 sudo apt install -y nginx
 ```
-
-
-
