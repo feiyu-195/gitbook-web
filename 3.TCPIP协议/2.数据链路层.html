@@ -1,0 +1,934 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2.数据链路层 · SkyFish</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-accordion/accordion.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="3.应用层概述.html" />
+    
+    
+    <link rel="prev" href="1.TCP与UDP.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    1.网络概述
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1.网络概述/1.网络企业基础架构.html">
+            
+                <a href="../1.网络概述/1.网络企业基础架构.html">
+            
+                    
+                    1.网络企业基础架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../1.网络概述/2.网络概述.html">
+            
+                <a href="../1.网络概述/2.网络概述.html">
+            
+                    
+                    2.网络概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../1.网络概述/3.网络模型.html">
+            
+                <a href="../1.网络概述/3.网络模型.html">
+            
+                    
+                    3.网络模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../1.网络概述/4.OSI参考模型.html">
+            
+                <a href="../1.网络概述/4.OSI参考模型.html">
+            
+                    
+                    4.OSI参考模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    2.VRP基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../2.VRP基础/1.概述.html">
+            
+                <a href="../2.VRP基础/1.概述.html">
+            
+                    
+                    1.概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../2.VRP基础/2.基础命令.html">
+            
+                <a href="../2.VRP基础/2.基础命令.html">
+            
+                    
+                    2.基础命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../2.VRP基础/3.文件系统.html">
+            
+                <a href="../2.VRP基础/3.文件系统.html">
+            
+                    
+                    3.文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../2.VRP基础/4.远程管理.html">
+            
+                <a href="../2.VRP基础/4.远程管理.html">
+            
+                    
+                    4.远程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../2.VRP基础/5.系统管理.html">
+            
+                <a href="../2.VRP基础/5.系统管理.html">
+            
+                    
+                    5.系统管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    3.TCPIP协议
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="1.TCP与UDP.html">
+            
+                <a href="1.TCP与UDP.html">
+            
+                    
+                    1.TCP与UDP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="2.数据链路层.html">
+            
+                <a href="2.数据链路层.html">
+            
+                    
+                    2.数据链路层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="3.应用层概述.html">
+            
+                <a href="3.应用层概述.html">
+            
+                    
+                    3.应用层概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    4.路由
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../4.路由/ACL.html">
+            
+                <a href="../4.路由/ACL.html">
+            
+                    
+                    ACL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../4.路由/ARP.html">
+            
+                <a href="../4.路由/ARP.html">
+            
+                    
+                    ARP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../4.路由/DHCP.html">
+            
+                <a href="../4.路由/DHCP.html">
+            
+                    
+                    DHCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../4.路由/ICMP.html">
+            
+                <a href="../4.路由/ICMP.html">
+            
+                    
+                    ICMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../4.路由/IP地址概述.html">
+            
+                <a href="../4.路由/IP地址概述.html">
+            
+                    
+                    IP地址概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../4.路由/IP报文.html">
+            
+                <a href="../4.路由/IP报文.html">
+            
+                    
+                    IP报文
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../4.路由/NAT.html">
+            
+                <a href="../4.路由/NAT.html">
+            
+                    
+                    NAT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../4.路由/OSPF.html">
+            
+                <a href="../4.路由/OSPF.html">
+            
+                    
+                    OSPF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../4.路由/RIP.html">
+            
+                <a href="../4.路由/RIP.html">
+            
+                    
+                    RIP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../4.路由/动态路由概述.html">
+            
+                <a href="../4.路由/动态路由概述.html">
+            
+                    
+                    动态路由概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../4.路由/单播、组播、广播.html">
+            
+                <a href="../4.路由/单播、组播、广播.html">
+            
+                    
+                    单播、组播、广播
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../4.路由/网关及数据转发过程.html">
+            
+                <a href="../4.路由/网关及数据转发过程.html">
+            
+                    
+                    网关及数据转发过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13" data-path="../4.路由/路由基础.html">
+            
+                <a href="../4.路由/路由基础.html">
+            
+                    
+                    路由基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.14" data-path="../4.路由/静态路由.html">
+            
+                <a href="../4.路由/静态路由.html">
+            
+                    
+                    静态路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    5.交换
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../5.交换/GARP-GVRP.html">
+            
+                <a href="../5.交换/GARP-GVRP.html">
+            
+                    
+                    GARP GVRP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../5.交换/PPP.html">
+            
+                <a href="../5.交换/PPP.html">
+            
+                    
+                    PPP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../5.交换/STP.html">
+            
+                <a href="../5.交换/STP.html">
+            
+                    
+                    STP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../5.交换/VLAN.html">
+            
+                <a href="../5.交换/VLAN.html">
+            
+                    
+                    VLAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../5.交换/交换机的工作原理.html">
+            
+                <a href="../5.交换/交换机的工作原理.html">
+            
+                    
+                    交换机的工作原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../联系我.html">
+            
+                <a href="../联系我.html">
+            
+                    
+                    联系我
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2.数据链路层</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x4EE5;&#x592A;&#x7F51;&#xFF1A;Ethernet &#x5F53;&#x4ECA;&#x4E3B;&#x5BFC;&#x5730;&#x4F4D;&#x7684;&#x5C40;&#x57DF;&#x7F51;&#x7EC4;&#x7F51;&#x6280;&#x672F;&#xFF08;&#x53EA;&#x4E0E;&#x7269;&#x7406;&#x5C42;&#x6570;&#x636E;&#x94FE;&#x8DEF;&#x5C42;&#x6709;&#x5173;&#xFF09;</p>
+<p><img src="2.&#x6570;&#x636E;&#x94FE;&#x8DEF;&#x5C42;/image-20240219152632238.png" alt="image-20240219152632238"></p>
+<p>&#x4EE5;&#x592A;&#x7F51;&#x7684;&#x53D1;&#x5C55;&#x53F2;&#xFF1A;</p>
+<ul>
+<li>20&#x4E16;&#x7EAA;70&#x5E74;&#x4EE3;&#xFF0C;&#x7531;Xerox&#x516C;&#x53F8;&#x8054;&#x5408;Intel&#x548C;DEC&#x516C;&#x53F8;&#x5F00;&#x53D1;&#x51FA;&#x4EE5;&#x592A;&#x7F51;</li>
+<li>1973&#x5E74;&#xFF0C;&#x4F20;&#x8F93;&#x901F;&#x7387;3Mb/s</li>
+<li>1980&#x5E74;&#xFF0C;&#x4F20;&#x8F93;&#x901F;&#x7387;10Mb/s</li>
+<li>1990&#x5E74;&#xFF0C;&#x51FA;&#x73B0;&#x53CC;&#x7EDE;&#x7EBF;&#x4ECB;&#x8D28;&#x7684;&#x4EE5;&#x592A;&#x7F51;</li>
+<li>1992&#x5E74;&#xFF0C;&#x4F20;&#x8F93;&#x901F;&#x7387;100Mb/s</li>
+<li>1998&#x5E74;&#xFF0C;&#x4F20;&#x8F93;&#x901F;&#x7387;1000Mb/s</li>
+<li>2010&#x5E74;&#xFF0C;IEEE&#x53D1;&#x5E03;40G/100G&#x6807;&#x51C6;</li>
+<li>2013&#x5E74;&#xFF0C;400G&#x7684;&#x4EE5;&#x592A;&#x7F51;&#x6807;&#x51C6;&#x5DE5;&#x4F5C;&#x6B63;&#x5F0F;&#x542F;&#x52A8;&#xFF01;</li>
+</ul>
+<p>&#x4EE5;&#x592A;&#x7F51;&#x7684;&#x5206;&#x7C7B;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x652F;&#x6301;&#x901F;&#x7387;/&#x6A21;&#x5F0F;</th>
+<th>&#x9700;&#x4E0D;&#x9700;&#x8981;&#x51B2;&#x7A81;&#x68C0;&#x6D4B;CSMA/CD&#x6280;&#x672F;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DIX&#x4EE5;&#x592A;&#x7F51;</td>
+<td>10Mbit/S&#x4EE5;&#x592A;&#x7F51;</td>
+<td>&#x9700;&#x8981;CSMA/CD</td>
+</tr>
+<tr>
+<td>IEEE802.3</td>
+<td>10Mbit/S&#x4EE5;&#x592A;&#x7F51;</td>
+<td>&#x9700;&#x8981;CSMA/CD</td>
+</tr>
+<tr>
+<td>IEEE802.3u</td>
+<td>100Mbit/S&#x4EE5;&#x592A;&#x7F51;</td>
+<td>&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x4F7F;&#x7528;CSMA/CD</td>
+</tr>
+<tr>
+<td>IEEE802.3z</td>
+<td>1Gbit/S&#x4EE5;&#x592A;&#x7F51;</td>
+<td>&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x4F7F;&#x7528;CSMA/CD</td>
+</tr>
+<tr>
+<td>IEEE802.3ae</td>
+<td>10Gbit/S&#x4EE5;&#x592A;&#x7F51;</td>
+<td>&#x4E0D;&#x9700;&#x8981;CSMA/CD</td>
+</tr>
+<tr>
+<td>IEEE802.3ba</td>
+<td>40/100Gbit/S&#x4EE5;&#x592A;&#x7F51;</td>
+<td>&#x4E0D;&#x9700;&#x8981;CSMA/CD</td>
+</tr>
+<tr>
+<td>IEEE802.3x</td>
+<td>&#x5168;&#x53CC;&#x5DE5;</td>
+<td>&#x4E0D;&#x9700;&#x8981;CSMA/CD</td>
+</tr>
+</tbody>
+</table>
+<p><img src="2.&#x6570;&#x636E;&#x94FE;&#x8DEF;&#x5C42;/image-20240219152644470.png" alt="image-20240219152644470"></p>
+<ul>
+<li>CSMA/CD&#x8F7D;&#x6CE2;&#x4FA6;&#x542C;&#x591A;&#x8DEF;&#x8BBF;&#x95EE;/&#x51B2;&#x7A81;&#x68C0;&#x6D4B;&#x6280;&#x672F;&#xFF1A;&#x7528;&#x6765;&#x907F;&#x514D;&#x5728;&#x540C;&#x4E00;&#x5171;&#x4EAB;&#x4ECB;&#x8D28;&#x51FA;&#x73B0;&#x4FE1;&#x53F7;&#x51B2;&#x7A81;&#x7684;&#x6280;&#x672F;&#x3002;</li>
+<li>&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;&#xFF1A;&#x53D1;&#x524D;&#x5148;&#x542C;&#xFF0C;&#x53D8;&#x53D1;&#x8FB9;&#x542C;&#xFF0C;&#x51B2;&#x7A81;&#x505C;&#x53D1;&#xFF0C;&#x8BA1;&#x7B97;&#x540E;&#x91CD;&#x53D1;</li>
+</ul>
+<p>&#x6570;&#x636E;&#x94FE;&#x8DEF;&#x5C42;&#x7684;&#x5206;&#x5C42;&#x8BBE;&#x8BA1;&#xFF1A;
+<img src="2.&#x6570;&#x636E;&#x94FE;&#x8DEF;&#x5C42;/image-20240219152655792.png" alt="image-20240219152655792"></p>
+<p>&#x5728;&#x6570;&#x636E;&#x94FE;&#x8DEF;&#x5C42;&#x5B9A;&#x4E49;&#x4E86;&#x4E24;&#x4E2A;&#x5B50;&#x5C42;&#xFF1A;LLC&#x5C42;&#x548C;MAC&#x5C42;</p>
+<table>
+<thead>
+<tr>
+<th>LLC</th>
+<th>Logical link control &#x903B;&#x8F91;&#x94FE;&#x8DEF;&#x63A7;&#x5236;&#x8D1F;&#x8D23;&#x8BC6;&#x522B;&#x7F51;&#x7EDC;&#x5C42;&#x7684;&#x534F;&#x8BAE;&#x7C7B;&#x578B;&#x5E76;&#x5BF9;&#x7F51;&#x7EDC;&#x5C42;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5C01;&#x88C5;&#x5411;&#x4E0B;&#x5C42;&#x4F20;&#x9012;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MAC</td>
+<td>Media access config &#x4ECB;&#x8D28;&#x8BBF;&#x95EE;&#x63A7;&#x5236;&#x8D1F;&#x8D23;&#x63A7;&#x5236;&#x7269;&#x7406;&#x5C42;&#x8BBE;&#x5907;&#x5904;&#x7406;&#x786C;&#x4EF6;&#x8BBE;&#x5907;&#x7684;&#x7269;&#x7406;&#x5BFB;&#x5740;&#x3001;&#x5B9A;&#x4E49;&#x7F51;&#x7EDC;&#x62D3;&#x6251;&#x53CA;&#x6570;&#x636E;&#x5E27;&#x7684;&#x4F20;&#x9012;&#x987A;&#x5E8F;</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>&#x4EE5;&#x592A;&#x7F51;&#x7684;&#x5E27;&#x7ED3;&#x6784;&#xFF1A;
+<img src="2.&#x6570;&#x636E;&#x94FE;&#x8DEF;&#x5C42;/image-20240219152712929.png" alt="image-20240219152712929"></li>
+</ol>
+<p>IEEE802.3&#x662F;Ethernet&#x7684;&#x524D;&#x751F;&#xFF0C;&#x76EE;&#x524D;&#x57FA;&#x672C;&#x672A;&#x4F7F;&#x7528;</p>
+<ol>
+<li>Ethernet&#x5E27;&#x7ED3;&#x6784;&#xFF1A;
+<img src="2.&#x6570;&#x636E;&#x94FE;&#x8DEF;&#x5C42;/image-20240219152802284.png" alt="image-20240219152802284"></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>&#x534F;&#x8BAE;&#x7C7B;&#x578B;</th>
+<th>&#x4EE3;&#x8868;&#x4E0A;&#x5C42;&#x7684;&#x534F;&#x8BAE; &#xFF08;IP=0<em>0800 ARP=0</em>0806 IPv6=86DD &#xFF09;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x5E27;&#x5927;&#x5C0F;&#x8303;&#x56F4;</td>
+<td>64B~1518B</td>
+</tr>
+<tr>
+<td>MTU</td>
+<td>&#x6700;&#x5927;&#x4F20;&#x8F93;&#x5355;&#x5143;&#xFF0C;&#x6BCF;&#x6B21;&#x53D1;&#x9001;&#x6570;&#x636E;&#x7684;&#x6700;&#x5927;&#x503C;&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;1500B&#xFF0C;&#x5927;&#x4E8E;&#x6216;&#x5C0F;&#x4E8E;&#x8BE5;&#x503C;&#x7684;&#x6570;&#x636E;&#x5E27;&#x90FD;&#x6709;&#x95EE;&#x9898;&#xFF09;</td>
+</tr>
+<tr>
+<td>&#x5E27;&#x6821;&#x9A8C;</td>
+<td>&#x901A;&#x8FC7;&#x4E00;&#x5B9A;&#x7684;&#x8BA1;&#x7B97;&#x516C;&#x5F0F;&#x6765;&#x5BF9;&#x6570;&#x636E;&#x5305;&#x7684;&#x5B8C;&#x6574;&#x6027;&#x68C0;&#x67E5;</td>
+</tr>
+<tr>
+<td>MAC&#x5730;&#x5740;</td>
+<td>&#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x7F51;&#x7EDC;&#x63A5;&#x53E3;&#x7684;&#x7269;&#x7406;&#x5730;&#x5740;&#xFF0C;&#x5168;&#x7403;&#x552F;&#x4E00;</td>
+</tr>
+</tbody>
+</table>
+<p><img src="2.&#x6570;&#x636E;&#x94FE;&#x8DEF;&#x5C42;/image-20240219153012494.png" alt="image-20240219153012494"></p>
+<p>FCS&#x5E27;&#x6821;&#x9A8C;&#x5E8F;&#x5217; 4B&#xFF1A;&#x7528;&#x6765;&#x68C0;&#x6D4B;&#x6570;&#x636E;&#x7684;&#x5B8C;&#x6574;&#x6027;&#xFF0C;&#x4E0D;&#x5B8C;&#x6574;&#x7684;&#x4F1A;&#x88AB;&#x4E4B;&#x95F4;&#x4E22;&#x5F03;&#xFF08;&#x4E0D;&#x4F1A;&#x91CD;&#x4F20;&#xFF0C;&#x9760;&#x4E0A;&#x5C42;&#x5B9E;&#x73B0;&#x91CD;&#x4F20;&#xFF09;
+<img src="2.&#x6570;&#x636E;&#x94FE;&#x8DEF;&#x5C42;/image-20240219153020089.png" alt="image-20240219153020089"></p>
+<p>&#x524D;24&#x4F4D;&#x662F;IEEE&#x7535;&#x6C14;&#x548C;&#x7535;&#x5B50;&#x5DE5;&#x7A0B;&#x5E08;&#x534F;&#x4F1A;&#x5206;&#x914D;&#x7ED9;&#x5382;&#x5546;&#xFF0C;&#x540E;24&#x4F4D;&#x662F;&#x5382;&#x5546;&#x5206;&#x914D;&#x7684;&#x7528;&#x6237;
+<img src="2.&#x6570;&#x636E;&#x94FE;&#x8DEF;&#x5C42;/image-20240219153032023.png" alt="image-20240219153032023"></p>
+<p><img src="2.&#x6570;&#x636E;&#x94FE;&#x8DEF;&#x5C42;/image-20240219153040320.png" alt="image-20240219153040320"></p>
+<p>&#x4E3B;&#x673A;&#x63A5;&#x6536;&#x5230;&#x6570;&#x636E;&#x5E27;&#x7684;&#x52A8;&#x4F5C;&#xFF1A;</p>
+<ol>
+<li>&#x68C0;&#x6D4B;FCS&#xFF0C;&#x901A;&#x8FC7;&#x4E0B;&#x4E00;&#x6B65;&#xFF08;&#x53CD;&#x5219;&#x4E22;&#x5F03;&#xFF09;</li>
+<li>&#x68C0;&#x6D4B;DMAC&#xFF0C;&#x901A;&#x8FC7;&#x4EA4;&#x7ED9;&#x4E0A;&#x5C42;&#xFF08;&#x53CD;&#x5219;&#x4E22;&#x5F03;&#xFF09;</li>
+</ol>
+<footer class="page-footer"><span class="copyright">&#x8D63;ICP&#x5907;2023008387&#x53F7;-1 &#x8D63;&#x516C;&#x7F51;&#x5B89;&#x5907;36052102100040&#x53F7; Copyright &#xA9;2022 - 2024 By Feiyu</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
+2025-04-09 21:19
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="1.TCP与UDP.html" class="navigation navigation-prev " aria-label="Previous page: 1.TCP与UDP">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="3.应用层概述.html" class="navigation navigation-next " aria-label="Next page: 3.应用层概述">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2.数据链路层","date":"2022-09-06T14:33:48.000Z","updated":"2024-11-15T21:49:40.000Z","categories":["数据通信","HCIA","3.TCPIP协议"],"tags":["数据通信","HCIA"],"permalink":"/posts/2.数据链路层/","level":"1.4.2","depth":2,"next":{"title":"3.应用层概述","level":"1.4.3","depth":2,"path":"3.TCPIP协议/3.应用层概述.md","ref":"3.TCPIP协议/3.应用层概述.md","articles":[]},"previous":{"title":"1.TCP与UDP","level":"1.4.1","depth":2,"path":"3.TCPIP协议/1.TCP与UDP.md","ref":"3.TCPIP协议/1.TCP与UDP.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-pro","expandable-chapters","splitter","github","page-toc-button","back-to-top-button","tbfed-pagefooter","code","accordion","-sharing","sharing-plus","3-ba","hide-element"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"赣ICP备2023008387号-1 赣公网安备36052102100040号 Copyright ©2022 - 2024 By Feiyu","modify_label":"最近一修改时间：","modify_format":"YYYY-MM-DD HH:mm"},"github":{"url":"https://github.com/feiyu-195"},"umami":{"url":"https://www.feiyunote.cn:30101/random-string.js","website-id":"49159946-a785-4fe1-aaf0-a009bd825d7e"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"3-ba":{"configuration":"auto","token":"44afc32490f5c9ccad725edf6bd674ae"},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SkyFish","language":"zh-hans","gitbook":"*","description":"这是我的简介..."},"file":{"path":"3.TCPIP协议/2.数据链路层.md","mtime":"2025-04-09T13:19:59.818Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-05-10T02:52:02.457Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-accordion/accordionSelector.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
